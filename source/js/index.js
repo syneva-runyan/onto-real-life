@@ -8,6 +8,6 @@ import '../scss/app.scss';
 
 // Render it to DOM
 ReactDOM.render(
-    <Routes />,
+  <Routes />,
   document.getElementById('root')
 );
