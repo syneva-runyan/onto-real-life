@@ -8,9 +8,8 @@ export default class Header extends Component {
 		this.adjBorder();
 
 		this.resizeListener = window.addEventListener('resize', () => {
-			//initialResize && initialResize();
 			this.adjBorder();
-		})
+		});
 	}
 
 	componentWillUnmount() {
@@ -20,16 +19,16 @@ export default class Header extends Component {
 	adjBorder() {
 		const border = document.getElementById('headerBorder');
 		border.style.width = '100%';
-		const borderWidth  = border.getBoundingClientRect().width;
-		this.snapWidth(borderWidth, chevronWidth, border);
+		this.snapWidth(border, chevronWidth);
 	}
 
 	// Snap width of provided el
 	// to nearest round number.
-	snapWidth(borderWidth, snapWidth, element) {
-		const widthMod = borderWidth % snapWidth;
+	snapWidth(element, snapWidth) {
+		const elWidth  = element.getBoundingClientRect().width;
+		const widthMod = elWidth % snapWidth;
 		if(widthMod !== 0) {
-			element.style.width = borderWidth - widthMod + 'px';
+			element.style.width = elWidth - widthMod + 'px';
 		}
 	}
 

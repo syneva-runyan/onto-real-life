@@ -5,10 +5,16 @@ body {
 .App {
   margin: 80px auto;
   max-width: 1200px;
+  min-width: $min-width;
   width: calc(100% - 160px);
   background: $white;
   padding: 20px;
   border-radius: 1px;
+
+  @media screen and (max-width: $md-break) {
+    width: 100%;
+    border-radius: 0;
+  }
 }
 
 .Menu a {
