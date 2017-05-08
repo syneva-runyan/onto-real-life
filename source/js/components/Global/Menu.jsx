@@ -42,6 +42,14 @@ export default class Menu extends Component {
             Blog Posts
           </Link>
         </li>
+        <li className={this.menuItemClass(routeCodes.PHOTO_MAP, this.props.pathname)}>
+          <Link
+            to={routeCodes.PHOTO_MAP}
+            onClick={this.boundMenuToggle}
+          >
+            Photo Map
+          </Link>
+        </li>
         <li className={this.menuItemClass(routeCodes.CONTACT, this.props.pathname)}>
           <Link
             to={routeCodes.CONTACT}
