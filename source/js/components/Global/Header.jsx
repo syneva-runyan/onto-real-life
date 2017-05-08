@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import Title from './Title';
+import Menu from './Menu';
 
 const chevronWidth = 5;
 
 export default class Header extends Component {
+	constructor(props) {
+		super(props);
+	}
 	componentDidMount() {
 		this.adjBorder();
 
@@ -35,9 +39,12 @@ export default class Header extends Component {
   render() {
     return (
       <div className='header'>
-        <span className='header__logo' />
-        <Title />
-        <span id='headerBorder' className='header__border' />
+        <div className="header__lead">
+        	<span className='header__logo' />
+        	<Title />
+        	<span id='headerBorder' className='header__border' />
+        </div>
+        <Menu pathname={this.props.location.pathname} />
       </div>
     );
   }

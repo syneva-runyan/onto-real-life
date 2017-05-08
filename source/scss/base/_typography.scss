@@ -1,8 +1,13 @@
-p, h1, h2, h3, h4, h5, h6 {
-	font-family: verlag-light;
+$primary-font: verlag-light;
+$primary-font-bold: verlag-book;
+$secondary-font: alegreyaSans-light;
+$secondary-font-bold: alegreyaSans-regular;
+
+a, p, h1, h2, h3, h4, h5, h6 {
+	font-family: $primary-font;
 	color: $text-color;
 }
 
 bold {
-	font-family: verlag-book;
+	font-family: $primary-font-bold;
 }

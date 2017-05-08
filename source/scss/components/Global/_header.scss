@@ -1,7 +1,14 @@
+$header-margin-bottom: 16px;
+
 .header {
 	display: inline-block;
+	margin-bottom: $header-margin-bottom;
 	position: relative;
 	width: 100%;
+
+	&__lead {
+		position: relative;
+	}
 
 	&__logo {
 		background-image: url("../assets/img/airplane.png");
@@ -15,7 +22,7 @@
 	&__border {
 		background-image: url("../assets/img/chevron.png");
 		background-size: auto 100%;
-		bottom: 0;
+		bottom: $header-margin-bottom * -1;
 		height: 9px;
 		left: 0;
 		position: absolute;
