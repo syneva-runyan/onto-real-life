@@ -1,0 +1,12 @@
+.header {
+	display: inline-block;
+
+	&__logo {
+		background-image: url("../assets/img/airplane.png");
+		background-size: cover;
+		float: left;
+		height: 37px;
+		margin-top: 6px;
+    	width: 50px;
+	}
+}

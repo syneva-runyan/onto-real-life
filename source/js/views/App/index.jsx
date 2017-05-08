@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Menu from 'components/Global/Menu';
+import { Header, Menu } from 'components/Global';
 
 export default class App extends Component {
   static propTypes = {
@@ -14,6 +14,7 @@ export default class App extends Component {
 
     return (
       <div className='App'>
+        <Header />
         <Menu />
 
         <div className='Page'>

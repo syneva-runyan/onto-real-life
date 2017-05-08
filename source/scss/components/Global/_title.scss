@@ -1,0 +1,16 @@
+.title {
+	color: $primary-color;
+	display: inline-block;
+	text-transform: uppercase;
+
+	&__block {
+		display: inline-block;
+		font-size: 22px;
+    	line-height: 18px;
+    	text-align: right;
+	}
+	&__text {
+		display: inline-block;
+		font-size: 46px;
+	}
+}
