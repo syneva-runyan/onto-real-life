@@ -1,5 +1,7 @@
 .header {
 	display: inline-block;
+	position: relative;
+	width: 100%;
 
 	&__logo {
 		background-image: url("../assets/img/airplane.png");
@@ -8,5 +10,15 @@
 		height: 37px;
 		margin-top: 6px;
     	width: 50px;
+	}
+
+	&__border {
+		background-image: url("../assets/img/chevron.png");
+		background-size: auto 100%;
+		bottom: 0;
+		height: 9px;
+		left: 0;
+		position: absolute;
+		width: 100%;
 	}
 }
