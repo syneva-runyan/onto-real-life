@@ -1,31 +1,20 @@
 body {
-  background: #1C1E20;
+  background: $light-gray;
 }
 
 .App {
-  margin: 20px auto;
-  max-width: 500px;
-  width: calc(100% - 40px);
-  background: #f5f6f7;
+  margin: 80px auto;
+  max-width: 1200px;
+  width: calc(100% - 160px);
+  background: $white;
   padding: 20px;
-  border-radius: 3px;
+  border-radius: 1px;
 }
 
 .Menu a {
   display: inline-block;
   padding: 5px 0;
   margin-right: 10px;
-}
-
-.BackgroundImgExample {
-  width: 250px;
-  height: 141px;
-  background: url(../assets/img/book1.jpg) no-repeat;
-  background-size: 100% auto;
-}
-
-.ImgExample {
-  width: 250px;
 }
 
 hr {
