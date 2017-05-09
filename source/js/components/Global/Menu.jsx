@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
-import { IndexLink, Link } from 'react-router';
+import { Link } from 'react-router';
 import { routeCodes } from '../../routes';
+
+const propTypes = {
+  pathname: React.PropTypes.string,
+}
+
+const defaultProps = {
+  pathname: '',
+}
 
 export default class Menu extends Component {
   constructor() {
     super();
     this.state = {
-      opened: false
+      opened: false,
     }
 
     this.boundMenuToggle = this.toggleMenu.bind(this);
@@ -25,35 +33,35 @@ export default class Menu extends Component {
   render() {
     const menuClassNames = this.state.opened ? 'menu menu--opened' : 'menu';
     return (
-      <nav className={menuClassNames}>
-        <li className={this.menuItemClass(routeCodes.ABOUT, this.props.pathname)}>
+      <nav className={ menuClassNames }>
+        <li className={ this.menuItemClass(routeCodes.ABOUT, this.props.pathname) }>
           <Link
-            to={routeCodes.ABOUT}
-            onClick={this.boundMenuToggle}
+            to={ routeCodes.ABOUT }
+            onClick={ this.boundMenuToggle }
           >
           About
         </Link>
         </li>
-        <li className={this.menuItemClass(routeCodes.BLOG_POSTS, this.props.pathname)}>
+        <li className={ this.menuItemClass(routeCodes.BLOG_POSTS, this.props.pathname) }>
           <Link
-            to={routeCodes.BLOG_POSTS}
-            onClick={this.boundMenuToggle}
+            to={ routeCodes.BLOG_POSTS }
+            onClick={ this.boundMenuToggle }
           >
             Blog Posts
           </Link>
         </li>
-        <li className={this.menuItemClass(routeCodes.PHOTO_MAP, this.props.pathname)}>
+        <li className={ this.menuItemClass(routeCodes.PHOTO_MAP, this.props.pathname) }>
           <Link
-            to={routeCodes.PHOTO_MAP}
-            onClick={this.boundMenuToggle}
+            to={ routeCodes.PHOTO_MAP }
+            onClick={ this.boundMenuToggle }
           >
             Photo Map
           </Link>
         </li>
-        <li className={this.menuItemClass(routeCodes.CONTACT, this.props.pathname)}>
+        <li className={ this.menuItemClass(routeCodes.CONTACT, this.props.pathname) }>
           <Link
-            to={routeCodes.CONTACT}
-            onClick={this.boundMenuToggle}
+            to={ routeCodes.CONTACT }
+            onClick={ this.boundMenuToggle }
           >
             Contact
           </Link>
@@ -62,3 +70,7 @@ export default class Menu extends Component {
     );
   }
 }
+
+Menu.propTypes = propTypes;
+Menu.defaultProps = defaultProps;
+

@@ -3,6 +3,16 @@ import PropTypes from 'prop-types';
 
 import { Header } from 'components/Global';
 
+const propTypes = {
+  location: React.propTypes.object,
+};
+
+const defaultProps = {
+  location: {
+    pathname: '',
+  },
+};
+
 export default class App extends Component {
   static propTypes = {
     children: PropTypes.object,
@@ -14,7 +24,7 @@ export default class App extends Component {
 
     return (
       <div className='App'>
-        <Header location={this.props.location} />
+        <Header location={ this.props.location } />
         <div className='Page'>
           { children }
         </div>
@@ -22,3 +32,6 @@ export default class App extends Component {
     );
   }
 }
+
+App.propTypes = propTypes;
+App.defaultProps = defaultProps;
