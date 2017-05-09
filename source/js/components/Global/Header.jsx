@@ -6,13 +6,13 @@ const chevronWidth = 5;
 
 const propTypes = {
   location: React.PropTypes.object,
-}
+};
 
 const defaultProps = {
   location: {
     pathname: '',
   },
-}
+};
 
 export default class Header extends Component {
   componentDidMount() {
@@ -36,9 +36,10 @@ export default class Header extends Component {
   // Snap width of provided el
   // to nearest round number.
   snapWidth(element, snapWidth) {
-    const elWidth  = element.getBoundingClientRect().width;
+    const elWidth = element.getBoundingClientRect().width;
     const widthMod = elWidth % snapWidth;
-    if(widthMod !== 0) {
+    if (widthMod !== 0) {
+      // eslint-disable-next-line
       element.style.width = elWidth - widthMod + 'px';
     }
   }
@@ -46,12 +47,12 @@ export default class Header extends Component {
   render() {
     return (
       <div className='header'>
-        <div className="header__lead">
+        <div className='header__lead'>
           <span className='header__logo' />
           <Title />
           <span id='headerBorder' className='header__border' />
         </div>
-        <Menu pathname={this.props.location.pathname} />
+        <Menu pathname={ this.props.location.pathname } />
       </div>
     );
   }

@@ -4,18 +4,18 @@ import { routeCodes } from '../../routes';
 
 const propTypes = {
   pathname: React.PropTypes.string,
-}
+};
 
 const defaultProps = {
   pathname: '',
-}
+};
 
 export default class Menu extends Component {
   constructor() {
     super();
     this.state = {
       opened: false,
-    }
+    };
 
     this.boundMenuToggle = this.toggleMenu.bind(this);
   }
@@ -26,7 +26,7 @@ export default class Menu extends Component {
 
   toggleMenu() {
     this.setState({
-      opened: !this.state.opened
+      opened: !this.state.opened,
     });
   }
 
