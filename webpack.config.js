@@ -63,7 +63,10 @@ const rules = [
     test: /\.(png|gif|jpg|svg)$/,
     include: imgPath,
     use: 'url-loader?limit=20480&name=assets/[name]-[hash].[ext]',
-  },
+  },{
+        test: /\.(eot|otf|svg|ttf|woff|woff2)$/,
+        use: 'file-loader?name=fonts/[name].[ext]'
+    }
 ];
 
 if (isProduction) {
