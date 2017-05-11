@@ -1,19 +1,25 @@
 @font-face {
   font-family: verlag-light;
-  src: url('../assets/fonts/verlag/Verlag-Light.otf');
+  src: url('../assets/fonts/verlag/Verlag-Light.woff') format("woff");
 }
 
 @font-face {
   font-family: verlag-book;
-  src: url('../assets/fonts/verlag/Verlag-Book.otf');
+  src: url('../assets/fonts/verlag/Verlag-Book.woff') format("woff");
 }
 
 @font-face {
   font-family: alegreyaSans-light;
-  src: url('../assets/fonts/alegreyaSans/AlegreyaSans-Light.otf');
+  src:
+  // url('../assets/fonts/alegreyaSans/AlegreyaSans-Light.otf') format("opentype"),
+       url('../assets/fonts/alegreyaSans/alegreyasans-light-webfont.woff2') format('woff2'),
+       url('../assets/fonts/alegreyaSans/alegreyasans-light-webfont.woff') format('woff');
 }
 
 @font-face {
   font-family: alegreyaSans-regular;
-  src: url('../assets/fonts/alegreyaSans/AlegreyaSans-Regular.otf');
+  src: 
+  //url('../assets/fonts/alegreyaSans/AlegreyaSans-Regular.otf') format("opentype"),
+       url('../assets/fonts/alegreyaSans/alegreyasans-regular-webfont.woff2') format('woff2'),
+       url('../assets/fonts/alegreyaSans/alegreyasans-regular-webfont.woff') format('woff');
 }
