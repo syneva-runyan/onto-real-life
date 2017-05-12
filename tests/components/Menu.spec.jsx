@@ -1,8 +1,9 @@
-import { Menu } from '../../source/js/components/Global';
+import React from 'react';
+import Menu from '../../source/js/components/Global/Menu';
 import { shallow } from 'enzyme';
 
 describe('Menu', () => {
-	const component;
+	let component;
 
 	beforeEach(() => {
 		component = shallow(<Menu />);
@@ -11,8 +12,8 @@ describe('Menu', () => {
 		it('should return selected class name iff provided paths are equal', () => {
 			const sameName = 'same';
 
-			expect(component.menuItemClass(sameName, sameName).toEqual('selected');
-			expect(component.menuItemClass(sameName, 'somethingDifferent').toEqual('');
+			expect(component.instance().menuItemClass(sameName, sameName)).toContain('selected');
+			expect(component.instance().menuItemClass(sameName, 'somethingDifferent')).not.toContain('selected');
 		});
 	});
 });

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-import { App, About, BlogPosts, NotFound } from 'views';
+import { App, About, BlogPosts, NotFound } from './views';
 
 const publicPath = '/';
 

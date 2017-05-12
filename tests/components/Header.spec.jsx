@@ -1,8 +1,9 @@
-import { Header } from '../../source/js/components/Global';
+import React from 'react';
+import Header from '../../source/js/components/Global/Header';
 import { shallow } from 'enzyme';
 
 describe('Header', () => {
-	const component;
+	let component;
 
 	beforeEach(() => {
 		component = shallow(<Header />);
@@ -12,9 +13,9 @@ describe('Header', () => {
 			let fakeElement = document.createElement('p');
 			fakeElement.style.width = '503px';
 
-			component.snapWidth(fakeElement, 5);
+			component.instance().snapWidth(fakeElement, 5, 503);
 
-			expect(fakeElement.style.width).toEqual('500px');
+			expect(fakeElement.style.width).toEqual('501px');
 		});
 	});
 });
