@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Header } from '../../components/Global';
 
 const propTypes = {
-  location: React.PropTypes.object,
+  location: PropTypes.object,
 };
 
 const defaultProps = {
