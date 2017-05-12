@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import { routeCodes } from '../../routes';
 
 const propTypes = {
-  pathname: React.PropTypes.string,
+  pathname: PropTypes.string,
 };
 
 const defaultProps = {
