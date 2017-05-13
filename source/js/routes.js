@@ -7,7 +7,7 @@ const publicPath = '/';
 
 export const routeCodes = {
   ABOUT: `${ publicPath }about`,
-  BLOG_POSTS: `${ publicPath }blog`,
+  BLOG_POSTS: `${ publicPath }posts`,
   PHOTO_MAP: `${ publicPath }photos`,
   CONTACT: `${ publicPath }contact`,
 };

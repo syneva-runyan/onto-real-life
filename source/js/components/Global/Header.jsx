@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import Title from './Title';
 import Menu from './Menu';
 
-const chevronWidth = 5;
-
 const propTypes = {
   location: PropTypes.object,
 };
