@@ -12,3 +12,11 @@ Because state management is not currently needed in this project, I've deleted t
 ## TODO
 
 GUI for automatic post generation
+Optimize Images
+Post sort functionaly
+Post Content
+Next & Back Post navigation
+Photo Map
+Contact Me
+About Section
+
