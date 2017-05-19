@@ -5,13 +5,13 @@ import { Link } from 'react-router';
 const propTypes = {
   title: PropTypes.string,
   tagLine: PropTypes.string,
-  imgPreviewPath: PropTypes.string,
+  assetPath: PropTypes.string,
 };
 
 const defaultProps = {
   title: 'Post Title',
-  tagLine: 'Post tagline',
-  imgPreviewPath: 'assets/img/blogs/barcelona/preview.jpg',
+  tagLine: null,
+  assetPath: 'assets/img/blogs',
 };
 
 export default class PostPreviewer extends Component {
@@ -19,10 +19,19 @@ export default class PostPreviewer extends Component {
     return (
       <Link
         className='postPreviewer'
-        style={ { backgroundImage: `src("${ this.props.imgPreviewPath }") ` } }
+        style={ { 
+          backgroundImage: `url("${ this.props.assetPath }/preview.jpg")`,
+        } }
+        tabIndex={0}
       >
-        <h3>{ this.props.title }</h3>
-        <h4>{ this.props.tagLine }</h4>
+        <h3 className='postPreviewer__title'>{ this.props.title }</h3>
+        <span
+          className='postPreviewer__icon'
+          style={{
+            backgroundImage: `url("${ this.props.assetPath }/entryStamp.png")`
+          }}
+        />
+       { this.props.tagLine ? <h4 className='postPreviewer__tagline'>{ this.props.tagLine }</h4> : null }
       </Link>
     );
   }

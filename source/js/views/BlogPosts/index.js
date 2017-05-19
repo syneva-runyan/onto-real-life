@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { PostPreviewer } from '../../components/BlogPosts';
 import postCatalog from '../../../data/posts';
 
-const imgPreviewBase = './assets/img/blogs/';
+const imgPreviewBase = './assets/img/blogs';
 
 export default class BlogPosts extends Component {
   previewGallery(catalog) {
@@ -15,7 +15,7 @@ export default class BlogPosts extends Component {
           key={ `post-${ item }` }
           title={ itemContent.title }
           tagLine={ itemContent.tagLine }
-          imgPreviewPath={ `${ imgPreviewBase }/${ item }/preiview.jpg` }
+          assetPath={ `${ imgPreviewBase }/${ item }` }
         />);
     }
 
@@ -23,10 +23,12 @@ export default class BlogPosts extends Component {
   }
   render() {
     return (
-      <div className='BlogPosts'>
+      <div className='blogPosts'>
         <h2>Blog Posts</h2>
-        <hr />
-        {this.previewGallery(postCatalog)}
+        <hr className="blogPosts__divider" />
+        <div className='blogPosts__gallery'>
+          {this.previewGallery(postCatalog)}
+        </div>
       </div>
     );
   }

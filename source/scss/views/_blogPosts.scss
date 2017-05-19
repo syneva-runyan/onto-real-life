@@ -1,0 +1,51 @@
+$gallery-margin-right: 15px;
+
+.blogPosts {
+    &__divider {
+        margin-bottom: 25px;
+    }
+    &__gallery {
+        display: inline-block;
+        width: 100%;
+        :nth-child(n) {
+            margin-right: 0;
+        }
+    }
+
+     @media screen and (min-width: $sm-break) {
+        // grid switches from 1 to 2 squares
+        &__gallery {
+            :nth-child(n) {
+                margin-right: $gallery-margin-right;
+            }
+             :nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @media screen and (min-width: $md-break) {
+        // grid switches from 2 to 3 squares
+        &__gallery {
+             :nth-child(2n) {
+                margin-right: $gallery-margin-right;
+            }
+            :nth-child(3n) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    
+    @media screen and (min-width: $lg-break) {
+        // grid switches from 3 to 4 squares
+         &__gallery {
+            :nth-child(3n) {
+                margin-right: $gallery-margin-right;
+            }
+            :nth-child(4n) {
+                margin-right: 0;
+            }
+         }
+    }
+}
