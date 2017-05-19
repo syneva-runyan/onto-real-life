@@ -20,4 +20,5 @@ Photo Map
 Contact Me
 About Section
 Add Search functionality
+Social Media Sharing capabilities
 
