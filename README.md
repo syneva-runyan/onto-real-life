@@ -19,4 +19,5 @@ Next & Back Post navigation
 Photo Map
 Contact Me
 About Section
+Add Search functionality
 
