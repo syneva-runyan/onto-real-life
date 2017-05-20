@@ -1,0 +1,23 @@
+.postTitle {
+    &__date {
+        color: $secondary-color;
+        font-family: $secondary-font;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+    &__title {
+        color: $primary-color;
+        margin-bottom: 5px;
+        margin-top: 0;
+    }
+    &__tagLine {
+        font-family: $secondary-font;
+        margin-top: 0;
+        margin-bottom: 13px;
+    }
+
+    &__divider {
+        border-color: $light-gray;
+        margin: 0 0 20px;
+    }
+}
