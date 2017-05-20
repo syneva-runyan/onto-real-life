@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { PostTitle } from '../../components/BlogPosts';
 
 const propTypes = {};
 
@@ -9,9 +10,7 @@ export default class BlogPost extends Component {
   render() {
     return (
       <div className='header'>
-        <h5>00 Month, 0000</h5>
-        <h1>Title Goes here</h1>
-        <h3>Tagline goes here</h3>
+        <PostTitle />
         <p>Blog Post Content Goes Here</p>
       </div>
     );
