@@ -1,11 +1,12 @@
 import App from './App';
 import About from './About';
-import BlogPosts from './BlogPosts';
+import { BlogPost, PostCollection } from './BlogPosts';
 import NotFound from './NotFound';
 
 module.exports = {
   App,
   About,
-  BlogPosts,
+  BlogPost,
+  PostCollection,
   NotFound,
 };
