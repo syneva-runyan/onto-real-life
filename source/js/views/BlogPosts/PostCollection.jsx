@@ -12,6 +12,7 @@ export default class BlogPosts extends Component {
       const itemContent = catalog[item];
       gallery.push(
         <PostPreviewer
+          postId={item}
           key={ `post-${ item }` }
           title={ itemContent.title }
           tagLine={ itemContent.tagLine }
