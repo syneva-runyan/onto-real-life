@@ -6,12 +6,14 @@ const propTypes = {
   title: PropTypes.string,
   tagLine: PropTypes.string,
   assetPath: PropTypes.string,
+  postId: PropTypes.string,
 };
 
 const defaultProps = {
   title: 'Post Title',
   tagLine: null,
   assetPath: 'assets/img/blogs',
+  postId: '',
 };
 
 export default class PostPreviewer extends Component {
@@ -23,6 +25,7 @@ export default class PostPreviewer extends Component {
           backgroundImage: `url("${ this.props.assetPath }/preview.jpg")`,
         } }
         tabIndex={0}
+        to={ `post/${ this.props.postId }` }
       >
         <h3 className='postPreviewer__title'>{ this.props.title }</h3>
         <span
