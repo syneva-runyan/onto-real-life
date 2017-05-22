@@ -1,6 +1,4 @@
-# React and Redux, Webpack 2 boilerplate
-
-
+# Simplistic Travel Blog
 
 ## ABOUT
 
