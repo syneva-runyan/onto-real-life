@@ -10,7 +10,7 @@ const propTypes = {
 const defaultProps = {
     title: 'Title',
     datePublished: '00 MONTH 0000',
-    tagLine: 'TagLine goes here',
+    tagLine: null,
 };
 
 export default function PostTitle(props) {
@@ -18,7 +18,7 @@ export default function PostTitle(props) {
         <div className="postTitle">
             <h5 className="postTitle__date">{props.datePublished}</h5>
             <h1 className="postTitle__title">{props.title}</h1>
-            <h3 className="postTitle__tagLine">{props.tagLine}</h3>
+            { props.tagLine ?  <h3 className="postTitle__tagLine">{props.tagLine}</h3> : null }
             <hr className="postTitle__divider" />
         </div>
     )

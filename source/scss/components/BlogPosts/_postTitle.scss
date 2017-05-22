@@ -7,17 +7,18 @@
     }
     &__title {
         color: $primary-color;
-        margin-bottom: 5px;
+        margin-bottom: 0;
         margin-top: 0;
     }
     &__tagLine {
         font-family: $secondary-font;
         margin-top: 0;
-        margin-bottom: 13px;
+        margin-bottom: 0;
+        margin-top: 5px;
     }
 
     &__divider {
         border-color: $light-gray;
-        margin: 0 0 20px;
+        margin: 13 0 20px;
     }
 }
