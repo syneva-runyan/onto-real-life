@@ -48,11 +48,21 @@ const plugins = [
       context: sourcePath,
     },
   }),
+  new webpack.ProvidePlugin({
+    $: "jquery",
+    jQuery: "jquery"
+  }),
 ];
 
 // Common rules
 const rules = [
   {
+    test: /\.css$/,
+    use: [
+      'style-loader',
+      'css-loader',
+    ],
+  }, {
     test: /\.(js|jsx)$/,
     exclude: /node_modules/,
     use: [
