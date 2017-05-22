@@ -15,18 +15,18 @@ https://www.froala.com/wysiwyg-editor
 
 ## TODO
 
-*GUI for automatic post generation
-*Optimize Images
-*Post sort functionaly
-*Post Content
-*Next & Back Post navigation
-*Photo Map
-*Contact Me
-*About Section
-*Add Search functionality
-*Social Media Sharing capabilities
-*Add security for file editing
-*Stop being lazy with tests
-*Use Prettier
-*Move legacy blog imgs
+* GUI for automatic post generation
+* Optimize Images
+* Post sort functionaly
+* Post Content
+* Next & Back Post navigation
+* Photo Map
+* Contact Me
+* About Section
+* Add Search functionality
+* Social Media Sharing capabilities
+* Add security for file editing
+* Stop being lazy with tests
+* Use Prettier
+* Move legacy blog imgs
 
