@@ -5,7 +5,7 @@
 ### Code Base
 The basic for this project's code base was taken from Stanko's React-redux-webpack2 boilerplate found at <https://github.com/Stanko/react-redux-webpack2-boilerplate>.
 
-Because state management is not currently needed in this project, I've deleted the Redux portion of the boilerplate.
+Because state management is not extensively needed in this project currently, I've deleted the Redux portion of the boilerplate.
 
 ### Blog Posts
 The tool used for the generation of blog post html content is Frola.
