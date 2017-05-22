@@ -26,4 +26,7 @@ About Section
 Add Search functionality
 Social Media Sharing capabilities
 Add security for file editing
+Stop being lazy with tests
+Use Prettier
+Move legacy blog imgs
 
