@@ -27,12 +27,15 @@ export default class PostContent extends Component {
       model: false,
       config: {},
     };
+
+    this.boundSavePost = this.savePost.bind(this);
   }
 
   componentDidMount() {
     PostHelper.getPost(this.props.postId, this.setPostContent.bind(this));
   }
 
+  //TODO post GET failures
   setPostContent(postContent) {
     this.setState({
       content: postContent, 
@@ -40,20 +43,21 @@ export default class PostContent extends Component {
   }
 
   savePost() {
-
+    PostHelper.savePost(this.props.postId, this.state.content);
   }
 
   render() {
     return (
-      <div>
+      <div className="postContent">
+        {   /* 
         <div className="editor">
           <FroalaEditor
             tag='textarea'
             model={this.state.content}
             config={this.config}
           />
-          <button onClick={this.savePost}>Save</button>
-        </div>
+          <button onClick={this.boundSavePost}>Save</button>
+        </div> */ }
         <FroalaEditorView model={this.state.content} />
       </div>
     );
