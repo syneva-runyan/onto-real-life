@@ -11,6 +11,7 @@ else {
 
 class PostHelper {
     parsePostResponse(requestObj, callback) {
+        //TODO handle failures
         return function() {
             if (requestObj.readyState==4 && requestObj.status==200) {
                 callback(requestObj.responseText);
@@ -22,6 +23,12 @@ class PostHelper {
         xmlRequest.onreadystatechange = this.parsePostResponse(xmlRequest, callback);
         xmlRequest.open("GET",`${postAssetPath}/${postId}/content.html`,true);
         xmlRequest.send();
+    }
+    savePost(postId, content) {
+      var a = document.getElementById("a");
+      var file = new Blob([content], {type: 'html'});
+      a.href = URL.createObjectURL(`${postAssetPath}/${postId}/content.html`);
+      a.download = name;
     }
 };
 

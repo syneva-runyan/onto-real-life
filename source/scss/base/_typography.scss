@@ -3,9 +3,21 @@ $primary-font-bold: verlag-book;
 $secondary-font: alegreyaSans-light;
 $secondary-font-bold: alegreyaSans-regular;
 
-a, p, h1, h2, h3, h4, h5, h6 {
+a, p, h1, h2, h3, h4, h5, h6, ul {
 	font-family: $primary-font;
 	color: $text-color;
+}
+
+p, em, string {
+	line-height: 1.4;
+}
+
+ul, em, strong {
+	color: $primary-color-emphasized;
+}
+
+ul {
+	line-height: 1.75;
 }
 
 bold {
