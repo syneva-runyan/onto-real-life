@@ -10,7 +10,7 @@
         margin-right: 0;
         font-family: $secondary-font-bold;
         font-size: 17px;
-        padding: 25px 25px 25px 35px;
+        padding: 25px 25px 25px 49px;
         position: relative;
 
         p {
@@ -30,13 +30,17 @@
         }
 
         &:before {
-            content: '\"';
+            background: url("/assets/img/quotes.png");
+            background-size: 100% auto;
+            content: ' ';
             color: $secondary-color;
             position: absolute;
-            top: -5px;
+            height: 22px;
+            top: 9px;
             left: 8px;
             font-size: 55px;
             font-family: serif;
+            width: 30px;
         }
     }
 
