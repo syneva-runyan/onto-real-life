@@ -25,7 +25,7 @@ export default class PostPreviewer extends Component {
           backgroundImage: `url("${ this.props.assetPath }/preview.jpg")`,
         } }
         tabIndex={0}
-        to={ `post/${ this.props.postId }` }
+        to={ `posts/${ this.props.postId }` }
       >
         <h3 className='postPreviewer__title'>{ this.props.title }</h3>
         <span

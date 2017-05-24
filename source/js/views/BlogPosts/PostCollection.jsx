@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import { PostPreviewer } from '../../components/BlogPosts';
 import postCatalog from '../../../data/posts';
 
-const imgPreviewBase = './assets/img/blogs';
-
 export default class BlogPosts extends Component {
-  previewGallery(catalog) {
+  previewGallery(catalog, assetBasePath) {
     const gallery = [];
 
     for (let item in catalog) {
@@ -16,7 +14,7 @@ export default class BlogPosts extends Component {
           key={ `post-${ item }` }
           title={ itemContent.title }
           tagLine={ itemContent.tagLine }
-          assetPath={ `${ imgPreviewBase }/${ item }` }
+          assetPath={ `${ assetBasePath }/${ item }` }
         />);
     }
 
@@ -28,7 +26,7 @@ export default class BlogPosts extends Component {
         <h2>Blog Posts</h2>
         <hr className="blogPosts__divider" />
         <div className='blogPosts__gallery'>
-          {this.previewGallery(postCatalog)}
+          {this.previewGallery(postCatalog, this.props.assetBasePath)}
         </div>
       </div>
     );
