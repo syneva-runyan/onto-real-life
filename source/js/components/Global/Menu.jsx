@@ -28,7 +28,6 @@ export default class Menu extends Component {
   toggleMenu() {
     this.setState({
       opened: !this.state.opened,
-      itemSelected: true,
     });
   }
 
