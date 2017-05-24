@@ -15,7 +15,7 @@ export default class Menu extends Component {
   constructor() {
     super();
     this.state = {
-      opened: false,
+      opened: false
     };
 
     this.boundMenuToggle = this.toggleMenu.bind(this);
@@ -28,6 +28,7 @@ export default class Menu extends Component {
   toggleMenu() {
     this.setState({
       opened: !this.state.opened,
+      itemSelected: true,
     });
   }
 
@@ -39,6 +40,11 @@ export default class Menu extends Component {
     const menuClassNames = this.state.opened ? 'menu menu--opened' : 'menu';
     return (
       <nav className={ menuClassNames }>
+        <li className={ 'menu__item selected menu__item--placeholder' } >
+          <a onClick={ this.boundMenuToggle }>
+            Menu
+          </a>
+        </li>
         <li className={ this.menuItemClass(routeCodes.ABOUT, this.props.pathname) }>
           <Link
             to={ routeCodes.ABOUT }

@@ -9,6 +9,11 @@
   &__item {
     display: inline-block;
     list-style-type: none;
+    text-transform: uppercase;
+
+    &--placeholder {
+      display: none;
+    }
   }
 
   .selected a {
@@ -27,18 +32,18 @@
     transition: $ani-speed;
 
     &:hover {
-      color: lighten($primary-color, 25%);
+      color: alpha($primary-color, 0.6);
     }
 	}
 
   @media screen and (max-width: $md-break) {
-    margin-top: 20px;
+    margin-bottom: 0;
+    margin-top: 15px;
     height: 30px;
     overflow: hidden;
     position: relative;
     width: 100%;
     transform: none;
-    display: table;
 
     &::after {
       content: '';
@@ -46,7 +51,7 @@
       height: 9px;
       position: absolute;
       right: 10px;
-      top: 8px;
+      top: 13px;
       width: 5px;
       transition: $ani-speed;
     }
@@ -57,8 +62,16 @@
       height: 0;
       overflow: hidden;
 
+       &--placeholder {
+         cursor: pointer;
+         display: block;
+         & , a {
+           height: 30px;
+         }
+       }
+
       a {
-        border-bottom: 1px solid $primary-color;
+        border-bottom: 1px solid lighten($primary-color, 0.2);
       }
 
     }
@@ -83,7 +96,6 @@
     }
 
     .selected {
-      display: table-header-group;
       a {
         pointer-events: auto;
       }
