@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Spinner } from '../../components/Spinner';
 
 export default class About extends Component {
   render() {
@@ -7,7 +8,7 @@ export default class About extends Component {
         <h2>About</h2>
 
         <hr />
-        <p>Face spinner!</p>
+        <Spinner />
         <p>Put stuff like I'm a young professional (developer in another life) who loves to spend my free time traveling.</p>
         <p>Currently on a 6 month hiatus from work, some boring stats for those of you who might be interested:</p>
         <ul>
