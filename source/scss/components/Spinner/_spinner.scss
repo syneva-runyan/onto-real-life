@@ -2,10 +2,15 @@
   margin-bottom: 15px;
   position: relative;
   width: 30%;
-  height: 380px;
   text-align: center;
 
-  .exInstructions {
+  
+  &__block {
+    height: 380px;
+    position: relative;
+  }
+
+  &__instructions {
       margin-top: 10px;
   }
 
@@ -101,6 +106,9 @@
     .spinner {
         width: 100%;
         margin-bottom :34px;
-        height: 250px;
+
+        &__block {
+            height: 250px;
+        }
     }
 }
