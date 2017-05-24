@@ -23,3 +23,28 @@ ul {
 bold {
 	font-family: $primary-font-bold;
 }
+
+blockquote {
+        background-color: $light-gray;
+        border-left: 5px solid $primary-color;
+        margin-right: 0;
+		margin-left: 0;
+        font-family: $secondary-font-bold;
+        font-size: 17px;
+        padding: 25px 25px 25px 49px;
+        position: relative;
+		
+		&:before {
+            background: url("/assets/img/quotes.png");
+            background-size: 100% auto;
+            content: ' ';
+            color: $secondary-color;
+            position: absolute;
+            height: 22px;
+            top: 9px;
+            left: 8px;
+            font-size: 55px;
+            font-family: serif;
+            width: 30px;
+        }
+}

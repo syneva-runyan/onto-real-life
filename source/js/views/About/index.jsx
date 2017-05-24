@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Spinner } from '../../components/Spinner';
+import { AboutMe } from '../../components/AboutMe';
 
 export default class About extends Component {
   render() {
@@ -8,23 +9,9 @@ export default class About extends Component {
         <h2>About</h2>
 
         <hr />
+        <blockquote>Hi! My name is Syneva. It's pronounced like Geneva (Switzerland) but with an S.</blockquote>
         <Spinner />
-        <p>Put stuff like I'm a young professional (developer in another life) who loves to spend my free time traveling.</p>
-        <p>Currently on a 6 month hiatus from work, some boring stats for those of you who might be interested:</p>
-        <ul>
-          <li>Money put away for each month</li>
-          <li>Plan for returning</li>
-          <li>Why? See Goal:See The World</li>
-        </ul>
-        <p>Travel Wish List:</p>
-        <ul>
-          <li>South Africa</li>
-          <li>Machu Pichu</li>
-          <li>Thailand</li>
-          <li>Bora Bora (must stay in raft houses on the water)</li>
-          <li>Glacier national park</li>
-        </ul>
-        <p>Hit me up if you're interested in going any of these places!</p>
+        <AboutMe />
       </div>
     );
   }

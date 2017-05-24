@@ -76,14 +76,16 @@ export default class Spinner extends Component {
 
   render() {
     return (
-      <div className='spinner'>
-        <div className="click-trigger top" onClick={this.boundSpinCube}></div>
-        { this.renderSquareSides("top", this.props.images, this.state.topCubeSide) }
-        <div className="click-trigger middle" onClick={this.boundSpinCube}></div>
-        { this.renderSquareSides("middle", this.props.images, this.state.middleCubeSide) }
-        <div className="click-trigger bottom" onClick={this.boundSpinCube}></div>
-        { this.renderSquareSides("bottom", this.props.images, this.state.bottomCubeSide) }
-        <div className="exInstructions"><p>Click a Cube To Spin</p></div>
+      <div className="spinner">
+        <div className="spinner__instructions"><p>Click a Cube To Spin</p></div>
+        <div className='spinner__block'>
+          <div className="click-trigger top" onClick={this.boundSpinCube}></div>
+          { this.renderSquareSides("top", this.props.images, this.state.topCubeSide) }
+          <div className="click-trigger middle" onClick={this.boundSpinCube}></div>
+          { this.renderSquareSides("middle", this.props.images, this.state.middleCubeSide) }
+          <div className="click-trigger bottom" onClick={this.boundSpinCube}></div>
+          { this.renderSquareSides("bottom", this.props.images, this.state.bottomCubeSide) }
+      </div>
     </div>
     );
   }
