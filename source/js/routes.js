@@ -8,7 +8,7 @@ const publicPath = '/';
 export const routeCodes = {
   ABOUT: `${ publicPath }about`,
   POST_COLLECTION: `${ publicPath }posts`,
-  POST:`${ publicPath }post/:postId`,
+  POSTS:`${ publicPath }post/:postId`,
   PHOTO_MAP: `${ publicPath }photos`,
   CONTACT: `${ publicPath }contact`,
 };
@@ -20,8 +20,7 @@ export default class Routes extends Component {
         <Route path={ publicPath } component={ App }>
           <IndexRoute component={ PostCollection } />
           <Route path={ routeCodes.ABOUT } component={ About } />
-          <Route path={ routeCodes.POST_COLLECTION } component={ PostCollection } />
-          <Route path={ routeCodes.POST } component={ BlogPost } />
+          <Route path={ routeCodes.POSTS } component={ BlogPosts } />
           <Route path={ routeCodes.PHOTO_MAP } component={ NotFound } />
           <Route path={ routeCodes.CONTACT } component={ NotFound } />
           <Route path='*' component={ NotFound } />
