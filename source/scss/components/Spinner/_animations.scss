@@ -1,0 +1,42 @@
+@keyframes spinTheCube {
+    0%{
+      -moz-transform: rotate3d(1,0,0, 0deg);
+       -webkit-transform: rotate3d(1,0,0, 0deg);
+      transform: rotate3d(1,0,0, 0deg);
+    }
+    25%{
+      -moz-transform: translateY(-50%) rotate3d(1,0,0, 90deg);
+      -webkit-transform: translateY(-50%) rotate3d(1,0,0, 90deg);
+      transform: translateY(-50%) rotate3d(1,0,0, 90deg);
+    }
+    50%{
+      -moz-transform: translateY(0%) rotate3d(1,0,0, 180deg);
+      -webkit-transform: translateY(0%) rotate3d(1,0,0, 180deg);
+      transform: translateY(0%) rotate3d(1,0,0, 180deg);
+    }
+    75%{
+      -moz-transform: translateY(50%) rotate3d(1,0,0, 270deg);
+      -webkit-transform: translateY(50%) rotate3d(1,0,0, 270deg);
+      transform: translateY(50%) rotate3d(1,0,0, 270deg);
+    }
+    100%{
+      -moz-transform: rotate3d(1,0,0, 360deg);
+      -webkit-transform: rotate3d(1,0,0, 360deg);
+      transform: rotate3d(1,0,0, 360deg);
+    }
+}
+
+@keyframes exInstructions{
+    0%{
+      opacity: 0;
+    }
+    25%{
+      opacity: 1;
+    }
+    75%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+}
