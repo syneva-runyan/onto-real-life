@@ -14,12 +14,77 @@ const defaultProps = {
   ],
 };
 
+const cubeClass = "cube";
+
 export default class Spinner extends Component {
+  constructor(props) {
+    super(props);
+    if(props.images.length !== 4) {
+        throw new Error("You must provide exactly 4 images to the face spinner");
+    }
+
+    this.state = {
+        topCubeSide: Math.floor(Math.random(0) * 4),
+        middleCubeSide: Math.floor(Math.random(0) * 4),
+        bottomCubeSide: Math.floor(Math.random(0) * 4),
+    };
+
+    this.boundSpinCube = this.spinCube.bind(this);
+  }
+
+  renderSide(sideCount, image) {
+      return (
+          <div
+            className={sideCount}
+            style={ {
+                backgroundImage: `url(${image})`
+            } }
+          />
+      );
+  }
+
+  renderSquareSides(side, images, sideToShow) {
+    return (
+      <div className={`${cubeClass} animateEx show-${sideToShow} ${side}`} data-sideShow={`${sideToShow}`}>
+         {this.renderSide("zero", images[0])}
+         {this.renderSide("first", images[1])}
+         {this.renderSide("second", images[2])}
+         {this.renderSide("third", images[3])}
+      </div>
+    )
+  }
+
+  determineNextSide(currentSide) {
+      return (currentSide +1 ) % 4;
+  }
+
+  setOrientation(cube, previousOrientation , nextOrientation) {
+    cube.classList.remove(`show-${previousOrientation}`);
+    cube.classList.add(`show-${nextOrientation}`);
+    cube.setAttribute("data-sideShow", nextOrientation);
+  }
+
+  spinCube(e) {
+    const target = e.target;
+    const cube = target.nextSibling;
+
+    const currentOrientation = cube.getAttribute("data-sideShow");
+    const nextOrientation = this.determineNextSide(parseInt(currentOrientation));
+
+    this.setOrientation(cube, currentOrientation, nextOrientation);
+  }
+
   render() {
     return (
       <div className='spinner'>
-        Spinner Goes Here
-      </div>
+        <div className="click-trigger top" onClick={this.boundSpinCube}></div>
+        { this.renderSquareSides("top", this.props.images, this.state.topCubeSide) }
+        <div className="click-trigger middle" onClick={this.boundSpinCube}></div>
+        { this.renderSquareSides("middle", this.props.images, this.state.middleCubeSide) }
+        <div className="click-trigger bottom" onClick={this.boundSpinCube}></div>
+        { this.renderSquareSides("bottom", this.props.images, this.state.bottomCubeSide) }
+        <div className="exInstructions"><p>Click a Cube To Spin</p></div>
+    </div>
     );
   }
 }
