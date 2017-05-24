@@ -20,7 +20,7 @@ https://www.froala.com/wysiwyg-editor
 * Next & Back Post navigation
 * Photo Map
 * Contact Me
-* About Section
+* Pick better face spinner images
 * Add Search functionality
 * Social Media Sharing capabilities
 * Add security for file editing
