@@ -31,6 +31,10 @@ export default class Menu extends Component {
     });
   }
 
+  postRouteAdjustments(postPath) {
+    return postPath.replace('/(:postId)', '')
+  }
+
   render() {
     const menuClassNames = this.state.opened ? 'menu menu--opened' : 'menu';
     return (
@@ -43,9 +47,11 @@ export default class Menu extends Component {
           About
         </Link>
         </li>
-        <li className={ this.menuItemClass(routeCodes.POST_COLLECTION, this.props.pathname) }>
+        <li className={
+          this.menuItemClass(this.postRouteAdjustments(routeCodes.POSTS), this.props.pathname)
+        }>
           <Link
-            to={ routeCodes.POST_COLLECTION }
+            to={ this.postRouteAdjustments(routeCodes.POSTS) }
             onClick={ this.boundMenuToggle }
           >
             Blog Posts

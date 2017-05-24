@@ -18,7 +18,9 @@
     }
 
     &__divider {
+        background-size: 100% auto;
         border-color: $light-gray;
-        margin: 13 0 20px;
+        margin: 13px 0 17px;
+        padding-top: 50px;
     }
 }
