@@ -5,6 +5,10 @@ const propTypes = {};
 
 const defaultProps = {};
 
+const notEmpty = function(value) {
+  return value && value!=="";
+}
+
 export default class ContactMsg extends Component {
     constructor(props) {
         super(props);
@@ -17,6 +21,7 @@ export default class ContactMsg extends Component {
         this.boundSubjectChange = this.onChange.bind(this, 'subject');
         this.boundEmailChange = this.onChange.bind(this, 'senderEmail');
         this.boundMsgChange = this.onChange.bind(this, 'msg');
+        this.boundSubmit = this.submitForm.bind(this);
     }
 
     onChange(field, e) {
@@ -27,9 +32,65 @@ export default class ContactMsg extends Component {
         this.setState(keyValuePair);
     }
 
+    clearForm() {
+        this.setState({
+            submitted: true,
+            error: false,
+            msg: "",
+            senderEmail: "",
+            subject: "",
+        });
+    }
+
+    validateFields(subject, email, msg) {
+        return notEmpty(subject) && notEmpty(email) && notEmpty(msg);
+    }
+
+    submitForm(e) {
+        const submitBtn = e.target;
+        e.preventDefault();
+        e.stopPropagation();
+
+        if(this.validateFields(this.state.subject, this.state.senderEmail, this.state.msg)) {
+          this.clearForm();
+          submitBtn.parentNode.submit(); 
+          return;
+        }
+
+        this.setState ({
+            error: true,
+            submitted: false,
+        })
+    }
+
+    getHelperContent(error, submitted) {
+        if (error) {
+            return {
+                msg: "Please ensure all fields have values",
+                class: "contactMsg__notice--error",
+            }
+        }
+
+        if(submitted) {
+            return {
+                msg: "Thank you for your message! I will try to respond in a timely manor.",
+                class: "contactMsg__notice--success",
+            };
+        }
+
+        return  {
+            msg: "*All fields required",
+            class: "",
+        }
+    }
+
     render() {
+        const helperContent = this.getHelperContent(this.state.error, this.state.submitted);
         return (
           <form action="./scripts/sendEmail.php">
+            <p className={`contactMsg__notice ${helperContent.class}`}>
+                {helperContent.msg}
+            </p>
             <input
               className="contactMsg__subject"
               name="contact-subject"
@@ -48,15 +109,15 @@ export default class ContactMsg extends Component {
             />
             <br />
             <textarea
+              className="contactMsg__msg"
               placeholder="Hi! I love your site..."
               name="message"
               id="contact-message"
               onChange={this.boundMsgChange}
-            >
-              {this.state.msg}
-            </textarea>
-            <p>*All fields required</p>
-            <submit>Submit</submit>
+              value={this.state.msg}
+            />
+            <br />
+            <submit onClick={this.boundSubmit} >Submit</submit>
           </form>
         );
     }
