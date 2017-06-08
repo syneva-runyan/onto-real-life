@@ -4,6 +4,7 @@ const path = require('path');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 
 const nodeEnv = process.env.NODE_ENV || 'development';
@@ -52,6 +53,9 @@ const plugins = [
     $: "jquery",
     jQuery: "jquery"
   }),
+  new CopyWebpackPlugin([{
+    from: "../assets/scripts/sendEmail.php", to: "scripts/sendEmail.php",
+  }]),
 ];
 
 // Common rules
