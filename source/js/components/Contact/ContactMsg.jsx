@@ -46,14 +46,27 @@ export default class ContactMsg extends Component {
         return notEmpty(subject) && notEmpty(email) && notEmpty(msg);
     }
 
+    postFormData(subject, email, msg) {
+	  var dataString = `&subject='${subject}'&contact-email='${email}'&message='${msg}`;
+
+      // TODO add sucess and failure handlers
+	  $.ajax({
+	        type: "POST",
+	        url: "./scripts/sendEmail.php",
+	        data: dataString,
+	        success: function() {},  
+	        error: function() {}   
+	  });         
+    }
+
     submitForm(e) {
         const submitBtn = e.target;
         e.preventDefault();
         e.stopPropagation();
 
         if(this.validateFields(this.state.subject, this.state.senderEmail, this.state.msg)) {
+          this.postFormData(this.state.subject, this.state.senderEmail, this.state.msg); 
           this.clearForm();
-          submitBtn.parentNode.submit(); 
           return;
         }
 
@@ -87,7 +100,7 @@ export default class ContactMsg extends Component {
     render() {
         const helperContent = this.getHelperContent(this.state.error, this.state.submitted);
         return (
-          <form action="./scripts/sendEmail.php">
+          <form action="./scripts/sendEmail.php" method="post">
             <p className={`contactMsg__notice ${helperContent.class}`}>
                 {helperContent.msg}
             </p>
@@ -117,7 +130,7 @@ export default class ContactMsg extends Component {
               value={this.state.msg}
             />
             <br />
-            <submit onClick={this.boundSubmit} >Submit</submit>
+            <button type="submit" onClick={this.boundSubmit} >Submit</button>
           </form>
         );
     }

@@ -104,8 +104,10 @@
 
 @media screen and (max-width: $md-break) {
     .spinner {
+        float: left;
         width: 100%;
         margin-bottom :34px;
+        margin-right: 20px;
 
         &__block {
             height: 250px;

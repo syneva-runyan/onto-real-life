@@ -26,4 +26,5 @@ https://www.froala.com/wysiwyg-editor
 * Stop being lazy with tests
 * Use Prettier
 * Move legacy blog imgs
+* Improve contact section edge cases & UX
 
