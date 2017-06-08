@@ -19,7 +19,6 @@ https://www.froala.com/wysiwyg-editor
 * Post Content
 * Next & Back Post navigation
 * Photo Map
-* Contact Me
 * Pick better face spinner images
 * Add Search functionality
 * Social Media Sharing capabilities
