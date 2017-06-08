@@ -27,4 +27,5 @@ https://www.froala.com/wysiwyg-editor
 * Use Prettier
 * Move legacy blog imgs
 * Improve contact section edge cases & UX
+* Fix routing fallbacks
 
