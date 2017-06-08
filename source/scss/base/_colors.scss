@@ -1,7 +1,9 @@
 $light-gray: #f0f0f2;
 $text-color: #3d4459;
 $white: #fff;
+$error: #f00;
 
 $primary-color: #004466;
 $primary-color-emphasized: #0c2776;
+$primary-color-light: lighten($primary-color, 0.2);
 $secondary-color: #810a23;

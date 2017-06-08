@@ -1,0 +1,33 @@
+.contactMsg {
+    position: relative;
+
+    &__subject, &__yourEmail {
+        width: calc(50% - 8px);
+    }
+    &__subject {
+        margin-right: 15px;
+    }
+    &__msg {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__notice {
+        color: $secondary-color;
+        font-size: 14px;
+        &--error {
+            color: $error;
+            animation: $ani-speed shake;
+        }
+        &--success {
+            animation: $ani-speed shake;
+            color: $primary-color-light;
+        }
+    }
+
+    @media screen and (max-width: $md-break) { 
+        &__subject, &__yourEmail {
+            width: 100%;
+        }
+    }
+}
