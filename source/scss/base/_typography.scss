@@ -16,6 +16,16 @@ ul, em, strong {
 	color: $primary-color-emphasized;
 }
 
+a {
+    color: $light-blue;
+    text-decoration: none;
+    transition: $ani-speed;
+
+    &:hover {
+        color: lighten($light-blue, 9);
+    }
+}
+
 ul {
 	line-height: 1.75;
 }
