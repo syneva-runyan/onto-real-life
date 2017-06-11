@@ -13,13 +13,19 @@ https://www.froala.com/wysiwyg-editor
 
 ## TODO
 
+### For Production
+* Fix Routing
+* Fix mobile styling
+* Finish Hiking post
+* Pick better face spinner images
+* Better img optimization
+
 * GUI for automatic post generation
 * Optimize Images
 * Post sort functionaly
 * Post Content
 * Next & Back Post navigation
 * Photo Map
-* Pick better face spinner images
 * Add Search functionality
 * Social Media Sharing capabilities
 * Add security for file editing
