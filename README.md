@@ -14,13 +14,10 @@ https://www.froala.com/wysiwyg-editor
 ## TODO
 
 ### For Production
-* Fix Routing
-* Finish Hiking post
-
 * GUI for automatic post generation
 * Optimize Images
 * Post sort functionaly
-* Post Content
+* Post Content Edit and save
 * Next & Back Post navigation
 * Photo Map
 * Add Search functionality
