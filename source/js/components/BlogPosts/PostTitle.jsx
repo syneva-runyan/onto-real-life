@@ -17,16 +17,15 @@ const defaultProps = {
 
 export default function PostTitle(props) {
     return (
-        <div className="postTitle">
+        <div className="postTitle"        >
+            <span className="postTitle__img"
+                style= {{
+                  backgroundImage: `url(${ props.imgPath })`
+                }}
+            />
             <h5 className="postTitle__date">{props.datePublished}</h5>
             <h1 className="postTitle__title">{props.title}</h1>
             { props.tagLine ?  <h3 className="postTitle__tagLine">{props.tagLine}</h3> : null }
-            <hr
-              style= {{
-                  backgroundImage: `url(${ props.imgPath })`
-              }}
-              className="postTitle__divider"
-            />
         </div>
     )
 }

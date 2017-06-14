@@ -17,7 +17,7 @@ export default class BlogPosts extends Component {
 
   renderPost(post, postId, assetBasePath) {
     return (
-    <div className='header'>
+    <div>
       <PostTitle
         title={ post.title }
         datePublished={ post.datePublished }

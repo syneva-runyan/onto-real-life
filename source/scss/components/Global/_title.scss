@@ -14,4 +14,26 @@
 		display: inline-block;
 		font-size: 46px;
 	}
+
+	@media screen and (max-width: $md-break) {
+		background-color: $white;
+		border-radius: 100%;
+		left: 50%;
+		padding: 8px;
+		transform: translateX(-50%);
+		margin-top: 10px;
+		position: absolute;
+
+		&--desktop {
+			display: none;
+		}
+
+		&__block {
+			font-size: 12px;
+			line-height: 12px;
+		}
+		&__text {
+			font-size: 28px;
+		}
+	}
 }
