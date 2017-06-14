@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
+import { routeCodes } from '../../routes';
 
 export default class Title extends Component {
-
   render() {
     return (
-      <p className='title'>
+      <Link className='title' to={routeCodes.HOME} >
         <span className='title__block'>
           <span>
             On
@@ -14,9 +15,9 @@ export default class Title extends Component {
             To
           </span>
         </span>
-        <bold className='title__text'>REAL</bold>
-        <span className='title__text'>LIFE</span>
-      </p>
+        <bold className='title__text'>R<span className="title--desktop">EAL</span></bold>
+        <span className='title__text'>L<span className="title--desktop">IFE</span></span>
+      </Link>
     );
   }
 }

@@ -1,19 +1,19 @@
 .menu {
-	font-family: $secondary-font;
-  padding: 0;
-	position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  font-family: $secondary-font;
+
+  &__nav {
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.25s;
+  }
 
   &__item {
     display: inline-block;
     list-style-type: none;
     text-transform: uppercase;
-
-    &--placeholder {
-      display: none;
-    }
   }
 
   .selected a {
@@ -37,23 +37,16 @@
 	}
 
   @media screen and (max-width: $md-break) {
-    margin-bottom: 0;
-    margin-top: 15px;
-    height: 30px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    transform: none;
-
-    &::after {
-      content: '';
-      background: url("../assets/img/chevron.png");
-      height: 9px;
+    &__nav {
+      background-color: $white;;
+      border-left: 0.5px solid $primary-color-light;
+      margin-bottom: 0;
+      margin-top: 0;
       position: absolute;
-      right: 10px;
-      top: 13px;
-      width: 5px;
-      transition: $ani-speed;
+      top: 35px;
+      transform: translateX(-100%);
+      width: auto;
+      z-index: 1;
     }
 
     &__item {
@@ -62,14 +55,6 @@
       height: 0;
       overflow: hidden;
 
-       &--placeholder {
-         cursor: pointer;
-         display: block;
-         & , a {
-           height: 30px;
-         }
-       }
-
       a {
         border-bottom: 0.5px solid $primary-color-light;
       }
@@ -77,14 +62,10 @@
     }
 
     &--opened {
-      height: auto;
+      transform: none;
 
       .menu__item, .menu__item a {
         height: auto;
-      }
-
-      &::after {
-        transform: rotate(270deg);
       }
     }
 
@@ -99,6 +80,32 @@
       a {
         pointer-events: auto;
       }
+    }
+  }
+
+  &__cta {
+    background: none;
+    display: none;
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    width: auto;
+
+    &:hover, &:focus {
+      background: none;
+    }
+  }
+
+  @media screen and (max-width: $md-break) {
+    width: 100%;
+
+    &__nav {
+      text-align: right;
+    }
+
+
+    &__cta {
+      display: block;
     }
   }
 }

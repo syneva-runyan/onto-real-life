@@ -1,17 +1,18 @@
 $header-margin-bottom: 16px;
 
 .header {
-	display: inline-block;
+	display: block;
 	margin-bottom: $header-margin-bottom;
 	position: relative;
 	width: 100%;
+	z-index: 1;
 
 	&__lead {
 		position: relative;
 	}
 
 	&__logo {
-		background-image: url("../assets/img/airplane.png");
+		background-color: url("../assets/img/airplane.png");
 		background-size: cover;
 		float: left;
 		height: 37px;
@@ -30,6 +31,14 @@ $header-margin-bottom: 16px;
 	}
 
 	@media screen and (max-width: $md-break) {
-	  margin-bottom: 0;
+		background-color: $primary-color;
+		height:35px;
+		margin-bottom: 0;
+		&__logo {
+			display: none;
+		} 
+		&__border {
+			display: none;
+		}
 	}
 }

@@ -15,10 +15,7 @@ https://www.froala.com/wysiwyg-editor
 
 ### For Production
 * Fix Routing
-* Fix mobile styling
 * Finish Hiking post
-* Pick better face spinner images
-* Better img optimization
 
 * GUI for automatic post generation
 * Optimize Images

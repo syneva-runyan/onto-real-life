@@ -11,10 +11,19 @@ body {
   padding: 20px;
   border-radius: 1px;
 
+  .Page {
+    padding-top: 5px;
+  }
+
   @media screen and (max-width: $md-break) {
     border-radius: 0;
-    margin-top: 45px;
+    margin-top: 0px;
+    padding: 0;
     width: 100%;
+
+    .Page {
+      padding: 0 20px 20px;
+    }
   }
 }
 

@@ -1,12 +1,14 @@
-.spinner{
+.spinner {
+  float: left;
   margin-bottom: 15px;
+  margin-right: 20px;
   position: relative;
   width: 30%;
   text-align: center;
 
   
   &__block {
-    height: 380px;
+    height: 255px;
     position: relative;
   }
 
