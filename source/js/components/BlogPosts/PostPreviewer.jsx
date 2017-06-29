@@ -20,10 +20,8 @@ export default class PostPreviewer extends Component {
   render() {
     return (
       <Link
-        className='postPreviewer'
-        style={ { 
-          backgroundImage: `url("${ this.props.assetPath }/preview.jpg")`,
-        } }
+        className='postPreviewer lazyload'
+        data-bgset={ `${ this.props.assetPath }/preview.jpg ` }
         tabIndex={0}
         to={ `posts/${ this.props.postId }` }
       >
