@@ -7,7 +7,4 @@ import Routes from 'routes';
 import '../scss/app.scss';
 
 // Render it to DOM
-ReactDOM.render(
-  <Routes />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Routes />, document.getElementById('root'));

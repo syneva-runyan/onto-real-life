@@ -4,14 +4,14 @@ var malta = require('./malta/config.json');
 var morocco = require('./morocco/config.json');
 var seeTheWorld = require('./seeTheWorld/config.json');
 var newZealandNorthOverview = require('./newZealandNorthOverview/config.json');
-var newZealandNorthHiking =require('./newZealandNorthHiking/config.json');
+var newZealandNorthHiking = require('./newZealandNorthHiking/config.json');
 
-module.exports = { 
-  newZealandNorthOverview,
-  newZealandNorthHiking,
-  barcelona,
-  eatingAlone,
-  malta,
-  morocco,
-  seeTheWorld
+module.exports = {
+	newZealandNorthOverview,
+	newZealandNorthHiking,
+	barcelona,
+	eatingAlone,
+	malta,
+	morocco,
+	seeTheWorld,
 };
