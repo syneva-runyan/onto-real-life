@@ -148,7 +148,7 @@ module.exports = {
   context: jsSourcePath,
   entry: {
     js: './index.js',
-    vendor: ['lazysizes'],
+    vendor: ['lazysizes', 'lazysizes/plugins/bgset/ls.bgset.min.js'],
   },
   output: {
     path: buildPath,

@@ -22,7 +22,7 @@ export default class BlogPosts extends Component {
         title={ post.title }
         datePublished={ post.datePublished }
         tagLine={ post.tagLine }
-        imgPath = { `${ assetBasePath }/${ postId }/introImg.jpg` }
+        imgPath = { `${ assetBasePath }/${ postId }` }
         />
       <PostContent postId={ postId } />
     </div>
