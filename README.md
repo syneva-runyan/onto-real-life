@@ -29,4 +29,5 @@ https://www.froala.com/wysiwyg-editor
 * Improve contact section edge cases & UX
 * Fix routing fallbacks
 * Add vendor.js optimizations
+* Add lazy loading to blogpost images
 
