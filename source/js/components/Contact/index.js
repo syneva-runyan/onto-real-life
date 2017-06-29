@@ -1,5 +1,5 @@
-import ContactMsg from './ContactMsg.jsx';
+import ContactMsg from "./ContactMsg.jsx";
 
 module.exports = {
-	ContactMsg,
+  ContactMsg,
 };

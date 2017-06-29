@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import PostHelper from '../../utils/post-helper';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import PostHelper from "../../utils/post-helper";
 
 // Require Editor JS files.
 require("froala-editor/js/froala_editor.pkgd.min.js");
@@ -9,11 +9,10 @@ require("froala-editor/css/froala_style.min.css");
 require("froala-editor/css/froala_editor.pkgd.min.css");
 
 // Require Font Awesome.
-require('font-awesome/css/font-awesome.css');
+require("font-awesome/css/font-awesome.css");
 
-var FroalaEditor = require('react-froala-wysiwyg');
-var FroalaEditorView = require('react-froala-wysiwyg/FroalaEditorView');
-
+var FroalaEditor = require("react-froala-wysiwyg");
+var FroalaEditorView = require("react-froala-wysiwyg/FroalaEditorView");
 
 const propTypes = {};
 
@@ -38,7 +37,7 @@ export default class PostContent extends Component {
   //TODO post GET failures
   setPostContent(postContent) {
     this.setState({
-      content: postContent, 
+      content: postContent,
     });
   }
 
@@ -49,7 +48,7 @@ export default class PostContent extends Component {
   render() {
     return (
       <div className="postContent">
-        {   /* 
+        {/* 
         <div className="editor">
           <FroalaEditor
             tag='textarea'
@@ -57,7 +56,7 @@ export default class PostContent extends Component {
             config={this.config}
           />
           <button onClick={this.boundSavePost}>Save</button>
-        </div> */ }
+        </div> */}
         <FroalaEditorView model={this.state.content} />
       </div>
     );

@@ -1,5 +1,5 @@
-import Contact from './Contact.jsx';
+import Contact from "./Contact.jsx";
 
 module.exports = {
-	Contact,
+  Contact,
 };

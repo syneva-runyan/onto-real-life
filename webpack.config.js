@@ -1,49 +1,46 @@
-const webpack = require('webpack');
-const path = require('path');
+const webpack = require("webpack");
+const path = require("path");
 
-const DashboardPlugin = require('webpack-dashboard/plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const autoprefixer = require('autoprefixer');
+const DashboardPlugin = require("webpack-dashboard/plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const autoprefixer = require("autoprefixer");
 
-const nodeEnv = process.env.NODE_ENV || 'development';
-const isProduction = nodeEnv === 'production';
+const nodeEnv = process.env.NODE_ENV || "development";
+const isProduction = nodeEnv === "production";
 
-const jsSourcePath = path.join(__dirname, './source/js');
-const buildPath = path.join(__dirname, './build');
-const imgPath = path.join(__dirname, './source/assets/img');
-const sourcePath = path.join(__dirname, './source');
+const jsSourcePath = path.join(__dirname, "./source/js");
+const buildPath = path.join(__dirname, "./build");
+const imgPath = path.join(__dirname, "./source/assets/img");
+const sourcePath = path.join(__dirname, "./source");
 
 // Common plugins
 const plugins = [
   new webpack.optimize.CommonsChunkPlugin({
-    name: 'vendor',
-    filename: 'vendor-[hash].js',
+    name: "vendor",
+    filename: "vendor-[hash].js",
     minChunks(module) {
       const context = module.context;
-      return context && context.indexOf('node_modules') >= 0;
+      return context && context.indexOf("node_modules") >= 0;
     },
   }),
   new webpack.DefinePlugin({
-    'process.env': {
+    "process.env": {
       NODE_ENV: JSON.stringify(nodeEnv),
     },
   }),
   new webpack.NamedModulesPlugin(),
   new HtmlWebpackPlugin({
-    template: path.join(sourcePath, 'index.html'),
+    template: path.join(sourcePath, "index.html"),
     path: buildPath,
-    filename: 'index.html',
+    filename: "index.html",
   }),
   new webpack.LoaderOptionsPlugin({
     options: {
       postcss: [
         autoprefixer({
-          browsers: [
-            'last 3 version',
-            'ie >= 10',
-          ],
+          browsers: ["last 3 version", "ie >= 10"],
         }),
       ],
       context: sourcePath,
@@ -51,35 +48,35 @@ const plugins = [
   }),
   new webpack.ProvidePlugin({
     $: "jquery",
-    jQuery: "jquery"
+    jQuery: "jquery",
   }),
-  new CopyWebpackPlugin([{
-    from: "../assets/scripts/sendEmail.php", to: "scripts/sendEmail.php",
-  }]),
+  new CopyWebpackPlugin([
+    {
+      from: "../assets/scripts/sendEmail.php",
+      to: "scripts/sendEmail.php",
+    },
+  ]),
 ];
 
 // Common rules
 const rules = [
   {
     test: /\.css$/,
-    use: [
-      'style-loader',
-      'css-loader',
-    ],
-  }, {
+    use: ["style-loader", "css-loader"],
+  },
+  {
     test: /\.(js|jsx)$/,
     exclude: /node_modules/,
-    use: [
-      'babel-loader',
-    ],
+    use: ["babel-loader"],
   },
   {
     test: /\.(png|gif|jpg|svg)$/,
     include: imgPath,
-    use: 'url-loader?limit=20480&name=assets/[name]-[hash].[ext]',
-  }, {
+    use: "url-loader?limit=20480&name=assets/[name]-[hash].[ext]",
+  },
+  {
     test: /\.(eot|otf|svg|ttf|woff|woff2)$/,
-    use: 'file-loader?name=fonts/[name].[ext]',
+    use: "file-loader?name=fonts/[name].[ext]",
   },
 ];
 
@@ -103,67 +100,63 @@ if (isProduction) {
         comments: false,
       },
     }),
-    new ExtractTextPlugin('style-[hash].css')
+    new ExtractTextPlugin("style-[hash].css"),
   );
 
   // Production rules
-  rules.push(
-    {
-      test: /\.scss$/,
-      loader: ExtractTextPlugin.extract({
-        fallback: 'style-loader',
-        use: 'css-loader!postcss-loader!sass-loader',
-      }),
-    }
-  );
+  rules.push({
+    test: /\.scss$/,
+    loader: ExtractTextPlugin.extract({
+      fallback: "style-loader",
+      use: "css-loader!postcss-loader!sass-loader",
+    }),
+  });
 } else {
   // Development plugins
-  plugins.push(
-    new webpack.HotModuleReplacementPlugin(),
-    new DashboardPlugin()
-  );
+  plugins.push(new webpack.HotModuleReplacementPlugin(), new DashboardPlugin());
 
   // Development rules
-  rules.push(
-    {
-      test: /\.scss$/,
-      exclude: /node_modules/,
-      use: [
-        'style-loader',
-        // Using source maps breaks urls in the CSS loader
-        // https://github.com/webpack/css-loader/issues/232
-        // This comment solves it, but breaks testing from a local network
-        // https://github.com/webpack/css-loader/issues/232#issuecomment-240449998
-        // 'css-loader?sourceMap',
-        'css-loader',
-        'postcss-loader',
-        'sass-loader?sourceMap',
-      ],
-    }
-  );
+  rules.push({
+    test: /\.scss$/,
+    exclude: /node_modules/,
+    use: [
+      "style-loader",
+      // Using source maps breaks urls in the CSS loader
+      // https://github.com/webpack/css-loader/issues/232
+      // This comment solves it, but breaks testing from a local network
+      // https://github.com/webpack/css-loader/issues/232#issuecomment-240449998
+      // 'css-loader?sourceMap',
+      "css-loader",
+      "postcss-loader",
+      "sass-loader?sourceMap",
+    ],
+  });
 }
 
 module.exports = {
-  devtool: isProduction ? false : 'source-map',
+  devtool: isProduction ? false : "source-map",
   context: jsSourcePath,
   entry: {
-    js: './index.js',
-    vendor: ['lazysizes', 'lazysizes/plugins/bgset/ls.bgset.min.js'],
+    js: "./index.js",
+    vendor: ["lazysizes", "lazysizes/plugins/bgset/ls.bgset.min.js"],
   },
   output: {
     path: buildPath,
-    publicPath: '/',
-    filename: 'app-[hash].js',
+    publicPath: "/",
+    filename: "app-[hash].js",
   },
   module: {
     rules,
   },
   resolve: {
-    extensions: ['.webpack-loader.js', '.web-loader.js', '.loader.js', '.js', '.jsx'],
-    modules: [
-      path.resolve(__dirname, 'node_modules'),
-      jsSourcePath,
+    extensions: [
+      ".webpack-loader.js",
+      ".web-loader.js",
+      ".loader.js",
+      ".js",
+      ".jsx",
     ],
+    modules: [path.resolve(__dirname, "node_modules"), jsSourcePath],
   },
   plugins,
   devServer: {
@@ -173,7 +166,7 @@ module.exports = {
     compress: isProduction,
     inline: !isProduction,
     hot: !isProduction,
-    host: '0.0.0.0',
+    host: "0.0.0.0",
     stats: {
       assets: true,
       children: false,
@@ -185,7 +178,7 @@ module.exports = {
       version: false,
       warnings: true,
       colors: {
-        green: '\u001b[32m',
+        green: "\u001b[32m",
       },
     },
   },
