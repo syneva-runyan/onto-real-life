@@ -18,10 +18,11 @@ const defaultProps = {
 export default function PostTitle(props) {
     return (
         <div className="postTitle"        >
-            <span className="postTitle__img"
-                style= {{
-                  backgroundImage: `url(${ props.imgPath })`
-                }}
+            <span className="postTitle__img lazyload"
+                data-bgset={ `${ props.imgPath }/introImg--sm.jpg [(max-width: 400px)] |
+                              ${ props.imgPath }/introImg--md.jpg  [(max-width: 725px)] |
+                              ${ props.imgPath }/introImg--lg.jpg [(max-width: 1025px)] |
+                              ${ props.imgPath }/introImg.jpg` }
             />
             <h5 className="postTitle__date">{props.datePublished}</h5>
             <h1 className="postTitle__title">{props.title}</h1>
