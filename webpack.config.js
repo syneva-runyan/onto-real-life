@@ -148,6 +148,7 @@ module.exports = {
   context: jsSourcePath,
   entry: {
     js: './index.js',
+    vendor: ['lazysizes'],
   },
   output: {
     path: buildPath,
