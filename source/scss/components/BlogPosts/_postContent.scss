@@ -3,6 +3,10 @@
         padding-left: 15px;
     }
 
+    br {
+        clear: both;
+    }
+
     figure {
         background-color: $light-gray;
         box-shadow: 0 0 19px 3px darken($light-gray, 9);
@@ -11,6 +15,7 @@
         overflow: hidden;
         img {
             margin: 0;
+            width: 100%;
         }
     }
 
