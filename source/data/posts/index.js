@@ -5,8 +5,10 @@ var morocco = require('./morocco/config.json');
 var seeTheWorld = require('./seeTheWorld/config.json');
 var newZealandNorthOverview = require('./newZealandNorthOverview/config.json');
 var newZealandNorthHiking =require('./newZealandNorthHiking/config.json');
+var newZealandSouth = require('./newZealandSouth/config.json');
 
 module.exports = { 
+  newZealandSouth,
   newZealandNorthOverview,
   newZealandNorthHiking,
   barcelona,
