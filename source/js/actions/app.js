@@ -10,7 +10,7 @@ export const TEST_ASYNC_ACTION_SUCCESS = "TEST_ASYNC_ACTION_SUCCESS";
 
 export function testAction() {
   return {
-              type: TEST_ACTION,
+          type: TEST_ACTION,
   };
 }
 
