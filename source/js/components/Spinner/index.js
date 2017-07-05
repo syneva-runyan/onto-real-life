@@ -1,5 +1,5 @@
-import Spinner from './Spinner';
+import Spinner from "./Spinner";
 
 module.exports = {
-  Spinner,
+  Spinner
 };

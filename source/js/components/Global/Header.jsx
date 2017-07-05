@@ -1,28 +1,28 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import Title from './Title';
-import Menu from './Menu';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import Title from "./Title";
+import Menu from "./Menu";
 
 const propTypes = {
-  location: PropTypes.object,
+  location: PropTypes.object
 };
 
 const defaultProps = {
   location: {
-    pathname: '',
-  },
+    pathname: ""
+  }
 };
 
 export default class Header extends Component {
   render() {
     return (
-      <div className='header'>
-        <div className='header__lead'>
-          <span className='header__logo' />
+      <div className="header">
+        <div className="header__lead">
+          <span className="header__logo" />
           <Title />
-          <span id='headerBorder' className='header__border' />
+          <span id="headerBorder" className="header__border" />
         </div>
-        <Menu pathname={ this.props.location.pathname } />
+        <Menu pathname={this.props.location.pathname} />
       </div>
     );
   }
@@ -30,4 +30,3 @@ export default class Header extends Component {
 
 Header.propTypes = propTypes;
 Header.defaultProps = defaultProps;
-

@@ -1,140 +1,147 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-
-const propTypes = {};
-
-const defaultProps = {};
+import React, { Component } from "react";
 
 const notEmpty = function(value) {
-  return value && value!=="";
-}
+  return value && value !== "";
+};
 
 export default class ContactMsg extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            subject: "",
-            senderEmail: "",
-            msg: "",
-        }
+  constructor(props) {
+    super(props);
+    this.state = {
+      subject: "",
+      senderEmail: "",
+      msg: ""
+    };
 
-        this.boundSubjectChange = this.onChange.bind(this, 'subject');
-        this.boundEmailChange = this.onChange.bind(this, 'senderEmail');
-        this.boundMsgChange = this.onChange.bind(this, 'msg');
-        this.boundSubmit = this.submitForm.bind(this);
+    this.boundSubjectChange = this.onChange.bind(this, "subject");
+    this.boundEmailChange = this.onChange.bind(this, "senderEmail");
+    this.boundMsgChange = this.onChange.bind(this, "msg");
+    this.boundSubmit = this.submitForm.bind(this);
+  }
+
+  onChange(field, e) {
+    const newValue = e.target.value;
+    const keyValuePair = {};
+    keyValuePair[field] = newValue;
+
+    this.setState(keyValuePair);
+  }
+
+  getHelperContent(error, submitted) {
+    if (error) {
+      return {
+        msg: "Please ensure all fields have values",
+        class: "contactMsg__notice--error"
+      };
     }
 
-    onChange(field, e) {
-        const newValue = e.target.value;
-        const keyValuePair = {};
-        keyValuePair[field] = newValue;
-
-        this.setState(keyValuePair);
+    if (submitted) {
+      return {
+        msg:
+          "Thank you for your message! I will try to respond in a timely manor.",
+        class: "contactMsg__notice--success"
+      };
     }
 
-    clearForm() {
-        this.setState({
-            submitted: true,
-            error: false,
-            msg: "",
-            senderEmail: "",
-            subject: "",
-        });
+    return {
+      msg: "*All fields required",
+      class: ""
+    };
+  }
+
+  submitForm(e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (
+      this.validateFields(
+        this.state.subject,
+        this.state.senderEmail,
+        this.state.msg
+      )
+    ) {
+      this.postFormData(
+        this.state.subject,
+        this.state.senderEmail,
+        this.state.msg
+      );
+      this.clearForm();
+      return;
     }
 
-    validateFields(subject, email, msg) {
-        return notEmpty(subject) && notEmpty(email) && notEmpty(msg);
-    }
+    this.setState({
+      error: true,
+      submitted: false
+    });
+  }
 
-    postFormData(subject, email, msg) {
-	  var dataString = `&subject='${subject}'&contact-email='${email}'&message='${msg}`;
+  postFormData(subject, email, msg) {
+    const dataString = `&subject='${subject}'&contact-email='${email}'&message='${msg}`;
 
-      // TODO add sucess and failure handlers
-	  $.ajax({
-	        type: "POST",
-	        url: "./scripts/sendEmail.php",
-	        data: dataString,
-	        success: function() {},  
-	        error: function() {}   
-	  });         
-    }
+    // TODO add sucess and failure handlers
+    $.ajax({
+      type: "POST",
+      url: "./scripts/sendEmail.php",
+      data: dataString,
+      success: () => {},
+      error: () => {}
+    });
+  }
 
-    submitForm(e) {
-        const submitBtn = e.target;
-        e.preventDefault();
-        e.stopPropagation();
+  validateFields(subject, email, msg) {
+    return notEmpty(subject) && notEmpty(email) && notEmpty(msg);
+  }
 
-        if(this.validateFields(this.state.subject, this.state.senderEmail, this.state.msg)) {
-          this.postFormData(this.state.subject, this.state.senderEmail, this.state.msg); 
-          this.clearForm();
-          return;
-        }
+  clearForm() {
+    this.setState({
+      submitted: true,
+      error: false,
+      msg: "",
+      senderEmail: "",
+      subject: ""
+    });
+  }
 
-        this.setState ({
-            error: true,
-            submitted: false,
-        })
-    }
-
-    getHelperContent(error, submitted) {
-        if (error) {
-            return {
-                msg: "Please ensure all fields have values",
-                class: "contactMsg__notice--error",
-            }
-        }
-
-        if(submitted) {
-            return {
-                msg: "Thank you for your message! I will try to respond in a timely manor.",
-                class: "contactMsg__notice--success",
-            };
-        }
-
-        return  {
-            msg: "*All fields required",
-            class: "",
-        }
-    }
-
-    render() {
-        const helperContent = this.getHelperContent(this.state.error, this.state.submitted);
-        return (
-          <form action="./scripts/sendEmail.php" method="post">
-            <p className={`contactMsg__notice ${helperContent.class}`}>
-                {helperContent.msg}
-            </p>
-            <input
-              className="contactMsg__subject"
-              name="contact-subject"
-              id="contact-subject"
-              placeholder="Subject"
-              value={this.state.subject}
-              onChange={this.boundSubjectChange}
-            />
-            <input
-              className="contactMsg__yourEmail"
-              name="message"
-              id="contact-email"
-              placeholder="Your email"
-              value={this.state.senderEmail} 
-              onChange={this.boundEmailChange}
-            />
-            <br />
-            <textarea
-              className="contactMsg__msg"
-              placeholder="Hi! I love your site..."
-              name="message"
-              id="contact-message"
-              onChange={this.boundMsgChange}
-              value={this.state.msg}
-            />
-            <br />
-            <button type="submit" onClick={this.boundSubmit} >Submit</button>
-          </form>
-        );
-    }
+  render() {
+    const helperContent = this.getHelperContent(
+      this.state.error,
+      this.state.submitted
+    );
+    return (
+      <form action="./scripts/sendEmail.php" method="post">
+        <p className={`contactMsg__notice ${helperContent.class}`}>
+          {helperContent.msg}
+        </p>
+        <input
+          className="contactMsg__subject"
+          name="contact-subject"
+          id="contact-subject"
+          placeholder="Subject"
+          value={this.state.subject}
+          onChange={this.boundSubjectChange}
+        />
+        <input
+          className="contactMsg__yourEmail"
+          name="message"
+          id="contact-email"
+          placeholder="Your email"
+          value={this.state.senderEmail}
+          onChange={this.boundEmailChange}
+        />
+        <br />
+        <textarea
+          className="contactMsg__msg"
+          placeholder="Hi! I love your site..."
+          name="message"
+          id="contact-message"
+          onChange={this.boundMsgChange}
+          value={this.state.msg}
+        />
+        <br />
+        <button type="submit" onClick={this.boundSubmit}>
+          Submit
+        </button>
+      </form>
+    );
+  }
 }
-
-ContactMsg.propTypes = propTypes;
-ContactMsg.defaultProps = defaultProps;

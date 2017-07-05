@@ -1,13 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import Routes from 'routes';
+import Routes from "routes";
 
 // Load SCSS
-import '../scss/app.scss';
+import "../scss/app.scss";
 
 // Render it to DOM
-ReactDOM.render(
-  <Routes />,
-  document.getElementById('root')
-);
+ReactDOM.render(<Routes />, document.getElementById("root"));

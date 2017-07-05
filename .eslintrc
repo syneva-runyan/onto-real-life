@@ -19,6 +19,10 @@ ecmaFeatures:
 env:
   browser: true
 
+globals:
+  ActiveXObject: {}
+  $: {}
+
 rules:
   arrow-body-style: 0
   arrow-parens: 0
@@ -29,22 +33,26 @@ rules:
   no-plusplus: 0
   no-return-assign: 0
   quote-props: 0
-  template-curly-spacing: [2, "always"]
+  template-curly-spacing: [2, "never"]
   comma-dangle: ["error", {
     "arrays": "always-multiline",
     "objects": "always-multiline",
     "imports": "always-multiline",
     "exports": "always-multiline",
-    "functions": "never"
   }]
-  jsx-quotes: [2, "prefer-single"]
+  jsx-quotes: [2, "prefer-double"]
+  quotes: 0
   react/forbid-prop-types: 0
-  react/jsx-curly-spacing: [2, "always"]
+  react/jsx-curly-spacing: [2, "never"]
   react/jsx-filename-extension: 0
   react/jsx-boolean-value: 0
+  react/jsx-indent: 0
   react/prefer-stateless-function: 0
   import/extensions: 0
   import/no-extraneous-dependencies: 0
   import/no-unresolved: 0
   import/prefer-default-export: 0
   linebreak-style: 0
+  space-before-function-paren: ["error", "never"]
+  no-mixed-operators: 0
+  max-len: 0
