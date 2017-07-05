@@ -9,7 +9,7 @@
     "start": "webpack-dashboard -- webpack-dev-server --colors --no-info",
     "build": "rm -rf ./build && cross-env NODE_ENV=\"production\" webpack",
     "lint-break-on-errors": "eslint ./source/js ./webpack.config.js -f table --ext .js --ext .jsx --fix",
-    "lint": "eslint ./source/js ./webpack.config.js -f table --ext .js --ext .jsx || true --fix"
+    "lint": "eslint ./source/js ./webpack.config.js -f table --ext .js --ext .jsx || true --fix",
   },
   "devDependencies": {
     "autoprefixer": "^6.5.3",

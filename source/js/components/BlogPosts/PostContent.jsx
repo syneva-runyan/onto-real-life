@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import PostHelper from "../../utils/post-helper";
 
+// const FroalaEditor = require("react-froala-wysiwyg");
+const FroalaEditorView = require("react-froala-wysiwyg/FroalaEditorView");
+
 // Require Editor JS files.
 require("froala-editor/js/froala_editor.pkgd.min.js");
 // Require Editor CSS files.
@@ -11,12 +14,13 @@ require("froala-editor/css/froala_editor.pkgd.min.css");
 // Require Font Awesome.
 require("font-awesome/css/font-awesome.css");
 
-var FroalaEditor = require("react-froala-wysiwyg");
-var FroalaEditorView = require("react-froala-wysiwyg/FroalaEditorView");
+const propTypes = {
+  postId: PropTypes.string,
+};
 
-const propTypes = {};
-
-const defaultProps = {};
+const defaultProps = {
+  postId: null,
+};
 
 export default class PostContent extends Component {
   constructor(props) {
@@ -34,7 +38,7 @@ export default class PostContent extends Component {
     PostHelper.getPost(this.props.postId, this.setPostContent.bind(this));
   }
 
-  //TODO post GET failures
+  // TODO post GET failures
   setPostContent(postContent) {
     this.setState({
       content: postContent,
@@ -48,7 +52,7 @@ export default class PostContent extends Component {
   render() {
     return (
       <div className="postContent">
-        {/* 
+        {/*
         <div className="editor">
           <FroalaEditor
             tag='textarea'

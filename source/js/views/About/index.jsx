@@ -10,8 +10,8 @@ export default class About extends Component {
 
         <hr />
         <blockquote>
-          Hi! My name is Syneva. It's pronounced like Geneva (Switzerland) but
-          with an S.
+          Hi! My name is Syneva. It&apos;s pronounced like Geneva (Switzerland)
+          but with an S.
         </blockquote>
         <Spinner />
         <AboutMe />

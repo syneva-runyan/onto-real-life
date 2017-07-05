@@ -6,23 +6,27 @@ import PostCollection from "./PostCollection";
 
 const assetBasePath = "/assets/img/blogs";
 
-const propTypes = {};
+const propTypes = {
+  params: PropTypes.object,
+};
 
-const defaultProps = {};
+const defaultProps = {
+  params: null,
+};
 
 export default class BlogPosts extends Component {
-  renderCollection(assetBasePath) {
-    return <PostCollection assetBasePath={assetBasePath} />;
+  renderCollection(assetBase) {
+    return <PostCollection assetBasePath={assetBase} />;
   }
 
-  renderPost(post, postId, assetBasePath) {
+  renderPost(post, postId, assetBase) {
     return (
       <div>
         <PostTitle
           title={post.title}
           datePublished={post.datePublished}
           tagLine={post.tagLine}
-          imgPath={`${assetBasePath}/${postId}`}
+          imgPath={`${assetBase}/${postId}`}
         />
         <PostContent postId={postId} />
       </div>
