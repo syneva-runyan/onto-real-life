@@ -11,6 +11,10 @@ Because state management is not extensively needed in this project currently, I'
 The tool used for the generation of blog post html content is Frola.
 https://www.froala.com/wysiwyg-editor
 
+### Git
+#### Precommit
+Prettier is executed and fixes are saved before each commit.
+
 ## TODO
 
 ### For Production

@@ -1,6 +1,9 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import PostHelper from '../../utils/post-helper';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import PostHelper from "../../utils/post-helper";
+
+// const FroalaEditor = require("react-froala-wysiwyg");
+const FroalaEditorView = require("react-froala-wysiwyg/FroalaEditorView");
 
 // Require Editor JS files.
 require("froala-editor/js/froala_editor.pkgd.min.js");
@@ -9,15 +12,15 @@ require("froala-editor/css/froala_style.min.css");
 require("froala-editor/css/froala_editor.pkgd.min.css");
 
 // Require Font Awesome.
-require('font-awesome/css/font-awesome.css');
+require("font-awesome/css/font-awesome.css");
 
-var FroalaEditor = require('react-froala-wysiwyg');
-var FroalaEditorView = require('react-froala-wysiwyg/FroalaEditorView');
+const propTypes = {
+  postId: PropTypes.string
+};
 
-
-const propTypes = {};
-
-const defaultProps = {};
+const defaultProps = {
+  postId: null
+};
 
 export default class PostContent extends Component {
   constructor(props) {
@@ -25,7 +28,7 @@ export default class PostContent extends Component {
 
     this.state = {
       model: false,
-      config: {},
+      config: {}
     };
 
     this.boundSavePost = this.savePost.bind(this);
@@ -35,10 +38,10 @@ export default class PostContent extends Component {
     PostHelper.getPost(this.props.postId, this.setPostContent.bind(this));
   }
 
-  //TODO post GET failures
+  // TODO post GET failures
   setPostContent(postContent) {
     this.setState({
-      content: postContent, 
+      content: postContent
     });
   }
 
@@ -49,7 +52,7 @@ export default class PostContent extends Component {
   render() {
     return (
       <div className="postContent">
-        {   /* 
+        {/*
         <div className="editor">
           <FroalaEditor
             tag='textarea'
@@ -57,7 +60,7 @@ export default class PostContent extends Component {
             config={this.config}
           />
           <button onClick={this.boundSavePost}>Save</button>
-        </div> */ }
+        </div> */}
         <FroalaEditorView model={this.state.content} />
       </div>
     );
