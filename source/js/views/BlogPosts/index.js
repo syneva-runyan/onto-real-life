@@ -1,7 +1,7 @@
-import BlogPosts from './BlogPosts';
-import PostCollection from './PostCollection';
+import BlogPosts from "./BlogPosts";
+import PostCollection from "./PostCollection";
 
 module.exports = {
   BlogPosts,
-  PostCollection,
+  PostCollection
 };
