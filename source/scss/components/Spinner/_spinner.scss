@@ -16,19 +16,22 @@
       margin-top: 10px;
   }
 
-  .click-trigger{
+  .click-trigger {
+    background: none;
     cursor: pointer;
     position: absolute;
-      z-index: 1;
-      width: 100%;
-      height: 33%;
-      top:0;
-      &.middle{
+    z-index: 1;
+    width: 100%;
+    height: 33%;
+    left: 0;
+    top:0;
+
+    &.middle{
       top:33%;
-      }
-      &.bottom{
+    }
+    &.bottom{
       top: 66%;
-      }
+    }
   }
   .cube{
     transition: 0.25s all;

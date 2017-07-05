@@ -100,7 +100,7 @@ if (isProduction) {
         comments: false,
       },
     }),
-    new ExtractTextPlugin("style-[hash].css"),
+    new ExtractTextPlugin("style-[hash].css")
   );
 
   // Production rules

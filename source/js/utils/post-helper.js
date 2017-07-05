@@ -10,15 +10,15 @@ if (window.XMLHttpRequest) {
 
 class PostHelper {
   parsePostResponse(requestObj, callback) {
-    //TODO handle failures
+    // TODO handle failures
     return function() {
-      if (requestObj.readyState == 4 && requestObj.status == 200) {
+      if (requestObj.readyState === 4 && requestObj.status === 200) {
         callback(requestObj.responseText);
       }
     };
   }
   getPost(postId, callback) {
-    let xmlRequest = new xmlhttp();
+    const xmlRequest = new xmlhttp();
     xmlRequest.onreadystatechange = this.parsePostResponse(
       xmlRequest,
       callback,
@@ -26,9 +26,10 @@ class PostHelper {
     xmlRequest.open("GET", `${postAssetPath}/${postId}/content.html`, true);
     xmlRequest.send();
   }
+  /* eslint-disable no-unused-vars */
   savePost(postId, content) {
-    var a = document.getElementById("a");
-    var file = new Blob([content], { type: "html" });
+    const a = document.getElementById("a");
+    // const file = new Blob([content], { type: "html" });
     a.href = URL.createObjectURL(`${postAssetPath}/${postId}/content.html`);
     a.download = name;
   }

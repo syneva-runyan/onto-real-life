@@ -1,9 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-
-const propTypes = {};
-
-const defaultProps = {};
 
 const notEmpty = function(value) {
   return value && value !== "";
@@ -32,35 +27,29 @@ export default class ContactMsg extends Component {
     this.setState(keyValuePair);
   }
 
-  clearForm() {
-    this.setState({
-      submitted: true,
-      error: false,
-      msg: "",
-      senderEmail: "",
-      subject: "",
-    });
-  }
+  getHelperContent(error, submitted) {
+    if (error) {
+      return {
+        msg: "Please ensure all fields have values",
+        class: "contactMsg__notice--error",
+      };
+    }
 
-  validateFields(subject, email, msg) {
-    return notEmpty(subject) && notEmpty(email) && notEmpty(msg);
-  }
+    if (submitted) {
+      return {
+        msg:
+          "Thank you for your message! I will try to respond in a timely manor.",
+        class: "contactMsg__notice--success",
+      };
+    }
 
-  postFormData(subject, email, msg) {
-    var dataString = `&subject='${subject}'&contact-email='${email}'&message='${msg}`;
-
-    // TODO add sucess and failure handlers
-    $.ajax({
-      type: "POST",
-      url: "./scripts/sendEmail.php",
-      data: dataString,
-      success: function() {},
-      error: function() {},
-    });
+    return {
+      msg: "*All fields required",
+      class: "",
+    };
   }
 
   submitForm(e) {
-    const submitBtn = e.target;
     e.preventDefault();
     e.stopPropagation();
 
@@ -86,26 +75,31 @@ export default class ContactMsg extends Component {
     });
   }
 
-  getHelperContent(error, submitted) {
-    if (error) {
-      return {
-        msg: "Please ensure all fields have values",
-        class: "contactMsg__notice--error",
-      };
-    }
+  postFormData(subject, email, msg) {
+    const dataString = `&subject='${subject}'&contact-email='${email}'&message='${msg}`;
 
-    if (submitted) {
-      return {
-        msg:
-          "Thank you for your message! I will try to respond in a timely manor.",
-        class: "contactMsg__notice--success",
-      };
-    }
+    // TODO add sucess and failure handlers
+    $.ajax({
+      type: "POST",
+      url: "./scripts/sendEmail.php",
+      data: dataString,
+      success: () => {},
+      error: () => {},
+    });
+  }
 
-    return {
-      msg: "*All fields required",
-      class: "",
-    };
+  validateFields(subject, email, msg) {
+    return notEmpty(subject) && notEmpty(email) && notEmpty(msg);
+  }
+
+  clearForm() {
+    this.setState({
+      submitted: true,
+      error: false,
+      msg: "",
+      senderEmail: "",
+      subject: "",
+    });
   }
 
   render() {
@@ -151,6 +145,3 @@ export default class ContactMsg extends Component {
     );
   }
 }
-
-ContactMsg.propTypes = propTypes;
-ContactMsg.defaultProps = defaultProps;
