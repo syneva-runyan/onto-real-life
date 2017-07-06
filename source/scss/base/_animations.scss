@@ -1,5 +1,14 @@
 $ani-speed: 0.25s;
 
+.blur-up {
+		filter: blur(5px);
+		transition: filter $ani-speed * 1.5, -webkit-filter $ani-speed * 1.5;
+	}
+
+.blur-up.lazyloaded {
+	  filter: blur(0);
+}
+
 @keyframes shake {
     0%{
       transform: translateX(2px);

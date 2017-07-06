@@ -20,7 +20,7 @@ export default class PostPreviewer extends Component {
   render() {
     return (
       <Link
-        className="postPreviewer lazyload"
+        className="postPreviewer lazyload blur-up"
         data-bgset={`${this.props.assetPath}/preview.jpg `}
         tabIndex={0}
         to={`posts/${this.props.postId}`}
