@@ -19,7 +19,7 @@ export default function PostTitle(props) {
   return (
     <div className="postTitle">
       <span
-        className="postTitle__img lazyload"
+        className="postTitle__img lazyload blur-up"
         data-bgset={`${props.imgPath}/introImg--sm.jpg [(max-width: 400px)] |
                               ${props.imgPath}/introImg--md.jpg  [(max-width: 725px)] |
                               ${props.imgPath}/introImg--lg.jpg [(max-width: 1025px)] |
