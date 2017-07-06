@@ -3,7 +3,7 @@ $primary-font-bold: verlag-book;
 $secondary-font: alegreyaSans-light;
 $secondary-font-bold: alegreyaSans-regular;
 
-a, p, h1, h2, h3, h4, h5, h6, ul {
+a, p, h1, h2, h3, h4, h5, h6, ul, ol {
 	font-family: $primary-font;
 	color: $text-color;
 }
@@ -26,8 +26,12 @@ a {
     }
 }
 
-ul {
+ul, ol {
 	line-height: 1.75;
+}
+
+ol {
+    padding-left: 15px;
 }
 
 bold {
