@@ -1,12 +1,12 @@
 import React from "react";
-import { BlogPosts } from "../../source/js/views/BlogPosts/index.js";
+import About from "../../../source/js/views/About/index.jsx";
 import { shallow } from "enzyme";
 
-describe("BlogPosts", () => {
+describe("About", () => {
   let component;
 
   beforeEach(() => {
-    component = shallow(<BlogPosts />);
+    component = shallow(<About />);
   });
   it("should exist", () => {
     expect(component).toBeTruthy();
