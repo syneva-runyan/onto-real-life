@@ -76,6 +76,8 @@
     "url": "https://github.com/syneva-runyan/onto-real-life.git"
   },
   "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "tests/coverage",
     "moduleNameMapper": {
       "\\.(css|scss)$": "<rootDir>/tests/__mocks__/styleMock.js"
     }
