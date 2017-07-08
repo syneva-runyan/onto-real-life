@@ -11,7 +11,9 @@ const propTypes = {
 };
 
 const defaultProps = {
-  params: null
+  params: {
+    postId: null
+  }
 };
 
 export default class BlogPosts extends Component {
