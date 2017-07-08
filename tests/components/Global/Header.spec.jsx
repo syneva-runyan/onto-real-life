@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../../source/js/components/Global/Header';
+import Header from '../../../source/js/components/Global/Header';
 import { shallow } from 'enzyme';
 
 describe('Header', () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from '../../source/js/components/Global/Menu';
+import Menu from '../../../source/js/components/Global/Menu';
 import { shallow } from 'enzyme';
 
 describe('Menu', () => {

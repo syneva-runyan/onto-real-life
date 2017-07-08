@@ -1,12 +1,12 @@
 import React from "react";
-import PostPreviewer from "../../../source/js/components/BlogPosts/PostPreviewer";
+import { BlogPosts } from "../../../source/js/views/BlogPosts/index.js";
 import { shallow } from "enzyme";
 
-describe("Post Previewer", () => {
+describe("BlogPosts", () => {
   let component;
 
   beforeEach(() => {
-    component = shallow(<PostPreviewer />);
+    component = shallow(<BlogPosts />);
   });
   it("should exist", () => {
     expect(component).toBeTruthy();
