@@ -77,6 +77,12 @@
   },
   "jest": {
     "collectCoverage": true,
+    "collectCoverageFrom": [
+      "source/js/**/*.{js,jsx}",
+      "!source/js/routes.js",
+      "!source/js/**/index.js",
+      "!source/js/dev/**"
+    ],
     "coverageDirectory": "tests/coverage",
     "moduleNameMapper": {
       "\\.(css|scss)$": "<rootDir>/tests/__mocks__/styleMock.js"
