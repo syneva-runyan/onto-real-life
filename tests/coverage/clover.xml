@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1499643069755" clover="3.2.0">
-  <project timestamp="1499643069755" name="All files">
-    <metrics statements="146" coveredstatements="83" conditionals="33" coveredconditionals="9" methods="56" coveredmethods="20" elements="235" coveredelements="112" complexity="0" loc="146" ncloc="146" packages="12" files="17" classes="17">
+<coverage generated="1499644425360" clover="3.2.0">
+  <project timestamp="1499644425360" name="All files">
+    <metrics statements="146" coveredstatements="84" conditionals="33" coveredconditionals="10" methods="56" coveredmethods="21" elements="235" coveredelements="115" complexity="0" loc="146" ncloc="146" packages="12" files="17" classes="17">
       <package name="actions">
         <metrics statements="8" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="9" coveredmethods="0"/>
         <file name="app.js" path="C:\Users\Syneva\Development\onto-real-life\source\js\actions\app.js">
@@ -196,16 +196,16 @@
         </file>
       </package>
       <package name="views.BlogPosts">
-        <metrics statements="17" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="2"/>
+        <metrics statements="17" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="3"/>
         <file name="BlogPosts.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\views\BlogPosts\BlogPosts.jsx">
-          <metrics statements="9" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
+          <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
           <line num="7" count="4" type="stmt"/>
           <line num="9" count="4" type="stmt"/>
           <line num="13" count="4" type="stmt"/>
-          <line num="21" count="1" type="stmt"/>
-          <line num="25" count="0" type="stmt"/>
-          <line num="39" count="1" type="stmt"/>
-          <line num="40" count="1" type="cond" truecount="1" falsecount="1"/>
+          <line num="21" count="3" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="39" count="4" type="stmt"/>
+          <line num="40" count="4" type="cond" truecount="2" falsecount="0"/>
           <line num="46" count="4" type="stmt"/>
           <line num="47" count="4" type="stmt"/>
         </file>
