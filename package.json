@@ -86,7 +86,8 @@
     "coverageDirectory": "tests/coverage",
     "moduleNameMapper": {
       "\\.(css|scss)$": "<rootDir>/tests/__mocks__/styleMock.js"
-    }
+    },
+    "setupFiles": ["<rootDir>/tests/test-env.js"]
   },
   "keywords": ["react", "webpack2"],
   "author": "syneva-runyan",
