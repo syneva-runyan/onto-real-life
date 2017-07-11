@@ -3,5 +3,5 @@ import PostCollection from "./PostCollection";
 
 module.exports = {
   BlogPosts,
-  PostCollection
+  PostCollection,
 };

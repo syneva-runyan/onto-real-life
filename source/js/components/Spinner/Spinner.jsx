@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 const propTypes = {
-  images: PropTypes.array
+  images: PropTypes.array,
 };
 
 const defaultProps = {
@@ -10,8 +10,8 @@ const defaultProps = {
     "assets/img/about-me/face0.png",
     "assets/img/about-me/face1.png",
     "assets/img/about-me/face2.png",
-    "assets/img/about-me/face3.png"
-  ]
+    "assets/img/about-me/face3.png",
+  ],
 };
 
 const cubeClass = "cube";
@@ -26,7 +26,7 @@ export default class Spinner extends Component {
     this.state = {
       topCubeSide: Math.floor(Math.random(0) * 4),
       middleCubeSide: Math.floor(Math.random(0) * 4),
-      bottomCubeSide: Math.floor(Math.random(0) * 4)
+      bottomCubeSide: Math.floor(Math.random(0) * 4),
     };
 
     this.boundSpinCube = this.spinCube.bind(this);
@@ -74,7 +74,7 @@ export default class Spinner extends Component {
       <div
         className={sideCount}
         style={{
-          backgroundImage: `url(${image})`
+          backgroundImage: `url(${image})`,
         }}
       />
     );
@@ -91,7 +91,7 @@ export default class Spinner extends Component {
           {this.renderSquareSides(
             "top",
             this.props.images,
-            this.state.topCubeSide
+            this.state.topCubeSide,
           )}
           <button
             className="click-trigger middle"
@@ -100,7 +100,7 @@ export default class Spinner extends Component {
           {this.renderSquareSides(
             "middle",
             this.props.images,
-            this.state.middleCubeSide
+            this.state.middleCubeSide,
           )}
           <button
             className="click-trigger bottom"
@@ -109,7 +109,7 @@ export default class Spinner extends Component {
           {this.renderSquareSides(
             "bottom",
             this.props.images,
-            this.state.bottomCubeSide
+            this.state.bottomCubeSide,
           )}
         </div>
       </div>

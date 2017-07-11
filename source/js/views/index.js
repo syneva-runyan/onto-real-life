@@ -9,5 +9,5 @@ module.exports = {
   About,
   BlogPosts,
   Contact,
-  NotFound
+  NotFound,
 };

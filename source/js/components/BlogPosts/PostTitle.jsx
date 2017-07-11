@@ -5,14 +5,14 @@ const propTypes = {
   title: PropTypes.string,
   datePublished: PropTypes.string,
   tagLine: PropTypes.string,
-  imgPath: PropTypes.string
+  imgPath: PropTypes.string,
 };
 
 const defaultProps = {
   title: "Title",
   datePublished: "00 MONTH 0000",
   tagLine: null,
-  imgPath: null
+  imgPath: null,
 };
 
 export default function PostTitle(props) {

@@ -7,13 +7,13 @@ import PostCollection from "./PostCollection";
 const assetBasePath = "/assets/img/blogs";
 
 const propTypes = {
-  params: PropTypes.object
+  params: PropTypes.object,
 };
 
 const defaultProps = {
   params: {
-    postId: null
-  }
+    postId: null,
+  },
 };
 
 export default class BlogPosts extends Component {
