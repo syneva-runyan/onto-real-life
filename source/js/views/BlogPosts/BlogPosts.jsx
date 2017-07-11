@@ -35,11 +35,43 @@ export default class BlogPosts extends Component {
     );
   }
 
+  getPostContext(collection, postId) {
+    const postContext = {
+      next: null,
+      prev: null,
+    };
+
+    Object.keys(collection).filter((item, index) => {
+      if (item === postId) {
+        const entriesArray = Object.entries(collection);
+        postContext.prev =
+          (entriesArray[index - 1] && entriesArray[index - 1][1]) || null;
+        postContext.next =
+          (entriesArray[index + 1] && entriesArray[index + 1][1]) || null;
+      }
+    });
+
+    return postContext;
+  }
+
   render() {
     const post = postCatalog[this.props.params.postId];
-    return post
-      ? this.renderPost(post, this.props.params.postId, assetBasePath)
-      : this.renderCollection(assetBasePath);
+
+    if (post) {
+      const postContext = this.getPostContext(
+        postCatalog,
+        this.props.params.postId,
+      );
+
+      return this.renderPost(
+        post,
+        this.props.params.postId,
+        assetBasePath,
+        postContext,
+      );
+    }
+
+    return this.renderCollection(assetBasePath);
   }
 }
 

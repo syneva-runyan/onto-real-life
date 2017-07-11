@@ -2,7 +2,7 @@ import React from "react";
 import { BlogPosts } from "../../../source/js/views/BlogPosts/index.js";
 import {
   PostTitle,
-  PostContent
+  PostContent,
 } from "../../../source/js/components/BlogPosts";
 import PostCollection from "../../../source/js/views/BlogPosts/PostCollection";
 import postCatalog from "../../../source/data/posts";
@@ -25,7 +25,7 @@ describe("BlogPosts", () => {
   });
   it("should render blog post title and content iff proved postId", () => {
     const postParams = {
-      postId: "mockedPost"
+      postId: "mockedPost",
     };
     component = shallow(<BlogPosts params={postParams} />);
 
@@ -34,5 +34,36 @@ describe("BlogPosts", () => {
 
     expect(blogPostContent.length).toEqual(1);
     expect(blogPostTitle.length).toEqual(1);
+  });
+
+  describe("post context", () => {
+    it("should return next and previous posts listed in selected post catalog", () => {
+      const collection = {
+        one: "one",
+        two: "two",
+        three: "three",
+      };
+
+      const context = component.instance().getPostContext(collection, "two");
+
+      expect(context).toEqual({
+        prev: "one",
+        next: "three",
+      });
+    });
+    it("should return null when next or previous post is not available", () => {
+      const collection = {
+        one: "one",
+        two: "two",
+        three: "three",
+      };
+
+      const context = component.instance().getPostContext(collection, "three");
+
+      expect(context).toEqual({
+        prev: "two",
+        next: null,
+      });
+    });
   });
 });
