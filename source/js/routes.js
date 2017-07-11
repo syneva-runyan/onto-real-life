@@ -9,7 +9,7 @@ export const routeCodes = {
   POSTS: `${publicPath}posts/(:postId)`,
   PHOTO_MAP: `${publicPath}photos`,
   CONTACT: `${publicPath}contact`,
-  HOME: publicPath
+  HOME: publicPath,
 };
 
 export default class Routes extends Component {

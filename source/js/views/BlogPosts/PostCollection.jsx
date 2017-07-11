@@ -4,11 +4,11 @@ import { PostPreviewer } from "../../components/BlogPosts";
 import postCatalog from "../../../data/posts";
 
 const propTypes = {
-  assetBasePath: PropTypes.string
+  assetBasePath: PropTypes.string,
 };
 
 const defaultProps = {
-  assetBasePath: "/assets/img/blogs"
+  assetBasePath: "/assets/img/blogs",
 };
 
 export default class BlogPosts extends Component {

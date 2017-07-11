@@ -12,7 +12,7 @@ export default class ContactMsg extends Component {
     this.state = {
       subject: "",
       senderEmail: "",
-      msg: ""
+      msg: "",
     };
 
     this.boundSubjectChange = this.onChange.bind(this, "subject");
@@ -33,7 +33,7 @@ export default class ContactMsg extends Component {
     if (error) {
       return {
         msg: "Please ensure all fields have values",
-        class: "contactMsg__notice--error"
+        class: "contactMsg__notice--error",
       };
     }
 
@@ -41,13 +41,13 @@ export default class ContactMsg extends Component {
       return {
         msg:
           "Thank you for your message! I will try to respond in a timely manor.",
-        class: "contactMsg__notice--success"
+        class: "contactMsg__notice--success",
       };
     }
 
     return {
       msg: "*All fields required",
-      class: ""
+      class: "",
     };
   }
 
@@ -59,13 +59,13 @@ export default class ContactMsg extends Component {
       this.validateFields(
         this.state.subject,
         this.state.senderEmail,
-        this.state.msg
+        this.state.msg,
       )
     ) {
       this.postFormData(
         this.state.subject,
         this.state.senderEmail,
-        this.state.msg
+        this.state.msg,
       );
       this.clearForm();
       return;
@@ -73,7 +73,7 @@ export default class ContactMsg extends Component {
 
     this.setState({
       error: true,
-      submitted: false
+      submitted: false,
     });
   }
 
@@ -86,7 +86,7 @@ export default class ContactMsg extends Component {
       url: postURL,
       data: dataString,
       success: () => {},
-      error: () => {}
+      error: () => {},
     });
   }
 
@@ -100,14 +100,14 @@ export default class ContactMsg extends Component {
       error: false,
       msg: "",
       senderEmail: "",
-      subject: ""
+      subject: "",
     });
   }
 
   render() {
     const helperContent = this.getHelperContent(
       this.state.error,
-      this.state.submitted
+      this.state.submitted,
     );
     return (
       <form action="./scripts/sendEmail.php" method="post">
