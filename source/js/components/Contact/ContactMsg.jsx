@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 
 const notEmpty = function(value) {
-  return value && value !== "";
+  return value && value !== "" ? true : false;
 };
+
+const postURL = "./scripts/sendEmail.php";
 
 export default class ContactMsg extends Component {
   constructor(props) {
@@ -81,7 +83,7 @@ export default class ContactMsg extends Component {
     // TODO add sucess and failure handlers
     $.ajax({
       type: "POST",
-      url: "./scripts/sendEmail.php",
+      url: postURL,
       data: dataString,
       success: () => {},
       error: () => {}
