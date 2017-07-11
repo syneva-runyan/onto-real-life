@@ -28,12 +28,12 @@ class PostHelper {
     const xmlRequest = new this.xmlhttp();
     xmlRequest.onreadystatechange = this.parsePostResponse(
       xmlRequest,
-      callback
+      callback,
     );
     xmlRequest.open(
       "GET",
       `${this.postAssetPath}/${postId}/${this.contentFileName}`,
-      true
+      true,
     );
     xmlRequest.send();
   }

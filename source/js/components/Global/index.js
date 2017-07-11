@@ -3,5 +3,5 @@ import Menu from "./Menu";
 
 module.exports = {
   Header,
-  Menu
+  Menu,
 };

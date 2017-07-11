@@ -4,18 +4,18 @@ import { Link } from "react-router";
 import { routeCodes } from "../../routes";
 
 const propTypes = {
-  pathname: PropTypes.string
+  pathname: PropTypes.string,
 };
 
 const defaultProps = {
-  pathname: ""
+  pathname: "",
 };
 
 export default class Menu extends Component {
   constructor() {
     super();
     this.state = {
-      opened: false
+      opened: false,
     };
 
     this.boundMenuToggle = this.toggleMenu.bind(this);
@@ -27,7 +27,7 @@ export default class Menu extends Component {
 
   toggleMenu() {
     this.setState({
-      opened: !this.state.opened
+      opened: !this.state.opened,
     });
   }
 
@@ -48,7 +48,7 @@ export default class Menu extends Component {
           <li
             className={this.menuItemClass(
               routeCodes.ABOUT,
-              this.props.pathname
+              this.props.pathname,
             )}
           >
             <Link to={routeCodes.ABOUT} onClick={this.boundMenuToggle}>
@@ -58,7 +58,7 @@ export default class Menu extends Component {
           <li
             className={this.menuItemClass(
               this.postRouteAdjustments(routeCodes.POSTS),
-              this.props.pathname
+              this.props.pathname,
             )}
           >
             <Link
@@ -71,7 +71,7 @@ export default class Menu extends Component {
           <li
             className={this.menuItemClass(
               routeCodes.PHOTO_MAP,
-              this.props.pathname
+              this.props.pathname,
             )}
           >
             <Link to={routeCodes.PHOTO_MAP} onClick={this.boundMenuToggle}>
@@ -81,7 +81,7 @@ export default class Menu extends Component {
           <li
             className={this.menuItemClass(
               routeCodes.CONTACT,
-              this.props.pathname
+              this.props.pathname,
             )}
           >
             <Link to={routeCodes.CONTACT} onClick={this.boundMenuToggle}>

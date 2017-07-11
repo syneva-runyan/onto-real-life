@@ -15,11 +15,11 @@ require("froala-editor/css/froala_editor.pkgd.min.css");
 require("font-awesome/css/font-awesome.css");
 
 const propTypes = {
-  postId: PropTypes.string
+  postId: PropTypes.string,
 };
 
 const defaultProps = {
-  postId: null
+  postId: null,
 };
 
 export default class PostContent extends Component {
@@ -28,7 +28,7 @@ export default class PostContent extends Component {
 
     this.state = {
       model: false,
-      config: {}
+      config: {},
     };
 
     this.boundSavePost = this.savePost.bind(this);
@@ -42,7 +42,7 @@ export default class PostContent extends Component {
   // TODO post GET failures
   setPostContent(postContent) {
     this.setState({
-      content: postContent
+      content: postContent,
     });
   }
 

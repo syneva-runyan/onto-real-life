@@ -4,13 +4,13 @@ import Title from "./Title";
 import Menu from "./Menu";
 
 const propTypes = {
-  location: PropTypes.object
+  location: PropTypes.object,
 };
 
 const defaultProps = {
   location: {
-    pathname: ""
-  }
+    pathname: "",
+  },
 };
 
 export default class Header extends Component {

@@ -5,5 +5,5 @@ import PostContent from "./PostContent";
 module.exports = {
   PostPreviewer,
   PostTitle,
-  PostContent
+  PostContent,
 };
