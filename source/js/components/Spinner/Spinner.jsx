@@ -32,6 +32,8 @@ export default class Spinner extends Component {
     this.boundSpinCube = this.spinCube.bind(this);
   }
 
+  // TODO make these changes with state
+  // instead of adding and removing classes.
   setOrientation(cube, previousOrientation, nextOrientation) {
     cube.classList.remove(`show-${previousOrientation}`);
     cube.classList.add(`show-${nextOrientation}`);
@@ -46,10 +48,9 @@ export default class Spinner extends Component {
     const target = e.target;
     const cube = target.nextSibling;
 
-    const currentOrientation = cube.getAttribute("data-sideShow");
-    const nextOrientation = this.determineNextSide(
-      parseInt(currentOrientation, 10)
-    );
+    let currentOrientation = cube.getAttribute("data-sideShow");
+    currentOrientation = parseInt(currentOrientation, 10);
+    const nextOrientation = this.determineNextSide(currentOrientation);
 
     this.setOrientation(cube, currentOrientation, nextOrientation);
   }

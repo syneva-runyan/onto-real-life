@@ -32,10 +32,11 @@ export default class PostContent extends Component {
     };
 
     this.boundSavePost = this.savePost.bind(this);
+    this.boundSetPostContent = this.setPostContent.bind(this);
   }
 
   componentDidMount() {
-    PostHelper.getPost(this.props.postId, this.setPostContent.bind(this));
+    PostHelper.getPost(this.props.postId, this.boundSetPostContent);
   }
 
   // TODO post GET failures
@@ -49,6 +50,7 @@ export default class PostContent extends Component {
     PostHelper.savePost(this.props.postId, this.state.content);
   }
 
+  // TODO look into tree shaking img resources within foala editor view.
   render() {
     return (
       <div className="postContent">
