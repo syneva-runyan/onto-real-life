@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { PostTitle, PostContent } from "../../components/BlogPosts";
+import {
+  PostTitle,
+  PostContent,
+  PostContextNav,
+} from "../../components/BlogPosts";
 import postCatalog from "../../../data/posts";
 import PostCollection from "./PostCollection";
 
@@ -21,7 +25,7 @@ export default class BlogPosts extends Component {
     return <PostCollection assetBasePath={assetBase} />;
   }
 
-  renderPost(post, postId, assetBase) {
+  renderPost(post, postId, assetBase, postContext) {
     return (
       <div>
         <PostTitle
@@ -31,6 +35,8 @@ export default class BlogPosts extends Component {
           imgPath={`${assetBase}/${postId}`}
         />
         <PostContent postId={postId} />
+        <hr />
+        <PostContextNav {...postContext} />
       </div>
     );
   }
