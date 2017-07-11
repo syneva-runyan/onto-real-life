@@ -27,11 +27,8 @@ Prettier is executed and fixes are saved before each commit.
 * Add Search functionality
 * Social Media Sharing capabilities
 * Add security for file editing
-* Stop being lazy with tests
-* Use Prettier
 * Move legacy blog imgs
 * Improve contact section edge cases & UX
-* Fix routing fallbacks
 * Add vendor.js optimizations
 * Add lazy loading to blogpost images
 
