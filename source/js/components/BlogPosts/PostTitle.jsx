@@ -19,11 +19,10 @@ export default function PostTitle(props) {
   return (
     <div className="postTitle">
       <span
-        className="postTitle__img lazyload blur-up"
-        data-bgset={`${props.imgPath}/introImg--sm.jpg [(max-width: 400px)] |
-                              ${props.imgPath}/introImg--md.jpg  [(max-width: 725px)] |
-                              ${props.imgPath}/introImg--lg.jpg [(max-width: 1025px)] |
-                              ${props.imgPath}/introImg.jpg`}
+        className="postTitle__img"
+        style={{
+          backgroundImage: `url("${props.imgPath}/introImg.jpg")`,
+        }}
       />
       <h5 className="postTitle__date">
         {props.datePublished}
@@ -42,3 +41,12 @@ export default function PostTitle(props) {
 
 PostTitle.propTypes = propTypes;
 PostTitle.defaultProps = defaultProps;
+
+/*
+TEMPORARILY COMMENTED FOR LAZYLOADER BUG
+className="postTitle__img lazyload blur-up"
+data-bgset={`${props.imgPath}/introImg--sm.jpg [(max-width: 400px)] |
+${props.imgPath}/introImg--md.jpg  [(max-width: 725px)] |
+${props.imgPath}/introImg--lg.jpg [(max-width: 1025px)] |
+${props.imgPath}/introImg.jpg`}
+*/

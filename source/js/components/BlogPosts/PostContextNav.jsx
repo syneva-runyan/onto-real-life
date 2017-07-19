@@ -16,7 +16,7 @@ export default function PostContextNav(props) {
   const renderCTA = function(id, cta, title, tagLine, classNames) {
     return (
       <Link
-        to={`./${id}`}
+        to={`/posts/${id}`}
         className={`btn postContextNav_cta btn_arrow ${classNames}`}
       >
         <strong>

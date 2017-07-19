@@ -3,7 +3,7 @@
     border-radius: 2px;
     color: $light-blue;
     cursor: pointer;
-    display: block;
+    display: inline-block;
     padding: 11px 11px;
     transition: $ani-speed;
 
@@ -32,7 +32,7 @@
         }
 
         &--left {
-            padding-left: 25px;
+            padding-left: 30px;
             &:before {
                  transform: translateY(-50%) rotate(-133deg);
                  left: 10px;
@@ -42,7 +42,7 @@
             }
         }
         &--right {
-            padding-right: 25px;
+            padding-right: 30px;
             &:before {
                 display: none;
             }

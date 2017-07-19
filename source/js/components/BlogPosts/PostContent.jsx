@@ -29,6 +29,7 @@ export default class PostContent extends Component {
     this.state = {
       model: false,
       config: {},
+      postId: props.postId,
     };
 
     this.boundSavePost = this.savePost.bind(this);
@@ -36,7 +37,14 @@ export default class PostContent extends Component {
   }
 
   componentDidMount() {
-    PostHelper.getPost(this.props.postId, this.boundSetPostContent);
+    PostHelper.getPost(this.state.postId, this.boundSetPostContent);
+  }
+
+  componentWillReceiveProps(props) {
+    if (props.postId !== this.state.postId) {
+      window.scrollTo(0, 0);
+      PostHelper.getPost(this.props.postId, this.boundSetPostContent);
+    }
   }
 
   // TODO post GET failures
@@ -47,7 +55,7 @@ export default class PostContent extends Component {
   }
 
   savePost() {
-    PostHelper.savePost(this.props.postId, this.state.content);
+    PostHelper.savePost(this.state.postId, this.state.content);
   }
 
   // TODO look into tree shaking img resources within foala editor view.

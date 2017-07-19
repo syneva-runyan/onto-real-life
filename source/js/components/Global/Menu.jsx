@@ -21,10 +21,6 @@ export default class Menu extends Component {
     this.boundMenuToggle = this.toggleMenu.bind(this);
   }
 
-  menuItemClass(linkTo, currentPath) {
-    return linkTo === currentPath ? "menu__item selected" : "menu__item";
-  }
-
   toggleMenu() {
     this.setState({
       opened: !this.state.opened,
@@ -45,46 +41,39 @@ export default class Menu extends Component {
           Menu
         </button>
         <nav className={menuClassNames}>
-          <li
-            className={this.menuItemClass(
-              routeCodes.ABOUT,
-              this.props.pathname,
-            )}
-          >
-            <Link to={routeCodes.ABOUT} onClick={this.boundMenuToggle}>
+          <li className={`menu__item ${routeCodes.ABOUT}`}>
+            <Link
+              activeClassName="selected"
+              to={routeCodes.ABOUT}
+              onClick={this.boundMenuToggle}
+            >
               About
             </Link>
           </li>
-          <li
-            className={this.menuItemClass(
-              this.postRouteAdjustments(routeCodes.POSTS),
-              this.props.pathname,
-            )}
-          >
+          <li className={`menu__item ${routeCodes.POSTS}`}>
             <Link
+              activeClassName="selected"
               to={this.postRouteAdjustments(routeCodes.POSTS)}
               onClick={this.boundMenuToggle}
             >
               Blog Posts
             </Link>
           </li>
-          <li
-            className={this.menuItemClass(
-              routeCodes.PHOTO_MAP,
-              this.props.pathname,
-            )}
-          >
-            <Link to={routeCodes.PHOTO_MAP} onClick={this.boundMenuToggle}>
+          <li className={`menu__item ${routeCodes.PHOTO_MAP}`}>
+            <Link
+              activeClassName="selected"
+              to={routeCodes.PHOTO_MAP}
+              onClick={this.boundMenuToggle}
+            >
               Photo Map
             </Link>
           </li>
-          <li
-            className={this.menuItemClass(
-              routeCodes.CONTACT,
-              this.props.pathname,
-            )}
-          >
-            <Link to={routeCodes.CONTACT} onClick={this.boundMenuToggle}>
+          <li className={`menu__item ${routeCodes.CONTACT}`}>
+            <Link
+              activeClassName="selected"
+              to={routeCodes.CONTACT}
+              onClick={this.boundMenuToggle}
+            >
               Contact
             </Link>
           </li>
