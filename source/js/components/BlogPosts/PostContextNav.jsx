@@ -15,7 +15,10 @@ const defaultProps = {
 export default function PostContextNav(props) {
   const renderCTA = function(id, cta, title, tagLine, classNames) {
     return (
-      <Link className={`btn postContextNav_cta ${classNames}`}>
+      <Link
+        to={`./${id}`}
+        className={`btn postContextNav_cta btn_arrow ${classNames}`}
+      >
         <strong>
           {cta}
         </strong>
@@ -37,6 +40,7 @@ export default function PostContextNav(props) {
             "Previous:  ",
             props.prev.title,
             props.prev.tagLine,
+            "btn_arrow--left",
           )
         : null}
       {props.next
@@ -45,6 +49,7 @@ export default function PostContextNav(props) {
             "Next:  ",
             props.next.title,
             props.next.tagLine,
+            "btn_arrow--right",
           )
         : null}
     </div>
