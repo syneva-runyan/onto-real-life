@@ -21,6 +21,9 @@ const defaultProps = {
 };
 
 export default class BlogPosts extends Component {
+  constructor(props) {
+    super(props);
+  }
   renderCollection(assetBase) {
     return <PostCollection assetBasePath={assetBase} />;
   }
