@@ -1,0 +1,28 @@
+.postContextNav {
+    :first-child {
+        margin-bottom: 15px;
+    }
+    &_cta {
+        color: $white;
+        width: 100%;
+        em {
+            color: $light-blue;
+        }
+
+        strong {
+            color: $white;
+        }
+
+        &:hover {
+            color: $light-blue;
+
+            em {
+                color: $white;
+            }
+
+            strong {
+                color: $white;
+            }
+        }
+    }
+}
