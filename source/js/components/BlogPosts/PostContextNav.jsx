@@ -13,9 +13,12 @@ const defaultProps = {
 };
 
 export default function PostContextNav(props) {
-  const renderCTA = function(id, title, tagLine) {
+  const renderCTA = function(id, cta, title, tagLine, classNames) {
     return (
-      <Link className="btn">
+      <Link className={`btn postContextNav_cta ${classNames}`}>
+        <strong>
+          {cta}
+        </strong>
         {title}
         {tagLine
           ? <em>
@@ -29,10 +32,20 @@ export default function PostContextNav(props) {
   return (
     <div className="postContextNav">
       {props.prev
-        ? renderCTA(props.prev.id, props.prev.title, props.prev.tagLine)
+        ? renderCTA(
+            props.prev.id,
+            "Previous:  ",
+            props.prev.title,
+            props.prev.tagLine,
+          )
         : null}
       {props.next
-        ? renderCTA(props.next.id, props.next.title, props.next.tagLine)
+        ? renderCTA(
+            props.next.id,
+            "Next:  ",
+            props.next.title,
+            props.next.tagLine,
+          )
         : null}
     </div>
   );
