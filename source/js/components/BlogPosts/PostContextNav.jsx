@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Link from "react-router";
 import PropTypes from "prop-types";
 
 const propTypes = {
@@ -11,16 +12,46 @@ const defaultProps = {
   prev: null,
 };
 
-export default class PostContextNav extends Component {
-  render() {
+export default function PostContextNav(props) {
+  renderCTA = function(id, title, tagLine) {
     return (
-      <div className="postContextNav">
-        <p>
-          This class should allow users to navigate to next and previous posts.
-        </p>
-      </div>
+      <Link to={`./${id}`}>
+        {title}:{" "}
+        {tagLine
+          ? <em>
+              : {tagLine}
+            </em>
+          : null}
+      </Link>
     );
-  }
+  };
+
+  return (
+    <div className="postContextNav">
+      <p>
+        {this.props.prev
+          ? <p>
+              Previous:{" "}
+              {this.renderCTA(
+                props.prev.id,
+                props.prev.title,
+                props.prev.tagLine,
+              )}
+            </p>
+          : null}
+        {this.props.next
+          ? <p>
+              Next:{" "}
+              {this.renderCTA(
+                props.next.id,
+                props.next.title,
+                props.next.tagLine,
+              )}
+            </p>
+          : null}
+      </p>
+    </div>
+  );
 }
 
 PostContextNav.propTypes = propTypes;
