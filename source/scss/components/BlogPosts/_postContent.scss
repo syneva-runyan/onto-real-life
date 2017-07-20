@@ -26,6 +26,7 @@
         margin-right: 0;
         font-family: $secondary-font-bold;
         font-size: 17px;
+        overflow: auto;
         padding: 25px 25px 25px 49px;
         position: relative;
 
@@ -142,9 +143,21 @@
     .width--30 {
         width: 30%;
     }
-
+    .width--33 {
+        width: 33.33%;
+    }
+    .width--40 {
+        width: 40%;
+    }
     .width--50 {
         width: 50%;
+    }
+
+    .width--60 {
+        width: 60%;
+    }
+    .width--70 {
+        width: 70%;
     }
     .sm-width--100 {
         @media screen and (max-width: $md-break) {
