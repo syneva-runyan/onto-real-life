@@ -30,9 +30,9 @@ export default class BlogPosts extends Component {
     Object.keys(collection).forEach((item, index) => {
       if (item === postId) {
         const entriesArray = Object.entries(collection);
-        postContext.prev =
-          (entriesArray[index - 1] && entriesArray[index - 1][1]) || null;
         postContext.next =
+          (entriesArray[index - 1] && entriesArray[index - 1][1]) || null;
+        postContext.prev =
           (entriesArray[index + 1] && entriesArray[index + 1][1]) || null;
       }
     });
