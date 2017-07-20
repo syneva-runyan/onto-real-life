@@ -24,7 +24,7 @@ export default function PostContextNav(props) {
         </strong>
         {title}
         {tagLine
-          ? <em>
+          ? <em data-selector="postContextNav_tagline">
               : {tagLine}{" "}
             </em>
           : null}
