@@ -37,14 +37,25 @@ export default class PostContent extends Component {
   }
 
   componentDidMount() {
-    PostHelper.getPost(this.state.postId, this.boundSetPostContent);
+    this.getPost(this.state.postId);
   }
 
   componentWillReceiveProps(props) {
-    if (props.postId !== this.state.postId) {
-      window.scrollTo(0, 0);
-      PostHelper.getPost(this.props.postId, this.boundSetPostContent);
+    if (props.postId && props.postId !== this.state.postId) {
+      this.refreshPost(props.postId);
     }
+  }
+
+  refreshPost(postId) {
+    window.scrollTo(0, 0);
+    this.getPost(postId);
+    this.setState({
+      postId: postId,
+    });
+  }
+
+  getPost(postId) {
+    PostHelper.getPost(postId, this.boundSetPostContent);
   }
 
   // TODO post GET failures
