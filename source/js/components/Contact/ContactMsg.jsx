@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 const notEmpty = function(value) {
-  return value && value !== "" ? true : false;
+  return !!value;
 };
 
 const postURL = "./scripts/sendEmail.php";
