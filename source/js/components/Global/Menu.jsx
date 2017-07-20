@@ -22,9 +22,20 @@ export default class Menu extends Component {
   }
 
   toggleMenu() {
+    this.listenForAltInteraction(!this.state.opened);
     this.setState({
       opened: !this.state.opened,
     });
+  }
+
+  listenForAltInteraction(shouldAdd) {
+    if (shouldAdd) {
+      // close menu on alternative interaction with page
+      document.addEventListener("click", this.boundMenuToggle);
+      return;
+    } else {
+      document.removeEventListener("click", this.boundMenuToggle);
+    }
   }
 
   postRouteAdjustments(postPath) {
