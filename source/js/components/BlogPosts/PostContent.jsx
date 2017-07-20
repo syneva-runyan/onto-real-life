@@ -58,11 +58,11 @@ export default class PostContent extends Component {
   }
 
   refreshPost(postId) {
-    window.scrollTo(0, 0);
     this.getPost(postId);
     this.setState({
       postId,
     });
+    window.scrollTo(0, 0);
   }
 
   savePost() {
