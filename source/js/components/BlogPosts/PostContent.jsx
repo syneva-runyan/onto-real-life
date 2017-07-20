@@ -46,14 +46,6 @@ export default class PostContent extends Component {
     }
   }
 
-  refreshPost(postId) {
-    window.scrollTo(0, 0);
-    this.getPost(postId);
-    this.setState({
-      postId: postId,
-    });
-  }
-
   getPost(postId) {
     PostHelper.getPost(postId, this.boundSetPostContent);
   }
@@ -62,6 +54,14 @@ export default class PostContent extends Component {
   setPostContent(postContent) {
     this.setState({
       content: postContent,
+    });
+  }
+
+  refreshPost(postId) {
+    window.scrollTo(0, 0);
+    this.getPost(postId);
+    this.setState({
+      postId,
     });
   }
 

@@ -34,8 +34,8 @@ describe("Post Helper", () => {
           this.send = sendSpy;
         }
       };
-      PostHelper.postAssetPath = "some/asset/path";
-      PostHelper.contentFileName = "content.html";
+      PostHelper.postAssetBase = "some/asset/path";
+      PostHelper.contentFile = "content.html";
     });
     it("should generate an xml request using provided data", () => {
       const callback = jest.fn();
@@ -44,7 +44,7 @@ describe("Post Helper", () => {
       expect(openSpy).toHaveBeenCalledWith(
         "GET",
         "some/asset/path/postId/content.html",
-        true
+        true,
       );
       expect(sendSpy).toHaveBeenCalled();
     });

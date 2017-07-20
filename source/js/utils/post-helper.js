@@ -1,19 +1,19 @@
 // this purpose of this util is to get & save edited versions of blog posts.
 const postAssetPath = "/data/posts";
 const contentFileName = "content.html";
-let xmlhttp;
+let xmlhttpRequest;
 
 if (window.XMLHttpRequest) {
-  xmlhttp = XMLHttpRequest;
+  xmlhttpRequest = XMLHttpRequest;
 } else {
-  xmlhttp = ActiveXObject.bind("Microsoft.XMLHTTP");
+  xmlhttpRequest = ActiveXObject.bind("Microsoft.XMLHTTP");
 }
 
 class PostHelper {
-  constructor(xmlhttp, postAssetPath, contentFileName) {
+  constructor(xmlhttp, postAssetBase, contentFile) {
     this.xmlhttp = xmlhttp;
-    this.postAssetPath = postAssetPath;
-    this.contentFileName = contentFileName;
+    this.postAssetBase = postAssetBase;
+    this.contentFile = contentFile;
   }
 
   parsePostResponse(requestObj, callback) {
@@ -32,7 +32,7 @@ class PostHelper {
     );
     xmlRequest.open(
       "GET",
-      `${this.postAssetPath}/${postId}/${this.contentFileName}`,
+      `${this.postAssetBase}/${postId}/${this.contentFile}`,
       true,
     );
     xmlRequest.send();
@@ -41,9 +41,9 @@ class PostHelper {
   savePost(postId, content) {
     // const a = document.getElementById("a");
     // const file = new Blob([content], { type: "html" });
-    // a.href = URL.createObjectURL(`${postAssetPath}/${postId}/${this.contentFileName}`);
+    // a.href = URL.createObjectURL(`${postAssetBase}/${postId}/${this.contentFile}`);
     // a.download = name;
   }
 }
 
-module.exports = new PostHelper(xmlhttp, postAssetPath, contentFileName);
+module.exports = new PostHelper(xmlhttpRequest, postAssetPath, contentFileName);

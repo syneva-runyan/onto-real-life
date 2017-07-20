@@ -21,11 +21,23 @@ const defaultProps = {
 };
 
 export default class BlogPosts extends Component {
-  constructor(props) {
-    super(props);
-  }
-  renderCollection(assetBase) {
-    return <PostCollection assetBasePath={assetBase} />;
+  getPostContext(collection, postId) {
+    const postContext = {
+      next: null,
+      prev: null,
+    };
+
+    Object.keys(collection).forEach((item, index) => {
+      if (item === postId) {
+        const entriesArray = Object.entries(collection);
+        postContext.prev =
+          (entriesArray[index - 1] && entriesArray[index - 1][1]) || null;
+        postContext.next =
+          (entriesArray[index + 1] && entriesArray[index + 1][1]) || null;
+      }
+    });
+
+    return postContext;
   }
 
   renderPost(post, postId, assetBase, postContext) {
@@ -44,23 +56,8 @@ export default class BlogPosts extends Component {
     );
   }
 
-  getPostContext(collection, postId) {
-    const postContext = {
-      next: null,
-      prev: null,
-    };
-
-    Object.keys(collection).filter((item, index) => {
-      if (item === postId) {
-        const entriesArray = Object.entries(collection);
-        postContext.prev =
-          (entriesArray[index - 1] && entriesArray[index - 1][1]) || null;
-        postContext.next =
-          (entriesArray[index + 1] && entriesArray[index + 1][1]) || null;
-      }
-    });
-
-    return postContext;
+  renderCollection(assetBase) {
+    return <PostCollection assetBasePath={assetBase} />;
   }
 
   render() {
