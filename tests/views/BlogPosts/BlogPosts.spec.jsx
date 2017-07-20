@@ -47,8 +47,8 @@ describe("BlogPosts", () => {
       const context = component.instance().getPostContext(collection, "two");
 
       expect(context).toEqual({
-        prev: "one",
-        next: "three",
+        prev: "three",
+        next: "one",
       });
     });
     it("should return null when next or previous post is not available", () => {
@@ -61,8 +61,8 @@ describe("BlogPosts", () => {
       const context = component.instance().getPostContext(collection, "three");
 
       expect(context).toEqual({
-        prev: "two",
-        next: null,
+        prev: null,
+        next: "two",
       });
     });
   });
