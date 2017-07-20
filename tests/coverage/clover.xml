@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1500552002459" clover="3.2.0">
-  <project timestamp="1500552002459" name="All files">
-    <metrics statements="164" coveredstatements="163" conditionals="43" coveredconditionals="42" methods="54" coveredmethods="52" elements="261" coveredelements="257" complexity="0" loc="164" ncloc="164" packages="11" files="17" classes="17">
+<coverage generated="1500554401424" clover="3.2.0">
+  <project timestamp="1500554401424" name="All files">
+    <metrics statements="169" coveredstatements="168" conditionals="45" coveredconditionals="44" methods="55" coveredmethods="53" elements="269" coveredelements="265" complexity="0" loc="169" ncloc="169" packages="11" files="17" classes="17">
       <package name="components.AboutMe">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="AboutMe.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\AboutMe\AboutMe.jsx">
@@ -102,7 +102,7 @@
         </file>
       </package>
       <package name="components.Global">
-        <metrics statements="17" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
+        <metrics statements="22" coveredstatements="22" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="7"/>
         <file name="Header.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Header.jsx">
           <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="6" count="4" type="stmt"/>
@@ -112,18 +112,23 @@
           <line num="32" count="4" type="stmt"/>
         </file>
         <file name="Menu.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Menu.jsx">
-          <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+          <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
           <line num="6" count="4" type="stmt"/>
           <line num="10" count="4" type="stmt"/>
           <line num="16" count="1" type="stmt"/>
           <line num="17" count="1" type="stmt"/>
           <line num="21" count="1" type="stmt"/>
           <line num="25" count="2" type="stmt"/>
-          <line num="31" count="3" type="stmt"/>
-          <line num="35" count="3" type="cond" truecount="2" falsecount="0"/>
-          <line num="38" count="3" type="stmt"/>
-          <line num="86" count="4" type="stmt"/>
-          <line num="87" count="4" type="stmt"/>
+          <line num="26" count="2" type="stmt"/>
+          <line num="32" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="34" count="1" type="stmt"/>
+          <line num="35" count="1" type="stmt"/>
+          <line num="37" count="1" type="stmt"/>
+          <line num="42" count="3" type="stmt"/>
+          <line num="46" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="49" count="3" type="stmt"/>
+          <line num="97" count="4" type="stmt"/>
+          <line num="98" count="4" type="stmt"/>
         </file>
         <file name="Title.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Title.jsx">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
