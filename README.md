@@ -22,7 +22,6 @@ Prettier is executed and fixes are saved before each commit.
 * Optimize Images
 * Post sort functionaly
 * Post Content Edit and save
-* Next & Back Post navigation
 * Photo Map
 * Add Search functionality
 * Social Media Sharing capabilities
