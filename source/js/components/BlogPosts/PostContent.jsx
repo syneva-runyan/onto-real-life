@@ -38,7 +38,7 @@ export default class PostContent extends Component {
   }
 
   savePost() {
-    PostHelper.savePost(this.state.postId, this.state.content);
+    PostHelper.savePost(this.props.postId, this.state.content);
   }
 
   render() {
