@@ -2,11 +2,11 @@ var barcelona = require("./barcelona/config.js");
 var eatingAlone = require("./eatingAlone/config.js");
 var malta = require("./malta/config.js");
 var morocco = require("./morocco/config.js");
-var seeTheWorld = require("./seeTheWorld/config.json");
-var newZealandNorthOverview = require("./newZealandNorthOverview/config.json");
+var seeTheWorld = require("./seeTheWorld/config.js");
+var newZealandNorthOverview = require("./newZealandNorthOverview/config.js");
 var newZealandNorthHiking = require("./newZealandNorthHiking/config.js");
-var newZealandSouth = require("./newZealandSouth/config.json");
-var nzTravelThoughts = require("./nzTravelThoughts/config.json");
+var newZealandSouth = require("./newZealandSouth/config.js");
+var nzTravelThoughts = require("./nzTravelThoughts/config.js");
 
 module.exports = {
   nzTravelThoughts,
