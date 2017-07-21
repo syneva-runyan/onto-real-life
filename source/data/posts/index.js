@@ -1,4 +1,4 @@
-var barcelona = require("./barcelona/config.json");
+var barcelona = require("./barcelona/config.js");
 var eatingAlone = require("./eatingAlone/config.json");
 var malta = require("./malta/config.json");
 var morocco = require("./morocco/config.json");
@@ -17,5 +17,5 @@ module.exports = {
   eatingAlone,
   malta,
   morocco,
-  seeTheWorld
+  seeTheWorld,
 };

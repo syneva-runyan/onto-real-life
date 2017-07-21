@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import PostHelper from "../../utils/post-helper";
+// TODO move not found msg to component instead of view
+import { NotFound } from "../../views";
 
 // const FroalaEditor = require("react-froala-wysiwyg");
 const FroalaEditorView = require("react-froala-wysiwyg/FroalaEditorView");
@@ -16,10 +18,12 @@ require("font-awesome/css/font-awesome.css");
 
 const propTypes = {
   postId: PropTypes.string,
+  content: PropTypes.func,
 };
 
 const defaultProps = {
   postId: null,
+  content: NotFound,
 };
 
 export default class PostContent extends Component {
@@ -29,41 +33,41 @@ export default class PostContent extends Component {
     this.state = {
       model: false,
       config: {},
-      postId: props.postId,
+      // postId: props.postId,
     };
 
     this.boundSavePost = this.savePost.bind(this);
-    this.boundSetPostContent = this.setPostContent.bind(this);
+    //this.boundSetPostContent = this.setPostContent.bind(this);
   }
 
   componentDidMount() {
-    this.getPost(this.state.postId);
+    //this.getPost(this.state.postId);
   }
 
   componentWillReceiveProps(props) {
-    if (props.postId && props.postId !== this.state.postId) {
-      this.refreshPost(props.postId);
-    }
+    // if (props.postId && props.postId !== this.state.postId) {
+    //   this.refreshPost(props.postId);
+    // }
   }
 
-  getPost(postId) {
-    PostHelper.getPost(postId, this.boundSetPostContent);
-  }
+  // getPost(postId) {
+  //   PostHelper.getPost(postId, this.boundSetPostContent);
+  // }
 
   // TODO post GET failures
-  setPostContent(postContent) {
-    this.setState({
-      content: postContent,
-    });
-  }
+  // setPostContent(postContent) {
+  //   this.setState({
+  //     content: postContent,
+  //   });
+  // }
 
-  refreshPost(postId) {
-    this.getPost(postId);
-    this.setState({
-      postId,
-    });
-    window.scrollTo(0, 0);
-  }
+  // refreshPost(postId) {
+  //   this.getPost(postId);
+  //   this.setState({
+  //     postId,
+  //   });
+  //   window.scrollTo(0, 0);
+  // }
 
   savePost() {
     PostHelper.savePost(this.state.postId, this.state.content);
@@ -82,7 +86,7 @@ export default class PostContent extends Component {
           />
           <button onClick={this.boundSavePost}>Save</button>
         </div> */}
-        <FroalaEditorView model={this.state.content} />
+        <this.props.content />
       </div>
     );
   }
