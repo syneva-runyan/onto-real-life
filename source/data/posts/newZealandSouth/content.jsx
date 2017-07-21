@@ -1,3 +1,8 @@
+import React from "react";
+
+export default function newZealandSouth() {
+  return (
+	<div>
 <p>There is <strong>So. Much. To. Do.</strong> on the south island, where do I even start?</p>
 <p class="quote">I've probably listened to the song "99 Red Balloons" more than once for every balloon in the song.</p>
 <p>And why, you ask, have I listened to that song <strong>So. Many. Times</strong>?  There is <strong>So. Much. Driving</strong> to do on the South Island <em>(and I have a severely lacking music library)</em>.</p>
@@ -33,10 +38,9 @@
 </figure>
 <p>There is that whole winter thing though...  So I'm headed off to somewhere warmer next week (Indonesia, whoopp), and'll plan on returning when it's warmer and camping/hiking is possible without the constant risk of turning into an ice cube.</p> 
 <p>From the peanut butter factory, to climbing on a glacier, to hating myself for hiking two and a half hours straight uphill - what I did fit in into the last three weeks has been nothing short of phenomenal.  Rather than writing an exhaustive narrative of everything, I've compiled a top-8 list.  It's made up of a mixture of hiking, outdoor activities, random places, and events.  Even though they may seem unrelated, all of them epitomize quintessential aspects of the Southern kiwi experience.</p>
-</br>
-</p>
+<br />
 <p class="quote"><em><strong>Side note- </strong></em> plz snd music suggestions after reading.</p>
-</br>
+<br />
 <h3>1.  Waking up in Wanaka</h3>
 <figure class="align-right width--50 sm-width--100 margin--left">   
     <img
@@ -72,7 +76,7 @@
         class="lazyload blur-up"
     />
 </figure>
-</br>
+<br />
 <h3>2. The Peanut Butter Factory (Nelson)</h3>
 <p class="quote">You'd run out of numbers before adding up the number of peanut butter sandwiches I ate as a child.</p>
 <figure class="width--30 sm-width--100 align-right margin--left">   
@@ -94,7 +98,7 @@
 <p>Pic's does things like donate free peanut butter for school lunches across Nelson.  When the hand-automated process of filling peanut butter jars was replaced with machines, employees were promoted or re-assigned instead of fired.</p>
 <p>Leaning about the jet boat operators' <a target="blank" href="http://www.queenstown.com/news/1621-shotover-jet-annual-locals-day-to-raise-funds-for-local-youth">"locals' day"</a> in Queenstown raising money for youths, and the community support in response to a <a target="_blank" href="http://www.nzherald.co.nz/nz/news/article.cfm?c_id=1&objectid=11879252">parasite affecting oyster farms</a> in Steward Island, and the hostel owners who trade off vacation time in Hanmer Springs impressed me while traveling throughout the South Island.</p>
 <p class="quote">Kiwis support each other and their communities, which is beautiful and something places all over the world could learn from.</p>
-</br>
+<br />
 
 <h3>3. Jumping off a Bridge (Queenstown)</h3>
 <p class="quote">If you love extreme outdoor adventuring, you need to go to Queenstown.  <em>Like, yesterday.</em>  So hop on a plane right now.</p>
@@ -115,7 +119,7 @@
 <p>After an interesting history of <a target="_blank" href="http://www.bungy.co.nz/who-we-are/history">fed-up wives and evil spirits,</a> modern Bungy jumping was reportedly invented outside of Queenstown during the 80s.</p>
 <p>I jumped off the Kawarau Bridge, one of the first public Bungy sites in the World.  I love heights, but there was a little voice screaming in the back of my head when I stepped off the bridge (<em>ok, so it wasn't in my head, I actually screamed</em>), because I really didn't want to die.</p>
 <p><strong>@Mark</strong> thanks for going with me! <strong>@Molly,</strong> pick a place, looking forward to jumping again with you!</p>
-</br>
+<br />
 <h3>4. Stewart & Ulva Islands</h3>
 <p>I didn't even know they had parrots in New Zealand, so when I heard something rustling in the trees above me, the last thing I expected to see was not just one parrot, but a family of parrots.</p>
 <figure class="width--30 sm-width--100 align-left margin--right">   
@@ -135,7 +139,7 @@
 </figure>
 <p>Outside of Dunedin, people pay $100+ nzd to see albatross in an exhibit (<em>Albatrosses? What is the plural of albatross?</em>).  On a ferry to Ulva (small wildlife reserve island) from Stewart Island, an albatross took interest in out boat and landed in the water right off the port side.(<em>Both me and the professional photographer I was chatting with had our lens caps on...</em>)</p>
 <p>Even as someone who knows very little about birds, I loved being on Stewart Island and discovering a wide array of wildlife on the beautiful coastal and bush hikes.
-</br>
+<br />
 <figure>   
     <img
         alt="Ropeswing"
@@ -257,7 +261,7 @@
 <p>When staying in Picton, the hostel owner's wife's school hosted a New Zealand centric charity pub quiz. Going to something like that is not an opportunity you should ever turn down.</p>
 <p>I answered one question about the US right, and one about the UK wrong, so overall had a net impact of zero. This is better than my normal pub quiz performance.</p>
 <p>Having the agriculture teacher on our team shot us into first place.  Everyone on the team got a prize.  The men's size 8 gumboots I won were perfect. My teammates suggested I play Cinderella with them.</p>
-</br>
+<br />
 <p class="quote"><em>Wanted: </em> Male, age 25-35.  Must never mention Donald Trump, do all household cooking, and wear nz men's shoe size 8.</p>
 <h3>7. Mt. Cook Hiking</h3>
 <figure class="align-left width--50 sm-width--100 margin--right">   
@@ -274,7 +278,7 @@
     />
 </figure>
 <p>Thank you <strong>Julia</strong> for this recommendation. The area around Mt. Cook is full of beautiful hiking.  The Hooker Valley track specifically has multiple suspension bridges, cloudy blue streams, and a partially frozen lake.  There are some benefits to traveling in winter.</p>
-</br>
+<br />
 <figure>
      <img
         alt="blue river"
@@ -299,7 +303,7 @@
         class="lazyload align-left width--50 sm-width--100 blur-up"
     />
 </figure>
-</br>
+<br />
 <h3>8. Roadside Surprises</h3>
 <p>The roadsides on the South Island were the perfect manifestation of kiwi humor & eccentricity.</p>
 <p>It's very possible to get around the country using buses, but if you do have a car, make sure to pull over at the random roadside attractions.  You're guaranteed to be stunned by either beauty or positive ridiculousness.</p>
@@ -490,5 +494,11 @@
     </li>
     <li><strong>Lake Tekapo Astonomy Tour: </strong> My tour was canceled due to bad weather, but completely different types of people in completely different circumstances independently talked about how amazing this tour was.</li>
 </ul>
-<p class="quote"><em><strong>Side note- </strong></em>For those of you interested in reading more about my travel experiences instead of location overviews, I've made a short <a href="../posts/nzTravelThoughts" target="blank">Q&A section</a> in a separate post.</p>
-
+<p className="quote">
+    <em><strong>Side note- </strong></em>
+    For those of you interested in reading more about my travel experiences instead of location overviews, I've made a short 
+    <a href="../posts/nzTravelThoughts" target="blank">Q&A section</a>
+     in a separate post.
+</p>
+</div>)
+}
