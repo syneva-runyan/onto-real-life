@@ -33,9 +33,8 @@ export default class Menu extends Component {
       // close menu on alternative interaction with page
       document.addEventListener("click", this.boundMenuToggle);
       return;
-    } else {
-      document.removeEventListener("click", this.boundMenuToggle);
     }
+    document.removeEventListener("click", this.boundMenuToggle);
   }
 
   postRouteAdjustments(postPath) {
