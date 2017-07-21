@@ -3,12 +3,12 @@ import React from "react";
 export default function seeTheWorld() {
   return (
     <div>
-      <p class="quote withAuthor">
-        Travel is fatal to prejudice, bigotry, and narrow-mindedness, and many
-        of our people need it sorely on these accounts. Broad, wholesome,
-        charitable views of men and things cannot be acquired by vegetating in
-        one little corner of the earth all one’s lifetime.{" "}
-        <span class="author">
+      <p className="quote withAuthor">
+        className= Travel is fatal to prejudice, bigotry, and narrow-mindedness,
+        and many of our people need it sorely on these accounts. Broad,
+        wholesome, charitable views of men and things cannot be acquired by
+        vegetating in one little corner of the earth all one’s lifetime.{" "}
+        <span className="author">
           Mark Twain, <em>The Innocents Abroad</em>
         </span>
       </p>
@@ -50,9 +50,9 @@ export default function seeTheWorld() {
         to comprehend what these women had experienced and provide them help?
         When the women came to talk to her however, what did they have to say?
         They complained about their husbands being lazy, or the boy they who
-        maybe-kinda-liked them.{" "}
+        maybe-kinda-liked them.
       </p>
-      <p class="quote">
+      <p className="quote">
         Love &#8211; and love problems &#8211; are so universal. It is one of
         the many human emotions that traverses all cultural borders, that makes
         people relatable everywhere you go.
