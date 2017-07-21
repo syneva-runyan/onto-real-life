@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function malta() {
+export default function morocco() {
   return (
     <div>
       <figure>
