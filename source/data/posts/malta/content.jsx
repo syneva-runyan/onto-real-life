@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function eatingAlone() {
+export default function malta() {
   return (
     <div>
       <p>
