@@ -40,7 +40,7 @@ export default class BlogPosts extends Component {
     return postContext;
   }
 
-  renderPost(post, postId, assetBase, postContext) {
+  renderPost(post, postId, content, assetBase, postContext) {
     return (
       <div>
         <PostTitle
@@ -49,7 +49,7 @@ export default class BlogPosts extends Component {
           tagLine={post.tagLine}
           imgPath={`${assetBase}/${postId}`}
         />
-        <PostContent postId={postId} />
+        <PostContent postId={postId} content={content} />
         <hr />
         <PostContextNav {...postContext} />
       </div>
@@ -72,6 +72,7 @@ export default class BlogPosts extends Component {
       return this.renderPost(
         post,
         this.props.params.postId,
+        post.Content,
         assetBasePath,
         postContext,
       );
