@@ -23,61 +23,65 @@ const plugins = [
     minChunks(module) {
       const context = module.context;
       return context && context.indexOf("node_modules") >= 0;
-    }
+    },
   }),
   new webpack.DefinePlugin({
     "process.env": {
-      NODE_ENV: JSON.stringify(nodeEnv)
-    }
+      NODE_ENV: JSON.stringify(nodeEnv),
+    },
   }),
   new webpack.NamedModulesPlugin(),
   new HtmlWebpackPlugin({
     template: path.join(sourcePath, "index.html"),
     path: buildPath,
-    filename: "index.html"
+    filename: "index.html",
   }),
   new webpack.LoaderOptionsPlugin({
     options: {
       postcss: [
         autoprefixer({
-          browsers: ["last 3 version", "ie >= 10"]
-        })
+          browsers: ["last 3 version", "ie >= 10"],
+        }),
       ],
-      context: sourcePath
-    }
+      context: sourcePath,
+    },
   }),
   new webpack.ProvidePlugin({
     $: "jquery",
-    jQuery: "jquery"
+    jQuery: "jquery",
   }),
   new CopyWebpackPlugin([
     {
       from: "../assets/scripts/sendEmail.php",
-      to: "scripts/sendEmail.php"
-    }
-  ])
+      to: "scripts/sendEmail.php",
+    },
+    {
+      from: "../data",
+      to: "data",
+    },
+  ]),
 ];
 
 // Common rules
 const rules = [
   {
     test: /\.css$/,
-    use: ["style-loader", "css-loader"]
+    use: ["style-loader", "css-loader"],
   },
   {
     test: /\.(js|jsx)$/,
     exclude: /node_modules/,
-    use: ["babel-loader"]
+    use: ["babel-loader"],
   },
   {
     test: /\.(png|gif|jpg|svg)$/,
     include: imgPath,
-    use: "url-loader?limit=20480&name=assets/[name]-[hash].[ext]"
+    use: "url-loader?limit=20480&name=assets/[name]-[hash].[ext]",
   },
   {
     test: /\.(eot|otf|svg|ttf|woff|woff2)$/,
-    use: "file-loader?name=fonts/[name].[ext]"
-  }
+    use: "file-loader?name=fonts/[name].[ext]",
+  },
 ];
 
 if (isProduction) {
@@ -94,13 +98,13 @@ if (isProduction) {
         dead_code: true,
         evaluate: true,
         if_return: true,
-        join_vars: true
+        join_vars: true,
       },
       output: {
-        comments: false
-      }
+        comments: false,
+      },
     }),
-    new ExtractTextPlugin("style-[hash].css")
+    new ExtractTextPlugin("style-[hash].css"),
   );
 
   // Production rules
@@ -108,8 +112,8 @@ if (isProduction) {
     test: /\.scss$/,
     loader: ExtractTextPlugin.extract({
       fallback: "style-loader",
-      use: "css-loader!postcss-loader!sass-loader"
-    })
+      use: "css-loader!postcss-loader!sass-loader",
+    }),
   });
 } else {
   // Development plugins
@@ -128,8 +132,8 @@ if (isProduction) {
       // 'css-loader?sourceMap',
       "css-loader",
       "postcss-loader",
-      "sass-loader?sourceMap"
-    ]
+      "sass-loader?sourceMap",
+    ],
   });
 }
 
@@ -138,15 +142,15 @@ module.exports = {
   context: jsSourcePath,
   entry: {
     js: "./index.js",
-    vendor: ["lazysizes", "lazysizes/plugins/bgset/ls.bgset.min.js"]
+    vendor: ["lazysizes", "lazysizes/plugins/bgset/ls.bgset.min.js"],
   },
   output: {
     path: buildPath,
     publicPath: "/",
-    filename: "app-[hash].js"
+    filename: "app-[hash].js",
   },
   module: {
-    rules
+    rules,
   },
   resolve: {
     extensions: [
@@ -154,9 +158,9 @@ module.exports = {
       ".web-loader.js",
       ".loader.js",
       ".js",
-      ".jsx"
+      ".jsx",
     ],
-    modules: [path.resolve(__dirname, "node_modules"), jsSourcePath]
+    modules: [path.resolve(__dirname, "node_modules"), jsSourcePath],
   },
   plugins,
   devServer: {
@@ -178,8 +182,8 @@ module.exports = {
       version: false,
       warnings: true,
       colors: {
-        green: "\u001b[32m"
-      }
-    }
-  }
+        green: "\u001b[32m",
+      },
+    },
+  },
 };
