@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { PostPreviewer } from "../../components/BlogPosts";
-import postCatalog from "../../data/posts";
 
 const propTypes = {
   assetBasePath: PropTypes.string,
+  postCatalog: PropTypes.object,
 };
 
 const defaultProps = {
   assetBasePath: "/assets/img/blogs",
+  postCatalog: {},
 };
 
 export default class BlogPosts extends Component {
@@ -32,7 +33,10 @@ export default class BlogPosts extends Component {
         <h2>Blog Posts</h2>
         <hr className="blogPosts__divider" />
         <div className="blogPosts__gallery">
-          {this.previewGallery(postCatalog, this.props.assetBasePath)}
+          {this.previewGallery(
+            this.props.postCatalog,
+            this.props.assetBasePath,
+          )}
         </div>
       </div>
     );
