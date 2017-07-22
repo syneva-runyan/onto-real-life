@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { PostPreviewer } from "../../components/BlogPosts";
-import postCatalog from "../../../data/posts";
+import postCatalog from "../../data/posts";
 
 const propTypes = {
   assetBasePath: PropTypes.string,
