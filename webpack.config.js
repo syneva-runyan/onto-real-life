@@ -55,10 +55,6 @@ const plugins = [
       from: "../assets/scripts/sendEmail.php",
       to: "scripts/sendEmail.php",
     },
-    {
-      from: "../data",
-      to: "data",
-    },
   ]),
 ];
 
@@ -87,6 +83,16 @@ const rules = [
 if (isProduction) {
   // Production plugins
   plugins.push(
+    new CopyWebpackPlugin([
+      {
+        from: "../data",
+        to: "data",
+      },
+      {
+        from: "../assets/img/blogs",
+        to: "assets/img/blogs",
+      },
+    ]),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
