@@ -1,16 +1,14 @@
 import React from "react";
 import PostCollection from "../../../source/js/views/BlogPosts/PostCollection";
 import { PostPreviewer } from "../../../source/js/components/BlogPosts";
-import postCatalog from "../../../source/data/posts";
+import postCatalogMock from "../../../source/data/posts/__mocks__";
 import { shallow } from "enzyme";
-
-jest.mock("../../../source/data/posts");
 
 describe("Post Collection", () => {
   let component;
 
   beforeEach(() => {
-    component = shallow(<PostCollection />);
+    component = shallow(<PostCollection postCatalog={postCatalogMock} />);
   });
   it("should exist", () => {
     expect(component).toBeTruthy();
