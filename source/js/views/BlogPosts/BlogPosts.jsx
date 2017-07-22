@@ -5,7 +5,7 @@ import {
   PostContent,
   PostContextNav,
 } from "../../components/BlogPosts";
-import postCatalog from "../../../data/posts";
+import postCatalog from "../../data/posts";
 import PostCollection from "./PostCollection";
 
 const assetBasePath = "/assets/img/blogs";
