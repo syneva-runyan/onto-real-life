@@ -92,6 +92,10 @@ if (isProduction) {
         from: "../assets/img/blogs",
         to: "assets/img/blogs",
       },
+      {
+        from: "../assets/img/quotes.png",
+        to: "assets/img/quotes.png",
+      },
     ]),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
