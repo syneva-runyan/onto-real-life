@@ -23,10 +23,10 @@ export default class App extends Component {
 
     return (
       <div className="App">
-        <Header location={this.props.location} />
-        <div className="Page">
+        <Header />
+         <div className="Page">
           {children}
-        </div>
+         </div>
       </div>
     );
   }

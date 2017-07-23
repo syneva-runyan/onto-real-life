@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Router, Route, IndexRoute, browserHistory } from "react-router";
+import ReactDOMServer from 'react-dom/server'
+import { StaticRouter, Route, Switch } from "react-router-dom";
 import { App, About, BlogPosts, Contact, NotFound } from "./views";
 
 const publicPath = "/";
@@ -12,19 +13,18 @@ export const routeCodes = {
   HOME: publicPath,
 };
 
-export default class Routes extends Component {
-  render() {
-    return (
-      <Router history={browserHistory}>
-          <Route path={publicPath} component={App}>
-            <IndexRoute component={BlogPosts} />
+module.exports = (locals) => {
+  return (
+    <StaticRouter location={locals.path} context={{}} >
+      <App>
+        <Switch>
             <Route path={routeCodes.ABOUT} component={About} />
-            <Route path={routeCodes.POSTS} component={BlogPosts} />
-            <Route path={routeCodes.PHOTO_MAP} component={NotFound} />
-            <Route path={routeCodes.CONTACT} component={Contact} />
-            <Route path="*" component={BlogPosts} />
-          </Route>
-      </Router>
-    );
-  }
-}
+            <Route component={BlogPosts} />
+        </Switch>
+      </App>
+    </StaticRouter>
+  )
+};
+            // <Route path={routeCodes.POSTS} component={BlogPosts} />
+            // <Route path={routeCodes.PHOTO_MAP} component={NotFound} />
+            // <Route path={routeCodes.CONTACT} component={Contact} />*/}
