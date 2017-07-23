@@ -31,11 +31,6 @@ const plugins = [
     },
   }),
   new webpack.NamedModulesPlugin(),
-  new HtmlWebpackPlugin({
-    template: path.join(sourcePath, "index.html"),
-    path: buildPath,
-    filename: "index.html",
-  }),
   new webpack.LoaderOptionsPlugin({
     options: {
       postcss: [
@@ -83,6 +78,7 @@ const rules = [
 if (isProduction) {
   // Production plugins
   plugins.push(
+    new StaticHtml(),
     new CopyWebpackPlugin([
       {
         from: "../data",
@@ -114,7 +110,7 @@ if (isProduction) {
         comments: false,
       },
     }),
-    new ExtractTextPlugin("style-[hash].css"),
+    new ExtractTextPlugin("style-[hash].css")
   );
 
   // Production rules
@@ -127,7 +123,15 @@ if (isProduction) {
   });
 } else {
   // Development plugins
-  plugins.push(new webpack.HotModuleReplacementPlugin(), new DashboardPlugin());
+  plugins.push(
+    new webpack.HotModuleReplacementPlugin(),
+    new DashboardPlugin(),
+    new HtmlWebpackPlugin({
+      template: path.join(sourcePath, "index.html"),
+      path: buildPath,
+      filename: "index.html",
+  }),
+  );
 
   // Development rules
   rules.push({
