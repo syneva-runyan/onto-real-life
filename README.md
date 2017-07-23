@@ -30,4 +30,3 @@ Prettier is executed and fixes are saved before each commit.
 * Improve contact section edge cases & UX
 * Add vendor.js optimizations
 * Add lazy loading to blogpost images
-    
