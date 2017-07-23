@@ -32,12 +32,13 @@ module.exports = {
   context: jsSourcePath,
   entry: {
     js: "./index.js",
-    vendor: ["lazysizes", "lazysizes/plugins/bgset/ls.bgset.min.js"]
+   // vendor: ["lazysizes", "lazysizes/plugins/bgset/ls.bgset.min.js"]
   },
   output: {
     path: buildPath,
     publicPath: "/",
-    filename: "app-[hash].js"
+    filename: "app.js",
+    libraryTarget: 'umd'
   },
   module: {
     rules,

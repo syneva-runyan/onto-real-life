@@ -17,12 +17,12 @@ export default class Header extends Component {
   render() {
     return (
       <div className="header">
-        <div className="header__lead">
+        {/*<div className="header__lead">
           <span className="header__logo" />
           <Title />
           <span id="headerBorder" className="header__border" />
-        </div>
-        <Menu pathname={this.props.location.pathname} />
+        </div>*/}
+        <Menu />
       </div>
     );
   }

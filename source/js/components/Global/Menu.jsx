@@ -1,15 +1,11 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { routeCodes } from "../../routes";
 
-const propTypes = {
-  pathname: PropTypes.string,
-};
+const propTypes = {};
 
-const defaultProps = {
-  pathname: "",
-};
+const defaultProps = {};
 
 export default class Menu extends Component {
   constructor() {
