@@ -1,10 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { Router } from "react-router";
+import { renderToStaticMarkup } from "react-dom";
 
-import Routes from "routes";
+import routes from "routes";
+
 
 // Load SCSS
 import "../scss/app.scss";
 
 // Render it to DOM
-ReactDOM.render(<Routes />, document.getElementById("root"));
+module.exports = function render(locals, callback) {
+    Router.run(routes, )
+}
