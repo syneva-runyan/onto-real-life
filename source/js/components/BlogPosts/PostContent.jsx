@@ -6,13 +6,13 @@ import PostHelper from "../../utils/post-helper";
 const FroalaEditorView = require("react-froala-wysiwyg/FroalaEditorView");
 
 // Require Editor JS files.
-require("froala-editor/js/froala_editor.pkgd.min.js");
+//require("froala-editor/js/froala_editor.pkgd.min.js");
 // Require Editor CSS files.
-require("froala-editor/css/froala_style.min.css");
-require("froala-editor/css/froala_editor.pkgd.min.css");
+//require("froala-editor/css/froala_style.min.css");
+//require("froala-editor/css/froala_editor.pkgd.min.css");
 
 // Require Font Awesome.
-require("font-awesome/css/font-awesome.css");
+//require("font-awesome/css/font-awesome.css");
 
 const propTypes = {
   postId: PropTypes.string,

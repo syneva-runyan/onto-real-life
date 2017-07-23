@@ -4,7 +4,7 @@ const contentFileName = "content.html";
 let xmlhttpRequest;
 
 if (window.XMLHttpRequest) {
-  xmlhttpRequest = XMLHttpRequest;
+  xmlhttpRequest = window.XMLHttpRequest;
 } else {
   xmlhttpRequest = ActiveXObject.bind("Microsoft.XMLHTTP");
 }

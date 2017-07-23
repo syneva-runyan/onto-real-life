@@ -16,14 +16,14 @@ export default class Routes extends Component {
   render() {
     return (
       <Router history={browserHistory}>
-        <Route path={publicPath} component={App}>
-          <IndexRoute component={BlogPosts} />
-          <Route path={routeCodes.ABOUT} component={About} />
-          <Route path={routeCodes.POSTS} component={BlogPosts} />
-          <Route path={routeCodes.PHOTO_MAP} component={NotFound} />
-          <Route path={routeCodes.CONTACT} component={Contact} />
-          <Route path="*" component={BlogPosts} />
-        </Route>
+          <Route path={publicPath} component={App}>
+            <IndexRoute component={BlogPosts} />
+            <Route path={routeCodes.ABOUT} component={About} />
+            <Route path={routeCodes.POSTS} component={BlogPosts} />
+            <Route path={routeCodes.PHOTO_MAP} component={NotFound} />
+            <Route path={routeCodes.CONTACT} component={Contact} />
+            <Route path="*" component={BlogPosts} />
+          </Route>
       </Router>
     );
   }
