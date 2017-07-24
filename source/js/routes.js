@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOMServer from 'react-dom/server'
 import { StaticRouter, Route, Switch } from "react-router-dom";
-import { App, About, BlogPosts, Contact, NotFound } from "./views";
+import { About, BlogPosts, Contact, NotFound } from "./views";
 
 const publicPath = "/";
 
@@ -16,12 +16,10 @@ export const routeCodes = {
 module.exports = (locals) => {
   return (
     <StaticRouter location={locals.path} context={{}} >
-      <App>
         <Switch>
             <Route path={routeCodes.ABOUT} component={About} />
             <Route component={BlogPosts} />
         </Switch>
-      </App>
     </StaticRouter>
   )
 };

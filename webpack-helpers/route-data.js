@@ -1,6 +1,7 @@
 module.exports = {
     paths: [
         '/',
-        '/about'
+        '/about',
+        '/contact'
     ]
 };
