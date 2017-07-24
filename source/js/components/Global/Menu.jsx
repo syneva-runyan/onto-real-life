@@ -41,7 +41,9 @@ export default class Menu extends Component {
     const menuClassNames = this.state.opened
       ? "menu__nav menu--opened"
       : "menu__nav";
-    return (
+
+      return (<p>PLACEHOLDER</p>)
+    /*return (
       <div className="menu">
         <button className="menu__cta" onClick={this.boundMenuToggle}>
           Menu
@@ -85,7 +87,7 @@ export default class Menu extends Component {
           </li>
         </nav>
       </div>
-    );
+    );*/
   }
 }
 
