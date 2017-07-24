@@ -1,44 +1,71 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom';
 import { ReactDOM } from 'react-dom'
 import ReactDOMServer from 'react-dom/server';
+
+import { App } from "./views";
 import routes from './routes';
 
-const Html = props =>
-(<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Onto Real life" />
-    <meta property="og:description" content="Going places and taking pictures." />
-    <meta property="og:image" content="http://ontoreallife.com/assets/img/blogs/newZealandSouth/lakeMatheson.jpg" />
-    <title>Onto real life</title>
-  </head>
-  <body>
-    <div id="app">
-        {props.children}
-    </div>
-    <script src="/app.js"></script>
-  </body>
-</html>);
+// Load SCSS
+import "../scss/app.scss";
 
-if (typeof document != 'undefined') {
-  ReactDOM.render(
-    <BrowserRouter>{routes}</BrowserRouter>,
-    document.getElementById('#app')
-  )
+
+// if (typeof document != 'undefined') {
+//   ReactDOM.render(
+//     <BrowserRouter>{routes}</BrowserRouter>,
+//     document.getElementById('#app')
+//   )
+// }
+
+if (typeof global.document !== 'undefined') {
+  const rootEl = global.document.getElementById('outlay');
+  React.render(
+    <App />,
+    rootEl,
+  );
+}
+
+const calcRelativeBase = (path) => {
+  let base = '';
+
+  // do not set base
+  // for main index
+  if (path === "/") {
+    return null
+  }
+
+  let subfolders = (path.match(/\//g) || []).length;
+
+  for(let i = 0; i < subfolders; i++) {
+    base += "../";
+  }
+  return base;
+}
+
+export default (data) => {
+  const assets = Object.keys(data.webpackStats.compilation.assets);
+  const css = assets.filter(value => value.match(/\.css$/));
+  const js = assets.filter(value => value.match(/\.js$/));
+  const base = calcRelativeBase(data.path);
+
+  var html = ReactDOMServer.renderToStaticMarkup(
+      (<App>
+        {routes(data)}
+      </App>
+    ), data);
+
+  return data.template({ css, js, base, html});
 }
 
 /**
  * This function is the global export that static-render-webpack-plugin uses
  */
 /* Exported static site renderer */
-export default (locals, callback) => {
+/*export default (locals, callback) => {
     var html = ReactDOMServer.renderToStaticMarkup(
       (<Html>
         {routes(locals)}
       </Html>
     ), locals);
     callback(null, html)
-}
+}*/

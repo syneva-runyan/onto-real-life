@@ -63,23 +63,24 @@ export default class BlogPosts extends Component {
   }
 
   render() {
-    const post = postCatalog[this.props.params.postId];
+    // const post = postCatalog[this.props.params.postId];
 
-    if (post) {
-      const postContext = this.getPostContext(
-        postCatalog,
-        this.props.params.postId,
-      );
+    // if (post) {
+    //   const postContext = this.getPostContext(
+    //     postCatalog,
+    //     this.props.params.postId,
+    //   );
 
-      return this.renderPost(
-        post,
-        this.props.params.postId,
-        assetBasePath,
-        postContext,
-      );
-    }
+    //   return this.renderPost(
+    //     post,
+    //     this.props.params.postId,
+    //     assetBasePath,
+    //     postContext,
+    //   );
+    // }
 
-    return this.renderCollection(assetBasePath);
+    // return this.renderCollection(assetBasePath);
+    return (<p>This is the blog post route</p>)
   }
 }
 
