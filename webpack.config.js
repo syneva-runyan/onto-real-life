@@ -30,14 +30,15 @@ if (isProduction) {
 module.exports = {
   devtool: isProduction ? false : "source-map",
   context: jsSourcePath,
+  target: 'node',
   entry: {
-    js: "./index.js",
-   // vendor: ["lazysizes", "lazysizes/plugins/bgset/ls.bgset.min.js"]
+    app: "./index.js",
+    vendor: ["lazysizes", "lazysizes/plugins/bgset/ls.bgset.min.js"]
   },
   output: {
     path: buildPath,
     publicPath: "/",
-    filename: "app.js",
+    filename: "[name].js",
     libraryTarget: 'umd'
   },
   module: {

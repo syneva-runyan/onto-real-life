@@ -4,12 +4,15 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const StaticSiteGeneratorPlugin = require("static-site-generator-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 const path = require("path");
-
+const ejs = require("ejs");
+const fs = require("fs");
 const nodeEnv = process.env.NODE_ENV || "development";
 const sourcePath = path.join(__dirname, "../source");
 const imgPath = path.join(__dirname, "../source/assets/img");
 const jsSourcePath = path.join(__dirname, "./source/js");
 const buildPath = path.join(__dirname, "../build");
+
+var template = ejs.compile(fs.readFileSync(path.join(__dirname, '../source/template.ejs'), 'utf-8'))
 const routeData = require('./route-data');
 
 module.exports = {
@@ -42,15 +45,18 @@ module.exports = {
             $: "jquery",
             jQuery: "jquery"
         }),
-        new StaticSiteGeneratorPlugin(
-            'js',
-            routeData.paths,
-            {},
-            {
+        new StaticSiteGeneratorPlugin({
+            entry: 'app',
+            paths: routeData.paths,
+            locals: {
+                template: template
+            },
+            globals: {
                 window: {
                     XMLHttpRequest: {}
                 }
-            }),
+            }
+        }),
         new CopyWebpackPlugin([
             {
             from: "../assets/scripts/sendEmail.php",

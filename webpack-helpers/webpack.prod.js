@@ -3,7 +3,8 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-    plugins: [
+    plugins: [        
+        new ExtractTextPlugin("style.css"),
         new CopyWebpackPlugin([{
             from: "../data",
             to: "data"
@@ -32,8 +33,7 @@ module.exports = {
         output: {
             comments: false,
         }
-        }),
-        new ExtractTextPlugin("style-[hash].css")
+        })
     ],
     rules: [
         {
