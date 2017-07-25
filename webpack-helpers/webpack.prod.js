@@ -1,9 +1,28 @@
 const webpack = require("webpack");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const StaticSiteGeneratorPlugin = require("static-site-generator-webpack-plugin");
+const ejs = require("ejs");
+const fs = require("fs");
+const path = require("path");
+
+const template = ejs.compile(fs.readFileSync(path.join(__dirname, '../source/template.ejs'), 'utf-8'))
+const routeData = require('./route-data');
 
 module.exports = {
-    plugins: [        
+    plugins: [    
+        new StaticSiteGeneratorPlugin({
+            entry: 'app',
+            paths: routeData.paths,
+            locals: {
+                template: template
+            },
+            globals: {
+                window: {
+                    XMLHttpRequest: {}
+                }
+            }
+        }),
         new ExtractTextPlugin("style.css"),
         new CopyWebpackPlugin([{
             from: "../data",

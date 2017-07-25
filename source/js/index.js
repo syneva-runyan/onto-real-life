@@ -1,10 +1,15 @@
+// index.js
+// Determine if dev or prod env,
+// load server || build static pages as appropriate.
+
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, StaticRouter } from 'react-router-dom';
 import { ReactDOM } from 'react-dom'
 import ReactDOMServer from 'react-dom/server';
+import { createBrowserHistory } from "history";
 
 import { App } from "./views";
-import routes from './routes';
+import { routes } from './routes';
 
 // Load SCSS
 import "../scss/app.scss";
@@ -18,13 +23,18 @@ import "../scss/app.scss";
 // }
 
 if (typeof global.document !== 'undefined') {
-  const rootEl = global.document.getElementById('outlay');
+  console.log(" THERE IS  A GLOBAL DOCUMENT DEFINED");
+  console.log(global.document);
+  const rootEl = global.document.getElementById('app');
   React.render(
-    <App />,
+    <p>Test</p>,
     rootEl,
   );
 }
 
+// For static page rendering,
+// ensure that base path for all assets
+// is set correctly.
 const calcRelativeBase = (path) => {
   let base = '';
 
@@ -42,30 +52,34 @@ const calcRelativeBase = (path) => {
   return base;
 }
 
+
+/**
+* Function exported for use by
+* static-site-generator-webpack-plugin
+*
+* Render static HTML for a provided path
+* as defined per StaticSiteGeneratorPlugin's config
+* @param {object} data - Object passed in StaticSiteGeneratorPlugin & general webpack data 
+*/
 export default (data) => {
+  // Assets defined in webpack config
   const assets = Object.keys(data.webpackStats.compilation.assets);
   const css = assets.filter(value => value.match(/\.css$/));
   const js = assets.filter(value => value.match(/\.js$/));
-  const base = calcRelativeBase(data.path);
 
+  // Get base path for assets relative to 
+  // main index location
+  const base = calcRelativeBase(data.path);
+  const context = {};
+
+  // Render html appropritae for path
   var html = ReactDOMServer.renderToStaticMarkup(
       (<App>
-        {routes(data)}
+        <StaticRouter location={data.path} context={context}>
+            {routes(data)}
+        </StaticRouter>
       </App>
     ), data);
 
   return data.template({ css, js, base, html});
 }
-
-/**
- * This function is the global export that static-render-webpack-plugin uses
- */
-/* Exported static site renderer */
-/*export default (locals, callback) => {
-    var html = ReactDOMServer.renderToStaticMarkup(
-      (<Html>
-        {routes(locals)}
-      </Html>
-    ), locals);
-    callback(null, html)
-}*/
