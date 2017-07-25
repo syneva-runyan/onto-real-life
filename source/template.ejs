@@ -9,22 +9,28 @@
     <meta property="og:image" content="http://ontoreallife.com/assets/img/blogs/newZealandSouth/lakeMatheson.jpg" />
     <link rel="stylesheet" href="/styles.css"/>
 
-    <% if(base) {  %>
-    <base href="<%=base%>" />
+    <% if(!htmlWebpackPlugin.options) { %>
+      <% if(base) {  %>
+      <base href="<%=base%>" />
+      <% } %>
+    
+      <% css.forEach(function(file){ %>
+          <link href="<%- file %>" rel="stylesheet">
+      <% }); %>
     <% } %>
-  
-    <% css.forEach(function(file){ %>
-        <link href="<%- file %>" rel="stylesheet">
-    <% }); %>
     
     <title>Onto real life</title>
   </head>
   <body>
     <div id="app">
+      <% if(!htmlWebpackPlugin.options) { %>
         <%- html %>
+      <% } %>
     </div>
-    <% js.forEach(function(file){ %>
-        <script src="<%- file %>" async></script>
-    <% }); %>
+    <% if(!htmlWebpackPlugin.options) { %>
+      <% js.forEach(function(file){ %>
+          <script src="<%- file %>" async></script>
+      <% }); %>
+    <% } %>
   </body>
 </html>
