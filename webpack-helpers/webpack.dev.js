@@ -1,8 +1,19 @@
 const webpack = require("webpack");
 const DashboardPlugin = require("webpack-dashboard/plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
+
+const sourcePath = path.join(__dirname, "../source");
+const buildPath = path.join(__dirname, "../build");
+
 
 module.exports = {
     plugins: [
+        new HtmlWebpackPlugin({
+            template: path.join(sourcePath, "template.ejs"),
+            path: buildPath,
+            filename: "index.html",
+        }),
         new webpack.HotModuleReplacementPlugin(),
         new DashboardPlugin()
     ],

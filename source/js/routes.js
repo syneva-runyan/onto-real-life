@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import ReactDOMServer from 'react-dom/server'
-import { StaticRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { About, BlogPosts, Contact, NotFound } from "./views";
 
 const publicPath = "/";
@@ -13,14 +12,12 @@ export const routeCodes = {
   HOME: publicPath,
 };
 
-module.exports = (locals) => {
+export const  routes = (locals) => {
   return (
-    <StaticRouter location={locals.path} context={{}} >
-        <Switch>
-            <Route path={routeCodes.ABOUT} component={About} />
-            <Route component={BlogPosts} />
-        </Switch>
-    </StaticRouter>
+      <Switch>
+          <Route path={routeCodes.ABOUT} component={About} />
+          <Route component={BlogPosts} />
+      </Switch>
   )
 };
             // <Route path={routeCodes.POSTS} component={BlogPosts} />
