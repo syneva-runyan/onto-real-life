@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { routeCodes } from "../../routes";
 
 const propTypes = {};
@@ -42,52 +42,51 @@ export default class Menu extends Component {
       ? "menu__nav menu--opened"
       : "menu__nav";
 
-      return (<p>PLACEHOLDER</p>)
-    /*return (
+    return (
       <div className="menu">
         <button className="menu__cta" onClick={this.boundMenuToggle}>
           Menu
         </button>
         <nav className={menuClassNames}>
           <li className={`menu__item ${routeCodes.ABOUT}`}>
-            <Link
+            <NavLink
               activeClassName="selected"
               to={routeCodes.ABOUT}
               onClick={this.boundMenuToggle}
             >
               About
-            </Link>
+            </NavLink>
           </li>
           <li className={`menu__item ${routeCodes.POSTS}`}>
-            <Link
+            <NavLink
               activeClassName="selected"
               to={this.postRouteAdjustments(routeCodes.POSTS)}
               onClick={this.boundMenuToggle}
             >
               Blog Posts
-            </Link>
+            </NavLink>
           </li>
           <li className={`menu__item ${routeCodes.PHOTO_MAP}`}>
-            <Link
+            <NavLink
               activeClassName="selected"
               to={routeCodes.PHOTO_MAP}
               onClick={this.boundMenuToggle}
             >
               Photo Map
-            </Link>
+            </NavLink>
           </li>
           <li className={`menu__item ${routeCodes.CONTACT}`}>
-            <Link
+            <NavLink
               activeClassName="selected"
               to={routeCodes.CONTACT}
               onClick={this.boundMenuToggle}
             >
               Contact
-            </Link>
+            </NavLink>
           </li>
         </nav>
       </div>
-    );*/
+    );
   }
 }
 

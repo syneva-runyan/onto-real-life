@@ -1,7 +1,6 @@
 // index.js
 // Determine if dev or prod env,
 // load server || build static pages as appropriate.
-
 import React from 'react';
 import { BrowserRouter, StaticRouter } from 'react-router-dom';
 import ReactDOM from 'react-dom'
@@ -14,18 +13,14 @@ import { routes } from './routes';
 // Load SCSS
 import "../scss/app.scss";
 
-
-// if (typeof document != 'undefined') {
-//   ReactDOM.render(
-//     <BrowserRouter>{routes}</BrowserRouter>,
-//     document.getElementById('#app')
-//   )
-// }
-
-if (typeof global.document !== 'undefined') {
+if (global && typeof global.document !== 'undefined') {
   const history = createBrowserHistory();
   const rootEl = global.document.getElementById('app');
-  ReactDOM.render(<App />, rootEl);
+  ReactDOM.render(
+      <BrowserRouter history={history} >
+            <App/>
+      </BrowserRouter>
+    , rootEl);
 }
 
 // For static page rendering,
@@ -63,20 +58,21 @@ export default (data) => {
   const assets = Object.keys(data.webpackStats.compilation.assets);
   const css = assets.filter(value => value.match(/\.css$/));
   const js = assets.filter(value => value.match(/\.js$/));
-
+  const devOptions = {
+    options: null
+  };
   // Get base path for assets relative to 
   // main index location
   const base = calcRelativeBase(data.path);
   const context = {};
 
-  // Render html appropritae for path
+  // Render html appropriate for path
   var html = ReactDOMServer.renderToStaticMarkup(
-      (<App>
+      (
         <StaticRouter location={data.path} context={context} history={history} >
-            {routes(data)}
+            <App />
         </StaticRouter>
-      </App>
     ), data);
 
-  return data.template({ css, js, base, html});
+  return data.template({ css, js, base, html, htmlWebpackPlugin: devOptions});
 }
