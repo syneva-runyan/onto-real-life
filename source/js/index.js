@@ -4,9 +4,9 @@
 
 import React from 'react';
 import { BrowserRouter, StaticRouter } from 'react-router-dom';
-import { ReactDOM } from 'react-dom'
+import ReactDOM from 'react-dom'
 import ReactDOMServer from 'react-dom/server';
-import { createBrowserHistory } from "history";
+import { createBrowserHistory, createMemoryHistory } from "history";
 
 import { App } from "./views";
 import { routes } from './routes';
@@ -23,13 +23,9 @@ import "../scss/app.scss";
 // }
 
 if (typeof global.document !== 'undefined') {
-  console.log(" THERE IS  A GLOBAL DOCUMENT DEFINED");
-  console.log(global.document);
+  const history = createBrowserHistory();
   const rootEl = global.document.getElementById('app');
-  React.render(
-    <p>Test</p>,
-    rootEl,
-  );
+  ReactDOM.render(<App />, rootEl);
 }
 
 // For static page rendering,
@@ -63,6 +59,7 @@ const calcRelativeBase = (path) => {
 */
 export default (data) => {
   // Assets defined in webpack config
+  const history = createMemoryHistory();
   const assets = Object.keys(data.webpackStats.compilation.assets);
   const css = assets.filter(value => value.match(/\.css$/));
   const js = assets.filter(value => value.match(/\.js$/));
@@ -75,7 +72,7 @@ export default (data) => {
   // Render html appropritae for path
   var html = ReactDOMServer.renderToStaticMarkup(
       (<App>
-        <StaticRouter location={data.path} context={context}>
+        <StaticRouter location={data.path} context={context} history={history} >
             {routes(data)}
         </StaticRouter>
       </App>
