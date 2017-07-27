@@ -1,11 +1,8 @@
 import React, { Component } from "react";
+import { Switch, Route } from "react-router-dom";
 import PropTypes from "prop-types";
-import {
-  PostTitle,
-  PostContent,
-  PostContextNav,
-} from "../../components/BlogPosts";
 import postCatalog from "../../../data/posts";
+import Post from "./Post";
 import PostCollection from "./PostCollection";
 
 const assetBasePath = "/assets/img/blogs";
@@ -21,66 +18,32 @@ const defaultProps = {
 };
 
 export default class BlogPosts extends Component {
-  getPostContext(collection, postId) {
-    const postContext = {
-      next: null,
-      prev: null,
-    };
+  constructor(props) {
+    super(props);
 
-    Object.keys(collection).forEach((item, index) => {
-      if (item === postId) {
-        const entriesArray = Object.entries(collection);
-        postContext.next =
-          (entriesArray[index - 1] && entriesArray[index - 1][1]) || null;
-        postContext.prev =
-          (entriesArray[index + 1] && entriesArray[index + 1][1]) || null;
-      }
-    });
-
-    return postContext;
+    this.postCollection = this.renderCollection(assetBasePath);
+    this.post = this.renderPost(assetBasePath);
   }
-
-  renderPost(post, postId, assetBase, postContext) {
+  renderPost(assetBase) {
     return (
-      <div>
-        <PostTitle
-          title={post.title}
-          datePublished={post.datePublished}
-          tagLine={post.tagLine}
-          imgPath={`${assetBase}/${postId}`}
-        />
-        <PostContent postId={postId} />
-        <hr />
-        <PostContextNav {...postContext} />
-      </div>
-    );
+      props => <Post assetBase={assetBase} postCatalog={postCatalog} {...props} />
+    )
   }
+
 
   renderCollection(assetBase) {
     return (
-      <PostCollection assetBasePath={assetBase} postCatalog={postCatalog} />
+      props => <PostCollection assetBase={assetBase} postCatalog={postCatalog} />
     );
   }
 
   render() {
-    // const post = postCatalog[this.props.params.postId];
-
-    // if (post) {
-    //   const postContext = this.getPostContext(
-    //     postCatalog,
-    //     this.props.params.postId,
-    //   );
-
-    //   return this.renderPost(
-    //     post,
-    //     this.props.params.postId,
-    //     assetBasePath,
-    //     postContext,
-    //   );
-    // }
-
-    // return this.renderCollection(assetBasePath);
-    return (<p>This is the blog post route</p>)
+    return (
+      <Switch>
+        <Route path="/posts/:postId" render={this.post} />
+        <Route render={this.postCollection} />
+      </Switch>
+    )
   }
 }
 
