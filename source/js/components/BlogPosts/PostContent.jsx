@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import PostHelper from "../../utils/post-helper";
+import { NotFound } from "../Global";
 
 // const FroalaEditor = require("react-froala-wysiwyg");
 const FroalaEditorView = require("react-froala-wysiwyg/FroalaEditorView");
@@ -16,10 +17,12 @@ const FroalaEditorView = require("react-froala-wysiwyg/FroalaEditorView");
 
 const propTypes = {
   postId: PropTypes.string,
+  component: PropTypes.func
 };
 
 const defaultProps = {
   postId: null,
+  component: NotFound
 };
 
 export default class PostContent extends Component {
@@ -33,36 +36,6 @@ export default class PostContent extends Component {
     };
 
     this.boundSavePost = this.savePost.bind(this);
-    this.boundSetPostContent = this.setPostContent.bind(this);
-  }
-
-  componentDidMount() {
-    this.getPost(this.state.postId);
-  }
-
-  componentWillReceiveProps(props) {
-    if (props.postId && props.postId !== this.state.postId) {
-      this.refreshPost(props.postId);
-    }
-  }
-
-  getPost(postId) {
-    PostHelper.getPost(postId, this.boundSetPostContent);
-  }
-
-  // TODO post GET failures
-  setPostContent(postContent) {
-    this.setState({
-      content: postContent,
-    });
-  }
-
-  refreshPost(postId) {
-    this.getPost(postId);
-    this.setState({
-      postId,
-    });
-    window.scrollTo(0, 0);
   }
 
   savePost() {
@@ -82,7 +55,8 @@ export default class PostContent extends Component {
           />
           <button onClick={this.boundSavePost}>Save</button>
         </div> */}
-        <FroalaEditorView model={this.state.content} />
+        {/*<FroalaEditorView model={this.state.content} />*/}
+        <this.props.component />
       </div>
     );
   }

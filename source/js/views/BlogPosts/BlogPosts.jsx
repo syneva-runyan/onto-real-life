@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import postCatalog from "../../../data/posts";
 import Post from "./Post";
 import PostCollection from "./PostCollection";
+import { routeCodes } from "../../routes";
 
 const assetBasePath = "/assets/img/blogs";
 
@@ -40,7 +41,7 @@ export default class BlogPosts extends Component {
   render() {
     return (
       <Switch>
-        <Route path="/posts/:postId" render={this.post} />
+        <Route path={`${routeCodes.POSTS}/:postId`} render={this.post} />
         <Route render={this.postCollection} />
       </Switch>
     )

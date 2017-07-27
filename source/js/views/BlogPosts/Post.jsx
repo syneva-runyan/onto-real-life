@@ -60,7 +60,7 @@ export default class Post extends Component {
                 tagLine={post.tagLine}
                 imgPath={`${this.props.assetBase}/${postId}`}
             />
-            <PostContent postId={postId} />
+            <PostContent postId={postId} component={post.component} />
             <hr />
             <PostContextNav {...postContext} />
         </div>
