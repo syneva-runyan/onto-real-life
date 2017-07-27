@@ -7,13 +7,12 @@ const fs = require("fs");
 const path = require("path");
 
 const template = ejs.compile(fs.readFileSync(path.join(__dirname, '../source/template.ejs'), 'utf-8'))
-const routeData = require('./route-data');
 
 module.exports = {
     plugins: [    
         new StaticSiteGeneratorPlugin({
+            crawl: true,
             entry: 'app',
-            paths: routeData.paths,
             locals: {
                 template: template
             },
