@@ -3,17 +3,17 @@ import PropTypes from "prop-types";
 import { PostPreviewer } from "../../components/BlogPosts";
 
 const propTypes = {
-  assetBasePath: PropTypes.string,
+  assetBase: PropTypes.string,
   postCatalog: PropTypes.object,
 };
 
 const defaultProps = {
-  assetBasePath: "/assets/img/blogs",
+  assetBase: "/assets/img/blogs",
   postCatalog: {},
 };
 
 export default class BlogPosts extends Component {
-  previewGallery(catalog, assetBasePath) {
+  previewGallery(catalog, assetBase) {
     return Object.keys(catalog).map(item => {
       const itemContent = catalog[item];
       return (
@@ -22,7 +22,7 @@ export default class BlogPosts extends Component {
           key={`post-${itemContent.id}`}
           title={itemContent.title}
           tagLine={itemContent.tagLine}
-          assetPath={`${assetBasePath}/${itemContent.id}`}
+          assetPath={`${assetBase}/${itemContent.id}`}
         />
       );
     });
@@ -35,7 +35,7 @@ export default class BlogPosts extends Component {
         <div className="blogPosts__gallery">
           {this.previewGallery(
             this.props.postCatalog,
-            this.props.assetBasePath,
+            this.props.assetBase,
           )}
         </div>
       </div>
