@@ -1,13 +1,13 @@
 import { App } from "./App";
-// import About from "./About";
-// import { BlogPosts } from "./BlogPosts";
-// import { Contact } from "./Contact";
-// import NotFound from "./NotFound";
+import About from "./About";
+import { BlogPosts } from "./BlogPosts";
+import { Contact } from "./Contact";
+import NotFound from "./NotFound";
 
-module.exports = {
+export {
   App,
-  // About,
-  // BlogPosts,
-  // Contact,
-  // NotFound,
+  About,
+  BlogPosts,
+  Contact,
+  NotFound,
 };

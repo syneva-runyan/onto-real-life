@@ -18,7 +18,7 @@ if (global && typeof global.document !== 'undefined') {
   const rootEl = global.document.getElementById('app');
   ReactDOM.render(
       <BrowserRouter history={history} >
-            <App/>
+            <App />
       </BrowserRouter>
     , rootEl);
 }
@@ -70,7 +70,9 @@ export default (data) => {
   var html = ReactDOMServer.renderToStaticMarkup(
       (
         <StaticRouter location={data.path} context={context} history={history} >
-            <App />
+            <App>
+              {routes(context)}
+            </App>
         </StaticRouter>
     ), data);
 
