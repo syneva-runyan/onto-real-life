@@ -13,9 +13,9 @@ import { routes } from './routes';
 // Load SCSS
 import "../scss/app.scss";
 
-if (global && typeof global.document !== 'undefined') {
+if (typeof document !== 'undefined') {
   const history = createBrowserHistory();
-  const rootEl = global.document.getElementById('app');
+  const rootEl = document.getElementById('app');
   ReactDOM.render(
       <BrowserRouter history={history} >
             <App />
@@ -70,9 +70,7 @@ export default (data) => {
   var html = ReactDOMServer.renderToStaticMarkup(
       (
         <StaticRouter location={data.path} context={context} history={history} >
-            <App>
-              {routes(context)}
-            </App>
+            <App />
         </StaticRouter>
     ), data);
 
