@@ -4,7 +4,7 @@ var malta = require("./malta/config.js");
 var morocco = require("./morocco/config.js");
 // var seeTheWorld = require("./seeTheWorld/config.json");
 // var newZealandNorthOverview = require("./newZealandNorthOverview/config.json");
-// var newZealandNorthHiking = require("./newZealandNorthHiking/config.json");
+var newZealandNorthHiking = require("./newZealandNorthHiking/config.js");
 // var newZealandSouth = require("./newZealandSouth/config.json");
 // var nzTravelThoughts = require("./nzTravelThoughts/config.json");
 
@@ -12,7 +12,7 @@ module.exports = {
   // nzTravelThoughts,
   // newZealandSouth,
   // newZealandNorthOverview,
-  // newZealandNorthHiking,
+  newZealandNorthHiking,
   barcelona,
   eatingAlone,
   malta,
