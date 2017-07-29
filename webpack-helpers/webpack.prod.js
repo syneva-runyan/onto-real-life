@@ -24,14 +24,6 @@ module.exports = {
         }),
         new ExtractTextPlugin("style.css"),
         new CopyWebpackPlugin([{
-            from: "../data",
-            to: "data"
-        },
-        {
-            from: "../assets/img/blogs",
-            to: "assets/img/blogs"
-        },
-        {
             from: "../assets/img/quotes.png",
             to: "assets/img/quotes.png"
         }]),
