@@ -1,9 +1,13 @@
+import React from "react";
+
+export default function Content(props) { 
+    return (
     <div>
       <p>
         There is <strong>So. Much. To. Do.</strong> on the south island, where
         do I even start?
       </p>
-      <p class="quote">
+      <p className="quote">
         I've probably listened to the song "99 Red Balloons" more than once for
         every balloon in the song.
       </p>
@@ -27,9 +31,9 @@
                   ../assets/img/blogs/newZealandSouth/gettingInTheWay.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/gettingInTheWay.jpg"
           data-srcset="../assets/img/blogs/newZealandSouth/gettingInTheWay--sm.jpg"
-          class="lazyload blur-up"
+          className="lazyload blur-up"
         />
-        <figcaption class="caption">
+        <figcaption className="caption">
           One can not simply drive over the Southern Alps.
         </figcaption>
       </figure>
@@ -38,7 +42,7 @@
         amount of things to do, the three weeks I spent on the south island were
         not enough. <strong>six weeks</strong> would have been more appropriate.
       </p>
-      <figure class="align-left width--50 sm-width--100 margin--right">
+      <figure className="align-left width--50 sm-width--100 margin--right">
         <img
           alt="Snowy mountain hiking path"
           data-sizes="auto"
@@ -48,9 +52,9 @@
                   ../assets/img/blogs/newZealandSouth/snow.jpg 2050w"
           data-srcset="../assets/img/blogs/newZealandSouth/snow--sm.jpg"
           src="../assets/img/blogs/newZealandSouth/snow.jpg"
-          class="lazyload blur-up"
+          className="lazyload blur-up"
         />
-        <figcaption class="caption">
+        <figcaption className="caption">
           Hiking in snow was new to me.
         </figcaption>
       </figure>
@@ -70,7 +74,7 @@
         them epitomize quintessential aspects of the Southern kiwi experience.
       </p>
       <br />
-      <p class="quote">
+      <p className="quote">
         <em>
           <strong>Side note- </strong>
         </em>
@@ -78,7 +82,7 @@
       </p>
       <br />
       <h3>1. Waking up in Wanaka</h3>
-      <figure class="align-right width--50 sm-width--100 margin--left">
+      <figure className="align-right width--50 sm-width--100 margin--left">
         <img
           alt="Mt Roy viewpoint"
           data-sizes="auto"
@@ -88,9 +92,9 @@
                   ../assets/img/blogs/newZealandSouth/mtRoy.jpg 2050w"
           data-srcset="../assets/img/blogs/newZealandSouth/mtRoy--sm.jpg"
           src="../assets/img/blogs/newZealandSouth/mtRoy.jpg"
-          class="lazyload blur-up"
+          className="lazyload blur-up"
         />
-        <figcaption class="caption">
+        <figcaption className="caption">
           There was a line to take this picture, mostly full of 'mericans.
         </figcaption>
       </figure>
@@ -124,7 +128,7 @@
         turn around. Doing the extra 30 minutes up to the peak is well worth the
         effort though.
       </p>
-      <p class="quote">
+      <p className="quote">
         I claim bragging rights for making it all the way up.
       </p>
       <figure>
@@ -137,16 +141,16 @@
                   ../assets/img/blogs/newZealandSouth/mtRoyPeak.jpg 2050w"
           data-srcset="../assets/img/blogs/newZealandSouth/mtRoyPeak--sm.jpg"
           src="../assets/img/blogs/newZealandSouth/mtRoyPeak.jpg"
-          class="lazyload blur-up"
+          className="lazyload blur-up"
         />
       </figure>
       <br />
       <h3>2. The Peanut Butter Factory (Nelson)</h3>
-      <p class="quote">
+      <p className="quote">
         You'd run out of numbers before adding up the number of peanut butter
         sandwiches I ate as a child.
       </p>
-      <figure class="width--30 sm-width--100 align-right margin--left">
+      <figure className="width--30 sm-width--100 align-right margin--left">
         <img
           alt="Pic's Peanut Butter Factor"
           data-sizes="auto"
@@ -156,7 +160,7 @@
                   ../assets/img/blogs/newZealandSouth/pics.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/pics.jpg"
           data-srcset="../assets/img/blogs/newZealandSouth/pics--sm.jpg"
-          class="lazyload blur-up"
+          className="lazyload blur-up"
         />
       </figure>
       <p>
@@ -207,18 +211,18 @@
         in Steward Island, and the hostel owners who trade off vacation time in
         Hanmer Springs impressed me while traveling throughout the South Island.
       </p>
-      <p class="quote">
+      <p className="quote">
         Kiwis support each other and their communities, which is beautiful and
         something places all over the world could learn from.
       </p>
       <br />
 
       <h3>3. Jumping off a Bridge (Queenstown)</h3>
-      <p class="quote">
+      <p className="quote">
         If you love extreme outdoor adventuring, you need to go to Queenstown.
         <em>Like, yesterday.</em> So hop on a plane right now.
       </p>
-      <figure class="width--50 sm-width--100 align-left margin--right">
+      <figure className="width--50 sm-width--100 align-left margin--right">
         <img
           alt="Kawarau Bridge Bungy Jumping"
           data-sizes="auto"
@@ -228,7 +232,7 @@
                   ../assets/img/blogs/newZealandSouth/bungy.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/bungy.jpg"
           data-srcset="../assets/img/blogs/newZealandSouth/bungy--sm.jpg"
-          class="lazyload blur-up"
+          className="lazyload blur-up"
         />
       </figure>
       <p>
@@ -263,7 +267,7 @@
         something rustling in the trees above me, the last thing I expected to
         see was not just one parrot, but a family of parrots.
       </p>
-      <figure class="width--30 sm-width--100 align-left margin--right">
+      <figure className="width--30 sm-width--100 align-left margin--right">
         <img
           alt="Albatross"
           data-sizes="auto"
@@ -274,9 +278,9 @@
           data-src="../assets/img/blogs/newZealandSouth/albatross--sm.jpg"
           src="../assets/img/blogs/newZealandSouth/albatross.jpg"
           data-srcset="../assets/img/blogs/newZealandSouth/albatross--sm.jpg"
-          class="lazyload blur-up"
+          className="lazyload blur-up"
         />
-        <figcaption class="caption">
+        <figcaption className="caption">
           Average weight of a Southern Albatross is 18.7lbs with a wingspan of
           ~9.8 ft.
           <a
@@ -313,7 +317,7 @@
                   ../assets/img/blogs/newZealandSouth/ropeSwing.jpg 2050w"
           data-srcset="../assets/img/blogs/newZealandSouth/ropeSwing--sm.jpg"
           src="../assets/img/blogs/newZealandSouth/ropeSwing.jpg"
-          class="lazyload width--50 align-left blur-up"
+          className="lazyload width--50 align-left blur-up"
         />
         <img
           alt="Boat Sheds on Stewart Island"
@@ -324,7 +328,7 @@
                   ../assets/img/blogs/newZealandSouth/boatShed.jpg 2050w"
           data-srcset="../assets/img/blogs/newZealandSouth/boatShed--sm.jpg"
           src="../assets/img/blogs/newZealandSouth/boatShed.jpg"
-          class="lazyload width--50 align-left blur-up"
+          className="lazyload width--50 align-left blur-up"
         />
         <img
           alt="Coastal Bush"
@@ -335,7 +339,7 @@
                   ../assets/img/blogs/newZealandSouth/coastalBush.jpg 2050w"
           data-srcset="../assets/img/blogs/newZealandSouth/coastalBush--sm.jpg"
           src="../assets/img/blogs/newZealandSouth/coastalBush.jpg"
-          class="lazyload blur-up"
+          className="lazyload blur-up"
         />
       </figure>
       <h3>5. Ice Explorer Tour (Franz Joseph)</h3>
@@ -349,7 +353,7 @@
                   ../assets/img/blogs/newZealandSouth/glacier1.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/glacier1.jpg"
           data-srcset="../assets/img/blogs/newZealandSouth/glacier1--sm.jpg"
-          class="lazyload align-left width--25 sm-width--50 blur-up"
+          className="lazyload align-left width--25 sm-width--50 blur-up"
         />
         <img
           alt=""
@@ -360,7 +364,7 @@
                   ../assets/img/blogs/newZealandSouth/glacier2.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/glacier2.jpg"
           data-srcset="../assets/img/blogs/newZealandSouth/glacier2--sm.jpg"
-          class="lazyload align-left width--25 sm-width--50 blur-up"
+          className="lazyload align-left width--25 sm-width--50 blur-up"
         />
         <img
           alt=""
@@ -371,7 +375,7 @@
                   ../assets/img/blogs/newZealandSouth/glacier4.jpg 2050w"
           data-srcset="../assets/img/blogs/newZealandSouth/glacier4--sm.jpg"
           src="../assets/img/blogs/newZealandSouth/glacier4.jpg"
-          class="lazyload align-left width--25 sm-width--50 blur-up"
+          className="lazyload align-left width--25 sm-width--50 blur-up"
         />
         <img
           alt=""
@@ -382,7 +386,7 @@
                   ../assets/img/blogs/newZealandSouth/glacier3.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/glacier3.jpg"
           data-srcset="../assets/img/blogs/newZealandSouth/glacier3--sm.jpg"
-          class="lazyload align-left width--25 sm-width--50 blur-up"
+          className="lazyload align-left width--25 sm-width--50 blur-up"
         />
       </figure>
       <p>
@@ -392,7 +396,7 @@
         for the first time, and shuffling through ice tunnel was something I
         won't forget.
       </p>
-      <p class="quote">
+      <p className="quote">
         Because of the recession of the Franz Joseph and Fox glaciers in the
         past few years (<em>thanks Donald Trump and global warming</em>), the
         only way to access the glaciers is via helicopter.
@@ -414,9 +418,9 @@
                   ../assets/img/blogs/newZealandSouth/fox.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/fox.jpg"
           data-srcset="../assets/img/blogs/newZealandSouth/fox--sm.jpg"
-          class="lazyload blur-up"
+          className="lazyload blur-up"
         />
-        <figcaption class="caption">Nearby Fox Glacier</figcaption>
+        <figcaption className="caption">Nearby Fox Glacier</figcaption>
       </figure>
       <p>
         I wasn't stranded, but my first trip was canceled. Our group made it as
@@ -430,7 +434,7 @@
       <p>
         <em>A: Highlander Beef</em>
       </p>
-      <figure class="align-left margin--right width--50">
+      <figure className="align-left margin--right width--50">
         <img
           alt="Pub Quiz Prize - Gumboots"
           data-sizes="auto"
@@ -440,9 +444,9 @@
                   ../assets/img/blogs/newZealandSouth/mudBoots.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/mudBoots.jpg"
           data-srcset="../assets/img/blogs/newZealandSouth/mudBoots--sm.jpg"
-          class="lazyload blur-up"
+          className="lazyload blur-up"
         />
-        <figcaption class="caption">
+        <figcaption className="caption">
           Despite contradiction from numerous non-kiwis, nobody seemed to call
           these Wellies. They're gumboots as far as I can tell.
         </figcaption>
@@ -463,12 +467,12 @@
         perfect. My teammates suggested I play Cinderella with them.
       </p>
       <br />
-      <p class="quote">
+      <p className="quote">
         <em>Wanted: </em> Male, age 25-35. Must never mention Donald Trump, do
         all household cooking, and wear nz men's shoe size 8.
       </p>
       <h3>7. Mt. Cook Hiking</h3>
-      <figure class="align-left width--50 sm-width--100 margin--right">
+      <figure className="align-left width--50 sm-width--100 margin--right">
         <img
           alt="Rippled lake with mountain backdrop"
           data-sizes="auto"
@@ -478,7 +482,7 @@
                   ../assets/img/blogs/newZealandSouth/ripple.jpg 2050w"
           data-srcset="../assets/img/blogs/newZealandSouth/ripple--sm.jpg"
           src="../assets/img/blogs/newZealandSouth/ripple.jpg"
-          class="lazyload blur-up"
+          className="lazyload blur-up"
         />
       </figure>
       <p>
@@ -498,7 +502,7 @@
                   ../assets/img/blogs/newZealandSouth/hookerBlue.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/hookerBlue.jpg"
           data-srcset="../assets/img/blogs/newZealandSouth/hookerBlue--sm.jpg"
-          class="lazyload align-left width--50 sm-width--100 blur-up"
+          className="lazyload align-left width--50 sm-width--100 blur-up"
         />
         <img
           alt="Rocky River"
@@ -509,7 +513,7 @@
                   ../assets/img/blogs/newZealandSouth/rockWater.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/rockWater.jpg"
           data-srcset="../assets/img/blogs/newZealandSouth/rockWater--sm.jpg"
-          class="lazyload align-left width--50 sm-width--100 blur-up"
+          className="lazyload align-left width--50 sm-width--100 blur-up"
         />
       </figure>
       <br />
@@ -534,7 +538,7 @@
                   ../assets/img/blogs/newZealandSouth/shoes.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/shoes.jpg"
           data-srcset="../assets/img/blogs/newZealandSouth/shoes--sm.jpg"
-          class="lazyload align-left width--50 sm-width--100 blur-up"
+          className="lazyload align-left width--50 sm-width--100 blur-up"
         />
         <img
           alt=""
@@ -545,7 +549,7 @@
                   ../assets/img/blogs/newZealandSouth/shipwreckCove.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/shipwreckCove.jpg"
           data-srcset="../assets/img/blogs/newZealandSouth/shipwreckCove--sm.jpg"
-          class="lazyload align-left width--50 sm-width--100 blur-up"
+          className="lazyload align-left width--50 sm-width--100 blur-up"
         />
         <img
           alt="Nugget Point Lighthouse"
@@ -556,7 +560,7 @@
                   ../assets/img/blogs/newZealandSouth/nugget.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/nugget.jpg"
           data-srcset="../assets/img/blogs/newZealandSouth/nugget--sm.jpg"
-          class="lazyload align-left width--50 sm-width--100 blur-up"
+          className="lazyload align-left width--50 sm-width--100 blur-up"
         />
         <img
           alt="fence covered in hubcaps"
@@ -567,7 +571,7 @@
                   ../assets/img/blogs/newZealandSouth/hubcaps.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/hubcaps.jpg"
           data-srcset="../assets/img/blogs/newZealandSouth/hubcaps--sm.jpg"
-          class="lazyload align-left width--50 sm-width--100 blur-up"
+          className="lazyload align-left width--50 sm-width--100 blur-up"
         />
       </figure>
       <hr />
@@ -601,7 +605,7 @@
             data-srcset="../assets/img/blogs/newZealandSouth/lakeMatheson--sm.jpg"
             src="../assets/img/blogs/newZealandSouth/lakeMatheson.jpg"
             data-srcset="../assets/img/blogs/newZealandSouth/lakeMatheson--sm.jpg"
-            class="lazyload align-left width--50 sm-width--100 blur-up"
+            className="lazyload align-left width--50 sm-width--100 blur-up"
           />
           <img
             alt=""
@@ -612,7 +616,7 @@
                   ../assets/img/blogs/newZealandSouth/lakeMatheson1.jpg 2050w"
             data-srcset="../assets/img/blogs/newZealandSouth/lakeMatheson1--sm.jpg"
             src="../assets/img/blogs/newZealandSouth/lakeMatheson1.jpg"
-            class="lazyload align-left width--50 sm-width--100 blur-up"
+            className="lazyload align-left width--50 sm-width--100 blur-up"
           />
         </figure>
         <li>
@@ -629,7 +633,7 @@
                         ../assets/img/blogs/newZealandSouth/bridge.jpg 2050w"
               src="../assets/img/blogs/newZealandSouth/bridge.jpg"
               data-srcset="../assets/img/blogs/newZealandSouth/bridge--sm.jpg"
-              class="lazyload align-left width--50 sm-width--100 blur-up"
+              className="lazyload align-left width--50 sm-width--100 blur-up"
             />
             <img
               alt=""
@@ -640,7 +644,7 @@
                     ../assets/img/blogs/newZealandSouth/rainbow.jpg 2050w"
               src="../assets/img/blogs/newZealandSouth/rainbow.jpg"
               data-srcset="../assets/img/blogs/newZealandSouth/rainbow--sm.jpg"
-              class="lazyload align-left width--50 sm-width--100 blur-up"
+              className="lazyload align-left width--50 sm-width--100 blur-up"
             />
             <img
               alt=""
@@ -651,7 +655,7 @@
                     ../assets/img/blogs/newZealandSouth/kayak.jpg 2050w"
               src="../assets/img/blogs/newZealandSouth/kayak.jpg"
               data-srcset="../assets/img/blogs/newZealandSouth/kayak--sm.jpg"
-              class="lazyload blur-up"
+              className="lazyload blur-up"
             />
           </figure>
         </li>
@@ -670,7 +674,7 @@
                   ../assets/img/blogs/newZealandSouth/milford.jpg 2050w"
               src="../assets/img/blogs/newZealandSouth/milford.jpg"
               data-srcset="../assets/img/blogs/newZealandSouth/milford--sm.jpg"
-              class="lazyload align-left width--50 sm-width--100 blur-up"
+              className="lazyload align-left width--50 sm-width--100 blur-up"
             />
             <img
               alt=""
@@ -681,7 +685,7 @@
                     ../assets/img/blogs/newZealandSouth/milfordRock.jpg 2050w"
               data-srcset="../assets/img/blogs/newZealandSouth/milfordRock--sm.jpg"
               src="../assets/img/blogs/newZealandSouth/milfordRock.jpg"
-              class="lazyload align-left width--50 sm-width--100 blur-up"
+              className="lazyload align-left width--50 sm-width--100 blur-up"
             />
             <img
               alt=""
@@ -692,7 +696,7 @@
                     ../assets/img/blogs/newZealandSouth/milfordBoat.jpg 2050w"
               src="../assets/img/blogs/newZealandSouth/milfordBoat.jpg"
               data-srcset="../assets/img/blogs/newZealandSouth/milfordBoat--sm.jpg"
-              class="lazyload blur-up"
+              className="lazyload blur-up"
             />
           </figure>
         </li>
@@ -709,7 +713,7 @@
                     ../assets/img/blogs/newZealandSouth/wow.jpg 2050w"
               src="../assets/img/blogs/newZealandSouth/wow.jpg"
               data-srcset="../assets/img/blogs/newZealandSouth/wow--sm.jpg"
-              class="lazyload blur-up"
+              className="lazyload blur-up"
             />
           </figure>
         </li>
@@ -729,9 +733,9 @@
                     ../assets/img/blogs/newZealandSouth/dogBark.jpg 2050w"
               src="../assets/img/blogs/newZealandSouth/dogBark.jpg"
               data-srcset="../assets/img/blogs/newZealandSouth/dogBark--sm.jpg"
-              class="lazyload blur-up"
+              className="lazyload blur-up"
             />
-            <figcaption class="caption">
+            <figcaption className="caption">
               Look at those smiles in the crowd. How can you not love a dog
               barking contest.
             </figcaption>
@@ -744,7 +748,7 @@
           tour was.
         </li>
       </ul>
-      <p class="quote">
+      <p className="quote">
         <em>
           <strong>Side note- </strong>
         </em>
@@ -756,3 +760,5 @@
         in a separate post.
       </p>
     </div>
+    )
+}
