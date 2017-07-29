@@ -1,9 +1,13 @@
+import React from "react";
+
+export default function Content(props) { 
+    return (
     <div>
       <p>
         In the past month I've gone caving, hiked up volcanos, biked around
         vineyards...
       </p>
-      <p class="quote">
+      <p className="quote">
         From the moment I stepped off the plane and breathed the noticeably
         clean air, I've been smiling.
       </p>
@@ -54,7 +58,7 @@
       <figure>
         <img src="../assets/img/blogs/newZealandNorthOverview/marae.jpg" />
         <img src="../assets/img/blogs/newZealandNorthOverview/museumView.jpg" />
-        <figcaption class="caption">
+        <figcaption className="caption">
           Exhibit and view from museum.
         </figcaption>
       </figure>
@@ -65,17 +69,15 @@
       </p>
       <figure>
         <img
-          class="align-left"
-          style="width: 50%"
+          className="align-left width--50"
           src="../assets/img/blogs/newZealandNorthOverview/aucklandCulture.jpg"
         />
         <img
-          class="align-left"
-          style="width: 50%"
+          className="align-left width--50"
           src="../assets/img/blogs/newZealandNorthOverview/aucklandPath.jpg"
         />
         <img src="../assets/img/blogs/newZealandNorthOverview/aucklandGaudi.jpg" />
-        <figcaption class="caption">
+        <figcaption className="caption">
           <em>Top Left:</em> Auckland trying culture. <em> Top Right: </em>Path
           not recommended for tall people.
           <em>Bottom: </em> Supposed to look like a chapel in Oxford. Architect
@@ -109,13 +111,13 @@
       <figure>
         <img src="../assets/img/blogs/newZealandNorthOverview/whangaraiView.jpg" />
         <img
-          class="align-left"
-          style="width: 38%"
+          className="align-left"
+          style={{"width": "38%"}}
           src="../assets/img/blogs/newZealandNorthOverview/whaleBay.jpg"
         />
         <img
-          class="align-left"
-          style="width: 43%"
+          className="align-left"
+          style={{"width": "43%"}}
           src="../assets/img/blogs/newZealandNorthOverview/bridge.jpg"
         />
       </figure>
@@ -133,13 +135,11 @@
       </p>
       <figure>
         <img
-          class="align-left"
-          style="width: 50%"
+          className="align-left width--50"
           src="../assets/img/blogs/newZealandNorthOverview/napierGreen.jpg"
         />
         <img
-          class="align-left"
-          style="width: 50%"
+          className="align-left width--50"
           src="../assets/img/blogs/newZealandNorthOverview/fallTree.jpg"
         />
         <img src="../assets/img/blogs/newZealandNorthOverview/missionEstate.jpg" />
@@ -163,24 +163,24 @@
         and walk/bus in.
       </p>
 
-      <figure class="align-center">
+      <figure className="align-center">
         <img
-          style="width: 37.2%"
+          style={{"width": "37.2%"}}
           src="../assets/img/blogs/newZealandNorthOverview/wellingtonWhale.jpg"
         />
         <img
-          style="width: 18.9%"
+          style={{"width": "18.9%"}}
           src="../assets/img/blogs/newZealandNorthOverview/wellingtonBay.jpg"
         />
         <img
-          style="width: 39%"
+          style={{"width": "39%"}}
           src="../assets/img/blogs/newZealandNorthOverview/skateboardBench.jpg"
         />
       </figure>
       <h3 id="wine">Wine</h3>
-      <figure class="align-right  margin--left width--25 sm-width--50">
+      <figure className="align-right  margin--left width--25 sm-width--50">
         <img src="../assets/img/blogs/newZealandNorthOverview/mudBrick.jpg" />
-        <figcaption class="caption">
+        <figcaption className="caption">
           Mudbrick, one of the most romantic vineyards in the world.
         </figcaption>
       </figure>
@@ -226,8 +226,8 @@
         These trails go along the coast, through sheep fields, and right past
         some (in my case) fall-clad vineyards.
       </p>
-      <hr style="width: 0" />
-      <p class="quote">
+      <hr style={{"width": "0"}} />
+      <p className="quote">
         Sheep field highlights: <br />
         <br />
         Watching a <em>Rogue sheep</em> escape from his pen. <br />
@@ -236,20 +236,20 @@
       </p>
       <figure>
         <img src="../assets/img/blogs/newZealandNorthOverview/napier.jpg" />
-        <figcaption class="caption">
+        <figcaption className="caption">
           It's hard to take a picture one handed while riding a bicycle, mostly
           because I can't ride a bike with no handlebars.
         </figcaption>
       </figure>
       <h3>Culture/History</h3>
-      <p class="quote">
+      <p className="quote">
         The oldest records of people on New Zealand date back 900 years ago.
         That's half a blink in comparison to the 9,0000+ years the aboriganies
         have lived in Australia.
       </p>
-      <figure class="align-right  margin--left width--20 sm-width--100">
+      <figure className="align-right  margin--left width--20 sm-width--100">
         <img src="../assets/img/blogs/newZealandNorthOverview/haka.jpg" />
-        <figcaption class="caption">
+        <figcaption className="caption">
           Courtesy, 
           <a href="http://i.dailymail.co.uk/i/pix/2015/03/07/26652F8600000578-0-image-a-12_1425721833065.jpg">
             Google images
@@ -280,22 +280,21 @@
         of someone's home, like they were part of a zoo, but I've grabbed some
         from google to make up for it.
       </p>
-      <p class="quote" style="word-break: break-word">
+      <p className="quote" style={{"wordBreak": "break-word"}}>
         Tewhakarewarewatangaoteopetauaawahio. Yes that's a real name of a real
         place.
       </p>
       <figure>
         <img
-          class="align-left"
-          style="width: 49.3%"
+          className="align-left"
+          style={{"width": "49.3%"}}
           src="../assets/img/blogs/newZealandNorthOverview/hagi.jpg"
         />
         <img
-          class="align-left"
-          style="width: 50%"
+          className="align-left width--50"
           src="../assets/img/blogs/newZealandNorthOverview/villageName.jpg"
         />
-        <figcaption class="caption">
+        <figcaption className="caption">
           <em>Left: </em> Hangi, or traditional earth over used to cook food by
           the Maori. <a href="http://blogs.shsinv.school.nz/room9/">credit</a>
           <em />
@@ -340,15 +339,15 @@
         colonials and Maoris that claim historical rights, these theories are
         being swept under the carpet. (<em>Thanks Britain.</em>)
       </p>
-      <p class="quote">
+      <p className="quote">
         Search <em>Ancient New Zealand Surveyors & Astronomers</em> on google
         for more, and enjoy the deep, dark places of conspiracy and speculation
         on the internet.
       </p>
       <h3>Outdoors</h3>
-      <figure class="align-right  margin--left width--25 sm-width--30">
+      <figure className="align-right  margin--left width--25 sm-width--30">
         <img src="../assets/img/blogs/newZealandNorthOverview/map.jpg" />
-        <figcaption class="caption">
+        <figcaption className="caption">
           Approximately all the outdoor sights I wanted to hit on the North
           Island.
         </figcaption>
@@ -365,7 +364,7 @@
       </p>
       <hr />
       <h4 id="hiking">Hiking</h4>
-      <p class="quote">
+      <p className="quote">
         What better way to spend a casual Tuesday than hiking up a volcano?
       </p>
       <p>
@@ -373,14 +372,14 @@
         for its beautiful hikes, and it's half the reason why I wanted to go
         here.
       </p>
-      <p class="quote">
+      <p className="quote">
         For people who are serious about hiking, the Te Araroa is a 300 km route
         that goes around the north and south islands, taking ~5 months to
         complete.
       </p>
-      <figure class="align-right margin--left" style="width: 200px">
+      <figure className="align-right margin--left" style={{"width": "200px"}}>
         <img src="../assets/img/blogs/newZealandNorthOverview/crossingStart.jpg" />
-        <figcaption class="caption">
+        <figcaption className="caption">
           Checkout the
           <a target="blank" href="/posts/newZealandNorthHiking">
             hiking catalog
@@ -414,7 +413,7 @@
         a kitchen. In actuality, there was a pull out sofa, a solar shower, and
         a gas stove. No laundry machine to be found.
       </p>
-      <p class="quote">
+      <p className="quote">
         I wrote in my journal the first night that if I could survive four
         nights in a bush hut without heat, wifi, power, or a working toilet, I
         could survive anything. <br />
@@ -435,17 +434,17 @@
       <figure>
         <img
           src="../assets/img/blogs/newZealandNorthOverview/coffee.jpg"
-          class="align-left"
-          style="width: 70.1%"
+          className="align-left"
+          style={{"width": "70.1%"}}
           alt="pancakes in the bush"
         />
         <img
           src="../assets/img/blogs/newZealandNorthOverview/toilet.jpg"
-          class="align-left"
-          style="width: 29.6%"
+          className="align-left"
+          style={{"width": "29.6%"}}
           alt="bush hut toilet"
         />
-        <figcaption class="caption">
+        <figcaption className="caption">
           You can't get much closer to nature than this. I got the mosquito
           bites to prove it.
         </figcaption>
@@ -459,13 +458,13 @@
         I landed next in HaiHai, which is almost directly east of Auckland on
         the coast.
       </p>
-      <figure class="align-left width--30 sm-width--100 margin--right">
+      <figure className="align-left width--30 sm-width--100 margin--right">
         <img
           src="../assets/img/blogs/newZealandNorthOverview/blowhole.jpg"
           style={{ width: "100%" }}
         />
       </figure>
-      <figure class="align-right margin--left width--30 sm-width--50">
+      <figure className="align-right margin--left width--30 sm-width--50">
         <img src="../assets/img/blogs/newZealandNorthOverview/cathedral.jpg" />
       </figure>
       <p>
@@ -499,13 +498,13 @@
       </p>
       <figure>
         <img
-          class="align-left"
-          style="width: 50%"
+          className="align-left"
+          style={{"width": "50%"}}
           src="../assets/img/blogs/newZealandNorthOverview/hotWaterBeach.jpg"
         />
         <img
-          class="align-left"
-          style="width: 50%"
+          className="align-left"
+          style={{"width": "50%"}}
           src="../assets/img/blogs/newZealandNorthOverview/hotWaterBeach2.jpg"
         />
       </figure>
@@ -535,21 +534,19 @@
       <figure>
         <img
           src="../assets/img/blogs/newZealandNorthOverview/soBlue.jpg"
-          class="align-left"
-          style="width: 50%"
+          className="align-left width--50"
           alt="Redwood forest water"
         />
         <img
           src="../assets/img/blogs/newZealandNorthOverview/mudPool.jpg"
-          class="align-left"
-          style="width: 50%"
+          className="align-left width--50"
           alt="mud pools"
         />
         <img
           src="../assets/img/blogs/newZealandNorthOverview/sulphurFlats.jpg"
           alt="Sulphur Flats"
         />
-        <figcaption class="caption">
+        <figcaption className="caption">
           <em>Top Left: </em> Fake looking blue water in the Redwood forest.<em>Top Right:</em>Land
           Before Time esque mud pools.<em>Bottom: </em>Sulphur Flats around Lake
           Rotorua
@@ -565,15 +562,15 @@
         There are hundreds of caves in the area, with new ones being discovered
         yearly.
       </p>
-      <p class="quote">
+      <p className="quote">
         A few years ago, a cow grazing in a field was started when the ground
         underneath him crumbled, opening up an entrance to a previously
         undiscovered cave right underneath his feet.
       </p>
       <p>I came into Waitomo to go on a glowworm "adventure" tour.</p>
-      <figure class="align-left margin--right width--20 sm-width--100">
+      <figure className="align-left margin--right width--20 sm-width--100">
         <img src="../assets/img/blogs/newZealandNorthOverview/caving.jpg" />
-        <figcaption class="caption">
+        <figcaption className="caption">
           Take from website, since I wasn't about to bring my camera caving.
         </figcaption>
       </figure>
@@ -618,7 +615,7 @@
       </p>
       <figure>
         <img src="../assets/img/blogs/newZealandNorthOverview/glowworms.jpg" />
-        <figcaption class="caption">
+        <figcaption className="caption">
           Courtesy 
           <a href="https://www.youtube.com/watch?v=JC41M7RPSec">
             Google Images
@@ -631,7 +628,7 @@
         Finally making some south-bound progress, I headed down to Whanganui
         River.
       </p>
-      <p class="quote">
+      <p className="quote">
         The Whanganui Journey is one of the nine 
         <a href="https://en.wikipedia.org/wiki/New_Zealand_Great_Walks">
           great walks of New Zealand
@@ -644,7 +641,7 @@
         and our driver nearly doubled the population of Whakapapa (population
         8), the drop off point for the boat ride.
       </p>
-      <p class="quote">
+      <p className="quote">
         <em>Fun fact: </em> WH on the north island is pronounced like an F. Try
         reading Whakapapa out loud in a New Zealand accent.
       </p>
@@ -653,7 +650,7 @@
         You only have to paddle ~50% of the time to make it down the river,
         barring bad weather or headwinds.
       </p>
-      <figure class="align-left margin--right width--25 sm-width--50">
+      <figure className="align-left margin--right width--25 sm-width--50">
         <img src="../assets/img/blogs/newZealandNorthOverview/river.jpg" />
       </figure>
       <p>
@@ -668,7 +665,7 @@
         them laid on their mattresses, curled up, and fell asleep watching
         Mohana.
       </p>
-      <p class="quote">Goat hunting. What a job.</p>
+      <p className="quote">Goat hunting. What a job.</p>
       <p>
         Night two, we had the hut all to ourselves. We were (I was at least)
         freezing cold, and it took a whole box of matches & a wallet full of
@@ -677,7 +674,7 @@
       </p>
       <figure>
         <img src="../assets/img/blogs/newZealandNorthOverview/fire.jpg" />
-        <figcaption class="caption">
+        <figcaption className="caption">
           Questionable, but resourceful survival skills.
         </figcaption>
       </figure>
@@ -702,20 +699,20 @@
         encouraged to be extras in the film as long as they were short and had
         big noses.
       </p>
-      <figure class="align-center">
+      <figure className="align-center">
         <img
-          class="width--30 sm-width--100"
+          className="width--30 sm-width--100"
           src="../assets/img/blogs/newZealandNorthOverview/party.jpg"
         />
         <img
-          class="width--30 sm-width--100"
+          className="width--30 sm-width--100"
           src="../assets/img/blogs/newZealandNorthOverview/meHobbit.jpg"
         />
         <img
-          class="width--30 sm-width--100"
+          className="width--30 sm-width--100"
           src="../assets/img/blogs/newZealandNorthOverview/mill.jpg"
         />
-        <figcaption class="caption">
+        <figcaption className="caption">
           <em>Yes, I'm a nerd</em> I say and surprise no one.
         </figcaption>
       </figure>
@@ -734,20 +731,20 @@
         I also learned here that the actor who plays Aragorn (<em>Viggo Mortensen</em>)
         is a method actor.
       </p>
-      <p class="quote">
+      <p className="quote">
         In some of the mountain top scenes for LotR, he opted to take a 4 hour
         horse ride up the mountain at sunrise instead of jumping on a helicopter
         with the others.
       </p>
       <figure>
         <img
-          class="align-left"
-          style="width: 49.5%"
+          className="align-left"
+          style={{"width": "49.5%"}}
           src="../assets/img/blogs/newZealandNorthOverview/gollum.jpg"
         />
         <img
-          class="align-left"
-          style="width: 49.5%"
+          className="align-left"
+          style={{"width": "49.5%"}}
           src="../assets/img/blogs/newZealandNorthOverview/hobbitFeet.jpg"
         />
       </figure>
@@ -762,7 +759,7 @@
       </p>
       <figure>
         <img src="../assets/img/blogs/newZealandNorthOverview/carrot.jpg" />
-        <figcaption class="caption">
+        <figcaption className="caption">
           "<em>Ohakune. Where Adventures Begin.</em>" What adventure that starts
           with a giant carrot has ever ended badly?
         </figcaption>
@@ -772,7 +769,7 @@
         seen.
       </p>
       <h4>Traveling </h4>
-      <p class="quote">
+      <p className="quote">
         Out of breath, you finally make it to the top of a 1,500 step hill...
         and then you realize you took a wrong turn at the bottom.
       </p>
@@ -807,7 +804,7 @@
       <hr />
       <figure>
         <img src="../assets/img/blogs/newZealandNorthOverview/oldMill.jpg" />
-        <figcaption class="caption">
+        <figcaption className="caption">
           <em>Window Walk</em> view. See 
           <a target="blank" href="/posts/newZealandNorthHiking">
             hiking catalog
@@ -830,3 +827,5 @@
         </em>). Until then, bye folks!
       </p>
     </div>
+    )
+}
