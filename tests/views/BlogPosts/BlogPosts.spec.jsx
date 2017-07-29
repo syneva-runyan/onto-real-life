@@ -1,10 +1,6 @@
 import React from "react";
 import { BlogPosts } from "../../../source/js/views/BlogPosts/index.js";
-import {
-  PostTitle,
-  PostContent,
-} from "../../../source/js/components/BlogPosts";
-import PostCollection from "../../../source/js/views/BlogPosts/PostCollection";
+import { PostCollection, Post } from "../../../source/js/views/BlogPosts";
 import postCatalog from "../../../source/data/posts";
 import { shallow } from "enzyme";
 
@@ -19,51 +15,22 @@ describe("BlogPosts", () => {
   it("should exist", () => {
     expect(component).toBeTruthy();
   });
-  it("should render blog post collection if not provided a postId", () => {
-    const postCollection = component.find(PostCollection);
-    expect(postCollection.length).toEqual(1);
-  });
-  it("should render blog post title and content iff proved postId", () => {
-    const postParams = {
-      postId: "mockedPost",
-    };
-    component = shallow(<BlogPosts params={postParams} />);
+ 
+  it("should render PostCollection with renderCollection's closure", () => {
+    const collectionRenderFn = component.instance().renderCollection("someBasePath");
+    const postCollection = collectionRenderFn();
+    const renderedCollection = shallow(postCollection);
+    const collection = renderedCollection.find(PostCollection);
 
-    const blogPostTitle = component.find(PostTitle);
-    const blogPostContent = component.find(PostContent);
-
-    expect(blogPostContent.length).toEqual(1);
-    expect(blogPostTitle.length).toEqual(1);
+    expect(collection.root.length).toEqual(1);
   });
 
-  describe("post context", () => {
-    it("should return next and previous posts listed in selected post catalog", () => {
-      const collection = {
-        one: "one",
-        two: "two",
-        three: "three",
-      };
+  it("should render post with renderPost's closure", () => {
+    const postRenderFn = component.instance().renderPost("someBasePath");
+    const postRenderer = postRenderFn();
+    const renderedCollection = shallow(postRenderer);
+    const post = renderedCollection.find(Post);
 
-      const context = component.instance().getPostContext(collection, "two");
-
-      expect(context).toEqual({
-        prev: "three",
-        next: "one",
-      });
-    });
-    it("should return null when next or previous post is not available", () => {
-      const collection = {
-        one: "one",
-        two: "two",
-        three: "three",
-      };
-
-      const context = component.instance().getPostContext(collection, "three");
-
-      expect(context).toEqual({
-        prev: null,
-        next: "two",
-      });
-    });
+    expect(post.root.length).toEqual(1);
   });
 });
