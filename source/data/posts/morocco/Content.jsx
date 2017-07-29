@@ -1,7 +1,11 @@
+import React from "react";
+
+export default function Content(props) { 
+    return (
     <div>
       <figure>
         <img
-          class="lazyload"
+          className="lazyload"
           src="https://ontoreallife.files.wordpress.com/2017/05/donkey-1-of-1.jpg?w=775"
           alt="Donkey on the roadside"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/05/donkey-1-of-1.jpg?w=775 775w,
@@ -28,10 +32,10 @@
       <figure
         data-shortcode="caption"
         id="attachment_media-3"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
-          class="lazyload"
+          className="lazyload"
           src="https://ontoreallife.files.wordpress.com/2017/05/minerets-1-of-11.jpg?w=775"
           alt="Mineret towering above Fez"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/05/minerets-1-of-11.jpg?w=775 775w,
@@ -42,7 +46,7 @@
                     https://ontoreallife.files.wordpress.com/2017/05/minerets-1-of-11.jpg?w=1024 1024w"
           data-sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           Minarets tower above everything else in most Moroccan cities
         </figcaption>
       </figure>
@@ -66,7 +70,7 @@
         </p>
       </blockquote>
       <img
-        class="alignnone size-full wp-image-759"
+        className="alignnone size-full wp-image-759"
         src="https://ontoreallife.files.wordpress.com/2017/05/medina-1-of-1.jpg?w=775"
         alt="Donkey walking through"
         data-srcset="https://ontoreallife.files.wordpress.com/2017/05/medina-1-of-1.jpg?w=775 775w,
@@ -86,9 +90,9 @@
         Of all the cultural differences, the attitude of opportunistic salesmen
         was the most exhausting.
       </p>
-      <figure class="wp-caption align-left margin--right">
+      <figure className="wp-caption align-left margin--right">
         <img
-          class="lazyload"
+          className="lazyload"
           src="https://ontoreallife.files.wordpress.com/2017/05/rugshop-1-of-11.jpg?w=178&#038;h=268"
           alt="Rug Shop Entrance"
           width="178"
@@ -99,7 +103,7 @@
                     https://ontoreallife.files.wordpress.com/2017/05/rugshop-1-of-11.jpg?w=200&amp;h=300 200w"
           data-sizes="(max-width: 178px) 100vw, 178px"
         />
-        <figcaption class="caption">
+        <figcaption className="caption">
           Sale pitches with tatics that rival Catholic guilt.
         </figcaption>
       </figure>
@@ -132,9 +136,9 @@
         between Chefchaouen, Fez, and Marrakesh.
       </p>
       <h4>Fez</h4>
-      <figure class="margin--left align-right width--20 sm-width--50">
+      <figure className="margin--left align-right width--20 sm-width--50">
         <img
-          class="lazyload"
+          className="lazyload"
           src="https://ontoreallife.files.wordpress.com/2017/05/ornatewall-1-of-1.jpg?w=192&#038;h=341"
           alt="ornateWall"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/05/ornatewall-1-of-1.jpg?w=192&amp;h=341 192w,
@@ -143,7 +147,7 @@
                         https://ontoreallife.files.wordpress.com/2017/05/ornatewall-1-of-1.jpg?w=169&amp;h=300 169w"
           data-sizes="(max-width: 192px) 100vw, 192px"
         />
-        <figcaption class="caption">Beautifully ornate walls</figcaption>
+        <figcaption className="caption">Beautifully ornate walls</figcaption>
       </figure>
       <p>
         Fez felt the most “authentic”. The Medina’s streets were half the width
@@ -174,7 +178,7 @@
       </p>
       <figure>
         <img
-          class="lazyload"
+          className="lazyload"
           src="https://ontoreallife.files.wordpress.com/2017/05/camelheader_min.jpg?w=775"
           alt="Camel head hanging in market"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/05/camelheader_min.jpg?w=775 775w,
@@ -185,7 +189,7 @@
                     https://ontoreallife.files.wordpress.com/2017/05/camelheader_min.jpg 1296w"
           data-sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="caption">
+        <figcaption className="caption">
           Camel head for sale in the Fez souks. Perfectly juxtaposed with the
           flowers used to make Chanel perfume no. 5
         </figcaption>
@@ -197,13 +201,13 @@
         continue attracting tourists. We walked around the streets taking
       </p>
       <figure>
-        <div class="align-left" style="width: 65.9%">
+        <div className="align-left" style={{"width": "65.9%"}}>
           <img
             src="https://i0.wp.com/ontoreallife.files.wordpress.com/2017/05/bluecity-1-of-12.jpg?w=505&#038;h=465&#038;crop&#038;ssl=1"
             alt="blueCity (1 of 1)"
           />
         </div>
-        <div class="align-right" style="width: 34.1%">
+        <div className="align-right" style={{"width": "34.1%"}}>
           <img
             src="https://i2.wp.com/ontoreallife.files.wordpress.com/2017/05/bluecity3-1-of-12.jpg?w=262&#038;h=465&#038;crop&#038;ssl=1"
             title="BlueCity3 (1 of 1)"
@@ -219,7 +223,7 @@
         views from the tower were breath taking.
       </p>
       <figure>
-        <div class="align-left width--33">
+        <div className="align-left width--33">
           <img
             src="https://i2.wp.com/ontoreallife.files.wordpress.com/2017/05/mypalace_min.jpg?w=254&#038;h=254&#038;crop=1&#038;ssl=1"
             width="254"
@@ -228,7 +232,7 @@
             alt="My Palace for the day"
           />
         </div>
-        <div class="align-left width--33">
+        <div className="align-left width--33">
           <img
             src="https://i1.wp.com/ontoreallife.files.wordpress.com/2017/05/palaceinside_min.jpg?w=254&#038;h=254&#038;crop=1&#038;ssl=1"
             width="254"
@@ -237,7 +241,7 @@
             alt="Chandelier inside the palace"
           />
         </div>
-        <div class="align-left width--33">
+        <div className="align-left width--33">
           <img
             src="https://i1.wp.com/ontoreallife.files.wordpress.com/2017/05/bluecity_min.jpg?w=254&#038;h=254&#038;crop=1&#038;ssl=1"
             width="254"
@@ -249,9 +253,9 @@
       </figure>
       <br />
       <h4>Marrakesh</h4>
-      <figure class="align-left margin--right width--60 sm-width--100">
+      <figure className="align-left margin--right width--60 sm-width--100">
         <img
-          class="lazyload"
+          className="lazyload"
           src="https://ontoreallife.files.wordpress.com/2017/05/europeanmarket_resized.jpg?w=628"
           alt="europeanMarket_resized.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/05/europeanmarket_resized.jpg?w=628 628w,
@@ -283,7 +287,7 @@
       </p>
       <figure>
         <img
-          class="lazyload"
+          className="lazyload"
           src="https://ontoreallife.files.wordpress.com/2017/05/cobra_min2.jpg?w=396&#038;h=223"
           alt="cobra_min.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/05/cobra_min2.jpg?w=396&amp;h=223 396w,
@@ -323,7 +327,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_820"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="820"
@@ -336,13 +340,13 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/05/babymonkeys_min.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/05/babymonkeys_min.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-820"
+          className="alignnone size-full wp-image-820"
           src="https://ontoreallife.files.wordpress.com/2017/05/babymonkeys_min.jpg?w=775"
           alt="babyMonkeys_min.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/05/babymonkeys_min.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/05/babymonkeys_min.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/05/babymonkeys_min.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/05/babymonkeys_min.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/05/babymonkeys_min.jpg 960w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           A saddening amount of human food is fed to wild monkeys here
         </figcaption>
       </figure>
@@ -368,7 +372,7 @@
       </p>
       <figure>
         <img
-          class="lazyload"
+          className="lazyload"
           src="https://ontoreallife.files.wordpress.com/2017/05/treegoat_min.jpg?w=775"
           alt="Tree goats"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/05/treegoat_min.jpg?w=775 775w,
@@ -378,7 +382,7 @@
                     https://ontoreallife.files.wordpress.com/2017/05/treegoat_min.jpg 960w"
           data-sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="caption">Natural tree goats!</figcaption>
+        <figcaption className="caption">Natural tree goats!</figcaption>
       </figure>
       <p>
         Most famous among all the animals in Morocco is the Camel. At sunset in
@@ -390,14 +394,14 @@
         a bad idea for me.
       </p>
       <figure>
-        <div class="align-left width--50">
+        <div className="align-left width--50">
           <img
             src="https://i1.wp.com/ontoreallife.files.wordpress.com/2017/05/camelssunset_min.jpg?w=384&#038;h=216&#038;crop&#038;ssl=1"
             title="camelsSunset_min"
             alt="camelsSunset_min"
           />
         </div>
-        <div class="align-left width--50">
+        <div className="align-left width--50">
           <img
             src="https://i1.wp.com/ontoreallife.files.wordpress.com/2017/05/camelshadows_min.jpg?w=383&#038;h=216&#038;crop&#038;ssl=1"
             title="camelShadows_min"
@@ -432,7 +436,7 @@
       </p>
       <figure>
         <img
-          class="lazyload"
+          className="lazyload"
           src="https://ontoreallife.files.wordpress.com/2017/05/driving_min.jpg?w=775"
           alt="driving_min.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/05/driving_min.jpg?w=775 775w,
@@ -443,7 +447,7 @@
                     https://ontoreallife.files.wordpress.com/2017/05/driving_min.jpg 1296w"
           data-sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="caption">
+        <figcaption className="caption">
           Just one shot of the thousands I took of views on the drive.
         </figcaption>
       </figure>
@@ -459,7 +463,7 @@
       </p>
       <figure>
         <img
-          class="lazyload"
+          className="lazyload"
           src="https://ontoreallife.files.wordpress.com/2017/05/roadsidecamels_min.jpg?w=775"
           alt="Roadside Camels"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/05/roadsidecamels_min.jpg?w=775 775w,
@@ -469,7 +473,7 @@
                     https://ontoreallife.files.wordpress.com/2017/05/roadsidecamels_min.jpg 960w"
           data-sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="caption">
+        <figcaption className="caption">
           Roadside Camels &#8211; not the ones we rode
         </figcaption>
       </figure>
@@ -501,7 +505,7 @@
       </p>
       <figure>
         <img
-          class="lazyload"
+          className="lazyload"
           src="https://ontoreallife.files.wordpress.com/2017/05/essoria_min.jpg?w=775"
           alt="Essouria market alley"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/05/essoria_min.jpg?w=775 775w,
@@ -524,3 +528,5 @@
       <p>Dessert, Merzouga</p>
       <p>Casablanca</p>
     </div>
+    )
+}
