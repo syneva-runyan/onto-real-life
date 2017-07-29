@@ -1,3 +1,7 @@
+import React from "react";
+
+export default function Post(props) { 
+    return (
     <div>
       <p>
         For some reason there&#8217;s this fear people have of going out and
@@ -7,7 +11,7 @@
         and when you have a per-diem to spend, eating take out or at an
         in-and-out place every night is a waste.
       </p>
-      <p class="quote">
+      <p className="quote">
         I occasionally find myself (slightly uncomfortably but very happily)
         eating alone at nice restaurants.
       </p>
@@ -41,7 +45,7 @@
         When I responded with an &#8220;Actually, I&#8217;m eating
         alone&#8230;&#8221;
       </p>
-      <p class="quote">
+      <p className="quote">
         The waitress very awkwardly laughed and was like &#8220;Ah that&#8217;s
         &#8230; that happens&#8221;
       </p>
@@ -56,3 +60,5 @@
         right&#8230; because <bold>SOMETHING</bold> feels slightly off.
       </p>
     </div>
+    )
+}
