@@ -1,6 +1,6 @@
 var barcelona = require("./barcelona/config.js");
 var eatingAlone = require("./eatingAlone/config.js");
-// var malta = require("./malta/config.json");
+var malta = require("./malta/config.js");
 // var morocco = require("./morocco/config.json");
 // var seeTheWorld = require("./seeTheWorld/config.json");
 // var newZealandNorthOverview = require("./newZealandNorthOverview/config.json");
@@ -15,7 +15,7 @@ module.exports = {
   // newZealandNorthHiking,
   barcelona,
   eatingAlone,
-  // malta,
+  malta,
   // morocco,
   // seeTheWorld,
 };

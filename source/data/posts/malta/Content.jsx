@@ -1,4 +1,8 @@
-    <div>
+import React from "react";
+
+export default function Post(props) { 
+    return (
+      <div>
       <p>
         I did relatively little preparation for this trip. I didn&#8217;t even
         plan on going to Malta really. I <em>wanted</em> to go to Greece. When I
@@ -16,7 +20,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_262"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="262"
@@ -29,13 +33,13 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/gozotree.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/gozotree.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-262"
+          className="alignnone size-full wp-image-262"
           src="https://ontoreallife.files.wordpress.com/2017/04/gozotree.jpg?w=775"
           alt="gozoTree.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/gozotree.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/gozotree.jpg?w=1548 1548w, https://ontoreallife.files.wordpress.com/2017/04/gozotree.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/gozotree.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/gozotree.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/gozotree.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           No joking on the pictures taking. Even random trees were ridiculously
           beautiful, so I shot it all
         </figcaption>
@@ -63,7 +67,7 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/boatmorning.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/boatmorning.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-360"
+          className="alignnone size-full wp-image-360"
           src="https://ontoreallife.files.wordpress.com/2017/04/boatmorning.jpg?w=775"
           alt="boatMorning.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/boatmorning.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/boatmorning.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/boatmorning.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/boatmorning.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/boatmorning.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/boatmorning.jpg?w=1024 1024w"
@@ -87,7 +91,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_300"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="300"
@@ -100,20 +104,20 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/bluegrottolight.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/bluegrottolight.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-300"
+          className="alignnone size-full wp-image-300"
           src="https://ontoreallife.files.wordpress.com/2017/04/bluegrottolight.jpg?w=775"
           alt="blueGrottoLight.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/bluegrottolight.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/bluegrottolight.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/bluegrottolight.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/bluegrottolight.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/bluegrottolight.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/bluegrottolight.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           Weak bioluminescence pictured in bottom right
         </figcaption>
       </figure>
       <figure
         data-shortcode="caption"
         id="attachment_305"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="305"
@@ -126,13 +130,13 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/bluegrotto2-copy.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/bluegrotto2-copy.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-305"
+          className="alignnone size-full wp-image-305"
           src="https://ontoreallife.files.wordpress.com/2017/04/bluegrotto2-copy.jpg?w=775"
           alt="blueGrotto2 copy.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/bluegrotto2-copy.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/bluegrotto2-copy.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/bluegrotto2-copy.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/bluegrotto2-copy.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/bluegrotto2-copy.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/bluegrotto2-copy.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           The prettier part of the boat tour &#8211; expansive grottos &amp;
           windows to blue skies
         </figcaption>
@@ -159,7 +163,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_media-4"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="327"
@@ -172,13 +176,13 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/marsaxlokk.jpeg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/marsaxlokk.jpeg?w=775?w=775"
-          class="alignnone size-full wp-image-327"
+          className="alignnone size-full wp-image-327"
           src="https://ontoreallife.files.wordpress.com/2017/04/marsaxlokk.jpeg?w=775"
           alt="marsaxlokk.jpeg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/marsaxlokk.jpeg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/marsaxlokk.jpeg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/marsaxlokk.jpeg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/marsaxlokk.jpeg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/marsaxlokk.jpeg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/marsaxlokk.jpeg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           Not my photo, as I never actually made it here. Courtesy Google Images
         </figcaption>
       </figure>
@@ -209,7 +213,7 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/shelter.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/shelter.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-376"
+          className="alignnone size-full wp-image-376"
           src="https://ontoreallife.files.wordpress.com/2017/04/shelter.jpg?w=775"
           alt="shelter.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/shelter.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/shelter.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/shelter.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/shelter.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/shelter.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/shelter.jpg?w=1024 1024w"
@@ -219,7 +223,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_654"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="654"
@@ -232,13 +236,13 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/nonuscience2.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/nonuscience2.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-654"
+          className="alignnone size-full wp-image-654"
           src="https://ontoreallife.files.wordpress.com/2017/04/nonuscience2.jpg?w=775"
           alt="noNuscience.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/nonuscience2.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/nonuscience2.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/nonuscience2.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/nonuscience2.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/nonuscience2.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/nonuscience2.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           Baseline rules. Applicable to life in general, really.
         </figcaption>
       </figure>
@@ -252,7 +256,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_434"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="434"
@@ -265,13 +269,13 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/watertaxi.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/watertaxi.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-434"
+          className="alignnone size-full wp-image-434"
           src="https://ontoreallife.files.wordpress.com/2017/04/watertaxi.jpg?w=775"
           alt="waterTaxi.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/watertaxi.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/watertaxi.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/watertaxi.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/watertaxi.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/watertaxi.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/watertaxi.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           Water taxi &#8211; recommended transportation between the 3 cities and
           Vallenta. 2 euros, and a lot of fun for the passengers. Presumably not
           as exciting for the driver who makes the trip 100x a day.
@@ -292,7 +296,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_414"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="414"
@@ -305,13 +309,13 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/threecities.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/threecities.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-414"
+          className="alignnone size-full wp-image-414"
           src="https://ontoreallife.files.wordpress.com/2017/04/threecities.jpg?w=775"
           alt="threeCities.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/threecities.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/threecities.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/threecities.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/threecities.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/threecities.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/threecities.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           All the &#8220;skylines&#8221; of each Malta City I visited were
           dominated by church cathedrals, what I assume is an impact of St.
           John&#8217;s Order&#8217;s time on the island.
@@ -328,7 +332,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_445"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="445"
@@ -341,13 +345,13 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/victoriagate.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/victoriagate.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-445"
+          className="alignnone size-full wp-image-445"
           src="https://ontoreallife.files.wordpress.com/2017/04/victoriagate.jpg?w=775"
           alt="victoriaGate.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/victoriagate.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/victoriagate.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/victoriagate.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/victoriagate.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/victoriagate.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/victoriagate.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           Apparently this is semi-well know. There was no one around when I
           found it, just turned a corner and there it was.
         </figcaption>
@@ -355,7 +359,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_446"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="446"
@@ -368,13 +372,13 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/door.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/door.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-446"
+          className="alignnone size-full wp-image-446"
           src="https://ontoreallife.files.wordpress.com/2017/04/door.jpg?w=775"
           alt="door.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/door.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/door.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/door.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/door.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/door.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/door.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           One of many cool doors in Malta.
         </figcaption>
       </figure>
@@ -397,7 +401,7 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/popeyesdancing.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/popeyesdancing.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-459"
+          className="alignnone size-full wp-image-459"
           src="https://ontoreallife.files.wordpress.com/2017/04/popeyesdancing.jpg?w=775"
           alt="popeyesDancing.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/popeyesdancing.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/popeyesdancing.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/popeyesdancing.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/popeyesdancing.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/popeyesdancing.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/popeyesdancing.jpg?w=1024 1024w"
@@ -414,7 +418,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_466"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="466"
@@ -427,13 +431,13 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/village2.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/village2.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-466"
+          className="alignnone size-full wp-image-466"
           src="https://ontoreallife.files.wordpress.com/2017/04/village2.jpg?w=775"
           alt="Village2.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/village2.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/village2.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/village2.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/village2.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/village2.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/village2.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           Ideally would have waited around until sunset but I had finished
           reading my book and didnt want to sit around&#8230;
         </figcaption>
@@ -471,21 +475,21 @@
         trying out the experience.
       </p>
       <hr />
-      <figure style="width: 95.6%">
+      <figure style={{"width": "95.6%"}}>
         <img
-          class="lazyload align-left width--25"
+          className="lazyload align-left width--25"
           src="https://ontoreallife.files.wordpress.com/2017/04/castelloruins1.jpg?w=759&#038;h=425"
           alt="castelloruins.jpg"
-          style="width: 72.6%"
+          style={{"width": "72.6%"}}
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/castelloruins1.jpg?w=150&amp;h=84 150w,
                      https://ontoreallife.files.wordpress.com/2017/04/castelloruins1.jpg?w=300&amp;h=169 300w"
           data-sizes="(max-width: 759px) 100vw, 759px"
         />
         <img
-          class="lazyload align-left width--25"
+          className="lazyload align-left width--25"
           src="https://ontoreallife.files.wordpress.com/2017/04/city2.jpg?w=280&#038;h=497"
           alt="city2.jpg"
-          style="width: 23%"
+          style={{"width": "23%"}}
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/city2.jpg?w=280&amp;h=497 280w,
                     https://ontoreallife.files.wordpress.com/2017/04/city2.jpg?w=560&amp;h=994 560w,
                     https://ontoreallife.files.wordpress.com/2017/04/city2.jpg?w=84&amp;h=150 84w,
@@ -495,7 +499,7 @@
         <img
           src="https://ontoreallife.files.wordpress.com/2017/04/gozo21.jpg?w=775"
           alt="gozo2.jpg"
-          style="width: 95.6%"
+          style={{"width": "95.6%"}}
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/gozo21.jpg?w=775 775w,
                     https://ontoreallife.files.wordpress.com/2017/04/gozo21.jpg?w=1550 1550w,
                     https://ontoreallife.files.wordpress.com/2017/04/gozo21.jpg?w=150 150w
@@ -517,7 +521,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_513"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="513"
@@ -530,13 +534,13 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/bluewindow.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/bluewindow.jpg?w=775?w=619"
-          class="alignnone size-full wp-image-513"
+          className="alignnone size-full wp-image-513"
           src="https://ontoreallife.files.wordpress.com/2017/04/bluewindow.jpg?w=775"
           alt="blueWindow"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/bluewindow.jpg 619w, https://ontoreallife.files.wordpress.com/2017/04/bluewindow.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/bluewindow.jpg?w=300 300w"
           sizes="(max-width: 619px) 100vw, 619px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           Until a few weeks ago, this was the Azure Window &#8211; Courtesy{" "}
           <a href="http://www.eve.com.mt/wp-content/uploads/2016/10/azure-window-gozo.jpg">
             Google Images
@@ -546,7 +550,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_media-23"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="519"
@@ -559,20 +563,20 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/nowindow.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/nowindow.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-519"
+          className="alignnone size-full wp-image-519"
           src="https://ontoreallife.files.wordpress.com/2017/04/nowindow.jpg?w=775"
           alt="noWindow.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/nowindow.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/nowindow.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/nowindow.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/nowindow.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/nowindow.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/nowindow.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           What was left of the window when I went
         </figcaption>
       </figure>
       <figure
         data-shortcode="caption"
         id="attachment_media-24"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="520"
@@ -585,13 +589,13 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/azurewindowremails2.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/azurewindowremails2.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-520"
+          className="alignnone size-full wp-image-520"
           src="https://ontoreallife.files.wordpress.com/2017/04/azurewindowremails2.jpg?w=775"
           alt="azureWindowRemails.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/azurewindowremails2.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/azurewindowremails2.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/azurewindowremails2.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/azurewindowremails2.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/azurewindowremails2.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/azurewindowremails2.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           Still a beautiful area
         </figcaption>
       </figure>
@@ -602,7 +606,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_535"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="535"
@@ -615,13 +619,13 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/randomchurch.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/randomchurch.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-535"
+          className="alignnone size-full wp-image-535"
           src="https://ontoreallife.files.wordpress.com/2017/04/randomchurch.jpg?w=775"
           alt="randomChurch.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/randomchurch.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/randomchurch.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/randomchurch.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/randomchurch.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/randomchurch.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/randomchurch.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           Ridiculously random and beautiful church I wouldn&#8217;t have seen if
           not for the tourist bus
         </figcaption>
@@ -649,7 +653,7 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/templeinside.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/templeinside.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-550"
+          className="alignnone size-full wp-image-550"
           src="https://ontoreallife.files.wordpress.com/2017/04/templeinside.jpg?w=775"
           alt="templeInside.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/templeinside.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/templeinside.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/templeinside.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/templeinside.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/templeinside.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/templeinside.jpg?w=1024 1024w"
@@ -659,7 +663,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_media-30"
-        class="wp-caption aligncenter"
+        className="wp-caption aligncenter"
       >
         <img
           data-attachment-id="548"
@@ -672,20 +676,20 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/templeruines.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/templeruines.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-548"
+          className="alignnone size-full wp-image-548"
           src="https://ontoreallife.files.wordpress.com/2017/04/templeruines.jpg?w=775"
           alt="templeRuines.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/templeruines.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/templeruines.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/templeruines.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/templeruines.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/templeruines.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/templeruines.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           How could they possibility have done it?!
         </figcaption>
       </figure>
       <figure
         data-shortcode="caption"
         id="attachment_media-29"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="547"
@@ -698,13 +702,13 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/behinddoors.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/behinddoors.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-547"
+          className="alignnone size-full wp-image-547"
           src="https://ontoreallife.files.wordpress.com/2017/04/behinddoors.jpg?w=775"
           alt="behindDoors.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/behinddoors.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/behinddoors.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/behinddoors.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/behinddoors.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/behinddoors.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/behinddoors.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           Bonus door near the temple.
         </figcaption>
       </figure>
@@ -719,7 +723,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_media-34"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="575"
@@ -732,13 +736,13 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/beach.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/beach.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-575"
+          className="alignnone size-full wp-image-575"
           src="https://ontoreallife.files.wordpress.com/2017/04/beach.jpg?w=775"
           alt="beach.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/beach.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/beach.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/beach.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/beach.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/beach.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/beach.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           I get the appeal, but seven years?
         </figcaption>
       </figure>
@@ -764,7 +768,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_595"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="595"
@@ -777,13 +781,13 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/img_20170403_185202265_hdr-1.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/img_20170403_185202265_hdr-1.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-595"
+          className="alignnone size-full wp-image-595"
           src="https://ontoreallife.files.wordpress.com/2017/04/img_20170403_185202265_hdr-1.jpg?w=775"
           alt="IMG_20170403_185202265_HDR (1).jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/img_20170403_185202265_hdr-1.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/img_20170403_185202265_hdr-1.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/img_20170403_185202265_hdr-1.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/img_20170403_185202265_hdr-1.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/img_20170403_185202265_hdr-1.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/img_20170403_185202265_hdr-1.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           Proof it happened. Note how the guy didn&#8217;t even try to spell my
           name.
         </figcaption>
@@ -795,7 +799,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_media-36"
-        class="wp-caption alignleft"
+        className="wp-caption alignleft"
       >
         <img
           data-attachment-id="602"
@@ -808,7 +812,7 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/moped.jpg?w=169"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/moped.jpg?w=576"
-          class="alignnone size-full wp-image-602"
+          className="alignnone size-full wp-image-602"
           src="https://ontoreallife.files.wordpress.com/2017/04/moped.jpg?w=412"
           alt="moped.jpg"
           width="206"
@@ -816,7 +820,7 @@
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/moped.jpg?w=412 412w, https://ontoreallife.files.wordpress.com/2017/04/moped.jpg?w=206 206w, https://ontoreallife.files.wordpress.com/2017/04/moped.jpg?w=84 84w, https://ontoreallife.files.wordpress.com/2017/04/moped.jpg?w=169 169w"
           sizes="(max-width: 206px) 100vw, 206px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           Rabat &#8211; Beautiful limestone houses line all the streets and
           alleyways.
         </figcaption>
@@ -847,7 +851,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_627"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="627"
@@ -860,13 +864,13 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/caves.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/caves.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-627"
+          className="alignnone size-full wp-image-627"
           src="https://ontoreallife.files.wordpress.com/2017/04/caves.jpg?w=775"
           alt="caves.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/caves.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/caves.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/caves.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/caves.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/caves.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/caves.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           No one knows who lived in these. Possibly Phoenician traders?
         </figcaption>
       </figure>
@@ -893,7 +897,7 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/trail.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/trail.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-633"
+          className="alignnone size-full wp-image-633"
           src="https://ontoreallife.files.wordpress.com/2017/04/trail.jpg?w=775"
           alt="trail.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/trail.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/trail.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/trail.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/trail.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/trail.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/trail.jpg?w=1024 1024w"
@@ -903,7 +907,7 @@
       <figure
         data-shortcode="caption"
         id="attachment_media-39"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="639"
@@ -916,20 +920,20 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/victorialinespanorama2.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/victorialinespanorama2.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-639"
+          className="alignnone size-full wp-image-639"
           src="https://ontoreallife.files.wordpress.com/2017/04/victorialinespanorama2.jpg?w=775"
           alt="victoriaLinesPanorama2.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/victorialinespanorama2.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/victorialinespanorama2.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/victorialinespanorama2.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/victorialinespanorama2.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/victorialinespanorama2.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/victorialinespanorama2.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           Expansive views from the lines
         </figcaption>
       </figure>
       <figure
         data-shortcode="caption"
         id="attachment_media-1"
-        class="wp-caption alignnone"
+        className="wp-caption alignnone"
       >
         <img
           data-attachment-id="641"
@@ -942,13 +946,13 @@
           data-image-description=""
           data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/notrail.jpg?w=775?w=300"
           data-large-file="https://ontoreallife.files.wordpress.com/2017/04/notrail.jpg?w=775?w=775"
-          class="alignnone size-full wp-image-641"
+          className="alignnone size-full wp-image-641"
           src="https://ontoreallife.files.wordpress.com/2017/04/notrail.jpg?w=775"
           alt="noTrail.jpg"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/notrail.jpg?w=775 775w, https://ontoreallife.files.wordpress.com/2017/04/notrail.jpg?w=1550 1550w, https://ontoreallife.files.wordpress.com/2017/04/notrail.jpg?w=150 150w, https://ontoreallife.files.wordpress.com/2017/04/notrail.jpg?w=300 300w, https://ontoreallife.files.wordpress.com/2017/04/notrail.jpg?w=768 768w, https://ontoreallife.files.wordpress.com/2017/04/notrail.jpg?w=1024 1024w"
           sizes="(max-width: 775px) 100vw, 775px"
         />
-        <figcaption class="wp-caption-text">
+        <figcaption className="wp-caption-text">
           Questionably maintained hiking trail.
         </figcaption>
       </figure>
@@ -994,3 +998,5 @@
         </li>
       </ul>
     </div>
+    )
+}
