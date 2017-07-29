@@ -1,4 +1,8 @@
-    <div>
+import React from "react";
+
+export default function Content(props) { 
+    return (
+      <div>
       <p>
         This catalog features some of the best walks I did on the north island,
         but is not comprehensive.
@@ -14,22 +18,22 @@
         missing the last afternoon ferry.
       </p>
       <figure>
-        <figcaption class="caption">
+        <figcaption className="caption">
           Less lava, more trees than expected.
         </figcaption>
         <img
           src="../assets/img/blogs/newZealandNorthOverview/crater.jpg"
-          style="margin-bottom: -5px"
+          style={{"marginBottom": "-5px"}}
         />
         <img
-          class="align-left"
+          className="align-left"
           src="../assets/img/blogs/newZealandNorthOverview/lavaCave.jpg"
         />
         <img
-          class="align-left"
+          className="align-left"
           src="../assets/img/blogs/newZealandNorthOverview/RangitotoViews.jpg"
         />
-        <figcaption class="caption">
+        <figcaption className="caption">
           Lava caves and beautiful views
         </figcaption>
       </figure>
@@ -46,18 +50,18 @@
       <figure>
         <img
           src="../assets/img/blogs/newZealandNorthOverview/cableBay.jpg"
-          class="align-left"
+          className="align-left"
           alt="cabel bay"
         />
         <img
           src="../assets/img/blogs/newZealandNorthOverview/bay.jpg"
-          class="align-left"
+          className="align-left"
           alt="Wahike Bay"
         />
       </figure>
       <h4>Breams Head (Whangarei)</h4>
       <p>Breams Head has been the most majestic hike of my trip so far.</p>
-      <p class="quote">At four hours, I chose the "short" trip.</p>
+      <p className="quote">At four hours, I chose the "short" trip.</p>
       <br />
       <br />
       <p>
@@ -66,13 +70,13 @@
         of the mountain to an open bay.
       </p>
       <figure>
-        <figcaption class="caption">
+        <figcaption className="caption">
           First you go up into the woods, boulder up a rock point...
         </figcaption>
         <img src="../assets/img/blogs/newZealandNorthOverview/intoTheWoods.jpg" />
         <img src="../assets/img/blogs/newZealandNorthOverview/headViewRock2.jpg" />
         <img src="../assets/img/blogs/newZealandNorthOverview/openToBay.jpg" />
-        <figcaption class="caption">
+        <figcaption className="caption">
           ...and then head down out into an open bay.
         </figcaption>
       </figure>
@@ -83,11 +87,11 @@
       </p>
       <figure>
         <img
-          class="align-left width--50"
+          className="align-left width--50"
           src="../assets/img/blogs/newZealandNorthHiking/chicken.jpg"
         />
         <img
-          class="align-left width--50"
+          className="align-left width--50"
           src="../assets/img/blogs/newZealandNorthHiking/figure.jpg"
         />
         <img src="../assets/img/blogs/newZealandNorthHiking/panorama.jpg" />
@@ -100,13 +104,13 @@
       </p>
       <figure>
         <img
-          class="align-left width--50"
-          style={{ width: "46.25%" }}
+          className="align-left width--50"
+          style={{ "width": "46.25%" }}
           src="../assets/img/blogs/newZealandNorthHiking/poundIt.jpg"
         />
         <img
-          class="align-left width--50"
-          style={{ width: "53.75%" }}
+          className="align-left width--50"
+          style={{ "width": "53.75%" }}
           src="../assets/img/blogs/newZealandNorthHiking/whaleBay2.jpg"
         />
         <img src="../assets/img/blogs/newZealandNorthHiking/whaleBay.jpg" />
@@ -132,19 +136,19 @@
       </p>
       <figure>
         <img
-          class="align-left width--50"
+          className="align-left width--50"
           src="../assets/img/blogs/newZealandNorthHiking/waterfall2.jpg"
         />
         <img
-          class="align-left width--50"
+          className="align-left width--50"
           src="../assets/img/blogs/newZealandNorthHiking/mineTrail.jpg"
         />
         <img
-          class="align-left width--50"
+          className="align-left width--50"
           src="../assets/img/blogs/newZealandNorthHiking/bridge3.jpg"
         />
         <img
-          class="align-left width--50"
+          className="align-left width--50"
           src="../assets/img/blogs/newZealandNorthHiking/fallsRetreat.jpg"
         />
       </figure>
@@ -157,11 +161,11 @@
       <figure>
         <img src="../assets/img/blogs/newZealandNorthHiking/champagne.jpg" />
         <img
-          class="align-left width--50"
+          className="align-left width--50"
           src="../assets/img/blogs/newZealandNorthHiking/steamVent.jpg"
         />
         <img
-          class="align-left width--50"
+          className="align-left width--50"
           src="../assets/img/blogs/newZealandNorthHiking/horrorMovie.jpg"
         />
         <img src="../assets/img/blogs/newZealandNorthHiking/steamyWalkway.jpg" />
@@ -195,3 +199,5 @@
         <img src="../assets/img/blogs/newZealandNorthHiking/huka.jpg" />
       </figure>
     </div>
+    )
+}

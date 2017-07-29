@@ -5,5 +5,5 @@ module.exports = {
   "title": "Malta & Gozo",
   "tagLine": "Just Roll With It",
   "datePublished": "8 April, 2017",
-  "component":Content,
+  "component": Content,
 }
