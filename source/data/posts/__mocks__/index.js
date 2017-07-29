@@ -1,5 +1,5 @@
-var mockedPost = require("./post/config.json");
-var mockedPost2 = require("./post/config.json");
+var mockedPost = require("./post/config.js");
+var mockedPost2 = require("./post/config.js");
 
 module.exports = {
   mockedPost,

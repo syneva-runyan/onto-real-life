@@ -13,7 +13,7 @@ describe("Menu", () => {
     it("should toggle open state on click of link", () => {
       expect(component.instance().state.opened).toEqual(false);
 
-      const menuLink = component.find("Link").get(0);
+      const menuLink = component.find("NavLink").get(0);
 
       menuLink.props.onClick();
       expect(component.instance().state.opened).toEqual(true);

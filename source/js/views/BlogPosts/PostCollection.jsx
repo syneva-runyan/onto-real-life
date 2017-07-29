@@ -12,7 +12,7 @@ const defaultProps = {
   postCatalog: {},
 };
 
-export default class BlogPosts extends Component {
+export default class PostCollection extends Component {
   previewGallery(catalog, assetBase) {
     return Object.keys(catalog).map(item => {
       const itemContent = catalog[item];
@@ -43,5 +43,5 @@ export default class BlogPosts extends Component {
   }
 }
 
-BlogPosts.propTypes = propTypes;
-BlogPosts.defaultProps = defaultProps;
+PostCollection.propTypes = propTypes;
+PostCollection.defaultProps = defaultProps;
