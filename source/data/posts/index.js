@@ -5,12 +5,12 @@ var morocco = require("./morocco/config.js");
 // var seeTheWorld = require("./seeTheWorld/config.json");
 var newZealandNorthOverview = require("./newZealandNorthOverview/config.js");
 var newZealandNorthHiking = require("./newZealandNorthHiking/config.js");
-// var newZealandSouth = require("./newZealandSouth/config.json");
+var newZealandSouth = require("./newZealandSouth/config.js");
 // var nzTravelThoughts = require("./nzTravelThoughts/config.json");
 
 module.exports = {
   // nzTravelThoughts,
-  // newZealandSouth,
+  newZealandSouth,
   newZealandNorthOverview,
   newZealandNorthHiking,
   barcelona,
