@@ -33,10 +33,7 @@ export default class PostCollection extends Component {
         <h2>Blog Posts</h2>
         <hr className="blogPosts__divider" />
         <div className="blogPosts__gallery">
-          {this.previewGallery(
-            this.props.postCatalog,
-            this.props.assetBase,
-          )}
+          {this.previewGallery(this.props.postCatalog, this.props.assetBase)}
         </div>
       </div>
     );

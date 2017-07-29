@@ -1,11 +1,6 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { routeCodes } from "../../routes";
-
-const propTypes = {};
-
-const defaultProps = {};
 
 export default class Menu extends Component {
   constructor() {
@@ -89,6 +84,3 @@ export default class Menu extends Component {
     );
   }
 }
-
-Menu.propTypes = propTypes;
-Menu.defaultProps = defaultProps;

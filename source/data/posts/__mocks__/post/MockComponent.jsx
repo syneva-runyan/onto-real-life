@@ -1,7 +1,5 @@
 import React from "react";
 
-export default function Post(props) { 
-    return (
-        <p>Post Content</p>
-    )
+export default function Post(props) {
+  return <p>Post Content</p>;
 }

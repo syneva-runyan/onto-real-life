@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Content(props) { 
-    return (
-      <div>
+export default function Content(props) {
+  return (
+    <div>
       <p>
         I did relatively little preparation for this trip. I didn&#8217;t even
         plan on going to Malta really. I <em>wanted</em> to go to Greece. When I
@@ -475,12 +475,12 @@ export default function Content(props) {
         trying out the experience.
       </p>
       <hr />
-      <figure style={{"width": "95.6%"}}>
+      <figure style={{ width: "95.6%" }}>
         <img
           className="lazyload align-left width--25"
           src="https://ontoreallife.files.wordpress.com/2017/04/castelloruins1.jpg?w=759&#038;h=425"
           alt="castelloruins.jpg"
-          style={{"width": "72.6%"}}
+          style={{ width: "72.6%" }}
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/castelloruins1.jpg?w=150&amp;h=84 150w,
                      https://ontoreallife.files.wordpress.com/2017/04/castelloruins1.jpg?w=300&amp;h=169 300w"
           data-sizes="(max-width: 759px) 100vw, 759px"
@@ -489,7 +489,7 @@ export default function Content(props) {
           className="lazyload align-left width--25"
           src="https://ontoreallife.files.wordpress.com/2017/04/city2.jpg?w=280&#038;h=497"
           alt="city2.jpg"
-          style={{"width": "23%"}}
+          style={{ width: "23%" }}
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/city2.jpg?w=280&amp;h=497 280w,
                     https://ontoreallife.files.wordpress.com/2017/04/city2.jpg?w=560&amp;h=994 560w,
                     https://ontoreallife.files.wordpress.com/2017/04/city2.jpg?w=84&amp;h=150 84w,
@@ -499,7 +499,7 @@ export default function Content(props) {
         <img
           src="https://ontoreallife.files.wordpress.com/2017/04/gozo21.jpg?w=775"
           alt="gozo2.jpg"
-          style={{"width": "95.6%"}}
+          style={{ width: "95.6%" }}
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/gozo21.jpg?w=775 775w,
                     https://ontoreallife.files.wordpress.com/2017/04/gozo21.jpg?w=1550 1550w,
                     https://ontoreallife.files.wordpress.com/2017/04/gozo21.jpg?w=150 150w
@@ -998,5 +998,5 @@ export default function Content(props) {
         </li>
       </ul>
     </div>
-    )
+  );
 }
