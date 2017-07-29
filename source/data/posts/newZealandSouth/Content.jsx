@@ -537,8 +537,8 @@ export default function Content(props) {
                   ../assets/img/blogs/newZealandSouth/shoes--lg.jpg 1025w,
                   ../assets/img/blogs/newZealandSouth/shoes.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/shoes.jpg"
-          data-srcset="../assets/img/blogs/newZealandSouth/shoes--sm.jpg"
-          className="lazyload align-left width--50 sm-width--100 blur-up"
+          data-srcset="../assets/img/blogs/newZealandSouth/shoes--md.jpg"
+          className="lazyload align-left width--50 blur-up"
         />
         <img
           alt=""
@@ -548,8 +548,8 @@ export default function Content(props) {
                   ../assets/img/blogs/newZealandSouth/shipwreckCove--lg.jpg 1025w,
                   ../assets/img/blogs/newZealandSouth/shipwreckCove.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/shipwreckCove.jpg"
-          data-srcset="../assets/img/blogs/newZealandSouth/shipwreckCove--sm.jpg"
-          className="lazyload align-left width--50 sm-width--100 blur-up"
+          data-srcset="../assets/img/blogs/newZealandSouth/shipwreckCove--md.jpg"
+          className="lazyload align-left width--50 blur-up"
         />
         <img
           alt="Nugget Point Lighthouse"
@@ -559,8 +559,8 @@ export default function Content(props) {
                   ../assets/img/blogs/newZealandSouth/nugget--lg.jpg 1025w,
                   ../assets/img/blogs/newZealandSouth/nugget.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/nugget.jpg"
-          data-srcset="../assets/img/blogs/newZealandSouth/nugget--sm.jpg"
-          className="lazyload align-left width--50 sm-width--100 blur-up"
+          data-srcset="../assets/img/blogs/newZealandSouth/nugget--md.jpg"
+          className="lazyload align-left width--50 blur-up"
         />
         <img
           alt="fence covered in hubcaps"
@@ -570,8 +570,8 @@ export default function Content(props) {
                   ../assets/img/blogs/newZealandSouth/hubcaps--lg.jpg 1025w,
                   ../assets/img/blogs/newZealandSouth/hubcaps.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/hubcaps.jpg"
-          data-srcset="../assets/img/blogs/newZealandSouth/hubcaps--sm.jpg"
-          className="lazyload align-left width--50 sm-width--100 blur-up"
+          data-srcset="../assets/img/blogs/newZealandSouth/hubcaps--md.jpg"
+          className="lazyload align-left width--50 blur-up"
         />
       </figure>
       <hr />

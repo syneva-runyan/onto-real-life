@@ -36,3 +36,4 @@ Prettier is executed and fixes are saved before each commit.
 * Create shared Img component with responsive lazy loading for blog posts.
 * Comprimise template renderings between prod & dev
 * Include React Helmet configs for each blog post
+* Figure out why assets aren't being required correctly in prod bundling

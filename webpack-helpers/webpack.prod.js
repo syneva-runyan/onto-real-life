@@ -18,12 +18,19 @@ module.exports = {
             },
             globals: {
                 window: {
-                    XMLHttpRequest: {}
+                    XMLHttpRequest: {},
+                    scroll: function() {}
                 }
             }
         }),
         new ExtractTextPlugin("style.css"),
         new CopyWebpackPlugin([{
+            from: "../assets/img/blogs",
+            to: "assets/img/blogs"  
+          }, {
+            from: "../assets/img/about-me",
+            to: "assets/img/about-me" 
+          }, {
             from: "../assets/img/quotes.png",
             to: "assets/img/quotes.png"
         }]),
