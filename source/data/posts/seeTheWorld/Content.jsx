@@ -1,6 +1,10 @@
-<div>
+import React from "react";
+
+export default function Content(props) { 
+    return (
+    <div>
       <p className="quote withAuthor">
-        className= Travel is fatal to prejudice, bigotry, and narrow-mindedness,
+        Travel is fatal to prejudice, bigotry, and narrow-mindedness,
         and many of our people need it sorely on these accounts. Broad,
         wholesome, charitable views of men and things cannot be acquired by
         vegetating in one little corner of the earth all one’s lifetime.{" "}
@@ -66,3 +70,5 @@
       </p>
       <h3>Goal Number One: See the World.</h3>
     </div>
+    )
+}
