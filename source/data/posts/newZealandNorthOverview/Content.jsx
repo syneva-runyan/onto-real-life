@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function Content(props) { 
-    return (
+export default function Content(props) {
+  return (
     <div>
       <p>
         In the past month I've gone caving, hiked up volcanos, biked around
@@ -33,7 +33,7 @@ export default function Content(props) {
         make fantastic coffee. Even the gas stations have manned (decent
         tasting) espresso machines. Gas station coffee tends to cost ~$4 nzd,
         which is cheaper than the usual $4.50 you pay for a cup everywhere else.
-        If that seems expensive to you, it should. 
+        If that seems expensive to you, it should.
         <bold>Everything is so expensive here.</bold> When you find a pint
         somewhere for $7.50 nzd, you stay at the pub. $7.50 is so much cheaper
         than the $10 you'll pay anywhere else.
@@ -46,13 +46,13 @@ export default function Content(props) {
       <p>
         <bold>
           <em>Auckland: </em>
-        </bold> 
+        </bold>
         Clean, has more people than anywhere else in the country, but that's
         still only 1.38 million. Pretty low key, with considerably less culture
-        than other places I've been, but has 
+        than other places I've been, but has
         <a target="blank" href="www.aucklandmuseum.com">
           a great museum
-        </a> 
+        </a>
         with a viewpoint of the city from its lawn.
       </p>
       <figure>
@@ -88,36 +88,36 @@ export default function Content(props) {
       <p>
         <bold>
           <em>Whangarei: </em>
-        </bold> 
+        </bold>
         Cute town with a lovely town centre. Not much to do here, more of a base
-        for several great hikes in the area (see 
+        for several great hikes in the area (see
         <a target="blank" href="/posts/newZealandNorthHiking">
           hiking catalog
         </a>) For any architecture nerds out there, there is a bridge in the
         city renowned for winning numerous design awards (pic below) that you
         can walk over on a lovely bay path, best done at sunset. There is also a
         kiwi house (<em>Bird, not people</em>) and local history museum with a
-        full 
+        full
         <a target="blank" href="https://en.wikipedia.org/wiki/Moa">
           Moa skeleton
-        </a> 
+        </a>
         worth checking out.
       </p>
       <p>
         The city is near Poor Knights Island, which has some of the greatest
         scuba diving in the world. I'm not certified yet, but plan on coming
-        back one day to do some dives. Preferably in the summer. 
+        back one day to do some dives. Preferably in the summer.
       </p>
       <figure>
         <img src="../assets/img/blogs/newZealandNorthOverview/whangaraiView.jpg" />
         <img
           className="align-left"
-          style={{"width": "38%"}}
+          style={{ width: "38%" }}
           src="../assets/img/blogs/newZealandNorthOverview/whaleBay.jpg"
         />
         <img
           className="align-left"
-          style={{"width": "43%"}}
+          style={{ width: "43%" }}
           src="../assets/img/blogs/newZealandNorthOverview/bridge.jpg"
         />
       </figure>
@@ -126,7 +126,7 @@ export default function Content(props) {
       <p>
         <bold>
           <em>Napier: </em>
-        </bold> 
+        </bold>
         See <a href="#wine">wine</a> below. Considers itself an Art Deco capital
         and does not disappoint. People were so overly friendly and happy here.
         We were given discounts or deals at the hostel, bike shop, and gas
@@ -148,10 +148,10 @@ export default function Content(props) {
       <p>
         <bold>
           <em>Wellington: </em>
-        </bold> 
+        </bold>
         Must have beard and skateboard to fit in. Capital of New Zealand. Tiny
         city, but considered large by New Zealand standards(496,000) with a
-        breathtaking bay and sunsets. See <a href="#weta">Weta workshop</a> 
+        breathtaking bay and sunsets. See <a href="#weta">Weta workshop</a>
         below to read about my favorite part. On the drive into the city, there
         is also one of the most impressive car collections I've ever seen (<em>
           <a target="blank" href="https://www.southwardcarmuseum.co.nz/">
@@ -165,15 +165,15 @@ export default function Content(props) {
 
       <figure className="align-center">
         <img
-          style={{"width": "37.2%"}}
+          style={{ width: "37.2%" }}
           src="../assets/img/blogs/newZealandNorthOverview/wellingtonWhale.jpg"
         />
         <img
-          style={{"width": "18.9%"}}
+          style={{ width: "18.9%" }}
           src="../assets/img/blogs/newZealandNorthOverview/wellingtonBay.jpg"
         />
         <img
-          style={{"width": "39%"}}
+          style={{ width: "39%" }}
           src="../assets/img/blogs/newZealandNorthOverview/skateboardBench.jpg"
         />
       </figure>
@@ -226,7 +226,7 @@ export default function Content(props) {
         These trails go along the coast, through sheep fields, and right past
         some (in my case) fall-clad vineyards.
       </p>
-      <hr style={{"width": "0"}} />
+      <hr style={{ width: "0" }} />
       <p className="quote">
         Sheep field highlights: <br />
         <br />
@@ -250,7 +250,7 @@ export default function Content(props) {
       <figure className="align-right  margin--left width--20 sm-width--100">
         <img src="../assets/img/blogs/newZealandNorthOverview/haka.jpg" />
         <figcaption className="caption">
-          Courtesy, 
+          Courtesy,
           <a href="http://i.dailymail.co.uk/i/pix/2015/03/07/26652F8600000578-0-image-a-12_1425721833065.jpg">
             Google images
           </a>
@@ -280,14 +280,14 @@ export default function Content(props) {
         of someone's home, like they were part of a zoo, but I've grabbed some
         from google to make up for it.
       </p>
-      <p className="quote" style={{"wordBreak": "break-word"}}>
+      <p className="quote" style={{ wordBreak: "break-word" }}>
         Tewhakarewarewatangaoteopetauaawahio. Yes that's a real name of a real
         place.
       </p>
       <figure>
         <img
           className="align-left"
-          style={{"width": "49.3%"}}
+          style={{ width: "49.3%" }}
           src="../assets/img/blogs/newZealandNorthOverview/hagi.jpg"
         />
         <img
@@ -377,7 +377,7 @@ export default function Content(props) {
         that goes around the north and south islands, taking ~5 months to
         complete.
       </p>
-      <figure className="align-right margin--left" style={{"width": "200px"}}>
+      <figure className="align-right margin--left" style={{ width: "200px" }}>
         <img src="../assets/img/blogs/newZealandNorthOverview/crossingStart.jpg" />
         <figcaption className="caption">
           Checkout the
@@ -435,13 +435,13 @@ export default function Content(props) {
         <img
           src="../assets/img/blogs/newZealandNorthOverview/coffee.jpg"
           className="align-left"
-          style={{"width": "70.1%"}}
+          style={{ width: "70.1%" }}
           alt="pancakes in the bush"
         />
         <img
           src="../assets/img/blogs/newZealandNorthOverview/toilet.jpg"
           className="align-left"
-          style={{"width": "29.6%"}}
+          style={{ width: "29.6%" }}
           alt="bush hut toilet"
         />
         <figcaption className="caption">
@@ -499,12 +499,12 @@ export default function Content(props) {
       <figure>
         <img
           className="align-left"
-          style={{"width": "50%"}}
+          style={{ width: "50%" }}
           src="../assets/img/blogs/newZealandNorthOverview/hotWaterBeach.jpg"
         />
         <img
           className="align-left"
-          style={{"width": "50%"}}
+          style={{ width: "50%" }}
           src="../assets/img/blogs/newZealandNorthOverview/hotWaterBeach2.jpg"
         />
       </figure>
@@ -616,7 +616,7 @@ export default function Content(props) {
       <figure>
         <img src="../assets/img/blogs/newZealandNorthOverview/glowworms.jpg" />
         <figcaption className="caption">
-          Courtesy 
+          Courtesy
           <a href="https://www.youtube.com/watch?v=JC41M7RPSec">
             Google Images
           </a>
@@ -629,7 +629,7 @@ export default function Content(props) {
         River.
       </p>
       <p className="quote">
-        The Whanganui Journey is one of the nine 
+        The Whanganui Journey is one of the nine
         <a href="https://en.wikipedia.org/wiki/New_Zealand_Great_Walks">
           great walks of New Zealand
         </a>. It's particularly famous for being leisurely boat ride down New
@@ -739,12 +739,12 @@ export default function Content(props) {
       <figure>
         <img
           className="align-left"
-          style={{"width": "49.5%"}}
+          style={{ width: "49.5%" }}
           src="../assets/img/blogs/newZealandNorthOverview/gollum.jpg"
         />
         <img
           className="align-left"
-          style={{"width": "49.5%"}}
+          style={{ width: "49.5%" }}
           src="../assets/img/blogs/newZealandNorthOverview/hobbitFeet.jpg"
         />
       </figure>
@@ -805,10 +805,10 @@ export default function Content(props) {
       <figure>
         <img src="../assets/img/blogs/newZealandNorthOverview/oldMill.jpg" />
         <figcaption className="caption">
-          <em>Window Walk</em> view. See 
+          <em>Window Walk</em> view. See
           <a target="blank" href="/posts/newZealandNorthHiking">
             hiking catalog
-          </a> 
+          </a>
           for more
         </figcaption>
       </figure>
@@ -827,5 +827,5 @@ export default function Content(props) {
         </em>). Until then, bye folks!
       </p>
     </div>
-    )
+  );
 }

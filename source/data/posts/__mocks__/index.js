@@ -3,5 +3,5 @@ var mockedPost2 = require("./post/config.js");
 
 module.exports = {
   mockedPost,
-  mockedPost2
+  mockedPost2,
 };

@@ -4,25 +4,25 @@ import PostHelper from "../../utils/post-helper";
 import { NotFound } from "../Global";
 
 // const FroalaEditor = require("react-froala-wysiwyg");
-const FroalaEditorView = require("react-froala-wysiwyg/FroalaEditorView");
+// const FroalaEditorView = require("react-froala-wysiwyg/FroalaEditorView");
 
 // Require Editor JS files.
-//require("froala-editor/js/froala_editor.pkgd.min.js");
+// require("froala-editor/js/froala_editor.pkgd.min.js");
 // Require Editor CSS files.
-//require("froala-editor/css/froala_style.min.css");
-//require("froala-editor/css/froala_editor.pkgd.min.css");
+// require("froala-editor/css/froala_style.min.css");
+// require("froala-editor/css/froala_editor.pkgd.min.css");
 
 // Require Font Awesome.
-//require("font-awesome/css/font-awesome.css");
+// require("font-awesome/css/font-awesome.css");
 
 const propTypes = {
   postId: PropTypes.string,
-  component: PropTypes.func
+  component: PropTypes.func,
 };
 
 const defaultProps = {
   postId: null,
-  component: NotFound
+  component: NotFound,
 };
 
 export default class PostContent extends Component {
@@ -55,7 +55,7 @@ export default class PostContent extends Component {
           />
           <button onClick={this.boundSavePost}>Save</button>
         </div> */}
-        {/*<FroalaEditorView model={this.state.content} />*/}
+        {/* <FroalaEditorView model={this.state.content} />*/}
         <this.props.component />
       </div>
     );

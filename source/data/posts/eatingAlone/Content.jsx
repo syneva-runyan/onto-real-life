@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function Content(props) { 
-    return (
+export default function Content(props) {
+  return (
     <div>
       <p>
         For some reason there&#8217;s this fear people have of going out and
@@ -60,5 +60,5 @@ export default function Content(props) {
         right&#8230; because <bold>SOMETHING</bold> feels slightly off.
       </p>
     </div>
-    )
+  );
 }

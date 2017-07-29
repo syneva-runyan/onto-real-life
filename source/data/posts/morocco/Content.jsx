@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function Content(props) { 
-    return (
+export default function Content(props) {
+  return (
     <div>
       <figure>
         <img
@@ -201,13 +201,13 @@ export default function Content(props) {
         continue attracting tourists. We walked around the streets taking
       </p>
       <figure>
-        <div className="align-left" style={{"width": "65.9%"}}>
+        <div className="align-left" style={{ width: "65.9%" }}>
           <img
             src="https://i0.wp.com/ontoreallife.files.wordpress.com/2017/05/bluecity-1-of-12.jpg?w=505&#038;h=465&#038;crop&#038;ssl=1"
             alt="blueCity (1 of 1)"
           />
         </div>
-        <div className="align-right" style={{"width": "34.1%"}}>
+        <div className="align-right" style={{ width: "34.1%" }}>
           <img
             src="https://i2.wp.com/ontoreallife.files.wordpress.com/2017/05/bluecity3-1-of-12.jpg?w=262&#038;h=465&#038;crop&#038;ssl=1"
             title="BlueCity3 (1 of 1)"
@@ -528,5 +528,5 @@ export default function Content(props) {
       <p>Dessert, Merzouga</p>
       <p>Casablanca</p>
     </div>
-    )
+  );
 }

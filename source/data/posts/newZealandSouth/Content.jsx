@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function Content(props) { 
-    return (
+export default function Content(props) {
+  return (
     <div>
       <p>
         There is <strong>So. Much. To. Do.</strong> on the south island, where
@@ -579,7 +579,7 @@ export default function Content(props) {
         I've loved visiting both the North and South Islands in New Zealand, but
         of the two, the South's unique culture and unreal beauty epitomized in
         my top 8 picks was the one that captured my heart. The only thing I
-        really disliked on the South island was the lack of big cities 
+        really disliked on the South island was the lack of big cities
         <em>(and cheaper pints)</em>. Size is relative though, and I hear the
         country is recruiting developers. Maybe I'll be back again with more
         time to do everything I've yet to do. Maybe on that trip I'll even bring
@@ -760,5 +760,5 @@ export default function Content(props) {
         in a separate post.
       </p>
     </div>
-    )
+  );
 }

@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Content(props) { 
-    return (
-      <div>
+export default function Content(props) {
+  return (
+    <div>
       <p>
         This catalog features some of the best walks I did on the north island,
         but is not comprehensive.
@@ -23,7 +23,7 @@ export default function Content(props) {
         </figcaption>
         <img
           src="../assets/img/blogs/newZealandNorthOverview/crater.jpg"
-          style={{"marginBottom": "-5px"}}
+          style={{ marginBottom: "-5px" }}
         />
         <img
           className="align-left"
@@ -105,12 +105,12 @@ export default function Content(props) {
       <figure>
         <img
           className="align-left width--50"
-          style={{ "width": "46.25%" }}
+          style={{ width: "46.25%" }}
           src="../assets/img/blogs/newZealandNorthHiking/poundIt.jpg"
         />
         <img
           className="align-left width--50"
-          style={{ "width": "53.75%" }}
+          style={{ width: "53.75%" }}
           src="../assets/img/blogs/newZealandNorthHiking/whaleBay2.jpg"
         />
         <img src="../assets/img/blogs/newZealandNorthHiking/whaleBay.jpg" />
@@ -199,5 +199,5 @@ export default function Content(props) {
         <img src="../assets/img/blogs/newZealandNorthHiking/huka.jpg" />
       </figure>
     </div>
-    )
+  );
 }
