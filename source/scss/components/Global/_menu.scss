@@ -38,7 +38,8 @@
 
   @media screen and (max-width: $md-break) {
     &__nav {
-      background-color: $white;;
+      display: none;
+      background-color: $white;
       border-left: 0.5px solid $primary-color-light;
       margin-bottom: 0;
       margin-top: 0;
@@ -67,6 +68,7 @@
 
     &--opened {
       transform: translateX(0);
+      display: block;
 
     }
 
