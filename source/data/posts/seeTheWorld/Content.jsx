@@ -1,13 +1,13 @@
 import React from "react";
 
-export default function Content(props) { 
-    return (
+export default function Content(props) {
+  return (
     <div>
       <p className="quote withAuthor">
-        Travel is fatal to prejudice, bigotry, and narrow-mindedness,
-        and many of our people need it sorely on these accounts. Broad,
-        wholesome, charitable views of men and things cannot be acquired by
-        vegetating in one little corner of the earth all one’s lifetime.{" "}
+        Travel is fatal to prejudice, bigotry, and narrow-mindedness, and many
+        of our people need it sorely on these accounts. Broad, wholesome,
+        charitable views of men and things cannot be acquired by vegetating in
+        one little corner of the earth all one’s lifetime.{" "}
         <span className="author">
           Mark Twain, <em>The Innocents Abroad</em>
         </span>
@@ -70,5 +70,5 @@ export default function Content(props) {
       </p>
       <h3>Goal Number One: See the World.</h3>
     </div>
-    )
+  );
 }

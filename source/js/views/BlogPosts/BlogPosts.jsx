@@ -26,16 +26,13 @@ export default class BlogPosts extends Component {
     this.post = this.renderPost(assetBasePath);
   }
   renderPost(assetBase) {
-    return (
-      props => <Post assetBase={assetBase} postCatalog={postCatalog} {...props} />
-    )
+    return props =>
+      <Post assetBase={assetBase} postCatalog={postCatalog} {...props} />;
   }
 
-
   renderCollection(assetBase) {
-    return (
-      props => <PostCollection assetBase={assetBase} postCatalog={postCatalog} />
-    );
+    return () =>
+      <PostCollection assetBase={assetBase} postCatalog={postCatalog} />;
   }
 
   render() {
@@ -44,7 +41,7 @@ export default class BlogPosts extends Component {
         <Route path={`${routeCodes.POSTS}/:postId`} render={this.post} />
         <Route render={this.postCollection} />
       </Switch>
-    )
+    );
   }
 }
 
