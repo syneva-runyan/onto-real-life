@@ -6,10 +6,10 @@ var morocco = require("./morocco/config.js");
 var newZealandNorthOverview = require("./newZealandNorthOverview/config.js");
 var newZealandNorthHiking = require("./newZealandNorthHiking/config.js");
 var newZealandSouth = require("./newZealandSouth/config.js");
-// var nzTravelThoughts = require("./nzTravelThoughts/config.json");
+var nzTravelThoughts = require("./nzTravelThoughts/config.js");
 
 module.exports = {
-  // nzTravelThoughts,
+  nzTravelThoughts,
   newZealandSouth,
   newZealandNorthOverview,
   newZealandNorthHiking,

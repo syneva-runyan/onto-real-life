@@ -1,4 +1,8 @@
-<div>
+import React from "react";
+
+export default function Content(props) { 
+    return (
+    <div>
 <ol>
     <li>
         <strong>Q. What is the 48 hour rule?</strong><br />
@@ -66,3 +70,5 @@
 <hr></hr>
 <p>Anything else you're curious about?  Send me an email at <strong>syneva@gmail.com</strong> or use the <a href="../contact" target="blank">contact section here.</a></p>
 </div>
+    )
+}
