@@ -17,7 +17,7 @@ export default function Routes(props) {
       <Switch>
           <Route exact path={publicPath} component={BlogPosts} />
           <Route path={routeCodes.ABOUT} component={About} />
-          <Route path={routeCodes.POSTS} component={BlogPosts} />
+          <Route path={routeCodes.POSTS} component={BlogPosts} onEnter={window.scroll(0,0)} />
           <Route path={routeCodes.PHOTO_MAP} component={NotFound} />
           <Route path={routeCodes.CONTACT} component={Contact} />
           <Route component={BlogPosts} />
