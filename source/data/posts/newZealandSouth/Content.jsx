@@ -30,7 +30,7 @@ export default function Content(props) {
                   ../assets/img/blogs/newZealandSouth/gettingInTheWay--lg.jpg 1025w,
                   ../assets/img/blogs/newZealandSouth/gettingInTheWay.jpg 2050w"
           src="../assets/img/blogs/newZealandSouth/gettingInTheWay.jpg"
-          data-srcset="../assets/img/blogs/newZealandSouth/gettingInTheWay--sm.jpg"
+          data-src="../assets/img/blogs/newZealandSouth/gettingInTheWay--sm.jpg"
           className="lazyload blur-up"
         />
         <figcaption className="caption">

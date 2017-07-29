@@ -1,12 +1,12 @@
 import React from 'react';
-import NotFound from '../../../source/js/components/Global/NotFound';
+import ResponsiveImg from '../../../source/js/components/Global/ResponsiveImg';
 import { shallow } from 'enzyme';
 
-describe('Not Found', () => {
+describe('Responsive Img', () => {
 	let component;
 
 	beforeEach(() => {
-		component = shallow(<NotFound />);
+		component = shallow(<ResponsiveImg />);
 	})
 	it('should exist', () => {
 		expect(component).toBeTruthy();
