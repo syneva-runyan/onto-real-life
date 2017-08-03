@@ -1,14 +1,18 @@
-var barcelona = require("./barcelona/config.js");
-var eatingAlone = require("./eatingAlone/config.js");
-var malta = require("./malta/config.js");
-var morocco = require("./morocco/config.js");
-var seeTheWorld = require("./seeTheWorld/config.js");
-var newZealandNorthOverview = require("./newZealandNorthOverview/config.js");
-var newZealandNorthHiking = require("./newZealandNorthHiking/config.js");
-var newZealandSouth = require("./newZealandSouth/config.js");
-var nzTravelThoughts = require("./nzTravelThoughts/config.js");
+const barcelona = require("./barcelona/config.js");
+const eatingAlone = require("./eatingAlone/config.js");
+const malta = require("./malta/config.js");
+const morocco = require("./morocco/config.js");
+const seeTheWorld = require("./seeTheWorld/config.js");
+const newZealandNorthOverview = require("./newZealandNorthOverview/config.js");
+const newZealandNorthHiking = require("./newZealandNorthHiking/config.js");
+const newZealandSouth = require("./newZealandSouth/config.js");
+const nzTravelThoughts = require("./nzTravelThoughts/config.js");
+const java = require("./java/config.js");
+const javaTravel = require("./javaTravel/config.js");
 
 module.exports = {
+  javaTravel,
+  java,
   nzTravelThoughts,
   newZealandSouth,
   newZealandNorthOverview,
