@@ -8,7 +8,7 @@ const argv = require('minimist')(process.argv.slice(2));
 
 const ogPrefix = "img";
 const fileExt = ".jpg";
-const inputDir = "C:/Users/Syneva/Development/onto-real-life/source/assets/img/blogs/java";
+const inputDir = "C:/Users/Syneva/Development/onto-real-life/source/assets/img/blogs/javaTravel";
 const suffixes = ["", "--sm", "--md", "--lg"];
 
 // Check to make sure imgName is provided in argumes
