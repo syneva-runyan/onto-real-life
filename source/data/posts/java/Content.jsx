@@ -23,7 +23,7 @@ export default function Content(props) {
         That 150cc scooter became not the first, not the second, but the third
         motor scooter parked in our family's garage.
       </blockquote>
-      <figure className="width--25 align-left margin--right">
+      <figure className="width--25 sm-width--50 align-left margin--right">
         <ResponsiveImg
           alt="Scooter Art"
           imgRootPath={imgBasePath}
@@ -32,7 +32,7 @@ export default function Content(props) {
         <figcaption className="caption">Indonesia Scooter Art.</figcaption>
       </figure>
       <p>
-        Needless to say, I have a decent amount of moped skills (<em>nbd, nbd</em>).
+        Needless to say, I have a decent amount of moped skills.
         With designated scooter lanes on large streets and scooter-width margins
         on the side of jam-packed roads, Java was a perfect place to put these
         skills into practice.
@@ -41,8 +41,8 @@ export default function Content(props) {
         I've spend the last two weeks in Java very happily taking trains,
         planes, cars, and scooters around the island. A visit to the island
         promises adventure. The people are friendly, smiling unprompted at
-        everyone. Importantly for backpackers, the prices in Java have been
-        cheap. Finally, the tourism has been rewarding, if slightly disorganized
+        everyone. Importantly for backpackers, the prices in Java are
+        cheap. Finally, the tourism is rewarding, if slightly disorganized
         and in need of change.
       </p>
       <br />
@@ -97,12 +97,12 @@ export default function Content(props) {
         interesting or different groups of people.
       </p>
       <p>
-        Everyone who did ask for a photo with me (with one exception) was very
-        friendly, always smiling and always thanked me afterwards. This
+        Everyone who did ask for a photo was very
+        friendly, always smiling and always thanking me afterwards. This
         friendliness is something to be expected from the people in Java.
       </p>
       <p>
-        Java is a tourist island, so there will be people, especially taxi
+        Java is a tourist island, so there are be people, especially taxi
         drivers (<em>
           Taxi: loose term for a range of car, scooter, and bike transport
         </em>) asking if you need or want something on almost every street
@@ -123,12 +123,11 @@ export default function Content(props) {
         </figcaption>
       </figure>
       <p>
-        Beyond light chatting however, conversations with locals was hard. I
-        speak very little Bahasa Indonesia.
+        Beyond light chatting however, conversations with locals is hard.
       </p>
       <p>
         <em>
-          My vocabulary consists of the words for <strong>thankyou</strong>,{" "}
+          My Bahasa Indonesian vocabulary consists of the words for <strong>thankyou</strong>,{" "}
           <strong>chicken</strong>, and <strong>caution/danger</strong>.
         </em>
       </p>
@@ -158,7 +157,7 @@ export default function Content(props) {
         than $1usd, almost always under $5usd.
       </p>
       <p>
-        Bintang, the cheap Indonesia pilsner, almost has a cult following among
+        Bintang, the cheap Indonesia pilsner, has an almost cult-like following among
         tourists and locals.
       </p>
       <p>
@@ -176,7 +175,7 @@ export default function Content(props) {
       <blockquote>
         The coffee's smooth flavor is attributed to partial digestion of coffee
         beans by a cat like animal, the Asian Palm Civet. Coffee beans are fed
-        to the civet before being collected from their feces for coffee.
+        to the civet and then collected from their feces for coffee.
       </blockquote>
       <figure>
         <ResponsiveImg
@@ -186,8 +185,8 @@ export default function Content(props) {
         />
       </figure>
       <p>
-        For expenses such as taxis and attraction entrance tickets, tourists
-        should expect to be up charged. When taking a taxi, make sure to always
+        Tourists
+        are always up charged for expenses such as taxis and attraction entrance tickets. When taking a taxi, make sure to always
         agree on a price before getting into the car.
       </p>
       <p>
@@ -212,7 +211,7 @@ export default function Content(props) {
         </figcaption>
       </figure>
       <p>
-        While not as touristy as Bali, Java has plenty of tourist attractions.
+        While not as touristy as Bali, Java has a sureal beauty and charm of its own.
       </p>
       <p>
         With only a 30 day tourist visa, I decided to hit only the big-name
@@ -276,10 +275,10 @@ export default function Content(props) {
       <p>
         Another option is to rent a scooter. I paid $7usd a day to rent a
         scooter and go on a trip from Jogjakarta to the Pramabana Complex, to
-        Borobudur, to Mareapi over three days.
+        Borobudur, to Merapi over three days.
       </p>
       <p>
-        I had a blast driving around the beautiful country side. I kept
+        Driving around the beautiful country side on a scooter was a blast. I kept
         expecting the traffic to die down outside of the cities, but without
         fail, whenever I looked around, there was always at least one other
         scooter, if not five, in sight.
@@ -295,7 +294,7 @@ export default function Content(props) {
         you're comfortable with anyone can ride a scooter safely through Java.
       </p>
       <p>
-        With eight hour train ride away from Jogjakarta, you can get to the Mt.
+        Just an eight hour train ride away from Jogjakarta, you can get to the Mt.
         Bromo and Ijen areas.
       </p>
       <p>

@@ -160,7 +160,7 @@ export default function Content(props) {
       <p>
         If you want to save money on a tour, rent a scooter from Yogya to get
         there and back. Renting a scooter also enabled me to check out a handful
-        of smaller template in the area, the famed Chicken Church, and a
+        of smaller temples in the area, the famed Chicken Church, and a
         famously cheap Luwak coffee shop.{" "}
         <a
           href="http://www.yogya-backpacker.com/see-do-7-things-to-see-do-in-around-borobudur-you-never-knew-existed/"
