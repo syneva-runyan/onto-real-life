@@ -1,5 +1,5 @@
 import React from "react";
-import { ResponsiveImg, Video } from "../../../js/components/Global";
+import { ResponsiveImg } from "../../../js/components/Global";
 
 const imgBasePath = "../assets/img/blogs/indonesiaTravelThoughts";
 
@@ -61,9 +61,7 @@ export default function Content(props) {
                 <p>Breaking format here for to post a video of footage I took in Indonesia.</p>
                 <p>Song choice (<em>Despacito, Luis Fonsi ft. Daddy Yankee</em>) is attributed to the fact that I heard <em>Despacito</em> no fewer than <strong>a hundred times</strong> every single freaking day while traveling Indonesia.</p>
                 <p>I used to really enjoy making/editing videos, but didn't keep up with the hobby after moving to London. Maybe I'll pick it back up again when I'm done traveling.</p>
-                <Video
-                    src=""
-                />
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/gGWdjRa9hlY" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe>
             </li>
         </ol>
     </div>
