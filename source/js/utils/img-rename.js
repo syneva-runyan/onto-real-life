@@ -10,7 +10,7 @@ const argv = require("minimist")(process.argv.slice(2));
 const ogPrefix0 = "img";
 const fileExt0 = ".jpg";
 const inputDir0 =
-  "C:/Users/Syneva/Development/onto-real-life/source/assets/img/blogs/javaTravel";
+  "C:/Users/Syneva/Development/onto-real-life/source/assets/img/blogs/indonesiaTravelThoughts";
 const suffixes0 = ["", "--sm", "--md", "--lg"];
 const newPrefix0 = argv.imgName;
 
