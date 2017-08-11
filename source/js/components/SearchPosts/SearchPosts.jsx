@@ -1,8 +1,13 @@
-export default class ContactMsg extends Component {
+import React, { Component } from "react";
+
+export default class SearchPosts extends Component {
   constructor(props) {
+    super(props);
     this.state = {
       serachTerm: "",
     };
+
+    this.boundOnChange = this.onChange.bind(this);
   }
 
   onChange(e) {
@@ -16,9 +21,7 @@ export default class ContactMsg extends Component {
   render() {
     return (
       <div>
-        <input onChange={this.onChange} placeholder="Search Posts">
-          {this.state.searchTerm}
-        </input>
+        <input type="input" onChange={this.boundOnChange} placeholder="Search Posts" value= {this.state.searchTerm} />
         <button type="submit" onClick={this.boundSearch} />
       </div>
     );
