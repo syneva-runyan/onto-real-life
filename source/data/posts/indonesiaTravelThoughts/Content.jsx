@@ -16,7 +16,7 @@ export default function Content(props) {
                 <p>(6) Que entrance of <strong>four of taxi driver's friends</strong>. They're intriged by the confused white girl, pointing at Google Translate on her phone. <em>(Turns out "carton" is the Indonesia word for "box")</em></p>
                 <p>(7) The <strong>vape shop owner</strong> comes through with a carton for me!</p>
                 <p>(9) <strong>Two cachiers</strong> at a nearby corner store let me use their masking tape when I can't find any to buy on the shelves.  They also give me a new box, because it turns out the vape box is too small.</p>
-                <p>(11) Finally, the <strong>post office attendant and his manager</strong> who take my package, and on my request, dig through a large stack of papers to find a US Declarations form.</p>
+                <p>(11) Finally, there are <strong>post office attendant and his manager,</strong> who take my package, and on my request, dig through a large stack of papers to find a US Declarations form.</p>
                 <blockquote>That makes <strong>11 people</strong>! <em>To be see if the package makes it home or not...</em></blockquote><br/>
             </li>
             <li>
