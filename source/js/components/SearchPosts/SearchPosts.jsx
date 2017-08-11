@@ -20,7 +20,7 @@ export default class SearchPosts extends Component {
 
   render() {
     return (
-      <div>
+      <div className="searchPosts">
         <input type="input" onChange={this.boundOnChange} placeholder="Search Posts" value= {this.state.searchTerm} />
         <button type="submit" onClick={this.boundSearch} />
       </div>
