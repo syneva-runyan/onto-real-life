@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1500707887330" clover="3.2.0">
-  <project timestamp="1500707887330" name="All files">
-    <metrics statements="169" coveredstatements="168" conditionals="45" coveredconditionals="44" methods="55" coveredmethods="53" elements="269" coveredelements="265" complexity="0" loc="169" ncloc="169" packages="11" files="17" classes="17">
+<coverage generated="1502257095031" clover="3.2.0">
+  <project timestamp="1502257095031" name="All files">
+    <metrics statements="186" coveredstatements="183" conditionals="43" coveredconditionals="40" methods="59" coveredmethods="56" elements="288" coveredelements="279" complexity="0" loc="186" ncloc="186" packages="11" files="22" classes="22">
       <package name="components.AboutMe">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="AboutMe.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\AboutMe\AboutMe.jsx">
@@ -10,67 +10,53 @@
         </file>
       </package>
       <package name="components.BlogPosts">
-        <metrics statements="40" coveredstatements="40" conditionals="14" coveredconditionals="14" methods="12" coveredmethods="12"/>
+        <metrics statements="26" coveredstatements="26" conditionals="10" coveredconditionals="10" methods="7" coveredmethods="7"/>
         <file name="PostContent.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\BlogPosts\PostContent.jsx">
-          <metrics statements="23" coveredstatements="23" conditionals="4" coveredconditionals="4" methods="8" coveredmethods="8"/>
-          <line num="6" count="8" type="stmt"/>
-          <line num="9" count="8" type="stmt"/>
-          <line num="11" count="8" type="stmt"/>
-          <line num="12" count="8" type="stmt"/>
-          <line num="15" count="8" type="stmt"/>
-          <line num="17" count="8" type="stmt"/>
-          <line num="21" count="8" type="stmt"/>
-          <line num="27" count="5" type="stmt"/>
-          <line num="29" count="5" type="stmt"/>
-          <line num="35" count="5" type="stmt"/>
-          <line num="36" count="5" type="stmt"/>
-          <line num="40" count="1" type="stmt"/>
-          <line num="44" count="2" type="cond" truecount="4" falsecount="0"/>
-          <line num="45" count="1" type="stmt"/>
-          <line num="50" count="2" type="stmt"/>
-          <line num="55" count="1" type="stmt"/>
-          <line num="61" count="1" type="stmt"/>
-          <line num="62" count="1" type="stmt"/>
-          <line num="65" count="1" type="stmt"/>
-          <line num="69" count="1" type="stmt"/>
-          <line num="74" count="8" type="stmt"/>
-          <line num="91" count="8" type="stmt"/>
-          <line num="92" count="8" type="stmt"/>
+          <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+          <line num="18" count="9" type="stmt"/>
+          <line num="23" count="9" type="stmt"/>
+          <line num="30" count="2" type="stmt"/>
+          <line num="32" count="2" type="stmt"/>
+          <line num="38" count="2" type="stmt"/>
+          <line num="42" count="1" type="stmt"/>
+          <line num="47" count="3" type="stmt"/>
+          <line num="65" count="9" type="stmt"/>
+          <line num="66" count="9" type="stmt"/>
         </file>
         <file name="PostContextNav.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\BlogPosts\PostContextNav.jsx">
           <metrics statements="7" coveredstatements="7" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
-          <line num="5" count="7" type="stmt"/>
-          <line num="10" count="7" type="stmt"/>
+          <line num="5" count="9" type="stmt"/>
+          <line num="10" count="9" type="stmt"/>
           <line num="16" count="8" type="stmt"/>
           <line num="17" count="4" type="stmt"/>
           <line num="35" count="8" type="stmt"/>
-          <line num="59" count="7" type="stmt"/>
-          <line num="60" count="7" type="stmt"/>
+          <line num="59" count="9" type="stmt"/>
+          <line num="60" count="9" type="stmt"/>
         </file>
         <file name="PostPreviewer.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\BlogPosts\PostPreviewer.jsx">
           <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-          <line num="5" count="8" type="stmt"/>
-          <line num="12" count="8" type="stmt"/>
+          <line num="5" count="10" type="stmt"/>
+          <line num="12" count="10" type="stmt"/>
           <line num="21" count="3" type="stmt"/>
-          <line num="47" count="8" type="stmt"/>
-          <line num="48" count="8" type="stmt"/>
+          <line num="47" count="10" type="stmt"/>
+          <line num="48" count="10" type="stmt"/>
         </file>
         <file name="PostTitle.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\BlogPosts\PostTitle.jsx">
           <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-          <line num="4" count="8" type="stmt"/>
-          <line num="11" count="8" type="stmt"/>
+          <line num="4" count="10" type="stmt"/>
+          <line num="11" count="10" type="stmt"/>
           <line num="19" count="3" type="stmt"/>
-          <line num="42" count="8" type="stmt"/>
-          <line num="43" count="8" type="stmt"/>
+          <line num="42" count="10" type="stmt"/>
+          <line num="43" count="10" type="stmt"/>
         </file>
       </package>
       <package name="components.Contact">
         <metrics statements="31" coveredstatements="31" conditionals="9" coveredconditionals="9" methods="11" coveredmethods="10"/>
         <file name="ContactMsg.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Contact\ContactMsg.jsx">
           <metrics statements="31" coveredstatements="31" conditionals="9" coveredconditionals="9" methods="11" coveredmethods="10"/>
-          <line num="3" count="6" type="stmt"/>
+          <line num="3" count="11" type="stmt"/>
           <line num="4" count="5" type="stmt"/>
-          <line num="7" count="6" type="stmt"/>
+          <line num="7" count="11" type="stmt"/>
           <line num="11" count="7" type="stmt"/>
           <line num="12" count="7" type="stmt"/>
           <line num="18" count="7" type="stmt"/>
@@ -102,46 +88,60 @@
         </file>
       </package>
       <package name="components.Global">
-        <metrics statements="22" coveredstatements="22" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="7"/>
+        <metrics statements="27" coveredstatements="27" conditionals="4" coveredconditionals="4" methods="10" coveredmethods="10"/>
         <file name="Header.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Header.jsx">
           <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="6" count="4" type="stmt"/>
-          <line num="10" count="4" type="stmt"/>
+          <line num="6" count="9" type="stmt"/>
+          <line num="10" count="9" type="stmt"/>
           <line num="18" count="1" type="stmt"/>
-          <line num="31" count="4" type="stmt"/>
-          <line num="32" count="4" type="stmt"/>
+          <line num="31" count="9" type="stmt"/>
+          <line num="32" count="9" type="stmt"/>
         </file>
         <file name="Menu.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Menu.jsx">
-          <metrics statements="16" coveredstatements="16" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
-          <line num="6" count="4" type="stmt"/>
-          <line num="10" count="4" type="stmt"/>
-          <line num="16" count="1" type="stmt"/>
-          <line num="17" count="1" type="stmt"/>
-          <line num="21" count="1" type="stmt"/>
-          <line num="25" count="2" type="stmt"/>
-          <line num="26" count="2" type="stmt"/>
-          <line num="32" count="2" type="cond" truecount="2" falsecount="0"/>
-          <line num="34" count="1" type="stmt"/>
-          <line num="35" count="1" type="stmt"/>
-          <line num="37" count="1" type="stmt"/>
-          <line num="41" count="3" type="stmt"/>
-          <line num="45" count="3" type="cond" truecount="2" falsecount="0"/>
-          <line num="48" count="3" type="stmt"/>
-          <line num="96" count="4" type="stmt"/>
-          <line num="97" count="4" type="stmt"/>
+          <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="16" count="2" type="stmt"/>
+          <line num="17" count="2" type="stmt"/>
+          <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
+          <line num="32" count="3" type="stmt"/>
+          <line num="36" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="40" count="3" type="stmt"/>
+        </file>
+        <file name="NotFound.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\NotFound.jsx">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="4" count="1" type="stmt"/>
+        </file>
+        <file name="ResponsiveImg.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\ResponsiveImg.jsx">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="4" count="10" type="stmt"/>
+          <line num="11" count="10" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="33" count="10" type="stmt"/>
+          <line num="34" count="10" type="stmt"/>
         </file>
         <file name="Title.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Title.jsx">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="7" count="1" type="stmt"/>
+        </file>
+        <file name="Video.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Video.jsx">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="4" count="10" type="stmt"/>
+          <line num="9" count="10" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
         </file>
       </package>
       <package name="components.Spinner">
         <metrics statements="23" coveredstatements="23" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
         <file name="Spinner.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Spinner\Spinner.jsx">
           <metrics statements="23" coveredstatements="23" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
-          <line num="4" count="6" type="stmt"/>
-          <line num="8" count="6" type="stmt"/>
-          <line num="17" count="6" type="stmt"/>
+          <line num="4" count="11" type="stmt"/>
+          <line num="8" count="11" type="stmt"/>
+          <line num="17" count="11" type="stmt"/>
           <line num="21" count="5" type="stmt"/>
           <line num="22" count="5" type="cond" truecount="2" falsecount="0"/>
           <line num="23" count="1" type="stmt"/>
@@ -160,22 +160,41 @@
           <line num="59" count="12" type="stmt"/>
           <line num="73" count="48" type="stmt"/>
           <line num="84" count="4" type="stmt"/>
-          <line num="120" count="6" type="stmt"/>
-          <line num="121" count="6" type="stmt"/>
+          <line num="120" count="11" type="stmt"/>
+          <line num="121" count="11" type="stmt"/>
         </file>
       </package>
       <package name="utils">
-        <metrics statements="16" coveredstatements="15" conditionals="6" coveredconditionals="5" methods="5" coveredmethods="4"/>
+        <metrics statements="32" coveredstatements="29" conditionals="8" coveredconditionals="5" methods="7" coveredmethods="5"/>
+        <file name="img-rename.js" path="C:\Users\Syneva\Development\onto-real-life\source\js\utils\img-rename.js">
+          <metrics statements="16" coveredstatements="14" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="19" count="2" type="stmt"/>
+          <line num="22" count="2" type="stmt"/>
+          <line num="23" count="6" type="stmt"/>
+          <line num="26" count="6" type="stmt"/>
+          <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="38" count="1" type="stmt"/>
+        </file>
         <file name="post-helper.js" path="C:\Users\Syneva\Development\onto-real-life\source\js\utils\post-helper.js">
           <metrics statements="16" coveredstatements="15" conditionals="6" coveredconditionals="5" methods="5" coveredmethods="4"/>
-          <line num="2" count="9" type="stmt"/>
-          <line num="3" count="9" type="stmt"/>
-          <line num="6" count="9" type="cond" truecount="1" falsecount="1"/>
-          <line num="7" count="9" type="stmt"/>
+          <line num="2" count="10" type="stmt"/>
+          <line num="3" count="10" type="stmt"/>
+          <line num="6" count="10" type="cond" truecount="1" falsecount="1"/>
+          <line num="7" count="10" type="stmt"/>
           <line num="9" count="0" type="stmt"/>
-          <line num="14" count="9" type="stmt"/>
-          <line num="15" count="9" type="stmt"/>
-          <line num="16" count="9" type="stmt"/>
+          <line num="14" count="10" type="stmt"/>
+          <line num="15" count="10" type="stmt"/>
+          <line num="16" count="10" type="stmt"/>
           <line num="21" count="2" type="stmt"/>
           <line num="22" count="2" type="cond" truecount="4" falsecount="0"/>
           <line num="23" count="1" type="stmt"/>
@@ -183,7 +202,7 @@
           <line num="29" count="1" type="stmt"/>
           <line num="33" count="1" type="stmt"/>
           <line num="38" count="1" type="stmt"/>
-          <line num="49" count="9" type="stmt"/>
+          <line num="49" count="10" type="stmt"/>
         </file>
       </package>
       <package name="views.About">
@@ -194,51 +213,64 @@
         </file>
       </package>
       <package name="views.App">
-        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="App.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\views\App\App.jsx">
-          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="6" count="4" type="stmt"/>
-          <line num="10" count="4" type="stmt"/>
-          <line num="22" count="2" type="stmt"/>
-          <line num="24" count="2" type="stmt"/>
-          <line num="35" count="4" type="stmt"/>
-          <line num="36" count="4" type="stmt"/>
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="7" count="9" type="stmt"/>
+          <line num="11" count="9" type="stmt"/>
+          <line num="23" count="2" type="stmt"/>
+          <line num="34" count="9" type="stmt"/>
+          <line num="35" count="9" type="stmt"/>
         </file>
       </package>
       <package name="views.BlogPosts">
-        <metrics statements="27" coveredstatements="27" conditionals="10" coveredconditionals="10" methods="8" coveredmethods="8"/>
+        <metrics statements="38" coveredstatements="38" conditionals="10" coveredconditionals="10" methods="12" coveredmethods="12"/>
         <file name="BlogPosts.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\views\BlogPosts\BlogPosts.jsx">
-          <metrics statements="19" coveredstatements="19" conditionals="10" coveredconditionals="10" methods="5" coveredmethods="5"/>
-          <line num="11" count="5" type="stmt"/>
-          <line num="13" count="5" type="stmt"/>
-          <line num="17" count="5" type="stmt"/>
+          <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+          <line num="9" count="9" type="stmt"/>
+          <line num="11" count="9" type="stmt"/>
+          <line num="15" count="9" type="stmt"/>
+          <line num="23" count="3" type="stmt"/>
           <line num="25" count="3" type="stmt"/>
-          <line num="30" count="3" type="stmt"/>
-          <line num="31" count="8" type="cond" truecount="2" falsecount="0"/>
+          <line num="26" count="3" type="stmt"/>
+          <line num="29" count="4" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
+          <line num="34" count="4" type="stmt"/>
+          <line num="35" count="1" type="stmt"/>
+          <line num="39" count="3" type="stmt"/>
+          <line num="48" count="9" type="stmt"/>
+          <line num="49" count="9" type="stmt"/>
+        </file>
+        <file name="Post.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\views\BlogPosts\Post.jsx">
+          <metrics statements="17" coveredstatements="17" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="3"/>
+          <line num="9" count="9" type="stmt"/>
+          <line num="15" count="9" type="stmt"/>
+          <line num="27" count="3" type="stmt"/>
           <line num="32" count="3" type="stmt"/>
-          <line num="33" count="3" type="stmt"/>
+          <line num="33" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="34" count="3" type="stmt"/>
           <line num="35" count="3" type="stmt"/>
-          <line num="40" count="3" type="stmt"/>
-          <line num="44" count="1" type="stmt"/>
-          <line num="60" count="5" type="stmt"/>
-          <line num="66" count="6" type="stmt"/>
-          <line num="68" count="6" type="cond" truecount="2" falsecount="0"/>
-          <line num="69" count="1" type="stmt"/>
-          <line num="74" count="1" type="stmt"/>
-          <line num="82" count="5" type="stmt"/>
-          <line num="86" count="5" type="stmt"/>
-          <line num="87" count="5" type="stmt"/>
+          <line num="37" count="3" type="stmt"/>
+          <line num="42" count="3" type="stmt"/>
+          <line num="46" count="6" type="stmt"/>
+          <line num="47" count="6" type="stmt"/>
+          <line num="49" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="50" count="5" type="stmt"/>
+          <line num="52" count="1" type="stmt"/>
+          <line num="54" count="1" type="stmt"/>
+          <line num="70" count="9" type="stmt"/>
+          <line num="71" count="9" type="stmt"/>
         </file>
         <file name="PostCollection.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\views\BlogPosts\PostCollection.jsx">
           <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-          <line num="5" count="6" type="stmt"/>
-          <line num="10" count="6" type="stmt"/>
-          <line num="17" count="2" type="stmt"/>
-          <line num="18" count="4" type="stmt"/>
-          <line num="19" count="4" type="stmt"/>
-          <line num="31" count="2" type="stmt"/>
-          <line num="46" count="6" type="stmt"/>
-          <line num="47" count="6" type="stmt"/>
+          <line num="5" count="9" type="stmt"/>
+          <line num="10" count="9" type="stmt"/>
+          <line num="17" count="3" type="stmt"/>
+          <line num="18" count="6" type="stmt"/>
+          <line num="19" count="6" type="stmt"/>
+          <line num="31" count="3" type="stmt"/>
+          <line num="43" count="9" type="stmt"/>
+          <line num="44" count="9" type="stmt"/>
         </file>
       </package>
       <package name="views.Contact">

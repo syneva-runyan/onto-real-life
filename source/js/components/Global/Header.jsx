@@ -22,7 +22,7 @@ export default class Header extends Component {
           <Title />
           <span id="headerBorder" className="header__border" />
         </div>
-        <Menu pathname={this.props.location.pathname} />
+        <Menu />
       </div>
     );
   }
