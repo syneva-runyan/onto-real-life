@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { PostPreviewer } from "../../components/BlogPosts";
+import { PostPreviewer } from "../../components/BlogPosts"
+import { SearchPosts } from "../../components/SearchPosts";
+
 
 const propTypes = {
   assetBase: PropTypes.string,
