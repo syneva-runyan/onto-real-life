@@ -3,17 +3,17 @@ import PropTypes from "prop-types";
 import { PostPreviewer } from "../../components/BlogPosts";
 
 const propTypes = {
-  assetBasePath: PropTypes.string,
+  assetBase: PropTypes.string,
   postCatalog: PropTypes.object,
 };
 
 const defaultProps = {
-  assetBasePath: "/assets/img/blogs",
+  assetBase: "/assets/img/blogs",
   postCatalog: {},
 };
 
-export default class BlogPosts extends Component {
-  previewGallery(catalog, assetBasePath) {
+export default class PostCollection extends Component {
+  previewGallery(catalog, assetBase) {
     return Object.keys(catalog).map(item => {
       const itemContent = catalog[item];
       return (
@@ -22,7 +22,7 @@ export default class BlogPosts extends Component {
           key={`post-${itemContent.id}`}
           title={itemContent.title}
           tagLine={itemContent.tagLine}
-          assetPath={`${assetBasePath}/${itemContent.id}`}
+          assetPath={`${assetBase}/${itemContent.id}`}
         />
       );
     });
@@ -33,15 +33,12 @@ export default class BlogPosts extends Component {
         <h2>Blog Posts</h2>
         <hr className="blogPosts__divider" />
         <div className="blogPosts__gallery">
-          {this.previewGallery(
-            this.props.postCatalog,
-            this.props.assetBasePath,
-          )}
+          {this.previewGallery(this.props.postCatalog, this.props.assetBase)}
         </div>
       </div>
     );
   }
 }
 
-BlogPosts.propTypes = propTypes;
-BlogPosts.defaultProps = defaultProps;
+PostCollection.propTypes = propTypes;
+PostCollection.defaultProps = defaultProps;
