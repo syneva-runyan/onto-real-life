@@ -19,9 +19,13 @@ export default class SearchPosts extends Component {
   searchPosts(searchTerm) {}
 
   render() {
+
+    const searchClassNames = !!this.state.searchTerm ? 
+      "active searchPosts" : "searchPosts";
+
     return (
-      <div className="searchPosts">
-        <input type="input" onChange={this.boundOnChange} placeholder="Search Posts" value= {this.state.searchTerm} />
+      <div className={searchClassNames} >
+        <input className="searchPosts__input" type="input" onChange={this.boundOnChange} placeholder="Search Posts" value={this.state.searchTerm} />
         <button type="submit" onClick={this.boundSearch} />
       </div>
     );
