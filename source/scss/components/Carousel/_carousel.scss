@@ -1,0 +1,15 @@
+.carousel {
+    padding: 0;
+    position: relative;
+
+    &__viewer {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    &__slide {
+        display: inline-block;
+        width: 100%;
+    }
+}
