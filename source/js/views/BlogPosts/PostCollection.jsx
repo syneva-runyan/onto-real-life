@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { PostPreviewer } from "../../components/BlogPosts";
+import { Carousel } from "../../components/Carousel";
+
 
 const propTypes = {
   assetBase: PropTypes.string,
@@ -28,12 +30,13 @@ export default class PostCollection extends Component {
     });
   }
   render() {
+    const blogPostPreviews = this.previewGallery(this.props.postCatalog, this.props.assetBase);
     return (
       <div className="blogPosts">
-        <h2>Blog Posts</h2>
+        <Carousel slides={blogPostPreviews} />
         <hr className="blogPosts__divider" />
         <div className="blogPosts__gallery">
-          {this.previewGallery(this.props.postCatalog, this.props.assetBase)}
+          {blogPostPreviews}
         </div>
       </div>
     );
