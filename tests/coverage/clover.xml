@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1502257095031" clover="3.2.0">
-  <project timestamp="1502257095031" name="All files">
-    <metrics statements="186" coveredstatements="183" conditionals="43" coveredconditionals="40" methods="59" coveredmethods="56" elements="288" coveredelements="279" complexity="0" loc="186" ncloc="186" packages="11" files="22" classes="22">
+<coverage generated="1502527587648" clover="3.2.0">
+  <project timestamp="1502527587648" name="All files">
+    <metrics statements="193" coveredstatements="190" conditionals="43" coveredconditionals="40" methods="61" coveredmethods="58" elements="297" coveredelements="288" complexity="0" loc="193" ncloc="193" packages="12" files="23" classes="23">
       <package name="components.AboutMe">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="AboutMe.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\AboutMe\AboutMe.jsx">
@@ -50,6 +50,16 @@
           <line num="43" count="10" type="stmt"/>
         </file>
       </package>
+      <package name="components.Carousel">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <file name="Carousel.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Carousel\Carousel.jsx">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <line num="5" count="10" type="stmt"/>
+          <line num="10" count="10" type="stmt"/>
+          <line num="16" count="3" type="stmt"/>
+          <line num="19" count="9" type="stmt"/>
+        </file>
+      </package>
       <package name="components.Contact">
         <metrics statements="31" coveredstatements="31" conditionals="9" coveredconditionals="9" methods="11" coveredmethods="10"/>
         <file name="ContactMsg.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Contact\ContactMsg.jsx">
@@ -88,7 +98,7 @@
         </file>
       </package>
       <package name="components.Global">
-        <metrics statements="27" coveredstatements="27" conditionals="4" coveredconditionals="4" methods="10" coveredmethods="10"/>
+        <metrics statements="29" coveredstatements="29" conditionals="4" coveredconditionals="4" methods="10" coveredmethods="10"/>
         <file name="Header.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Header.jsx">
           <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="6" count="9" type="stmt"/>
@@ -129,10 +139,12 @@
           <line num="7" count="1" type="stmt"/>
         </file>
         <file name="Video.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Video.jsx">
-          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="4" count="10" type="stmt"/>
           <line num="9" count="10" type="stmt"/>
           <line num="15" count="1" type="stmt"/>
+          <line num="18" count="10" type="stmt"/>
+          <line num="19" count="10" type="stmt"/>
         </file>
       </package>
       <package name="components.Spinner">
@@ -224,7 +236,7 @@
         </file>
       </package>
       <package name="views.BlogPosts">
-        <metrics statements="38" coveredstatements="38" conditionals="10" coveredconditionals="10" methods="12" coveredmethods="12"/>
+        <metrics statements="39" coveredstatements="39" conditionals="10" coveredconditionals="10" methods="12" coveredmethods="12"/>
         <file name="BlogPosts.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\views\BlogPosts\BlogPosts.jsx">
           <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
           <line num="9" count="9" type="stmt"/>
@@ -262,15 +274,16 @@
           <line num="71" count="9" type="stmt"/>
         </file>
         <file name="PostCollection.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\views\BlogPosts\PostCollection.jsx">
-          <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-          <line num="5" count="9" type="stmt"/>
-          <line num="10" count="9" type="stmt"/>
-          <line num="17" count="3" type="stmt"/>
-          <line num="18" count="6" type="stmt"/>
-          <line num="19" count="6" type="stmt"/>
-          <line num="31" count="3" type="stmt"/>
-          <line num="43" count="9" type="stmt"/>
-          <line num="44" count="9" type="stmt"/>
+          <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+          <line num="7" count="9" type="stmt"/>
+          <line num="12" count="9" type="stmt"/>
+          <line num="19" count="3" type="stmt"/>
+          <line num="20" count="6" type="stmt"/>
+          <line num="21" count="6" type="stmt"/>
+          <line num="33" count="3" type="stmt"/>
+          <line num="34" count="3" type="stmt"/>
+          <line num="46" count="9" type="stmt"/>
+          <line num="47" count="9" type="stmt"/>
         </file>
       </package>
       <package name="views.Contact">
