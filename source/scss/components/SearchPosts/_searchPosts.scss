@@ -3,6 +3,25 @@
     right: 0;
     top: -45px;
 
+    &__input {
+        background-color: rgba(0,0,0,0);
+        border: 0;
+        border-bottom: 1px solid $primary-color;
+        color: $primary-color-light;
+        cursor: text;
+        transition: 0.25s;
+        padding: 7px 0;
+        width: 0;
+
+    }
+
+    &:focus, &:hover, &.active {
+        .searchPosts__input {
+            padding: 7px;
+            width: 175px;
+        }
+    }
+
     @media screen and (max-width: $md-break) {
         left: 0;
         right: auto;
