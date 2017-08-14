@@ -24,9 +24,9 @@ export default class SearchPosts extends Component {
       "active searchPosts" : "searchPosts";
 
     return (
-      <div className={searchClassNames} >
+      <div className={searchClassNames} tabIndex={1} >
         <input className="searchPosts__input" type="input" onChange={this.boundOnChange} placeholder="Search Posts" value={this.state.searchTerm} />
-        <button type="submit" onClick={this.boundSearch} />
+        <button className="searchPosts__submit" type="submit" onClick={this.boundSearch} />
       </div>
     );
   }
