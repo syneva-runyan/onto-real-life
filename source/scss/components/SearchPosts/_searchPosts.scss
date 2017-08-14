@@ -37,13 +37,41 @@
         }
     }
 
-     .searchPosts__input:focus {
-            padding: 7px;
-            width: 175px;
-        }
+    .searchPosts__input:focus {
+        padding: 7px;
+        width: 175px;
+    }
 
     @media screen and (max-width: $md-break) {
-        left: 0;
-        right: auto;
+        height: 35px;
+        right: 0;
+        top: 0px;
+        z-index: 2;
+
+        &__input {
+            border-bottom: 1px solid $white;
+            color: $white;    
+            font-size:  11px;
+            height: 32px;
+            margin-right: 32px;
+            padding: 5px 0 0;
+        }
+
+        &__submit {
+            filter: brightness(100) saturate(0);
+            position: absolute;
+            top: 10px;
+            right: 9px;
+        }
+
+        &:hover,  &.active, &:focus {
+            .searchPosts__input {
+                width: 130px;
+            }
+        } 
+
+        .searchPosts__input:focus { 
+            width: 130px;
+        }
     }
 }
