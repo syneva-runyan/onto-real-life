@@ -9,6 +9,24 @@ $ani-speed: 0.25s;
 	  filter: blur(0);
 }
 
+@keyframes carouselSlideIn {
+  0% {
+
+  }
+  100% {
+    float: left
+  }
+}
+
+@keyframes carouselSlideOut {
+  0% {
+    float: left
+  }
+  100% {
+    position: absolute;
+  }
+}
+
 @keyframes shake {
     0%{
       transform: translateX(2px);
