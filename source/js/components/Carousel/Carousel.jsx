@@ -1,43 +1,74 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { map } from "lodash";
 
 const propTypes = {
-    aniDuration: PropTypes.string,
+    aniDuration: PropTypes.number,
     slides: PropTypes.array
 }
 
 const defaultProps = {
-    aniDuration: "1s",
+    aniDuration: 3000,
     slides: [],
 }
 
-export default function Carousel(props) {
-    const carouselWidth = 100*props.slides.length;
-    const slideWidth = 100 / props.slides.length; 
+export default class Carousel extends Component {
+    constructor(props) {
+        super(props);
+        this.slideTimer = null;
 
-    return (
-        <div className="carousel__viewer">
+        this.state = {
+            active: 0,
+        }
+
+        this.boundMoveSlide = this.moveSlide.bind(this);
+    }
+
+    componentDidMount(props) {
+        this.slideTimer = setInterval(this.boundMoveSlide, this.props.aniDuration);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.slideTimer);
+    }
+
+    moveSlide() {
+        const activeSlideIndex =  (this.state.active + 1) % this.props.slides.length;
+        this.setState({
+            active: activeSlideIndex,
+        })
+    }
+
+    render () {
+        return (
             <ul
                 className="carousel"
-                style={{
-                    "animationDuration": props.aniDuration,
-                    "width": carouselWidth + "%"
-                }}
             >
-                {map(props.slides, (slide, index) => {
+                {map(this.props.slides, (slide, index) => {
+                    let slideClassNames = "carousel__slide";
+                    if (index == this.state.active) {
+                        slideClassNames += " carousel__slide--active"
+                    } else if (
+                        index == this.state.active - 1 ||
+                    (index == this.props.slides.length-1 && this.state.active == 0)) {
+                        slideClassNames += " carousel__slide--prev"
+                    } else if (index == this.state.active +1 ||
+                    (index == 0 && this.state.active == this.props.slides.length - 1)){
+                        slideClassNames += " carouesl__slide--next"
+                    }
                     return ( 
                     <li 
-                        className="carousel__slide"
+                        className={slideClassNames}
                         key={`slide-${index}`}
-                        style={{
-                            "width": slideWidth  + "%"
-                        }}
                     >
                         {slide}
                     </li>)
                 })}
             </ul>
-        </div>
-    )
+            
+        )
+    }
 }
+
+Carousel.propTypes = propTypes;
+Carousel.defaultProps = defaultProps;

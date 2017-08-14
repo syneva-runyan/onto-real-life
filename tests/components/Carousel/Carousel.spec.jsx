@@ -22,8 +22,4 @@ describe("Post Content", () => {
 
    expect(slides.length).toEqual(3);
   });
-  
-  it("should set css' animation duration from provided prop", () => {
-      expect(component.props().style.animationDuration).toEqual(exAniDuration);
-  })
 });
