@@ -11,7 +11,7 @@
         display: inline-block;
         left: 101%;
         position: absolute;
-        width: 100%;
+        width: 101%;
 
         &--active {
             position: relative;
@@ -27,7 +27,7 @@
 
         &--next, &--active, &--prev {
             float: left;
-            left: 0;
+            left: -1%;
             transition: $ani-speed * 1.5 ease-in-out;
         }
 
