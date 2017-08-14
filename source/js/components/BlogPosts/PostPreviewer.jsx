@@ -25,20 +25,22 @@ export default class PostPreviewer extends Component {
         tabIndex={0}
         to={`posts/${this.props.postId}`}
       >
-        <h3 className="postPreviewer__title">
-          {this.props.title}
-        </h3>
-        <span
-          className="postPreviewer__icon"
-          style={{
-            backgroundImage: `url("${this.props.assetPath}/entryStamp.png")`,
-          }}
-        />
-        {this.props.tagLine
-          ? <h4 className="postPreviewer__tagline">
-              {this.props.tagLine}
-            </h4>
-          : null}
+        <div className="postPreviewer__titles">
+          <h3 className="postPreviewer__title">
+            {this.props.title}
+          </h3>
+          <span
+            className="postPreviewer__icon"
+            style={{
+              backgroundImage: `url("${this.props.assetPath}/entryStamp.png")`,
+            }}
+          />
+          {this.props.tagLine
+            ? <h4 className="postPreviewer__tagline">
+                {this.props.tagLine}
+              </h4>
+            : null}
+          </div>
       </Link>
     );
   }
