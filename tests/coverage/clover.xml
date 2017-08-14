@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1502527587648" clover="3.2.0">
-  <project timestamp="1502527587648" name="All files">
-    <metrics statements="193" coveredstatements="190" conditionals="43" coveredconditionals="40" methods="61" coveredmethods="58" elements="297" coveredelements="288" complexity="0" loc="193" ncloc="193" packages="12" files="23" classes="23">
+<coverage generated="1502528605099" clover="3.2.0">
+  <project timestamp="1502528605099" name="All files">
+    <metrics statements="195" coveredstatements="192" conditionals="43" coveredconditionals="40" methods="61" coveredmethods="58" elements="299" coveredelements="290" complexity="0" loc="195" ncloc="195" packages="12" files="23" classes="23">
       <package name="components.AboutMe">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="AboutMe.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\AboutMe\AboutMe.jsx">
@@ -51,13 +51,15 @@
         </file>
       </package>
       <package name="components.Carousel">
-        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <file name="Carousel.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Carousel\Carousel.jsx">
-          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
           <line num="5" count="10" type="stmt"/>
           <line num="10" count="10" type="stmt"/>
           <line num="16" count="3" type="stmt"/>
-          <line num="19" count="9" type="stmt"/>
+          <line num="17" count="3" type="stmt"/>
+          <line num="19" count="3" type="stmt"/>
+          <line num="29" count="9" type="stmt"/>
         </file>
       </package>
       <package name="components.Contact">

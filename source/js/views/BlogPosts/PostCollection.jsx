@@ -34,7 +34,6 @@ export default class PostCollection extends Component {
     return (
       <div className="blogPosts">
         <Carousel slides={blogPostPreviews} />
-        <hr className="blogPosts__divider" />
         <div className="blogPosts__gallery">
           {blogPostPreviews}
         </div>
