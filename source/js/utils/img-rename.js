@@ -10,7 +10,7 @@ const argv = require("minimist")(process.argv.slice(2));
 const ogPrefix0 = "img";
 const fileExt0 = ".jpg";
 const inputDir0 =
-  "C:/Users/Syneva/Development/onto-real-life/source/assets/img/blogs/indonesiaTravelThoughts";
+  "C:/Users/Syneva/Development/onto-real-life/source/assets/img/blogs/newZealandNorthHiking";
 const suffixes0 = ["", "--sm", "--md", "--lg"];
 const newPrefix0 = argv.imgName;
 
@@ -21,7 +21,7 @@ const rename = function(ogPrefix, newPrefix, fileExt, inputDir, suffixes) {
   // Iterate through ogPrefix/suffix combinations and rename.
   for (let suffix of suffixes) {
     console.info(
-      `Renaming ${ogPrefix}${suffix}${fileExt} to ${newPrefix}${suffix}${fileExt}`,
+      `Renaming ${ogPrefix}${suffix}${fileExt} to ${newPrefix}${suffix}${fileExt}`
     );
     fs.rename(
       `${inputDir}\\${ogPrefix}${suffix}${fileExt}`,
@@ -30,11 +30,11 @@ const rename = function(ogPrefix, newPrefix, fileExt, inputDir, suffixes) {
         if (err) {
           console.error(`err renaming files: ${err}`);
         }
-      },
+      }
     );
   }
 };
 
 rename(ogPrefix0, newPrefix0, fileExt0, inputDir0, suffixes0);
 
-export default rename;
+// export default rename;

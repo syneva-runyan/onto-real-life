@@ -6,7 +6,7 @@ const imgBasePath = "../assets/img/blogs/indonesiaTravelThoughts";
 export default function Content(props) {
   return (
     <div>
-        <p>The world doesn't need another post from a white girl who went to Ubud for a Yoga Retreat <em>(which was great btw, highly recomend.  Shout out to Chantel and Andrea for being some of the sweetest and most fun people I've met traveling)</em>.<br/><br/>  Instead, I've put together this.</p>
+        <p>The world doesn't need another post from a white girl who went to Ubud for a Yoga Retreat <em>((thankyou, Eat Pray Love)</em>.<br/><br/>  Instead, I've put together this.</p>
         <ol>
              <li>
                 <strong>Q. How many people does it take to ship a package in Indonesia?</strong><br/>
