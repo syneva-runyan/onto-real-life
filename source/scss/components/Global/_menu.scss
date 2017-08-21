@@ -4,7 +4,8 @@
   &__nav {
     padding: 0;
     position: absolute;
-    left: 0;
+    left: auto;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
     transition: 0.25s;
@@ -39,10 +40,12 @@
   @media screen and (max-width: $md-break) {
     &__nav {
       background-color: $white;
-      border-left: 0.5px solid $primary-color-light;
+      border-right: 0.5px solid $primary-color-light;
+      left: 0;
       margin-bottom: 0;
       margin-top: 0;
       position: absolute;
+      right: auto;
       top: 35px;
       transform: translateX(-101%);
       width: auto;
