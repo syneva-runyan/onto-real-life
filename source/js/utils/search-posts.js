@@ -63,14 +63,52 @@ class SearchPosts {
 // to a search dictionary
 class SearchDictionary {
     constructor(posts) {
-        this.entries = [];
-        // posts.forEach(postEntry => {
-        //     postEntry.title
-        //     textEntry.toLowerCase();
-        //     textEntry.split(" ").filter(word => {
-        //         return dictFilterList.indexOf(word) !==-1;
-        //     });
-        // });
+        this.dict = {};
+        // start predictive search after 3 char are provided
+        this.predictiveSearchStartIndex = 3;
+        Object.keys(posts).forEach(postEntry => {
+            const postInfo = posts[postEntry];
+            const title = cleanSearchTerm(postInfo.title);
+            const tagLine = postInfo.tagLine ? cleanSearchTerm(postInfo.tagLine) : "";
+            this.createDictItem(postEntry, title, tagLine, ...postInfo.tags);
+        });
+    }
+
+    find(searchTerm) {
+        return this.dict[searchTerm] ? this.dict[searchTerm].values : null;
+    }
+
+    appendEntryToPath(currObj, charToAppend) {
+        // check to see if char path already exists
+        if(currObj[charToAppend]) {
+            return currObj;
+        }
+        const newEntry = {};
+        newEntry[charToAppend] = {};
+        return Object.assign(currObj, newEntry);
+    }
+
+    // add provided value
+    // to appropriate dictionary locations.
+    appendToDict(dictionary, phrase, value) {
+        for(let charIndex = this.predictiveSearchStartIndex; charIndex <= phrase.length; charIndex ++) {
+            const chars = phrase.substring(0, charIndex);
+            dictionary = this.appendEntryToPath(dictionary, chars);
+  
+            if(dictionary[chars].values) {
+                dictionary[chars].values.push(value);
+            } else {
+                dictionary[chars].values = [value];
+            } 
+        }
+
+        return dictionary;
+    }
+
+    createDictItem(value, ...terms) {
+        terms.forEach((term) => {
+            this.dict = this.appendToDict(this.dict, term, value);
+        });
     }
 }
 
