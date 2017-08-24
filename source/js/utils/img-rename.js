@@ -37,4 +37,4 @@ const rename = function(ogPrefix, newPrefix, fileExt, inputDir, suffixes) {
 
 rename(ogPrefix0, newPrefix0, fileExt0, inputDir0, suffixes0);
 
-// export default rename;
+export default rename;
