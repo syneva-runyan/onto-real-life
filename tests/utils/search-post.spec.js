@@ -38,13 +38,56 @@ describe("Search Posts", () => {
         });
     });
     describe("Search Dictionary", () => {
-        it("should split provided text terms and add them as entries to dictionary", () => {
-            // const exTermsOne = "This is an example term";
-            // const exTermsTwo = "Once in a lifetime journey to Prauge";
+        describe("appendToDic", () => {
+            it("should breakdown provided term by char and append to dictionary tree", () => {
+                const emptyDict = {};
+                const termToAdd = "add t";
+                const value = "VALUE"
 
-            // const dictionary = new SearchDictionary(exTermsOne, exTermsTwo);
-
-            // expect(dictionary.entries).toEqual(12);
+                const emptySearchDict = new SearchDictionary({});
+                const actual = emptySearchDict.appendToDict(emptyDict, termToAdd, value);
+                const expected = {
+                    "add": {
+                        values: [value],
+                    },
+                    "add ": {
+                        values: [value],
+                    },
+                    "add t": {
+                        values: [value],
+                    },
+                };
+                expect(actual).toEqual(expected);
+            })
         })
+        it("should be able to find related tags from dictionary", () => {
+            const title = "This is an example term";
+            const title2 = "Another unrelated title";
+            const tags2 = ["unrelated", "tagTwo"];
+            const tagLine = "Once in a lifetime journey to Prauge";
+            const tags = ["tagOne", "tagTwo"];
+
+            const exPost = {
+                post1: {
+                    title,
+                    tagLine,
+                    tags,
+                },
+                post2: {
+                    title: title2,
+                    tags: tags2,
+                }
+            }
+
+
+           const dictionary = new SearchDictionary(exPost);
+
+            expect(dictionary.find("tagTwo")).toEqual(["post1", "post2"]);
+            expect(dictionary.find("onc")).toEqual(["post1"]);
+        });
+        it("should return null if no predictive results are available", () => {
+            const emptyDict = new SearchDictionary({});
+            expect(dictionary.find("something")).toEqual(null);
+        });
     })
 });
