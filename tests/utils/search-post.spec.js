@@ -38,6 +38,12 @@ describe("Search Posts", () => {
         });
     });
     describe("Search Dictionary", () => {
+        it("should throw info if not provided expected postcatalog", () => {
+            const expectedInfo = "For search to work properly, please provide post catalog object to dictionary searcher";
+            const spy = spyOn(console, "info");
+            new SearchDictionary("invalidPostCatalog");
+            expect(spy).toHaveBeenCalledWith(expectedInfo);
+        });
         describe("appendToDic", () => {
             it("should breakdown provided term by char and append to dictionary tree", () => {
                 const emptyDict = {};
@@ -87,7 +93,7 @@ describe("Search Posts", () => {
         });
         it("should return null if no predictive results are available", () => {
             const emptyDict = new SearchDictionary({});
-            expect(dictionary.find("something")).toEqual(null);
+            expect(emptyDict.find("something")).toEqual(null);
         });
     })
 });
