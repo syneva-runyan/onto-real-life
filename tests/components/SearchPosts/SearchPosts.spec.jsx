@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 
 jest.mock("../../../source/js/utils/search-posts");
 
-describe('Not Found', () => {
+describe('Search Posts', () => {
 	let component;
 
 	beforeEach(() => {
