@@ -66,12 +66,20 @@ class SearchDictionary {
         this.dict = {};
         // start predictive search after 3 char are provided
         this.predictiveSearchStartIndex = 3;
-        Object.keys(posts).forEach(postEntry => {
-            const postInfo = posts[postEntry];
-            const title = cleanSearchTerm(postInfo.title);
-            const tagLine = postInfo.tagLine ? cleanSearchTerm(postInfo.tagLine) : "";
-            this.createDictItem(postEntry, title, tagLine, ...postInfo.tags);
-        });
+
+        if(posts && typeof(posts) === "object") {
+            Object.keys(posts).forEach(postEntry => {
+                const postInfo = posts[postEntry];
+                const title = cleanSearchTerm(postInfo.title);
+                const tagLine = postInfo.tagLine ? cleanSearchTerm(postInfo.tagLine) : "";
+                const tags = postInfo.tags ? postInfo.tags : [];
+                this.createDictItem(postEntry, title, tagLine, ...tags);
+            });
+        } else {
+            console.info("For search to work properly, please provide post catalog object to dictionary searcher");
+        }
+
+        return this;
     }
 
     find(searchTerm) {
@@ -96,7 +104,9 @@ class SearchDictionary {
             dictionary = this.appendEntryToPath(dictionary, chars);
   
             if(dictionary[chars].values) {
-                dictionary[chars].values.push(value);
+                if(dictionary[chars].values.indexOf(value) === -1) {
+                    dictionary[chars].values.push(value);
+                }
             } else {
                 dictionary[chars].values = [value];
             } 
@@ -112,9 +122,9 @@ class SearchDictionary {
     }
 }
 
-const dictionaryContent = new SearchDictionary(postCatalogue);
+const catalogSearcher = new SearchDictionary(postCatalogue);
 module.exports = {
-    searcher: new SearchPosts(dictionaryContent),
+    catalogSearcher,
     SearchPosts,
     SearchDictionary,
     checkForSubstring,

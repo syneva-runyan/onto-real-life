@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import { catalogSearcher }from "../../utils/search-posts";
 
 export default class SearchPosts extends Component {
   constructor(props) {
     super(props);
+    this.predictiveSearchStart = 3;
     this.state = {
       serachTerm: "",
     };
@@ -11,12 +13,18 @@ export default class SearchPosts extends Component {
   }
 
   onChange(e) {
+    const searchTerm = e.target.value;
     this.setState({
-      searchTerm: e.target.value,
+      searchTerm,
     });
+
+    (searchTerm.length >= this.predictiveSearchStart) ? this.searchPosts(searchTerm) : null;
   }
 
-  searchPosts(searchTerm) {}
+  searchPosts(searchTerm) {
+    const possibleMatches = catalogSearcher.find(searchTerm);
+    console.log(possibleMatches);
+  }
 
   render() {
 
