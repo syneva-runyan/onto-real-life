@@ -1,17 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const propTypes = {
-    suggestions: PropTypes.array
+    suggestions: PropTypes.array,
+    closeSearch: PropTypes.func
 }
 const defaultProps = {
+    closeSearch: () => {},
     suggestions: null
 }
 
-export const renderSearchLink = function(suggestions) {
+export const renderSearchLink = function(suggestions, closeSearch) {
     return (
         <ul className="predictiveSuggestions__list">
-            <li>Links to related posts go here</li>
+            {suggestions.map(article => {
+                return <li key={`${article.id}-predictiveSuggestions`}className="predictiveSuggestions__listItem">
+                        <Link onClick={closeSearch} className="predictiveSuggestions__link" to={`/posts/${article.id}`}>{article.title}</Link>
+                    </li>
+            })}
         </ul>
     )
 }
@@ -22,8 +29,8 @@ export const renderNoSuggestions = function() {
 export default function PredictiveSuggestions(props) {
     return (
         <div className="predictiveSuggestions">
-            {props.suggestions ? 
-                renderSearchLink(props.suggestions) :
+            {props.suggestions && props.suggestions.length > 0 ? 
+                renderSearchLink(props.suggestions, props.closeSearch) :
                 renderNoSuggestions()
             }
         </div>
