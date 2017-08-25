@@ -1,5 +1,6 @@
 import postCatalogue from "../../data/posts";
 
+
 const dictFilterList = ["a", "the", "an", "of", "and"];
 
 // Given a string and pos & length of independant word
