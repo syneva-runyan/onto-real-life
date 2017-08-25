@@ -16,6 +16,8 @@ import { NotFound } from "../Global";
 // require("font-awesome/css/font-awesome.css");
 
 
+
+
 const propTypes = {
   postId: PropTypes.string,
   component: PropTypes.func,
