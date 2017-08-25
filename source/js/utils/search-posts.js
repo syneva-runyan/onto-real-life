@@ -2,6 +2,7 @@ import postCatalogue from "../../data/posts";
 
 const dictFilterList = ["a", "the", "an", "of", "and"];
 
+
 // Given a string and pos & length of independant word
 // surrounding by white spaces in that string,
 // return original string with indepedant word removed.
