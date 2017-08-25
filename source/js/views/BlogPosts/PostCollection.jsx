@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { PostPreviewer } from "../../components/BlogPosts"
-import { SearchPosts } from "../../components/SearchPosts";
+import { PostPreviewer } from "../../components/BlogPosts";
 import { Carousel } from "../../components/Carousel";
-
 
 const propTypes = {
   assetBase: PropTypes.string,
@@ -31,7 +29,10 @@ export default class PostCollection extends Component {
     });
   }
   render() {
-    const blogPostPreviews = this.previewGallery(this.props.postCatalog, this.props.assetBase);
+    const blogPostPreviews = this.previewGallery(
+      this.props.postCatalog,
+      this.props.assetBase,
+    );
     return (
       <div className="blogPosts">
         <Carousel slides={blogPostPreviews} />

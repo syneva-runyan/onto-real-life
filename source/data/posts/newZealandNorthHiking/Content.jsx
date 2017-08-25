@@ -200,11 +200,18 @@ export default function Content(props) {
       </figure>
       <h4>Red Rocks (Wellington)</h4>
       <p>
-        A ~1 hour rocky coastal walk, where if done in the right season, you'll find a large seal colony napping on rocks right next to the path.
+        A ~1 hour rocky coastal walk, where if done in the right season, you'll
+        find a large seal colony napping on rocks right next to the path.
       </p>
       <figure>
-        <img className="width--50 sm-width--100" src="../assets/img/blogs/newZealandNorthHiking/seals.jpg" />
-        <img className="width--50 sm-width--100" src="../assets/img/blogs/newZealandNorthHiking/redRocks.jpg" />
+        <img
+          className="width--50 sm-width--100"
+          src="../assets/img/blogs/newZealandNorthHiking/seals.jpg"
+        />
+        <img
+          className="width--50 sm-width--100"
+          src="../assets/img/blogs/newZealandNorthHiking/redRocks.jpg"
+        />
       </figure>
     </div>
   );
