@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { catalogSearcher }from "../../utils/search-posts";
 import PredictiveSuggestions from './PredictiveSuggestions';
+
 export default class SearchPosts extends Component {
   constructor(props) {
     super(props);
@@ -31,7 +32,7 @@ export default class SearchPosts extends Component {
 
   render() {
 
-    const searchClassNames = !!this.state.searchTerm ? 
+    const searchClassNames = this.state.searchTerm && this.state.searchTerm.length > 0 ? 
       "active searchPosts" : "searchPosts";
 
     return (
