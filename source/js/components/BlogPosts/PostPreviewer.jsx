@@ -40,7 +40,7 @@ export default class PostPreviewer extends Component {
                 {this.props.tagLine}
               </h4>
             : null}
-          </div>
+        </div>
       </Link>
     );
   }

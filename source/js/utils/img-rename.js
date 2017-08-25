@@ -21,7 +21,7 @@ const rename = function(ogPrefix, newPrefix, fileExt, inputDir, suffixes) {
   // Iterate through ogPrefix/suffix combinations and rename.
   for (let suffix of suffixes) {
     console.info(
-      `Renaming ${ogPrefix}${suffix}${fileExt} to ${newPrefix}${suffix}${fileExt}`
+      `Renaming ${ogPrefix}${suffix}${fileExt} to ${newPrefix}${suffix}${fileExt}`,
     );
     fs.rename(
       `${inputDir}\\${ogPrefix}${suffix}${fileExt}`,
@@ -30,7 +30,7 @@ const rename = function(ogPrefix, newPrefix, fileExt, inputDir, suffixes) {
         if (err) {
           console.error(`err renaming files: ${err}`);
         }
-      }
+      },
     );
   }
 };
