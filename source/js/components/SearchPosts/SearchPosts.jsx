@@ -12,6 +12,14 @@ export default class SearchPosts extends Component {
     };
 
     this.boundOnChange = this.onChange.bind(this);
+    this.boundCloseSearch = this.closeSearch.bind(this);
+  }
+
+  closeSearch() {
+    this.setState({
+      searchTerm: "",
+      predictiveSuggestions: null,
+    })
   }
 
   onChange(e) {
@@ -31,7 +39,6 @@ export default class SearchPosts extends Component {
   }
 
   render() {
-
     const searchClassNames = this.state.searchTerm && this.state.searchTerm.length > 0 ? 
       "active searchPosts" : "searchPosts";
 
@@ -40,7 +47,7 @@ export default class SearchPosts extends Component {
         <input className="searchPosts__input" type="search" onChange={this.boundOnChange} placeholder="Search Posts" value={this.state.searchTerm} />
         <button className="searchPosts__submit" type="submit" onClick={this.boundSearch} />
         {this.state.searchTerm && this.state.searchTerm.length >= this.predictiveSearchStart ? 
-          <PredictiveSuggestions suggestions={this.state.suggestions} /> :
+          <PredictiveSuggestions suggestions={this.state.searchPredictions} closeSearch={this.boundCloseSearch}/> :
           null
         }
       </div>

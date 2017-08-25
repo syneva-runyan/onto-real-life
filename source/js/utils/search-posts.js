@@ -66,6 +66,7 @@ class SearchDictionary {
         this.dict = {};
         // start predictive search after 3 char are provided
         this.predictiveSearchStartIndex = 3;
+        this.posts = posts;
 
         if(posts && typeof(posts) === "object") {
             Object.keys(posts).forEach(postEntry => {
@@ -83,7 +84,9 @@ class SearchDictionary {
     }
 
     find(searchTerm) {
-        return this.dict[searchTerm] ? this.dict[searchTerm].values : null;
+        searchTerm = cleanSearchTerm(searchTerm);
+        const termMatches = this.dict[searchTerm] ? this.dict[searchTerm].values : [];
+        return termMatches.map(postKey => this.posts[postKey]);
     }
 
     appendEntryToPath(currObj, charToAppend) {

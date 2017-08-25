@@ -69,9 +69,9 @@ describe("Search Posts", () => {
         it("should be able to find related tags from dictionary", () => {
             const title = "This is an example term";
             const title2 = "Another unrelated title";
-            const tags2 = ["unrelated", "tagTwo"];
+            const tags2 = ["unrelated", "tagtwo"];
             const tagLine = "Once in a lifetime journey to Prauge";
-            const tags = ["tagOne", "tagTwo"];
+            const tags = ["tagone", "tagtwo"];
 
             const exPost = {
                 post1: {
@@ -88,12 +88,12 @@ describe("Search Posts", () => {
 
            const dictionary = new SearchDictionary(exPost);
 
-            expect(dictionary.find("tagTwo")).toEqual(["post1", "post2"]);
-            expect(dictionary.find("onc")).toEqual(["post1"]);
+            expect(dictionary.find("tagTwo")).toEqual([exPost.post1, exPost.post2]);
+            expect(dictionary.find("onc")).toEqual([exPost.post1]);
         });
-        it("should return null if no predictive results are available", () => {
+        it("should return an empty array if no predictive results are available", () => {
             const emptyDict = new SearchDictionary({});
-            expect(emptyDict.find("something")).toEqual(null);
+            expect(emptyDict.find("something")).toEqual([]);
         });
     })
 });
