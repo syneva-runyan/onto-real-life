@@ -49,8 +49,7 @@
         z-index: 2;
 
         &__input {
-            border-bottom: 1px solid $white;
-            color: $white;    
+            border-bottom: 1px solid $primary-color;
             font-size:  11px;
             height: 32px;
             margin-right: 32px;
@@ -61,17 +60,26 @@
             filter: brightness(100) saturate(0);
             position: absolute;
             top: 10px;
-            right: 9px;
+            height: 14px;
+            right: 7px;
+            width: 15px;
         }
 
         &:hover,  &.active, &:focus {
+            background-color: white;
+            padding-left: 10px;
+
             .searchPosts__input {
-                width: 130px;
+                width: 155px;
+            }
+
+            .searchPosts__submit {
+                filter: none;
             }
         } 
 
         .searchPosts__input:focus { 
-            width: 130px;
+            width: 155px;
         }
     }
 }
