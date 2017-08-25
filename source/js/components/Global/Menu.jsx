@@ -54,6 +54,7 @@ export default class Menu extends Component {
           </li>
           <li className={`menu__item ${routeCodes.POSTS}`}>
             <NavLink
+              exact
               activeClassName="selected"
               to={this.postRouteAdjustments(routeCodes.POSTS)}
               onClick={this.boundMenuToggle}
