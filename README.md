@@ -27,13 +27,11 @@ Prettier is executed and fixes are saved before each commit.
 * Post sort functionaly
 * Post Content Edit and save
 * Photo Map
-* Add Search functionality
 * Social Media Sharing capabilities
 * Add security for file editing
 * Move legacy blog imgs
 * Improve contact section edge cases & UX
 * Add vendor.js optimizations
-* Create shared Img component with responsive lazy loading for blog posts.
 * Comprimise template renderings between prod & dev
 * Include React Helmet configs for each blog post
 * Figure out why assets aren't being required correctly in prod bundling
