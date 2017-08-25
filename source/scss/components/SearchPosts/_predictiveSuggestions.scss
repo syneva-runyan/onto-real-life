@@ -1,3 +1,23 @@
 .predictiveSuggestions {
+    position: absolute;
+    background: $white;
+    border: 0.5px $text-color solid;
+    font-size: 13px;
+    margin-top: -12px;
+    right: 17px;
+    top: 100%;
+
+
     
+
+    &__none {
+        color: $secondary-color;
+        margin-bottom: 0;
+        padding: 3px 5px;
+    }
+
+    @media screen and (max-width: $md-break) {
+        margin-top: 0;
+        right: 0;
+    }
 }
