@@ -47,11 +47,15 @@ export default class Carousel extends Component {
           if (index === this.state.active) {
             slideClassNames += " carousel__slide--active";
           } else if (
+            //make sure the previously shown slide is identifiable
+          // for any animation purposes
             index === this.state.active - 1 ||
             (index === this.props.slides.length - 1 && this.state.active === 0)
           ) {
             slideClassNames += " carousel__slide--prev";
           } else if (
+            //make sure the next shown slide is identifiable
+            // for any animation purposes
             index === this.state.active + 1 ||
             (index === 0 && this.state.active === this.props.slides.length - 1)
           ) {
