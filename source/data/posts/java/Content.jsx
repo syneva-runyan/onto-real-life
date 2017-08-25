@@ -32,18 +32,18 @@ export default function Content(props) {
         <figcaption className="caption">Indonesia Scooter Art.</figcaption>
       </figure>
       <p>
-        Needless to say, I have a decent amount of moped skills.
-        With designated scooter lanes on large streets and scooter-width margins
-        on the side of jam-packed roads, Java was a perfect place to put these
-        skills into practice.
+        Needless to say, I have a decent amount of moped skills. With designated
+        scooter lanes on large streets and scooter-width margins on the side of
+        jam-packed roads, Java was a perfect place to put these skills into
+        practice.
       </p>
       <p>
         I've spend the last two weeks in Java very happily taking trains,
         planes, cars, and scooters around the island. A visit to the island
         promises adventure. The people are friendly, smiling unprompted at
-        everyone. Importantly for backpackers, the prices in Java are
-        cheap. Finally, the tourism is rewarding, if slightly disorganized
-        and in need of change.
+        everyone. Importantly for backpackers, the prices in Java are cheap.
+        Finally, the tourism is rewarding, if slightly disorganized and in need
+        of change.
       </p>
       <br />
       <h3>People & Culture</h3>
@@ -97,9 +97,9 @@ export default function Content(props) {
         interesting or different groups of people.
       </p>
       <p>
-        Everyone who did ask for a photo was very
-        friendly, always smiling and always thanking me afterwards. This
-        friendliness is something to be expected from the people in Java.
+        Everyone who did ask for a photo was very friendly, always smiling and
+        always thanking me afterwards. This friendliness is something to be
+        expected from the people in Java.
       </p>
       <p>
         Java is a tourist island, so there are be people, especially taxi
@@ -122,13 +122,12 @@ export default function Content(props) {
           Java has very friendly people and culture.
         </figcaption>
       </figure>
-      <p>
-        Beyond light chatting however, conversations with locals is hard.
-      </p>
+      <p>Beyond light chatting however, conversations with locals is hard.</p>
       <p>
         <em>
-          My Bahasa Indonesian vocabulary consists of the words for <strong>thankyou</strong>,{" "}
-          <strong>chicken</strong>, and <strong>caution/danger</strong>.
+          My Bahasa Indonesian vocabulary consists of the words for{" "}
+          <strong>thankyou</strong>, <strong>chicken</strong>, and{" "}
+          <strong>caution/danger</strong>.
         </em>
       </p>
       <p>
@@ -157,8 +156,8 @@ export default function Content(props) {
         than $1usd, almost always under $5usd.
       </p>
       <p>
-        Bintang, the cheap Indonesia pilsner, has an almost cult-like following among
-        tourists and locals.
+        Bintang, the cheap Indonesia pilsner, has an almost cult-like following
+        among tourists and locals.
       </p>
       <p>
         You can even drink an affordable cup of the{" "}
@@ -185,9 +184,9 @@ export default function Content(props) {
         />
       </figure>
       <p>
-        Tourists
-        are always up charged for expenses such as taxis and attraction entrance tickets. When taking a taxi, make sure to always
-        agree on a price before getting into the car.
+        Tourists are always up charged for expenses such as taxis and attraction
+        entrance tickets. When taking a taxi, make sure to always agree on a
+        price before getting into the car.
       </p>
       <p>
         Despite cheap costs in most places, there are several expenses that
@@ -211,7 +210,8 @@ export default function Content(props) {
         </figcaption>
       </figure>
       <p>
-        While not as touristy as Bali, Java has a sureal beauty and charm of its own.
+        While not as touristy as Bali, Java has a sureal beauty and charm of its
+        own.
       </p>
       <p>
         With only a 30 day tourist visa, I decided to hit only the big-name
@@ -278,10 +278,10 @@ export default function Content(props) {
         Borobudur, to Merapi over three days.
       </p>
       <p>
-        Driving around the beautiful country side on a scooter was a blast. I kept
-        expecting the traffic to die down outside of the cities, but without
-        fail, whenever I looked around, there was always at least one other
-        scooter, if not five, in sight.
+        Driving around the beautiful country side on a scooter was a blast. I
+        kept expecting the traffic to die down outside of the cities, but
+        without fail, whenever I looked around, there was always at least one
+        other scooter, if not five, in sight.
       </p>
       <blockquote>
         There are over ~141 million people living in Java, making it the most
@@ -294,8 +294,8 @@ export default function Content(props) {
         you're comfortable with anyone can ride a scooter safely through Java.
       </p>
       <p>
-        Just an eight hour train ride away from Jogjakarta, you can get to the Mt.
-        Bromo and Ijen areas.
+        Just an eight hour train ride away from Jogjakarta, you can get to the
+        Mt. Bromo and Ijen areas.
       </p>
       <p>
         Mt. Bromo is in a national park with a collection of three active
