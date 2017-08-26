@@ -10,17 +10,6 @@ describe("Post Content", () => {
   const mockSlides = [exSlide, exSlide, exSlide];
   const exAniDuration = 2000;
 
-
-
-
-
-
-
-
-
-
-
-
   beforeEach(() => {
     component = shallow(
       <Carousel aniDuration={exAniDuration} slides={mockSlides} />,
