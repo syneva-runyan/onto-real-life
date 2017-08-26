@@ -9,7 +9,7 @@
     "start": "webpack-dashboard -- webpack-dev-server --colors --no-info",
     "build": "rm -rf ./build && cross-env NODE_ENV=\"production\" webpack",
     "lint-break-on-errors": "eslint ./source/js ./webpack.config.js -f table --ext .js --ext .jsx --fix",
-    "lint": "eslint ./source/js ./webpack.config.js -f table --ext .js --ext .jsx || true --fix"
+    "lint": "eslint ./source/js ./webpack.config.js -f table --ext .js --ext .jsx || true"
   },
   "devDependencies": {
     "autoprefixer": "^6.5.3",
@@ -96,20 +96,13 @@
     "moduleNameMapper": {
       "\\.(css|scss)$": "<rootDir>/tests/__mocks__/styleMock.js"
     },
-    "setupFiles": [
-      "<rootDir>/tests/test-env.js"
-    ]
+    "setupFiles": ["<rootDir>/tests/test-env.js"]
   },
-  "keywords": [
-    "react",
-    "webpack2"
-  ],
+  "keywords": ["react", "webpack2"],
   "author": "syneva-runyan",
   "bugs": {
     "url": "https://github.com/syneva-runyan/onto-real-life/issues"
   },
   "homepage": "https://github.com/syneva-runyan/onto-real-life#readme",
-  "prepush": [
-    "npm run lint-break-on-errors"
-  ]
+  "prepush": ["npm run lint-break-on-errors"]
 }
