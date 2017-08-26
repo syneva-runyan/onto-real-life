@@ -18,6 +18,7 @@ describe("Post Content", () => {
 
 
 
+
   beforeEach(() => {
     component = shallow(
       <Carousel aniDuration={exAniDuration} slides={mockSlides} />,
