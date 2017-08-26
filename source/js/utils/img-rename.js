@@ -1,4 +1,4 @@
-/* eslint no-console: 0 prefer-arrow-callback: 0*/
+/* eslint no-console: 0 prefer-arrow-callback: 0 prefer-const: 0 */
 
 // Looks for files with original prefix and suffix combinations in input directory
 // and renames them to provided img name with corresponding suffix combinations.
