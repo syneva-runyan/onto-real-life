@@ -6,4 +6,3 @@ module.exports = {
   mockedPost2,
 };
 
-
