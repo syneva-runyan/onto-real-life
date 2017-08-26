@@ -18,8 +18,6 @@ import { NotFound } from "../Global";
 
 
 
-
-
 const propTypes = {
   postId: PropTypes.string,
   component: PropTypes.func,
