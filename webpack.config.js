@@ -1,3 +1,5 @@
+/* eslint comma-dangle: 0 */
+
 const webpack = require("webpack");
 const path = require("path");
 
