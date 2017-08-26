@@ -20,11 +20,6 @@ const propTypes = {
   component: PropTypes.func,
 };
 
-
-
-
-
-
 const defaultProps = {
   postId: null,
   component: NotFound,
