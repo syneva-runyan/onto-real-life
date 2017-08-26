@@ -1,4 +1,4 @@
-/* eslint no-console: 0 prefer-arrow-callback: 0 prefer-const: 0 */
+/* eslint no-console: 0 prefer-arrow-callback: 0 */
 
 // Looks for files with original prefix and suffix combinations in input directory
 // and renames them to provided img name with corresponding suffix combinations.
@@ -19,7 +19,7 @@ const rename = function(ogPrefix, newPrefix, fileExt, inputDir, suffixes) {
   assert.ok(!!argv.imgName, "Please provide arg 'imgName' with value");
 
   // Iterate through ogPrefix/suffix combinations and rename.
-  for (let suffix of suffixes) {
+  for (const suffix of suffixes) {
     console.info(
       `Renaming ${ogPrefix}${suffix}${fileExt} to ${newPrefix}${suffix}${fileExt}`,
     );
