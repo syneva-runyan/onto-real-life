@@ -5,11 +5,3 @@ module.exports = {
   mockedPost,
   mockedPost2,
 };
-
-
-
-
-
-
-
-
