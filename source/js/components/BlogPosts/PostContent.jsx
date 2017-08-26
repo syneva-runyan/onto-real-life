@@ -23,6 +23,7 @@ const propTypes = {
 
 
 
+
 const defaultProps = {
   postId: null,
   component: NotFound,
