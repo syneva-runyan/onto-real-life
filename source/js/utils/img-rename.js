@@ -9,6 +9,8 @@ const argv = require("minimist")(process.argv.slice(2));
 
 
 
+
+
 const ogPrefix0 = "img";
 const fileExt0 = ".jpg";
 const inputDir0 =
