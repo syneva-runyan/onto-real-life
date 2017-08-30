@@ -16,7 +16,8 @@ describe("Post Content", () => {
     );
   });
   it("should exist", () => {
-    expect(component).toBeTruthy();
+    //expect(component).toBeTruthy();
+    expect(true).toEqual(false);
   });
 
   it("should call setInterval when component is mounted", () => {
