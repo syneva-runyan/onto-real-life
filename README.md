@@ -36,3 +36,5 @@ Prettier is executed and fixes are saved before each commit.
 * Include React Helmet configs for each blog post
 * Figure out why assets aren't being required correctly in prod bundling
 * Separate vendor from scripts & implement better caching practices
+* Linter execution - specifiy failure appropriately
+* PreCommit hook - ensure all webpack files are excluded from prettier execution
