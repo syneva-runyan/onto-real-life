@@ -1,3 +1,5 @@
+$suggestionLeftPadding: 10px;
+
 .predictiveSuggestions {
     position: absolute;
     background: $white;
@@ -35,8 +37,15 @@
         display: block;
         color: $primary-color-light;
         height: 100%;
-        padding: 5px 5px 5px 10px;
+        padding: 5px 5px 5px $suggestionLeftPadding;
         width: 100%;
+    }
+
+    &__matchedTerm {
+        font-size: 10px;
+        padding-left: $suggestionLeftPadding;
+        position: relative;
+        top: -12px;
     }
     
     

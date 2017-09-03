@@ -27,6 +27,9 @@ export const renderSearchLink = function(suggestions, closeSearch) {
             >
               {article.title}
             </Link>
+            <span className="predictiveSuggestions__matchedTerm">
+              matches: <strong>{article.matchedPhrase}</strong>
+            </span>
           </li>
         );
       })}
