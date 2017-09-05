@@ -18,12 +18,6 @@ export default class SearchPosts extends Component {
     this.boundSearch = this.search.bind(this);
   }
 
-  emphasizeResults() {
-    this.setState({
-      emphasizeResults: true,
-    });
-  }
-
   search() {
     this.textInput.focus();
     this.state.searchTerm ? this.showResults() : null;
@@ -50,6 +44,12 @@ export default class SearchPosts extends Component {
     if (searchTerm.length >= this.predictiveSearchStart) {
       this.searchPosts(searchTerm);
     }
+  }
+
+  emphasizeResults() {
+    this.setState({
+      emphasizeResults: true,
+    });
   }
 
   closeSearch() {
