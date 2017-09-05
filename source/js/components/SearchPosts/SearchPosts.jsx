@@ -18,15 +18,15 @@ export default class SearchPosts extends Component {
     this.boundSearch = this.search.bind(this);
   }
 
-  search(e) {
-    this.textInput.focus();
-    this.state.search ? null : this.showResults();
-  }
-
   emphasizeResults() {
     this.setState({
       emphasizeResults: true,
     });
+  }
+
+  search() {
+    this.textInput.focus();
+    this.state.searchTerm ? this.showResults() : null;
   }
 
   showResults() {

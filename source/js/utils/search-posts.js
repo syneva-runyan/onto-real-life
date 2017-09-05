@@ -108,7 +108,7 @@ class SearchDictionary {
     });
   }
 
-  appendEntryToPath(currObj, charToAppend, searchTerm) {
+  appendEntryToPath(currObj, charToAppend) {
     // check to see if char path already exists
     if (currObj[charToAppend]) {
       return currObj;
@@ -128,11 +128,7 @@ class SearchDictionary {
       charIndex++
     ) {
       const chars = phrase.substring(0, charIndex);
-      updatedDictionary = this.appendEntryToPath(
-        updatedDictionary,
-        chars,
-        phrase,
-      );
+      updatedDictionary = this.appendEntryToPath(updatedDictionary, chars);
 
       // make sure entry contains matched value and search phrase
       const searchEntry = {
