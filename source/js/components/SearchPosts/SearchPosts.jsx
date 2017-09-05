@@ -7,18 +7,44 @@ export default class SearchPosts extends Component {
     super(props);
     this.predictiveSearchStart = 3;
     this.state = {
-      serachTerm: "",
+      searchTerm: "",
       PredictiveSuggestions: null,
+      showMsg: null,
+      emphasizeResults: false,
     };
 
     this.boundOnChange = this.onChange.bind(this);
     this.boundCloseSearch = this.closeSearch.bind(this);
+    this.boundSearch = this.search.bind(this);
+  }
+
+  search(e) {
+    this.textInput.focus();
+    this.state.search ? null : this.showResults();
+  }
+
+  emphasizeResults() {
+    this.setState({
+      emphasizeResults: true,
+    });
+  }
+
+  showResults() {
+    if (this.state.searchTerm.length < this.predictiveSearchStart) {
+      this.setState({
+        showMsg: "Please enter 3 or more characters",
+      });
+    }
+
+    this.emphasizeResults();
   }
 
   onChange(e) {
     const searchTerm = e.target.value;
     this.setState({
       searchTerm,
+      showMsg: null,
+      emphasizeResults: false,
     });
 
     if (searchTerm.length >= this.predictiveSearchStart) {
@@ -30,11 +56,14 @@ export default class SearchPosts extends Component {
     this.setState({
       searchTerm: "",
       predictiveSuggestions: null,
+      emphasizeResults: false,
+      showMsg: null,
     });
   }
 
   searchPosts(searchTerm) {
     const possibleMatches = catalogSearcher.find(searchTerm);
+
     this.setState({
       searchPredictions: possibleMatches,
     });
@@ -53,6 +82,9 @@ export default class SearchPosts extends Component {
           type="search"
           onChange={this.boundOnChange}
           placeholder="Search Posts"
+          ref={input => {
+            this.textInput = input;
+          }}
           value={this.state.searchTerm}
         />
         <button
@@ -60,12 +92,24 @@ export default class SearchPosts extends Component {
           type="submit"
           onClick={this.boundSearch}
         />
-        {this.state.searchTerm &&
-        this.state.searchTerm.length >= this.predictiveSearchStart
+        {(this.state.searchTerm &&
+          this.state.searchTerm.length >= this.predictiveSearchStart) ||
+        this.state.showMsg
           ? <PredictiveSuggestions
+              className="searchPosts__suggestions"
               suggestions={this.state.searchPredictions}
               closeSearch={this.boundCloseSearch}
+              msg={this.state.showMsg}
+              emphasize={this.state.emphasizeResults}
             />
+          : null}
+        {this.state.searchTerm && this.state.searchTerm.length >= 1
+          ? <button
+              className="searchPosts__clear"
+              onClick={this.boundCloseSearch}
+            >
+              X
+            </button>
           : null}
       </div>
     );

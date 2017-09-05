@@ -141,11 +141,7 @@ class SearchDictionary {
       };
 
       if (updatedDictionary[chars].values) {
-        // make sure searchEntry doesn't already exist in
-        // searchTerm results
-        if (updatedDictionary[chars].values.indexOf(value) === -1) {
-          updatedDictionary[chars].values.push(searchEntry);
-        }
+        updatedDictionary[chars].values.push(searchEntry);
       } else {
         updatedDictionary[chars].values = [searchEntry];
       }

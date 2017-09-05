@@ -26,10 +26,11 @@ export const renderSearchLink = function(suggestions, closeSearch) {
               to={`/posts/${article.id}`}
             >
               {article.title}
+              <br />
+              <span className="predictiveSuggestions__matchedTerm">
+                matches: <strong>{article.matchedPhrase}</strong>
+              </span>
             </Link>
-            <span className="predictiveSuggestions__matchedTerm">
-              matches: <strong>{article.matchedPhrase}</strong>
-            </span>
           </li>
         );
       })}
@@ -44,9 +45,21 @@ export const renderNoSuggestions = function() {
     </p>
   );
 };
-export default function PredictiveSuggestions(props) {
+
+export const showMsg = function(msg) {
   return (
-    <div className="predictiveSuggestions">
+    <p className="predictiveSuggestions__none">
+      {msg}
+    </p>
+  );
+};
+export default function PredictiveSuggestions(props) {
+  const classNames = props.emphasize
+    ? ` ${props.className} predictiveSuggestions predictiveSuggestions--emphasize`
+    : `${props.className} predictiveSuggestions`;
+  return (
+    <div className={classNames}>
+      {props.msg ? showMsg(props.msg) : null}
       {props.suggestions && props.suggestions.length > 0
         ? renderSearchLink(props.suggestions, props.closeSearch)
         : renderNoSuggestions()}
