@@ -3,11 +3,17 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const propTypes = {
-  suggestions: PropTypes.array,
+  className: PropTypes.string,
   closeSearch: PropTypes.func,
+  emphasize: PropTypes.bool,
+  msg: PropTypes.string,
+  suggestions: PropTypes.array,
 };
 const defaultProps = {
+  className: "",
   closeSearch: () => {},
+  emphasize: false,
+  msg: null,
   suggestions: null,
 };
 
@@ -26,6 +32,10 @@ export const renderSearchLink = function(suggestions, closeSearch) {
               to={`/posts/${article.id}`}
             >
               {article.title}
+              <br />
+              <span className="predictiveSuggestions__matchedTerm">
+                matches: <strong>{article.matchedPhrase}</strong>
+              </span>
             </Link>
           </li>
         );
@@ -41,9 +51,21 @@ export const renderNoSuggestions = function() {
     </p>
   );
 };
-export default function PredictiveSuggestions(props) {
+
+export const showMsg = function(msg) {
   return (
-    <div className="predictiveSuggestions">
+    <p className="predictiveSuggestions__none predictiveSuggestions__msg">
+      {msg}
+    </p>
+  );
+};
+export default function PredictiveSuggestions(props) {
+  const classNames = props.emphasize
+    ? ` ${props.className} predictiveSuggestions predictiveSuggestions--emphasize`
+    : `${props.className} predictiveSuggestions`;
+  return (
+    <div className={classNames}>
+      {props.msg ? showMsg(props.msg) : null}
       {props.suggestions && props.suggestions.length > 0
         ? renderSearchLink(props.suggestions, props.closeSearch)
         : renderNoSuggestions()}
