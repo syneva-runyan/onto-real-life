@@ -27,6 +27,18 @@ $ani-speed: 0.25s;
   }
 }
 
+@keyframes emphasize {
+  0%{
+    box-shadow: 0  0 0.5px 0.5px $secondary-color;
+  }
+  50%{
+    box-shadow: 0 0 2px 0.5px  darken($secondary-color, 2);
+  }
+  100%{
+    box-shadow: 0  0 0.5px 0.5px  $secondary-color;
+  }
+}
+
 @keyframes shake {
     0%{
       transform: translateX(2px);

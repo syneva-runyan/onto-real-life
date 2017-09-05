@@ -2,6 +2,7 @@
     position: absolute;
     right: 0;
     top: -41px;
+    z-index: 2;
 
     &__input {
         background-color: rgba(0,0,0,0);
@@ -12,8 +13,26 @@
         transition: 0.25s;
         padding: 7px 0;
         width: 0;
-
     }
+
+    &__clear {
+        position: absolute;
+        background: $lightest-gray;
+        border-radius: 23px;
+        color: $black;
+        font-size: 8px;
+        line-height: 3px;
+        opacity: 0.6;
+        padding: 7px 5px 6px 5px;
+        right: 38px;
+        top: 9px;
+        width: auto;
+    }
+
+    &__suggestions {
+        display: none;
+    }
+
 
     &__submit {
         background-color: rgba(255,255,255,0);
@@ -34,6 +53,10 @@
         .searchPosts__input {
             padding: 7px;
             width: 175px;
+        }
+
+        .searchPosts__suggestions {
+            display: block;
         }
     }
 
