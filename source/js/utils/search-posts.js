@@ -99,7 +99,13 @@ class SearchDictionary {
     const termMatches = this.dict[cleanedSearchTerm]
       ? this.dict[cleanedSearchTerm].values
       : [];
-    return termMatches.map(postKey => this.posts[postKey]);
+    return termMatches.map(suggestedMatch => {
+      const postKey = suggestedMatch.searchSuggestion;
+      return {
+        matchedPhrase: suggestedMatch.matchedPhrase,
+        ...this.posts[postKey],
+      };
+    });
   }
 
   appendEntryToPath(currObj, charToAppend) {
@@ -124,12 +130,16 @@ class SearchDictionary {
       const chars = phrase.substring(0, charIndex);
       updatedDictionary = this.appendEntryToPath(updatedDictionary, chars);
 
+      // make sure entry contains matched value and search phrase
+      const searchEntry = {
+        searchSuggestion: value,
+        matchedPhrase: phrase,
+      };
+
       if (updatedDictionary[chars].values) {
-        if (updatedDictionary[chars].values.indexOf(value) === -1) {
-          updatedDictionary[chars].values.push(value);
-        }
+        updatedDictionary[chars].values.push(searchEntry);
       } else {
-        updatedDictionary[chars].values = [value];
+        updatedDictionary[chars].values = [searchEntry];
       }
     }
 
