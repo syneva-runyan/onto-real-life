@@ -38,10 +38,6 @@ export default function Content(props) {
           <ul>
             <li>Large Kangaroos (They live out east)</li>
             <li>Crocodiles (Out of season)</li>
-            <li>
-              <strike>Koa</strike>las (Only counting half because I had to go to
-              a specific rehomed colony. Koalas live further east)
-            </li>
             <li>Snakes (Out of season)</li>
             <li>
               Spiders that could eat me alive (Just because I didn't see them
@@ -87,7 +83,7 @@ export default function Content(props) {
         </figcaption>
       </figure>
       <blockquote>
-        The season you visit Australis heavily impacts the animals you see
+        The season you visit Australia heavily impacts the animals you see
         there.
       </blockquote>
       <p>
@@ -97,7 +93,7 @@ export default function Content(props) {
         it's rivers year round.
       </p>
       <br />
-      <figure className="align-left width--25 margin--right sm-width--50">
+      <figure className="align-left width--25 margin--right sm-width--100">
         <ResponsiveImg
           alt="Happily holding a baby kangaroo"
           imgRootPath={imgBasePath}
