@@ -3,11 +3,17 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const propTypes = {
-  suggestions: PropTypes.array,
+  className: PropTypes.string,
   closeSearch: PropTypes.func,
+  emphasize: PropTypes.bool,
+  msg: PropTypes.string,
+  suggestions: PropTypes.array,
 };
 const defaultProps = {
+  className: "",
   closeSearch: () => {},
+  emphasize: false,
+  msg: null,
   suggestions: null,
 };
 
