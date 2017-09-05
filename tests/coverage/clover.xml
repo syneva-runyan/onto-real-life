@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1504605025185" clover="3.2.0">
-  <project timestamp="1504605025185" name="All files">
+<coverage generated="1504605556011" clover="3.2.0">
+  <project timestamp="1504605556011" name="All files">
     <metrics statements="304" coveredstatements="293" conditionals="104" coveredconditionals="94" methods="91" coveredmethods="82" elements="499" coveredelements="469" complexity="0" loc="304" ncloc="304" packages="13" files="26" classes="26">
       <package name="components.AboutMe">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -191,8 +191,8 @@
           <line num="17" count="4" type="stmt"/>
           <line num="18" count="4" type="stmt"/>
           <line num="22" count="0" type="stmt"/>
-          <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="27" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
+          <line num="29" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="34" count="0" type="stmt"/>
           <line num="39" count="0" type="stmt"/>
@@ -329,15 +329,15 @@
           <line num="125" count="2253" type="stmt"/>
           <line num="130" count="16369" type="stmt"/>
           <line num="131" count="16369" type="stmt"/>
-          <line num="138" count="16369" type="stmt"/>
-          <line num="143" count="16369" type="cond" truecount="2" falsecount="0"/>
-          <line num="144" count="4448" type="stmt"/>
-          <line num="146" count="11921" type="stmt"/>
-          <line num="150" count="2253" type="stmt"/>
-          <line num="154" count="144" type="stmt"/>
-          <line num="155" count="2252" type="stmt"/>
-          <line num="160" count="12" type="stmt"/>
-          <line num="161" count="12" type="stmt"/>
+          <line num="134" count="16369" type="stmt"/>
+          <line num="139" count="16369" type="cond" truecount="2" falsecount="0"/>
+          <line num="140" count="4448" type="stmt"/>
+          <line num="142" count="11921" type="stmt"/>
+          <line num="146" count="2253" type="stmt"/>
+          <line num="150" count="144" type="stmt"/>
+          <line num="151" count="2252" type="stmt"/>
+          <line num="156" count="12" type="stmt"/>
+          <line num="157" count="12" type="stmt"/>
         </file>
       </package>
       <package name="views.About">
