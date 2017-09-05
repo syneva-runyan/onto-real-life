@@ -20,16 +20,6 @@ export default class SearchPosts extends Component {
     this.boundSearch = this.search.bind(this);
   }
 
-  showResults() {
-    if (this.state.searchTerm.length < this.predictiveSearchStart) {
-      this.setState({
-        showMsg: invalidSearchAdvisory,
-      });
-    }
-
-    this.emphasizeResults();
-  }
-
   onChange(e) {
     const searchTerm = e.target.value;
     this.setState({
@@ -41,6 +31,16 @@ export default class SearchPosts extends Component {
     if (searchTerm.length >= this.predictiveSearchStart) {
       this.searchPosts(searchTerm);
     }
+  }
+
+  showResults() {
+    if (this.state.searchTerm.length < this.predictiveSearchStart) {
+      this.setState({
+        showMsg: invalidSearchAdvisory,
+      });
+    }
+
+    this.emphasizeResults();
   }
 
   search() {
