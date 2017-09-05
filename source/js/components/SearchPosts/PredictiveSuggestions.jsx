@@ -54,7 +54,7 @@ export const renderNoSuggestions = function() {
 
 export const showMsg = function(msg) {
   return (
-    <p className="predictiveSuggestions__none">
+    <p className="predictiveSuggestions__none predictiveSuggestions__msg">
       {msg}
     </p>
   );
