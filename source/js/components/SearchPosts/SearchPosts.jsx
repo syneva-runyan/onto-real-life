@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { catalogSearcher } from "../../utils/search-posts";
 import PredictiveSuggestions from "./PredictiveSuggestions";
 
+const invalidSearchAdvisory = "Please enter 3 or more characters";
+
 export default class SearchPosts extends Component {
   constructor(props) {
     super(props);
@@ -18,15 +20,10 @@ export default class SearchPosts extends Component {
     this.boundSearch = this.search.bind(this);
   }
 
-  search() {
-    this.textInput.focus();
-    this.state.searchTerm ? this.showResults() : null;
-  }
-
   showResults() {
     if (this.state.searchTerm.length < this.predictiveSearchStart) {
       this.setState({
-        showMsg: "Please enter 3 or more characters",
+        showMsg: invalidSearchAdvisory,
       });
     }
 
@@ -43,6 +40,13 @@ export default class SearchPosts extends Component {
 
     if (searchTerm.length >= this.predictiveSearchStart) {
       this.searchPosts(searchTerm);
+    }
+  }
+
+  search() {
+    this.textInput && this.textInput.focus();
+    if (this.state.searchTerm) {
+      this.showResults();
     }
   }
 
