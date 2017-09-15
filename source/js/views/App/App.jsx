@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import { SearchPosts } from "../../components/SearchPosts";
-import { Header } from "../../components/Global";
+import { Header, Footer } from "../../components/Global";
 import Routes from "../../routes";
 
 const propTypes = {
@@ -28,6 +28,7 @@ export default class App extends Component {
         <div className="Page">
           <Routes />
         </div>
+        <Footer />
       </div>
     );
   }
