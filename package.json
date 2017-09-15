@@ -48,6 +48,7 @@
     "install": "^0.10.1",
     "jest": "^20.0.1",
     "jest-cli": "^20.0.1",
+    "jsdom": "^11.2.0",
     "node-sass": "^3.13.0",
     "npm": "^5.3.0",
     "postcss-loader": "^1.1.1",
@@ -96,13 +97,20 @@
     "moduleNameMapper": {
       "\\.(css|scss)$": "<rootDir>/tests/__mocks__/styleMock.js"
     },
-    "setupFiles": ["<rootDir>/tests/test-env.js"]
+    "setupFiles": [
+      "<rootDir>/tests/test-env.js"
+    ]
   },
-  "keywords": ["react", "webpack2"],
+  "keywords": [
+    "react",
+    "webpack2"
+  ],
   "author": "syneva-runyan",
   "bugs": {
     "url": "https://github.com/syneva-runyan/onto-real-life/issues"
   },
   "homepage": "https://github.com/syneva-runyan/onto-real-life#readme",
-  "prepush": ["npm run lint-break-on-errors"]
+  "prepush": [
+    "npm run lint-break-on-errors"
+  ]
 }
