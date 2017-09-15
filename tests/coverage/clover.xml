@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1504607286535" clover="3.2.0">
-  <project timestamp="1504607286535" name="All files">
-    <metrics statements="306" coveredstatements="302" conditionals="106" coveredconditionals="100" methods="91" coveredmethods="86" elements="503" coveredelements="488" complexity="0" loc="306" ncloc="306" packages="13" files="26" classes="26">
+<coverage generated="1505462876881" clover="3.2.0">
+  <project timestamp="1505462876881" name="All files">
+    <metrics statements="309" coveredstatements="305" conditionals="106" coveredconditionals="100" methods="93" coveredmethods="88" elements="508" coveredelements="493" complexity="0" loc="309" ncloc="309" packages="13" files="28" classes="28">
       <package name="components.AboutMe">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="AboutMe.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\AboutMe\AboutMe.jsx">
@@ -115,7 +115,11 @@
         </file>
       </package>
       <package name="components.Global">
-        <metrics statements="29" coveredstatements="29" conditionals="4" coveredconditionals="4" methods="10" coveredmethods="10"/>
+        <metrics statements="32" coveredstatements="32" conditionals="4" coveredconditionals="4" methods="12" coveredmethods="12"/>
+        <file name="Footer.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Footer.jsx">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="5" count="1" type="stmt"/>
+        </file>
         <file name="Header.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Header.jsx">
           <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="6" count="12" type="stmt"/>
@@ -150,6 +154,11 @@
           <line num="19" count="1" type="stmt"/>
           <line num="33" count="13" type="stmt"/>
           <line num="34" count="13" type="stmt"/>
+        </file>
+        <file name="SocialShares.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\SocialShares.jsx">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
         </file>
         <file name="Title.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Title.jsx">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -191,13 +200,13 @@
           <line num="18" count="8" type="stmt"/>
           <line num="19" count="8" type="stmt"/>
           <line num="20" count="8" type="stmt"/>
-          <line num="24" count="3" type="cond" truecount="2" falsecount="0"/>
-          <line num="25" count="1" type="stmt"/>
-          <line num="30" count="3" type="stmt"/>
-          <line num="34" count="3" type="stmt"/>
-          <line num="35" count="3" type="stmt"/>
-          <line num="41" count="3" type="cond" truecount="2" falsecount="0"/>
-          <line num="42" count="1" type="stmt"/>
+          <line num="24" count="3" type="stmt"/>
+          <line num="25" count="3" type="stmt"/>
+          <line num="31" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="32" count="1" type="stmt"/>
+          <line num="37" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="38" count="1" type="stmt"/>
+          <line num="43" count="3" type="stmt"/>
           <line num="47" count="2" type="cond" truecount="1" falsecount="1"/>
           <line num="48" count="2" type="cond" truecount="2" falsecount="0"/>
           <line num="49" count="1" type="stmt"/>
@@ -356,8 +365,8 @@
           <line num="8" count="12" type="stmt"/>
           <line num="12" count="12" type="stmt"/>
           <line num="24" count="2" type="stmt"/>
-          <line num="36" count="12" type="stmt"/>
           <line num="37" count="12" type="stmt"/>
+          <line num="38" count="12" type="stmt"/>
         </file>
       </package>
       <package name="views.BlogPosts">
