@@ -1,7 +1,7 @@
 .socialShares {
     display: inline-block;
     left: 50%;
-    margin-bottom: 0;
+    margin-bottom: 8px;
     margin-top: 0;
     padding-left: 0;
     position: relative;
@@ -39,14 +39,12 @@
             }
         }
 
-        &--linkedIn {
-            a {
-                background-image: url("../assets/img/socialMediaIcons/LinkedIn.svg");
-            }
-        }
-
         span {
-            display: none;
+            font-size: 11px;
+            position: absolute;
+            text-align: center;
+            top: 24px;
+            width: 100%;
         }
     }
 }
