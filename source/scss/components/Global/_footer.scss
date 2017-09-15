@@ -1,4 +1,10 @@
 .footer {
     background-color: $light-gray;
-    padding: 25px 0 5px;
+    // account for side padding inside app's shoulders
+    margin: 10px -20px 5px;
+    padding: 20px 0 5px;
+
+    @media screen and (max-width: $md-break) {
+        margin: 0;
+    }
 }

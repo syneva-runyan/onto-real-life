@@ -1,26 +1,34 @@
 import React from "react";
 
 export default function SocialShares() {
+  const shareAddress = encodeURIComponent(document.location.href);
   return (
     <ul className="socialShares">
       <li className="socialShares__icon socialShares__icon--facebook">
-        <a title="Share on Facebook" target="_blank">
-          <span>Share on Facebook</span>
+        <a
+          href={`https://www.facebook.com/sharer/sharer.php?u=${shareAddress}`}
+          title="Share on Facebook"
+          target="_blank"
+        >
+          <span>share</span>
         </a>
       </li>
       <li className="socialShares__icon socialShares__icon--twitter">
-        <a title="Share on Twitter" target="_blank">
-          <span>Share on Twitter</span>
-        </a>
-      </li>
-      <li className="socialShares__icon socialShares__icon--linkedIn">
-        <a>
-          <span>Share on LinkedIn</span>
+        <a
+          href={`https://twitter.com/home?status=${shareAddress}`}
+          title="Share on Twitter"
+          target="_blank"
+        >
+          <span>share</span>
         </a>
       </li>
       <li className="socialShares__icon socialShares__icon--instagram">
-        <a href="https://www.instagram.com/synevarunyan/" target="_blank">
-          <span>Follow on Instagram</span>
+        <a
+          href="https://www.instagram.com/synevarunyan/"
+          target="_blank"
+          title="Follow on Instagram"
+        >
+          <span>follow</span>
         </a>
       </li>
     </ul>
