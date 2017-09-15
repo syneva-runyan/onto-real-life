@@ -9,6 +9,7 @@ export default function SocialShares() {
           href={`https://www.facebook.com/sharer/sharer.php?u=${shareAddress}`}
           title="Share on Facebook"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <span>share</span>
         </a>
@@ -18,6 +19,7 @@ export default function SocialShares() {
           href={`https://twitter.com/home?status=${shareAddress}`}
           title="Share on Twitter"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <span>share</span>
         </a>
@@ -27,6 +29,7 @@ export default function SocialShares() {
           href="https://www.instagram.com/synevarunyan/"
           target="_blank"
           title="Follow on Instagram"
+          rel="noopener noreferrer"
         >
           <span>follow</span>
         </a>
