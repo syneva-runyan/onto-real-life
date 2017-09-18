@@ -66,7 +66,7 @@
     }
 
     @media screen and (max-width: $md-break) {
-        height: 35px;
+        height: 40px;
         right: 0;
         top: 0px;
         z-index: 2;
@@ -74,18 +74,19 @@
         &__input {
             border-bottom: 1px solid $primary-color;
             font-size:  11px;
-            height: 32px;
+            height: 34px;
             margin-right: 32px;
+            margin-top: 2px;
             padding: 5px 0 0;
         }
 
         &__submit {
             filter: brightness(100) saturate(0);
             position: absolute;
-            top: 10px;
-            height: 14px;
-            right: 7px;
-            width: 15px;
+            top: 12px;
+            height: 16px;
+            right: 10px;
+            width: 19px;
         }
 
         &:hover,  &.active, &:focus {
