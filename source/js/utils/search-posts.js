@@ -149,7 +149,7 @@ class SearchDictionary {
   }
 
   // add new search suggestion to list of existing search suggestions.
-  // if new search suggestion's post already exists in provided list of suggestions, 
+  // if new search suggestion's post already exists in provided list of suggestions,
   // add new search suggestion's matchedPhrase to the matching suggestion's
   // matchedPhrase array.
   addSearchSuggestion(existingEntries, newEntry) {
