@@ -27,7 +27,7 @@
     &__listItem {
         border-bottom: 0.5px solid $text-color;
         transition: $ani-speed;
-        &:hover {
+        &:hover, &:focus {
             background-color: rgba($primary-color-light, 0.85);
             a {
                 color: $white;
@@ -39,8 +39,13 @@
         display: block;
         color: $primary-color-light;
         height: 100%;
+        line-height: 6.1px;
         padding: 5px 5px 5px 10px;
         width: 100%;
+    }
+
+    &__title {
+        line-height: 30px;
     }
 
     &__matchedTerm {
