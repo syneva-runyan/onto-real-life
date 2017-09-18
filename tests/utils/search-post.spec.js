@@ -62,7 +62,7 @@ describe("Search Posts", () => {
         const value = "VALUE";
         const searchEntry = {
           searchSuggestion: value,
-          matchedPhrase: termToAdd,
+          matchedPhrases: [termToAdd],
         };
 
         const emptySearchDict = new SearchDictionary({});
@@ -109,17 +109,17 @@ describe("Search Posts", () => {
       expect(dictionary.find("tagTw")).toEqual([
         {
           ...exPost.post1,
-          matchedPhrase: "tagtwo",
+          matchedPhrases: ["tagtwo"],
         },
         {
           ...exPost.post2,
-          matchedPhrase: "tagtwo",
+          matchedPhrases: ["tagtwo"],
         },
       ]);
       expect(dictionary.find("onc")).toEqual([
         {
           ...exPost.post1,
-          matchedPhrase: "once in lifetime journey to prauge",
+          matchedPhrases: ["once in lifetime journey to prauge"],
         },
       ]);
     });
