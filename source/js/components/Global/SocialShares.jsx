@@ -1,7 +1,8 @@
 import React from "react";
 
 export default function SocialShares() {
-  const shareAddress = encodeURIComponent(document.location.href);
+  const pageURI = window.document && window.document.location.href || "http://ontoreallife.com";
+  const shareAddress = encodeURIComponent(pageURI);
   return (
     <ul className="socialShares">
       <li className="socialShares__icon socialShares__icon--facebook">
