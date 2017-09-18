@@ -96,7 +96,6 @@ export default function Content(props) {
           src="https://ontoreallife.files.wordpress.com/2017/05/rugshop-1-of-11.jpg?w=178&#038;h=268"
           alt="Rug Shop Entrance"
           width="178"
-          height="268"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/05/rugshop-1-of-11.jpg?w=178&amp;h=268 178w,
                     https://ontoreallife.files.wordpress.com/2017/05/rugshop-1-of-11.jpg?w=356&amp;h=536 356w,
                     https://ontoreallife.files.wordpress.com/2017/05/rugshop-1-of-11.jpg?w=100&amp;h=150 100w,
@@ -227,7 +226,6 @@ export default function Content(props) {
           <img
             src="https://i2.wp.com/ontoreallife.files.wordpress.com/2017/05/mypalace_min.jpg?w=254&#038;h=254&#038;crop=1&#038;ssl=1"
             width="254"
-            height="254"
             title="myPalace_min"
             alt="My Palace for the day"
           />
@@ -236,7 +234,6 @@ export default function Content(props) {
           <img
             src="https://i1.wp.com/ontoreallife.files.wordpress.com/2017/05/palaceinside_min.jpg?w=254&#038;h=254&#038;crop=1&#038;ssl=1"
             width="254"
-            height="254"
             title="palaceInside_min"
             alt="Chandelier inside the palace"
           />
@@ -245,7 +242,6 @@ export default function Content(props) {
           <img
             src="https://i1.wp.com/ontoreallife.files.wordpress.com/2017/05/bluecity_min.jpg?w=254&#038;h=254&#038;crop=1&#038;ssl=1"
             width="254"
-            height="254"
             title="BlueCity_min"
             alt="BlueCity_min"
           />
