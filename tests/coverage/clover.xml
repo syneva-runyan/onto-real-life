@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1505462876881" clover="3.2.0">
-  <project timestamp="1505462876881" name="All files">
-    <metrics statements="309" coveredstatements="305" conditionals="106" coveredconditionals="100" methods="93" coveredmethods="88" elements="508" coveredelements="493" complexity="0" loc="309" ncloc="309" packages="13" files="28" classes="28">
+<coverage generated="1505743000405" clover="3.2.0">
+  <project timestamp="1505743000405" name="All files">
+    <metrics statements="310" coveredstatements="306" conditionals="109" coveredconditionals="102" methods="93" coveredmethods="88" elements="512" coveredelements="496" complexity="0" loc="310" ncloc="310" packages="13" files="28" classes="28">
       <package name="components.AboutMe">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="AboutMe.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\AboutMe\AboutMe.jsx">
@@ -115,7 +115,7 @@
         </file>
       </package>
       <package name="components.Global">
-        <metrics statements="32" coveredstatements="32" conditionals="4" coveredconditionals="4" methods="12" coveredmethods="12"/>
+        <metrics statements="33" coveredstatements="33" conditionals="7" coveredconditionals="6" methods="12" coveredmethods="12"/>
         <file name="Footer.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Footer.jsx">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
           <line num="5" count="1" type="stmt"/>
@@ -156,9 +156,10 @@
           <line num="34" count="13" type="stmt"/>
         </file>
         <file name="SocialShares.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\SocialShares.jsx">
-          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="4" count="1" type="stmt"/>
+          <metrics statements="3" coveredstatements="3" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
+          <line num="4" count="1" type="cond" truecount="2" falsecount="1"/>
           <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
         </file>
         <file name="Title.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Title.jsx">
           <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
