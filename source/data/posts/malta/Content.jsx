@@ -802,23 +802,9 @@ export default function Content(props) {
         className="wp-caption alignleft"
       >
         <img
-          data-attachment-id="602"
-          data-permalink="https://ontoreallife.wordpress.com/2017/04/08/malta-gozo-just-roll-with-it/moped/"
-          data-orig-file="https://ontoreallife.files.wordpress.com/2017/04/moped.jpg"
-          data-orig-size="2160,3840"
-          data-comments-opened="1"
-          data-image-meta="{&quot;aperture&quot;:&quot;4.5&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;DMC-GX8&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1460012311&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;17&quot;,&quot;iso&quot;:&quot;400&quot;,&quot;shutter_speed&quot;:&quot;0.004&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}"
-          data-image-title="moped"
-          data-image-description=""
-          data-medium-file="https://ontoreallife.files.wordpress.com/2017/04/moped.jpg?w=169"
-          data-large-file="https://ontoreallife.files.wordpress.com/2017/04/moped.jpg?w=576"
-          className="alignnone size-full wp-image-602"
           src="https://ontoreallife.files.wordpress.com/2017/04/moped.jpg?w=412"
           alt="moped.jpg"
-          width="206"
-          height="366"
           data-srcset="https://ontoreallife.files.wordpress.com/2017/04/moped.jpg?w=412 412w, https://ontoreallife.files.wordpress.com/2017/04/moped.jpg?w=206 206w, https://ontoreallife.files.wordpress.com/2017/04/moped.jpg?w=84 84w, https://ontoreallife.files.wordpress.com/2017/04/moped.jpg?w=169 169w"
-          sizes="(max-width: 206px) 100vw, 206px"
         />
         <figcaption className="wp-caption-text">
           Rabat &#8211; Beautiful limestone houses line all the streets and
