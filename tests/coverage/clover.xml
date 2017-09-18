@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1505743384170" clover="3.2.0">
-  <project timestamp="1505743384170" name="All files">
-    <metrics statements="310" coveredstatements="306" conditionals="109" coveredconditionals="102" methods="93" coveredmethods="88" elements="512" coveredelements="496" complexity="0" loc="310" ncloc="310" packages="13" files="28" classes="28">
+<coverage generated="1505747492316" clover="3.2.0">
+  <project timestamp="1505747492316" name="All files">
+    <metrics statements="319" coveredstatements="315" conditionals="113" coveredconditionals="106" methods="95" coveredmethods="90" elements="527" coveredelements="511" complexity="0" loc="319" ncloc="319" packages="13" files="28" classes="28">
       <package name="components.AboutMe">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="AboutMe.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\AboutMe\AboutMe.jsx">
@@ -182,7 +182,7 @@
           <line num="12" count="13" type="stmt"/>
           <line num="20" count="13" type="stmt"/>
           <line num="21" count="1" type="stmt"/>
-          <line num="24" count="3" type="stmt"/>
+          <line num="24" count="1" type="stmt"/>
           <line num="47" count="13" type="stmt"/>
           <line num="48" count="2" type="stmt"/>
           <line num="55" count="13" type="stmt"/>
@@ -250,7 +250,7 @@
         </file>
       </package>
       <package name="utils">
-        <metrics statements="91" coveredstatements="88" conditionals="30" coveredconditionals="27" methods="18" coveredmethods="16"/>
+        <metrics statements="100" coveredstatements="97" conditionals="34" coveredconditionals="31" methods="20" coveredmethods="18"/>
         <file name="img-rename.js" path="C:\Users\Syneva\Development\onto-real-life\source\js\utils\img-rename.js">
           <metrics statements="16" coveredstatements="14" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
           <line num="6" count="1" type="stmt"/>
@@ -290,7 +290,7 @@
           <line num="49" count="13" type="stmt"/>
         </file>
         <file name="search-posts.js" path="C:\Users\Syneva\Development\onto-real-life\source\js\utils\search-posts.js">
-          <metrics statements="59" coveredstatements="59" conditionals="22" coveredconditionals="22" methods="11" coveredmethods="11"/>
+          <metrics statements="68" coveredstatements="68" conditionals="26" coveredconditionals="26" methods="13" coveredmethods="13"/>
           <line num="4" count="12" type="stmt"/>
           <line num="9" count="12" type="stmt"/>
           <line num="14" count="72" type="stmt"/>
@@ -343,13 +343,22 @@
           <line num="131" count="16369" type="stmt"/>
           <line num="134" count="16369" type="stmt"/>
           <line num="139" count="16369" type="cond" truecount="2" falsecount="0"/>
-          <line num="140" count="4448" type="stmt"/>
-          <line num="142" count="11921" type="stmt"/>
-          <line num="146" count="2253" type="stmt"/>
-          <line num="150" count="144" type="stmt"/>
-          <line num="151" count="2252" type="stmt"/>
-          <line num="156" count="12" type="stmt"/>
-          <line num="157" count="12" type="stmt"/>
+          <line num="141" count="4448" type="stmt"/>
+          <line num="142" count="4448" type="stmt"/>
+          <line num="144" count="11921" type="stmt"/>
+          <line num="148" count="2253" type="stmt"/>
+          <line num="156" count="4448" type="stmt"/>
+          <line num="157" count="4448" type="stmt"/>
+          <line num="158" count="6898" type="cond" truecount="2" falsecount="0"/>
+          <line num="159" count="1331" type="stmt"/>
+          <line num="160" count="1331" type="stmt"/>
+          <line num="163" count="6898" type="stmt"/>
+          <line num="166" count="4448" type="cond" truecount="2" falsecount="0"/>
+          <line num="167" count="4448" type="stmt"/>
+          <line num="171" count="144" type="stmt"/>
+          <line num="172" count="2252" type="stmt"/>
+          <line num="177" count="12" type="stmt"/>
+          <line num="178" count="12" type="stmt"/>
         </file>
       </package>
       <package name="views.About">

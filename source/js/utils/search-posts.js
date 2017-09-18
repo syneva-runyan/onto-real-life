@@ -102,7 +102,7 @@ class SearchDictionary {
     return termMatches.map(suggestedMatch => {
       const postKey = suggestedMatch.searchSuggestion;
       return {
-        matchedPhrase: suggestedMatch.matchedPhrase,
+        matchedPhrases: suggestedMatch.matchedPhrases,
         ...this.posts[postKey],
       };
     });
@@ -133,17 +133,38 @@ class SearchDictionary {
       // make sure entry contains matched value and search phrase
       const searchEntry = {
         searchSuggestion: value,
-        matchedPhrase: phrase,
+        matchedPhrases: [phrase],
       };
 
       if (updatedDictionary[chars].values) {
-        updatedDictionary[chars].values.push(searchEntry);
+        // check to make sure search entry does not already exist.
+        const searchSuggestions = this.addSearchSuggestion(updatedDictionary[chars].values, searchEntry);
+        updatedDictionary[chars].values = searchSuggestions;
       } else {
         updatedDictionary[chars].values = [searchEntry];
       }
     }
 
     return updatedDictionary;
+  }
+
+  // add new search suggestion to list of existing search suggestions.
+  // if new search suggestion's post already exists in provided list of suggestions, 
+  // add new search suggestion's matchedPhrase to the matching suggestion's
+  // matchedPhrase array.
+  addSearchSuggestion(existingEntries, newEntry) {
+    let suggestionExists = false;
+    const searchSuggestions = existingEntries.map(entry => {
+      if (entry.searchSuggestion === newEntry.searchSuggestion) {
+        suggestionExists = true;
+        entry.matchedPhrases = entry.matchedPhrases.concat(newEntry.matchedPhrases);
+      }
+
+      return entry;
+    });
+
+    !suggestionExists && searchSuggestions.push(newEntry);
+    return searchSuggestions;
   }
 
   createDictItem(value, ...terms) {

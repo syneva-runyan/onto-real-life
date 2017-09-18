@@ -27,7 +27,7 @@ a {
     text-decoration: none;
     transition: $ani-speed;
 
-    &:hover {
+    &:hover, &:focus {
         color: lighten($light-blue, 9);
     }
 }

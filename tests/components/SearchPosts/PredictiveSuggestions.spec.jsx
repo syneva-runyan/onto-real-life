@@ -7,6 +7,7 @@ describe("PredictiveSuggestions", () => {
   const exSuggestion = {
     id: "someId",
     title: "someTitle",
+    matchedPhrases: ["phrase one", "phrase two"],
   };
   it("should exist", () => {
     expect(component).toBeTruthy();
