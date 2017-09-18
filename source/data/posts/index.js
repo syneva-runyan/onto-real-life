@@ -12,8 +12,10 @@ const javaTravel = require("./javaTravel/config.js");
 const indonesiaTravelThoughts = require("./indonesiaTravelThoughts/config.js");
 const australiaDarwinToPerth = require("./australiaDarwinToPerth/config.js");
 const australiaDarwinToPerthExperience = require("./australiaDarwinToPerthExperience/config.js");
+const taiwan = require("./taiwan/config.js");
 
 module.exports = {
+  taiwan,
   australiaDarwinToPerthExperience,
   australiaDarwinToPerth,
   indonesiaTravelThoughts,
