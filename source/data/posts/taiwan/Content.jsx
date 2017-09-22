@@ -7,8 +7,8 @@ export default function Content(props) {
   return (
     <div>
       <blockquote>
-        Beutiful scenery, brilliant history, coastal biking, bubble tea, and
-        nightmarkets (each with better food than the last).
+        Beautiful scenery, brilliant history, coastal biking, bubble tea, and
+        night markets (each with better food than the last).
       </blockquote>
       <p>
         Each of these aspects of Taiwan make the island a brilliant holiday
@@ -46,15 +46,15 @@ export default function Content(props) {
         of overblown tourism though, contributes to the island's charm.
       </p>
       <p>
-        Culturally facscinating and aestetically stunning, Taiwan is a hidden
+        Culturally fascinating and aesthetically stunning, Taiwan is a hidden
         travel gem.
       </p>
       <h3>Culture</h3>
       <p>
-        In addition having a history of aboriginal tribes on the island, Taiwan
-        was once a Dutch colony, became a haven for fleeing Ming Dynasty
+        In addition to having a history of aboriginal tribes on the island,
+        Taiwan was once a Dutch colony, became a haven for fleeing Ming Dynasty
         loyalists, was taken over by the Qing dynasty, and ruled by the Japanese
-        prior and throughout WWII before becaming a part of China in 1945. There
+        prior and throughout WWII before becoming a part of China in 1945. There
         have been a series of power transitions inside the country since.
       </p>
       <p>
@@ -73,7 +73,7 @@ export default function Content(props) {
           fascinating to learn about.
         </a>
       </blockquote>
-      <h4>Aborigonies</h4>
+      <h4>Aborigines</h4>
       <p>
         Despite a history of aboriginal oppression, the indigenous cultures and
         traditions are increasingly celebrated on the island.
@@ -100,17 +100,16 @@ export default function Content(props) {
         </figcaption>
       </figure>
       <p>
-        At Sun Moon Lake, you'll notice stores and stores full of owl
-        souveniers. Owls are an indigenous symbol of guardianship. The story
-        goes...
+        At Sun Moon Lake, you'll notice stores and stores full of owl souvenirs.
+        Owls are an indigenous symbol of guardianship. The story goes...
       </p>
       <blockquote>
         Generations ago, a young Thao (<em>Aboriginal tribe</em>) girl became
-        became pregnant out of wedlock. She ran away into the woods in shame.
-        Later, when men went to search for her, she was gone, but there was a
-        beautiful owl in her place. From that point on, owls seen over pregnant
-        woman's houses were said to be the spirit of the young girl, sent to
-        protect them.
+        pregnant out of wedlock. She ran away into the woods in shame. Later,
+        when men went to search for her, she was gone, but there was a beautiful
+        owl in her place. From that point on, owls seen over pregnant woman's
+        houses were said to be the spirit of the young girl, sent to protect
+        them.
       </blockquote>
       <p>
         Aboriginal art collectives and ceramics workshops can also be found
@@ -118,7 +117,7 @@ export default function Content(props) {
       </p>
       <h4>Chinese Influence</h4>
       <p>
-        While the precence of aboriginal culture is ever increasing, it is
+        While the presence of aboriginal culture is ever increasing, it is
         heavily outweighed by Chinese culture and traditions on the island.
       </p>
       <p>
@@ -155,7 +154,7 @@ export default function Content(props) {
       </figure>
       <p>
         One of my favorite religious items I saw while traveling was a giant
-        statue of the Chinese diety Guangong outside of Juifen (see below).
+        statue of the Chinese deity Guangong outside of Juifen (see below).
       </p>
       <p>
         Want a cheap, delicious dinner? You can find Chinese-like-style dumpling
@@ -171,7 +170,7 @@ export default function Content(props) {
       </figure>
       <h4>Culinary Culture</h4>
       <p>
-        The culinary tasts of Taiwan expands so much further than
+        The culinary tastes of Taiwan expands so much further than
         Chinese-influenced dishes.
       </p>
       <figure className="width--50 sm-width--50 align-left margin--right">
@@ -184,10 +183,10 @@ export default function Content(props) {
       <p>
         Chinese, Japanese, and Aboriginal influences come together, resulting in
         dishes like Beef Noodle Soup, Red Yeast Meatballs, Sweet Taro Soup, and
-        oyster omlets.
+        oyster omelets.
       </p>
       <p>
-        "Stinky" tofu has earned an reputation in Taiwanese night markets. I'd
+        "Stinky" tofu has earned a reputation in Taiwanese night markets. I'd
         describe the smell like a mix a Body Odor and Puke, but I didn't notice
         much of a taste, good or bad.
       </p>
@@ -206,10 +205,10 @@ export default function Content(props) {
         Nicholas Sparks movie.
       </blockquote>
       <p>
-        Diving in between the buildings, nightmarkets are full of energy,
+        Diving in between the buildings, night markets are full of energy,
         delicious, cheap food, and an upbeat rhythm of life.
       </p>
-      <p>The engery carries over to interesting cafes and people.</p>
+      <p>The energy carries over to interesting cafes and people.</p>
       <p>
         There are cafes in Taipei where you can get your face printed on a cup
         of coffee.
