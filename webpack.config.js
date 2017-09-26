@@ -1,8 +1,7 @@
 /* eslint comma-dangle: 0 */
 
-const webpack = require("webpack");
+const webpack = require("webpack"); // eslint-disable-line no-unused-vars
 const path = require("path");
-
 
 const nodeEnv = process.env.NODE_ENV || "development";
 const isProduction = nodeEnv === "production";

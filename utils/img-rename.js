@@ -19,9 +19,9 @@ const rename = function(ogPrefix, newPrefix, fileExt, inputDir, suffixes) {
   assert.ok(!!argv.imgName, "Please provide arg 'imgName' with value");
 
   // Iterate through ogPrefix/suffix combinations and rename.
-  for (const suffix of suffixes) {
+  for (const suffix of suffixes) { // es-lint-disable-line no-restricted-syntax
     console.info(
-      `Renaming ${ogPrefix}${suffix}${fileExt} to ${newPrefix}${suffix}${fileExt}`,
+      `Renaming ${ogPrefix}${suffix}${fileExt} to ${newPrefix}${suffix}${fileExt}`
     );
     fs.rename(
       `${inputDir}\\${ogPrefix}${suffix}${fileExt}`,
