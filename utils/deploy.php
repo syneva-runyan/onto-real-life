@@ -5,7 +5,11 @@
 	 * Used for automatically deploying websites via github or bitbucket, more deets here:
 	 *
 	 *		https://gist.github.com/1809044
+	 *      Edited for purpose of ontoreallife.com deployment by syneva-runyan
 	 */
+
+	$ref = $_POST["ref"]
+	$commits = $_POST["commits"]
 
 	// The commands
 	$commands = array(
@@ -24,7 +28,7 @@
 		// Run it
 		$tmp = shell_exec($command);
 		// Output
-		$output .= "<span style=\"color: #6BE234;\">\$</span> <span style=\"color: #729FCF;\">{$command}\n</span>";
+		$output .= "{$command}";
 		$output .= htmlentities(trim($tmp)) . "\n";
 	}
 
@@ -32,7 +36,7 @@
 	// code cred synevarunyan
 	$email_to = "syneva@gmail.com";	
 	$email_subject = "OntoReallife Deployment";
-	$email_message = $output;
+	$email_message = "A deployment was attempted for your site based on commit(s): . \n".$commits"\r\n".$output;
 	$headers = 'From: '.$email_from."\r\n".
 	
 	'Reply-To: '.$email_from."\r\n" .
