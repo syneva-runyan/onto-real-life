@@ -8,8 +8,8 @@
 	 *      Edited for purpose of ontoreallife.com deployment by syneva-runyan
 	 */
 
-	$ref = $_POST["ref"]
-	$commits = $_POST["commits"]
+	$ref = $_POST["ref"];
+	$commits = $_POST["commits"];
 
 	// The commands
 	$commands = array(
@@ -36,7 +36,7 @@
 	// code cred synevarunyan
 	$email_to = "syneva@gmail.com";	
 	$email_subject = "OntoReallife Deployment";
-	$email_message = "A deployment was attempted for your site based on commit(s): . \n".$commits"\r\n".$output;
+	$email_message = "A deployment was attempted for your site based on commit(s): . \n".$commits."\r\n".$output;
 	$headers = 'From: '.$email_from."\r\n".
 	
 	'Reply-To: '.$email_from."\r\n" .
