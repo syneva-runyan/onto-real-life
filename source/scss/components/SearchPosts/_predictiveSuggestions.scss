@@ -1,0 +1,69 @@
+.predictiveSuggestions {
+    position: absolute;
+    background: $white;
+    border: 0.5px $text-color solid;
+    font-size: 13px;
+    margin-top: -12px;
+    right: 17px;
+    top: 100%;
+    width: 100%;
+
+    &--emphasize {
+        animation: emphasize $ani-speed*2 2;
+    }
+
+    &__list {
+        border-left: 0.5px solid $text-color;
+        border-right: 0.5px solid $text-color;
+        background-color: $white;
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+        position: relative;
+        width: 100%;
+        z-index: 2;
+    }
+
+    &__listItem {
+        border-bottom: 0.5px solid $text-color;
+        transition: $ani-speed;
+        &:hover, &:focus {
+            background-color: rgba($primary-color-light, 0.85);
+            a {
+                color: $white;
+            }
+        }
+    }
+
+    &__link {
+        display: block;
+        color: $primary-color-light;
+        height: 100%;
+        line-height: 6.1px;
+        padding: 5px 5px 5px 10px;
+        width: 100%;
+    }
+
+    &__title {
+        line-height: 30px;
+    }
+
+    &__matchedTerm {
+        font-size: 10px;
+        position: relative;
+        top: -6px;
+    }
+    
+    
+
+    &__none {
+        color: $secondary-color;
+        margin-bottom: 0;
+        padding: 3px 5px;
+    }
+
+    @media screen and (max-width: $md-break) {
+        margin-top: 0;
+        right: 0;
+    }
+}

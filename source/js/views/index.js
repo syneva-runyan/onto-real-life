@@ -4,10 +4,4 @@ import { BlogPosts } from "./BlogPosts";
 import { Contact } from "./Contact";
 import NotFound from "./NotFound";
 
-module.exports = {
-  App,
-  About,
-  BlogPosts,
-  Contact,
-  NotFound,
-};
+export { App, About, BlogPosts, Contact, NotFound };

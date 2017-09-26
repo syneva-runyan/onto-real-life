@@ -3,17 +3,14 @@ body {
 }
 
 .App {
-  margin: 50px auto;
+  margin: 50px auto 0;
   max-width: 1078px;
   min-width: $min-width;
   width: calc(100% - 100px);
   background: $white;
-  padding: 20px;
+  padding: 20px 20px 0;
+  position: relative;
   border-radius: 1px;
-
-  .Page {
-    padding-top: 5px;
-  }
 
   @media screen and (max-width: $md-break) {
     border-radius: 0;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 export default class AboutMe extends Component {
   render() {
@@ -18,7 +18,7 @@ export default class AboutMe extends Component {
           English accents from Australian.
         </p>
         <h2>Travel Wish List</h2>
-        <ul>
+        <ul className="aboutMe__list">
           <li>South Africa</li>
           <li>Machu Pichu</li>
           <li>Thailand</li>

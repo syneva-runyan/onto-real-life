@@ -1,0 +1,65 @@
+.carousel {
+    .postPreviewer  {
+        background-position: 50%;
+        height: 300px;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        &__titles {
+            background-color: rgba(255,255,255,0.5);
+            left: 0;
+            margin: auto;
+            padding: 10px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40%;
+        }
+
+        &__title {
+            background: none;
+            color: $primary-color;
+            font-size: 22px;
+            margin-bottom: 0;
+            position: relative;
+            text-transform: none;
+        }
+
+        &__tagline {
+            color: $secondary-color;
+            background: none;
+            font-family: $title-font;
+            letter-spacing: 1.3px;
+            margin-bottom: 0;
+            margin-top: 0;
+            opacity: 1;
+            padding: 0 0;
+            position: relative;
+            text-transform: none;
+            transform: none;
+        }
+
+        &__icon {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: $md-break) {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+
+        .postPreviewer {
+            height: 160px;
+            
+            &__titles {
+                padding: 5px;
+                width: 65%; 
+            }
+            &__title {
+                font-size: 18px;
+            }
+        }
+    }
+}
