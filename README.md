@@ -23,8 +23,6 @@ Prettier is executed and fixes are saved before each commit.
 * Post sort functionaly
 * Post Content Edit and save
 * Photo Map
-* Add Search functionality
-* Social Media Sharing capabilities
 * Add security for file editing
 * Move legacy blog imgs
 * Improve contact section edge cases & UX
