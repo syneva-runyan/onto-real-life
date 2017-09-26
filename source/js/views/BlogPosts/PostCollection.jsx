@@ -1,19 +1,20 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { PostPreviewer } from "../../components/BlogPosts";
+import { Carousel } from "../../components/Carousel";
 
 const propTypes = {
-  assetBasePath: PropTypes.string,
+  assetBase: PropTypes.string,
   postCatalog: PropTypes.object,
 };
 
 const defaultProps = {
-  assetBasePath: "/assets/img/blogs",
+  assetBase: "/assets/img/blogs",
   postCatalog: {},
 };
 
-export default class BlogPosts extends Component {
-  previewGallery(catalog, assetBasePath) {
+export default class PostCollection extends Component {
+  previewGallery(catalog, assetBase) {
     return Object.keys(catalog).map(item => {
       const itemContent = catalog[item];
       return (
@@ -22,26 +23,26 @@ export default class BlogPosts extends Component {
           key={`post-${itemContent.id}`}
           title={itemContent.title}
           tagLine={itemContent.tagLine}
-          assetPath={`${assetBasePath}/${itemContent.id}`}
+          assetPath={`${assetBase}/${itemContent.id}`}
         />
       );
     });
   }
   render() {
+    const blogPostPreviews = this.previewGallery(
+      this.props.postCatalog,
+      this.props.assetBase,
+    );
     return (
       <div className="blogPosts">
-        <h2>Blog Posts</h2>
-        <hr className="blogPosts__divider" />
+        <Carousel slides={blogPostPreviews} />
         <div className="blogPosts__gallery">
-          {this.previewGallery(
-            this.props.postCatalog,
-            this.props.assetBasePath,
-          )}
+          {blogPostPreviews}
         </div>
       </div>
     );
   }
 }
 
-BlogPosts.propTypes = propTypes;
-BlogPosts.defaultProps = defaultProps;
+PostCollection.propTypes = propTypes;
+PostCollection.defaultProps = defaultProps;

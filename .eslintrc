@@ -56,3 +56,5 @@ rules:
   space-before-function-paren: ["error", "never"]
   no-mixed-operators: 0
   max-len: 0
+  react/jsx-indent-props: 0
+  react/jsx-closing-bracket-location: 0
