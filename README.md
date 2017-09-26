@@ -23,6 +23,11 @@ Install the precommit locally with
 * Prettier is executed and fixes are saved before each commit.
 * Lint is executed and commit will fail on errors.
 
+### Deployment
+A php page is included under utils here that is used to deploy
+builds to my server with a webhook when commits are made to the master branch
+of this repository.
+
 ## TODO
 * GUI for automatic post generation
 * Optimize Images
