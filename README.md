@@ -3,7 +3,7 @@
 ## ABOUT
 
 ### Code Base
-The basic for this project's code base was initially taken from Stanko's React-redux-webpack2 boilerplate found at <https://github.com/Stanko/react-redux-webpack2-boilerplate>.
+The basic for this project's code base was initially taken from Stanko's React-redux-webpack2 boilerplate found at <https://github.com/Stanko/react-redux-webpack2-boilerplate>.  The build has since been extensively edited.
 
 Because state management is not extensively needed in this project currently, I've deleted the Redux portion of the boilerplate.
 
@@ -17,13 +17,13 @@ https://www.froala.com/wysiwyg-editor
 
 ### Git
 #### Precommit
-Prettier is executed and fixes are saved before each commit.
 Install the precommit locally with
 `ln -s ../../utils/pre-commit.sh .git/hooks/pre-commit`
 
-## TODO
+* Prettier is executed and fixes are saved before each commit.
+* Lint is executed and commit will fail on errors.
 
-### For Production
+## TODO
 * GUI for automatic post generation
 * Optimize Images
 * Post sort functionaly
