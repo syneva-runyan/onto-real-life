@@ -47,6 +47,7 @@ const checkForSubstring = function(stringToCheck, subString) {
 // and remove unhelpful words
 const cleanSearchTerm = function(searchTerm) {
   let cleanedSearchTerm = searchTerm.toLowerCase();
+  // eslint-disable-next-line no-restricted-syntax
   for (const wordToRemove of dictFilterList) {
     let startIndex = checkForSubstring(cleanedSearchTerm, wordToRemove);
 
@@ -138,7 +139,10 @@ class SearchDictionary {
 
       if (updatedDictionary[chars].values) {
         // check to make sure search entry does not already exist.
-        const searchSuggestions = this.addSearchSuggestion(updatedDictionary[chars].values, searchEntry);
+        const searchSuggestions = this.addSearchSuggestion(
+          updatedDictionary[chars].values,
+          searchEntry,
+        );
         updatedDictionary[chars].values = searchSuggestions;
       } else {
         updatedDictionary[chars].values = [searchEntry];
@@ -157,13 +161,16 @@ class SearchDictionary {
     const searchSuggestions = existingEntries.map(entry => {
       if (entry.searchSuggestion === newEntry.searchSuggestion) {
         suggestionExists = true;
-        entry.matchedPhrases = entry.matchedPhrases.concat(newEntry.matchedPhrases);
+        // eslint-disable-next-line no-param-reassign
+        entry.matchedPhrases = entry.matchedPhrases.concat(
+          newEntry.matchedPhrases,
+        );
       }
 
       return entry;
     });
 
-    !suggestionExists && searchSuggestions.push(newEntry);
+    !suggestionExists && searchSuggestions.push(newEntry); // eslint-disable-line no-unused-expressions
     return searchSuggestions;
   }
 

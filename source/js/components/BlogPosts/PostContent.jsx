@@ -17,7 +17,7 @@ import { NotFound } from "../Global";
 
 const propTypes = {
   postId: PropTypes.string,
-  component: PropTypes.func,
+  component: PropTypes.func, // eslint-disable-line react/no-unused-prop-types
 };
 
 const defaultProps = {
