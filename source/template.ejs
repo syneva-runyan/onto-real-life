@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Onto Real life" />
+    <meta property="og:description" content="Going places and taking pictures." />
+    <meta property="og:image" content="http://ontoreallife.com/assets/img/blogs/newZealandSouth/gettingInTheWay--md.jpg" />
+
+    <% if(!htmlWebpackPlugin.options) { %>
+      <% if(base) {  %>
+      <base href="<%=base%>" />
+      <% } %>
+    
+      <% css.forEach(function(file){ %>
+          <link href="<%- file %>" rel="stylesheet">
+      <% }); %>
+    <% } %>
+    
+    <title>Onto real life</title>
+  </head>
+  <body>
+    <div id="app">
+      <% if(!htmlWebpackPlugin.options) { %>
+        <%- html %>
+      <% } %>
+    </div>
+    <% if(!htmlWebpackPlugin.options) { %>
+      <% js.forEach(function(file){ %>
+          <script src="<%- file %>" async></script>
+      <% }); %>
+    <% } %>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+.searchPosts {
+    position: absolute;
+    right: 0;
+    top: -41px;
+    z-index: 2;
+
+    &__input {
+        background-color: rgba(0,0,0,0);
+        border: 0;
+        border-bottom: 1px solid $primary-color;
+        color: $primary-color-light;
+        cursor: text;
+        transition: 0.25s;
+        padding: 7px 0;
+        width: 0;
+    }
+
+    &__clear {
+        position: absolute;
+        background: $lightest-gray;
+        border-radius: 23px;
+        color: $black;
+        font-size: 8px;
+        line-height: 3px;
+        opacity: 0.6;
+        padding: 7px 5px 6px 5px;
+        right: 38px;
+        top: 9px;
+        width: auto;
+    }
+
+    &__suggestions {
+        display: none;
+    }
+
+
+    &__submit {
+        background-color: rgba(255,255,255,0);
+        background-image: url("../assets/img/search.png");
+        background-size: 100% 100%;
+        height: 17px;
+        padding: 0;
+        position: relative;
+        top: 8px;
+        width: 17px;
+
+        &:hover {
+            background-color: rgba(255,255,255,0);
+        }
+    }
+
+    &:focus, &:hover, &.active, {
+        .searchPosts__input {
+            padding: 7px;
+            width: 175px;
+        }
+
+        .searchPosts__suggestions {
+            display: block;
+        }
+    }
+
+    .searchPosts__input:focus {
+        padding: 7px;
+        width: 175px;
+    }
+
+    @media screen and (max-width: $md-break) {
+        height: 40px;
+        right: 0;
+        top: 0px;
+        z-index: 2;
+
+        &__input {
+            border-bottom: 1px solid $primary-color;
+            font-size:  11px;
+            height: 34px;
+            margin-right: 32px;
+            margin-top: 2px;
+            padding: 5px 0 0;
+        }
+
+        &__submit {
+            filter: brightness(100) saturate(0);
+            position: absolute;
+            top: 12px;
+            height: 16px;
+            right: 10px;
+            width: 19px;
+        }
+
+        &:hover,  &.active, &:focus {
+            background-color: white;
+            padding-left: 10px;
+
+            .searchPosts__input {
+                width: 155px;
+            }
+
+            .searchPosts__submit {
+                filter: none;
+            }
+        } 
+
+        .searchPosts__input:focus { 
+            width: 155px;
+        }
+    }
+}

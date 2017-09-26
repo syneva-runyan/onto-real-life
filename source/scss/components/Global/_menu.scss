@@ -4,6 +4,7 @@
   &__nav {
     padding: 0;
     position: absolute;
+    left: auto;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -38,13 +39,15 @@
 
   @media screen and (max-width: $md-break) {
     &__nav {
-      background-color: $white;;
-      border-left: 0.5px solid $primary-color-light;
+      background-color: $white;
+      border-right: 0.5px solid $primary-color-light;
+      left: 0;
       margin-bottom: 0;
       margin-top: 0;
       position: absolute;
+      right: auto;
       top: 35px;
-      transform: translateX(101%);
+      transform: translateX(-101%);
       width: auto;
       z-index: 1;
      
@@ -67,6 +70,7 @@
 
     &--opened {
       transform: translateX(0);
+      display: block;
 
     }
 
@@ -87,9 +91,10 @@
   &__cta {
     background: none;
     display: none;
-    font-size: 12px;
+    font-size: 14px;
+    height: 100%;
     position: absolute;
-    right: 0;
+    left: 0;
     text-transform: uppercase;
     width: auto;
 
@@ -102,7 +107,7 @@
     width: 100%;
 
     &__nav {
-      text-align: right;
+      text-align: left;
     }
 
 
