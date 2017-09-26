@@ -9,7 +9,7 @@
 	 */
 
 	$ref = $_POST["ref"];
-	$commits = $_POST["commits"];
+	$head_commit = $_POST["head_commit"]["message"];
 
 	// The commands
 	$commands = array(
@@ -36,7 +36,7 @@
 	// code cred synevarunyan
 	$email_to = "syneva@gmail.com";	
 	$email_subject = "OntoReallife Deployment";
-	$email_message = "A deployment was attempted for your site based on commit(s): . \n".$commits."\r\n".$output;
+	$email_message = "A deployment was attempted for your site based on the head commit: . \n".$head_commit."\r\n".$output;
 	$headers = 'From: '.$email_from."\r\n".
 	
 	'Reply-To: '.$email_from."\r\n" .
