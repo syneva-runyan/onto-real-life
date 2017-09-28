@@ -9,7 +9,6 @@
 	 */
 
 	$post_body = $_POST['payload'];
-	$payload = json_decode( file_get_contents('php://input') );
 	
 	// The commands
 	$commands = array(
@@ -36,7 +35,7 @@
 	// code cred synevarunyan
 	$email_to = "syneva@gmail.com";	
 	$email_subject = "OntoReallife Deployment";
-	$email_message = "A deployment was attempted for your site based on the head commit: \n".$payload."\r\n".$output;
+	$email_message = "A deployment was attempted for your site based on the head commit: \n".$post_body."\r\n".$output;
 	$headers = 'From: '.$email_from."\r\n".
 	
 	'Reply-To: '.$email_from."\r\n" .
