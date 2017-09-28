@@ -9,9 +9,7 @@
 	 */
 
 	$post_body = $_POST['payload'];
-	//$payload = json_decode($post_body);
-	$head_commit = $post_body["head_commit"];
-	//["message"];
+	$head_commit = $post_body["head_commit"]["message"];
 
 	// The commands
 	$commands = array(
