@@ -9,7 +9,7 @@
 	 */
 
 	$post_body = $_POST['payload'];
-	$payload = json_decode($post_body);
+	$payload = $post_body['commits'];
 
 	// The commands
 	$commands = array(
