@@ -9,8 +9,8 @@
 	 */
 
 	$post_body = $_POST['payload'];
-	$payload = $post_body['commits'];
-
+	$payload = json_decode( file_get_contents('php://input') );
+	
 	// The commands
 	$commands = array(
 		'echo $PWD',
