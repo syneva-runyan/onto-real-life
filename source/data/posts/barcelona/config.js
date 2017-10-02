@@ -3,7 +3,6 @@ import Content from "./Content.jsx";
 module.exports = {
   id: "barcelona",
   tags: [
-    "barcelona",
     "spain",
     "europe",
     "montserrat",
