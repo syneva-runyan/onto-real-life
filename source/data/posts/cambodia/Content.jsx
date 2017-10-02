@@ -58,8 +58,7 @@ export default function Content(props) {
       <p>
         These were not merciful killings. At the Killing Field outside of Phnom
         Pen you can see a tree with small indents on it's trunk. The indents
-        came from babies being literally being pounded to death against the
-        tree.
+        came from babies being literally pounded to death against the tree.
       </p>
       <p>
         In a gross miscarriage of justice, Pol Pot, the aforementioned
@@ -243,7 +242,7 @@ export default function Content(props) {
       <h4>Other Notes:</h4>
       <ul>
         <li>
-          The 7 boat ride from Battambang to Siem Reap, even though I was
+          The 7 hour boat ride from Battambang to Siem Reap, even though I was
           worried about getting sea sick and even though it rained for part, was
           one of my favorite things in Cambodia.
         </li>
@@ -253,8 +252,8 @@ export default function Content(props) {
           <em>side note - $1 and $0.50 beers are dangerous.</em>
         </li>
         <li>
-          SO to Charlotte and Stephen (and Kevin) for being awesome and for
-          being brave enough to try all the food. Still super impressed.
+          SO to Charlotte and Stephen (and Kyle) for being awesome and for being
+          brave enough to try all the food. Still super impressed.
         </li>
       </ul>
     </div>
