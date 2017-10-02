@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <coverage generated="1506571425637" clover="3.2.0">
   <project timestamp="1506571425638" name="All files">
     <metrics statements="303" coveredstatements="301" conditionals="111" coveredconditionals="106" methods="93" coveredmethods="89" elements="507" coveredelements="496" complexity="0" loc="303" ncloc="303" packages="13" files="27" classes="27">
+=======
+<coverage generated="1506849430206" clover="3.2.0">
+  <project timestamp="1506849430206" name="All files">
+    <metrics statements="319" coveredstatements="315" conditionals="113" coveredconditionals="106" methods="95" coveredmethods="90" elements="527" coveredelements="511" complexity="0" loc="319" ncloc="319" packages="13" files="28" classes="28">
+>>>>>>> 977f65f7a295f79206a7f4f04c9d25304cde3dc2
       <package name="components.AboutMe">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="AboutMe.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\AboutMe\AboutMe.jsx">
@@ -278,17 +284,18 @@
           <line num="15" count="82" type="stmt"/>
           <line num="19" count="82" type="stmt"/>
           <line num="25" count="12" type="stmt"/>
-          <line num="26" count="1542" type="stmt"/>
-          <line num="28" count="1542" type="cond" truecount="2" falsecount="0"/>
+          <line num="26" count="1642" type="stmt"/>
+          <line num="28" count="1642" type="cond" truecount="2" falsecount="0"/>
           <line num="29" count="58" type="stmt"/>
-          <line num="33" count="1484" type="stmt"/>
-          <line num="34" count="1484" type="stmt"/>
-          <line num="35" count="1484" type="cond" truecount="2" falsecount="0"/>
-          <line num="37" count="1484" type="cond" truecount="2" falsecount="0"/>
+          <line num="33" count="1584" type="stmt"/>
+          <line num="34" count="1584" type="stmt"/>
+          <line num="35" count="1584" type="cond" truecount="2" falsecount="0"/>
+          <line num="37" count="1584" type="cond" truecount="2" falsecount="0"/>
           <line num="38" count="2" type="stmt"/>
-          <line num="42" count="1482" type="stmt"/>
-          <line num="43" count="1482" type="cond" truecount="2" falsecount="0"/>
+          <line num="42" count="1582" type="stmt"/>
+          <line num="43" count="1582" type="cond" truecount="2" falsecount="0"/>
           <line num="48" count="12" type="stmt"/>
+<<<<<<< HEAD
           <line num="49" count="292" type="stmt"/>
           <line num="51" count="292" type="stmt"/>
           <line num="52" count="1460" type="stmt"/>
@@ -340,6 +347,59 @@
           <line num="179" count="2472" type="stmt"/>
           <line num="184" count="12" type="stmt"/>
           <line num="185" count="12" type="stmt"/>
+=======
+          <line num="49" count="312" type="stmt"/>
+          <line num="50" count="312" type="stmt"/>
+          <line num="51" count="1560" type="stmt"/>
+          <line num="53" count="1560" type="stmt"/>
+          <line num="56" count="79" type="stmt"/>
+          <line num="61" count="79" type="stmt"/>
+          <line num="65" count="312" type="stmt"/>
+          <line num="73" count="16" type="stmt"/>
+          <line num="75" count="16" type="stmt"/>
+          <line num="76" count="16" type="stmt"/>
+          <line num="78" count="16" type="cond" truecount="4" falsecount="0"/>
+          <line num="79" count="15" type="stmt"/>
+          <line num="80" count="164" type="stmt"/>
+          <line num="81" count="164" type="stmt"/>
+          <line num="82" count="164" type="cond" truecount="2" falsecount="0"/>
+          <line num="85" count="164" type="cond" truecount="2" falsecount="0"/>
+          <line num="86" count="164" type="stmt"/>
+          <line num="89" count="1" type="stmt"/>
+          <line num="94" count="16" type="stmt"/>
+          <line num="98" count="3" type="stmt"/>
+          <line num="99" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="102" count="3" type="stmt"/>
+          <line num="103" count="3" type="stmt"/>
+          <line num="104" count="3" type="stmt"/>
+          <line num="113" count="18009" type="cond" truecount="2" falsecount="0"/>
+          <line num="114" count="4638" type="stmt"/>
+          <line num="116" count="13371" type="stmt"/>
+          <line num="117" count="13371" type="stmt"/>
+          <line num="118" count="13371" type="stmt"/>
+          <line num="124" count="2533" type="stmt"/>
+          <line num="125" count="2533" type="stmt"/>
+          <line num="130" count="18009" type="stmt"/>
+          <line num="131" count="18009" type="stmt"/>
+          <line num="134" count="18009" type="stmt"/>
+          <line num="139" count="18009" type="cond" truecount="2" falsecount="0"/>
+          <line num="141" count="4638" type="stmt"/>
+          <line num="142" count="4638" type="stmt"/>
+          <line num="144" count="13371" type="stmt"/>
+          <line num="148" count="2533" type="stmt"/>
+          <line num="156" count="4638" type="stmt"/>
+          <line num="157" count="4638" type="stmt"/>
+          <line num="158" count="7338" type="cond" truecount="2" falsecount="0"/>
+          <line num="159" count="1331" type="stmt"/>
+          <line num="160" count="1331" type="stmt"/>
+          <line num="163" count="7338" type="stmt"/>
+          <line num="166" count="4638" type="cond" truecount="2" falsecount="0"/>
+          <line num="167" count="4638" type="stmt"/>
+          <line num="171" count="164" type="stmt"/>
+          <line num="172" count="2532" type="stmt"/>
+          <line num="177" count="12" type="stmt"/>
+          <line num="178" count="12" type="stmt"/>
+>>>>>>> 977f65f7a295f79206a7f4f04c9d25304cde3dc2
         </file>
       </package>
       <package name="views.About">

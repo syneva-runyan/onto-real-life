@@ -21,7 +21,7 @@ export default class AboutMe extends Component {
         <ul className="aboutMe__list">
           <li>South Africa</li>
           <li>Machu Pichu</li>
-          <li>Thailand</li>
+          <li>Northern Vietnam (via motorbike)</li>
           <li>Bora Bora (must stay in raft house on the water)</li>
           <li>Glacier National Park, Montana USA</li>
         </ul>
