@@ -3,6 +3,6 @@ node_modules
 build
 .module-cache
 *.log*
-_nogit
 tests/coverage
 .vscode
+_nogit
