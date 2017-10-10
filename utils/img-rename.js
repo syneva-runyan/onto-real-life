@@ -20,6 +20,7 @@ const rename = function(ogPrefix, newPrefix, fileExt, inputDir, suffixes) {
 
   // Iterate through ogPrefix/suffix combinations and rename.
   for (const suffix of suffixes) {
+    // es-lint-disable-line no-restricted-syntax
     console.info(
       `Renaming ${ogPrefix}${suffix}${fileExt} to ${newPrefix}${suffix}${fileExt}`,
     );
