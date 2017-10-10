@@ -12,7 +12,7 @@ The Static Site Generator Webpack Plugin is used for the production build, in or
 Routing is acomplished with React-Router-4.
 
 ### Blog Posts
-The tool used for the generation of blog post html content is Frola.
+The tool used for the generation of blog post html content is Frola. Currently a to-do item for development.
 https://www.froala.com/wysiwyg-editor
 
 ### Git
@@ -23,24 +23,15 @@ Install the precommit locally with
 * Prettier is executed and fixes are saved before each commit.
 * Lint is executed and commit will fail on errors.
 
-### Deployment
-A php page is included under utils here that is used to deploy
-builds to my server with a webhook when commits are made to the master branch
-of this repository.
-
 ## TODO
-* GUI for automatic post generation
+* GUI for automatic post generation and edits
 * Optimize Images
 * Post sort functionaly
-* Post Content Edit and save
 * Photo Map
 * Add security for file editing
 * Move legacy blog imgs
 * Improve contact section edge cases & UX
 * Add vendor.js optimizations
 * Comprimise template renderings between prod & dev
-* Include React Helmet configs for each blog post
-* Figure out why assets aren't being required correctly in prod bundling
 * Separate vendor from scripts & implement better caching practices
-* Linter execution - specifiy failure appropriately
 * PreCommit hook - ensure all webpack files are excluded from prettier execution
