@@ -44,7 +44,7 @@ export default class SearchPosts extends Component {
   }
 
   search() {
-    this.textInput && this.textInput.focus();
+    this.textInput && this.textInput.focus(); // eslint-disable-line no-unused-expressions
     if (this.state.searchTerm) {
       this.showResults();
     }
