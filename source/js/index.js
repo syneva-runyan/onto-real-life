@@ -2,7 +2,7 @@
 // Determine if dev or prod env,
 // load server || build static pages as appropriate.
 import React from "react";
-import { BrowserRouter, StaticRouter } from "react-router-dom";
+import { Router, StaticRouter } from "react-router-dom";
 import ReactDOM from "react-dom";
 import ReactDOMServer from "react-dom/server";
 import { createBrowserHistory, createMemoryHistory } from "history";
@@ -16,9 +16,9 @@ if (typeof document !== "undefined") {
   const history = createBrowserHistory();
   const rootEl = document.getElementById("app");
   ReactDOM.render(
-    <BrowserRouter history={history}>
+    <Router history={history}>
       <App />
-    </BrowserRouter>,
+    </Router>,
     rootEl,
   );
 }

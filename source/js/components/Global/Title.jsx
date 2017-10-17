@@ -11,9 +11,9 @@ export default class Title extends Component {
           <br />
           <span>To</span>
         </span>
-        <bold className="title__text">
+        <strong className="title__text">
           R<span className="title--desktop">EAL</span>
-        </bold>
+        </strong>
         <span className="title__text">
           L<span className="title--desktop">IFE</span>
         </span>
