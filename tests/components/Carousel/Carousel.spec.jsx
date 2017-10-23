@@ -47,21 +47,21 @@ describe("Post Content", () => {
   });
 
   it("should make prev and next slides identifiable", () => {
-    component.instance().setState({
+    component.setState({
       active: 1,
     });
     const prev = component.find(".carousel__slide--prev");
     const next = component.find(".carouesl__slide--next");
 
-    expect(prev.node.key).toEqual("slide-0");
-    expect(next.node.key).toEqual("slide-2");
+    expect(prev.getElement().key).toEqual("slide-0");
+    expect(next.getElement().key).toEqual("slide-2");
   });
   it("should wrap next and prev slide identifiers as appropriate to active index", () => {
-    component.instance().setState({
+    component.setState({
       active: 2,
     });
 
     const next = component.find(".carouesl__slide--next");
-    expect(next.node.key).toEqual("slide-0");
+    expect(next.getElement().key).toEqual("slide-0");
   });
 });

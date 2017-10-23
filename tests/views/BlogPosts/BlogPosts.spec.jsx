@@ -15,22 +15,18 @@ describe("BlogPosts", () => {
   it("should exist", () => {
     expect(component).toBeTruthy();
   });
- 
-  it("should render PostCollection with renderCollection's closure", () => {
-    const collectionRenderFn = component.instance().renderCollection("someBasePath");
-    const postCollection = collectionRenderFn();
-    const renderedCollection = shallow(postCollection);
-    const collection = renderedCollection.find(PostCollection);
 
-    expect(collection.root.length).toEqual(1);
+  it("should hold a copy of a PostCollection on the state", () => {
+    const postCollectionFn = component.instance().renderCollection("somebase");
+    const postCollection = postCollectionFn("somebase");
+
+    expect(postCollection.type).toEqual(PostCollection);
   });
 
   it("should render post with renderPost's closure", () => {
     const postRenderFn = component.instance().renderPost("someBasePath");
-    const postRenderer = postRenderFn();
-    const renderedCollection = shallow(postRenderer);
-    const post = renderedCollection.find(Post);
+    const post = postRenderFn("somebase");
 
-    expect(post.root.length).toEqual(1);
+    expect(post.type).toEqual(Post);
   });
 });

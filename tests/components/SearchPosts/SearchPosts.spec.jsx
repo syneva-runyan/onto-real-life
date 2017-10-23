@@ -1,5 +1,8 @@
 import React from "react";
-import { SearchPosts } from "../../../source/js/components/SearchPosts";
+import {
+  SearchPosts,
+  PredictiveSuggestions,
+} from "../../../source/js/components/SearchPosts";
 import { catalogSearcher } from "../../../source/js/utils/search-posts";
 import { shallow } from "enzyme";
 
@@ -21,6 +24,7 @@ describe("Search Posts", () => {
 
   it("should set an advisory msg on state iff show results is called without a searchable term available", () => {
     component.instance().showResults();
+
     expect(component.instance().state.showMsg).toEqual(
       "Please enter 3 or more characters",
     );
@@ -89,14 +93,13 @@ describe("Search Posts", () => {
 
   describe("search", () => {
     it("should call show results iff a searchTerm is available", () => {
+      const mock = spyOn(component.instance(), "showResults");
       component.instance().search();
-      let searchResults = component.find(".searchPosts__suggestions");
-      expect(searchResults.length).toEqual(0);
+      expect(mock).not.toHaveBeenCalled();
 
       component.instance().state.searchTerm = "some term";
       component.instance().search();
-      searchResults = component.find(".searchPosts__suggestions");
-      expect(searchResults.length).toEqual(1);
+      expect(mock).toHaveBeenCalled();
     });
   });
 });
