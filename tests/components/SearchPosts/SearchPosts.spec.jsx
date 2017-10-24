@@ -24,7 +24,6 @@ describe("Search Posts", () => {
 
   it("should set an advisory msg on state iff show results is called without a searchable term available", () => {
     component.instance().showResults();
-
     expect(component.instance().state.showMsg).toEqual(
       "Please enter 3 or more characters",
     );
