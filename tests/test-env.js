@@ -10,4 +10,24 @@ global.requestAnimationFrame = callback => {
   setTimeout(callback, 0);
 };
 
+global.WE = {
+  tileLayer: () => {
+    return {
+      addTo: () => {},
+    }
+  },
+  map: () => {
+    return {}
+  },
+  marker: () => {
+    return {
+      addTo: () => {
+        return {
+          bindPopup: () => {}
+        }
+      },
+    }
+  }
+}
+
 global.$ = $;

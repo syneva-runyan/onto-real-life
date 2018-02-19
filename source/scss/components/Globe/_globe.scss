@@ -1,0 +1,15 @@
+.globe {
+    &__marker {
+        display: flex;
+    }
+
+    &__markerImg {
+        flex: 1;
+        padding-top: 7px;
+    }
+
+    &__markerContent {
+        flex: 2;
+        position: relative;
+    }
+}
