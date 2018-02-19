@@ -5,9 +5,11 @@ import { map } from "lodash";
 const propTypes = {
   aniDuration: PropTypes.number,
   slides: PropTypes.array,
+  className: PropTypes.string,
 };
 
 const defaultProps = {
+  className: '',
   aniDuration: 3000,
   slides: [],
 };
@@ -41,7 +43,7 @@ export default class Carousel extends Component {
 
   render() {
     return (
-      <ul className="carousel">
+      <ul className={`carousel ${this.props.className}`}>
         {map(this.props.slides, (slide, index) => {
           let slideClassNames = "carousel__slide";
           if (index === this.state.active) {

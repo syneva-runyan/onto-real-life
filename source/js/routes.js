@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { About, BlogPosts, Contact, NotFound } from "./views";
+import { About, BlogPosts, Contact, NotFound, Photos } from "./views";
 
 const publicPath = "/";
 
@@ -22,7 +22,7 @@ export default function Routes() {
         component={BlogPosts}
         onEnter={window.scroll(0, 0)}
       />
-      <Route path={routeCodes.PHOTO_MAP} component={NotFound} />
+      <Route path={routeCodes.PHOTO_MAP} component={Photos} />
       <Route path={routeCodes.CONTACT} component={Contact} />
       <Route component={BlogPosts} />
     </Switch>

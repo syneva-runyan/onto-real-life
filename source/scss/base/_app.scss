@@ -12,6 +12,11 @@ body {
   position: relative;
   border-radius: 1px;
 
+  .Page__content {
+    padding-bottom: 20px;
+    padding-top: 15px;
+  }
+
   @media screen and (max-width: $md-break) {
     border-radius: 0;
     margin-top: 0px;
