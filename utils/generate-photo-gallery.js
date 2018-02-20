@@ -87,7 +87,6 @@ const googleMapsLocationURL = "https://maps.googleapis.com/maps/api/geocode/json
     }
  }
 
-
  function main(photoGalleryMarkers) {
     const generator = new geoPhotoGalleryGenerator(photoGalleryMarkers);   
     // generator.writeFile();
