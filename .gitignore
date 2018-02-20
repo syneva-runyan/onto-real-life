@@ -6,3 +6,4 @@ build
 tests/coverage
 .vscode
 _nogit
+.env
