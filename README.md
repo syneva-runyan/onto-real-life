@@ -15,6 +15,11 @@ Routing is acomplished with React-Router-4.
 The tool used for the generation of blog post html content is Frola. Currently a to-do item for development.
 https://www.froala.com/wysiwyg-editor
 
+### Geo Photo Gallery
+The photo gallery is built with [webGL Earth](http://www.webglearth.org/).
+
+During the build proccess, information from source/data/phones/index.js is read, reformatted, associated with images kept under src/assets/img/photos/[markerKey] and src/assets/img/blogs/[markerKey], and written to a new file to be consumed by the web application.
+
 ### Git
 #### Precommit
 Install the precommit locally with
