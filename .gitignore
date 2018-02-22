@@ -7,3 +7,4 @@ tests/coverage
 .vscode
 _nogit
 .env
+source/data/photos/photgallerydata.js
