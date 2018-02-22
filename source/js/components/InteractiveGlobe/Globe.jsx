@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import ReactDOM from "react-dom";
 import Marker from "./Marker";
 
+import markerData from '../../../data/photos/photgallerydata';
+
 const propTypes = {
   onMarkerClick: PropTypes.func,
 };
@@ -12,6 +14,11 @@ const defaultProps = {
 };
 
 export default class Globe extends Component {
+  constructor(props) {
+    super(props);
+
+    this.markerData = markerData;
+  }
   componentDidMount() {
     this.createGlobe();
     this.placeMarkers();
@@ -28,16 +35,34 @@ export default class Globe extends Component {
   placeMarkers() {
     // for markes in some loaded json file
     var options = { zoom: 1.5, position: [47.19537,8.524404] };
-    var marker = WE.marker([33.753746, -84.386330]).addTo(this.earth);
-    window.loadMarkerContent = this.renderMarker.bind(this);
-    marker.bindPopup(`<div class="globe__marker">
-      <img class="globe__markerImg" src="http://www.petsworld.in/blog/wp-content/uploads/2015/03/How-To-Make-Your-Puppy-Gain-Weight.jpg" onload="loadMarkerContent()" width="100" height="132">
-      <div id="someMarker" class="globe__markerContent"/>
-    </div>`);
+    this.createMarkers(options, this.markerData);
   }
 
-  renderMarker() {
-    ReactDOM.render(<Marker onClick={this.props.onMarkerClick} />, document.getElementById("someMarker"));
+  createMarkers(options, markerData) {
+    markerData.markerData.forEach(markerInfo => {
+      var marker = WE.marker([markerInfo.geoLocation.lat, markerInfo.geoLocation.lng]).addTo(this.earth);
+      window[`loadMarkerContent${markerInfo.id}`] = this.renderMarker(markerInfo).bind(this);
+      marker.bindPopup(`<div class="globe__marker">
+        <img class="globe__markerImg" src="http://www.petsworld.in/blog/wp-content/uploads/2015/03/How-To-Make-Your-Puppy-Gain-Weight.jpg" onload="loadMarkerContent${markerInfo.id}()" width="100" height="132">
+        <div id="marker--${markerInfo.id}" class="globe__markerContent"/>
+      </div>`);
+    });
+  }
+
+  renderMarker(marker) {
+    return function() {
+      const el = document.getElementById(`marker--${marker.id}`);
+
+      if(el) {
+        ReactDOM.render(<Marker
+          onClick={this.props.onMarkerClick}
+          tagline={marker.tagline}
+          title={marker.title}
+          />, el);
+        } else {
+          console.log("I need to figure out what to do here");
+        }
+    }
   }
 
   render() {
