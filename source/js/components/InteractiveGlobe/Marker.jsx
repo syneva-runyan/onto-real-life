@@ -17,7 +17,7 @@ const propTypes = {
 export default function Marker(props) {
   return (
     <div className="marker">
-      <h5>{props.title}</h5>
+      <h4>{props.title}</h4>
       <p>{props.tagline}</p>
       {props.isPost ? <a data-test="marker-blog-cta">Read the Blog</a> : null }
       <a role="button" onClick={props.onClick} className="marker__galleryCta" data-test="marker-photos-cta">
