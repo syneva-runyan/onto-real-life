@@ -6,7 +6,7 @@ module.exports = {
         "id": "atlanta",
     }, {
         "location": "Valletta, Malta",
-        "tagline": "Malta",
+        "tagline": "Blue skies, blue water, beautiful island",
         "isBlogPost": true,
         "id": "malta"
     }, {

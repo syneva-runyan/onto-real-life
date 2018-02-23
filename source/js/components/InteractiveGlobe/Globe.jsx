@@ -42,8 +42,9 @@ export default class Globe extends Component {
     markerData.markerData.forEach(markerInfo => {
       var marker = WE.marker([markerInfo.geoLocation.lat, markerInfo.geoLocation.lng]).addTo(this.earth);
       window[`loadMarkerContent${markerInfo.id}`] = this.renderMarker(markerInfo).bind(this);
+      marker.element.onclick = this.renderMarker(markerInfo).bind(this);
       marker.bindPopup(`<div class="globe__marker">
-        <img class="globe__markerImg" src="http://www.petsworld.in/blog/wp-content/uploads/2015/03/How-To-Make-Your-Puppy-Gain-Weight.jpg" onload="loadMarkerContent${markerInfo.id}()" width="100" height="132">
+        <img class="globe__markerImg" id="${markerInfo.id}--img" onload="loadMarkerContent${markerInfo.id}()" src="${markerInfo.photos[0]}" width="100" height="132">
         <div id="marker--${markerInfo.id}" class="globe__markerContent"/>
       </div>`);
     });
@@ -52,16 +53,13 @@ export default class Globe extends Component {
   renderMarker(marker) {
     return function() {
       const el = document.getElementById(`marker--${marker.id}`);
-
-      if(el) {
+      if(el && el.children.length == 0) {
         ReactDOM.render(<Marker
           onClick={this.props.onMarkerClick}
           tagline={marker.tagline}
-          title={marker.title}
+          title={marker.location}
           />, el);
-        } else {
-          console.log("I need to figure out what to do here");
-        }
+      }
     }
   }
 
