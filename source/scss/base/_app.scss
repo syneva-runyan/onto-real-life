@@ -1,5 +1,6 @@
 body {
   background: $light-gray;
+  overflow: hidden;
 }
 
 .App {
@@ -15,6 +16,10 @@ body {
   .Page__content {
     padding-bottom: 20px;
     padding-top: 15px;
+
+    @media screen and (max-width: $md-break) { 
+      padding-top: 30px;
+    }
   }
 
   @media screen and (max-width: $md-break) {
