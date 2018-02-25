@@ -1,11 +1,32 @@
 .globe {
     &__marker {
         display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: $md-break) { 
+            display: inline-block;
+        }
+    }
+
+    &__markerImgContainer {
+        align-items: center;
+        display: flex;
+        width: 100%;
+        flex: 1;
+        padding-top: 7px;
+        overflow: hidden;
+        @media screen and (max-width: $md-break) { 
+            float: left;
+            margin-right: 10px;
+            width: 50%;
+        }
     }
 
     &__markerImg {
-        flex: 1;
-        padding-top: 7px;
+        box-shadow: 1px 1px 9px 0px grey;
+        width: 100%;
+        height: auto;
+
     }
 
     &__markerContent {

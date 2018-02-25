@@ -1,5 +1,19 @@
 .marker {
-    padding-left: 10px;
+    // padding-left: 15px;
+    @media screen and (max-width: $md-break) { 
+        padding-left: 10px;
+    }
+
+    &__title {
+        @media screen and (max-width: $md-break) { 
+            margin-top: 5px;
+        }
+    }
+
+
+    p {
+        margin: 0;
+    }
 
     &__galleryCta {
         cursor: pointer;
@@ -7,5 +21,14 @@
 
     &__arrow {
         font-size: 19px;
+    }
+}
+
+// marker contents
+.we-pp {
+    max-width: 200px;
+
+    @media screen and (max-width: $md-break) { 
+        max-width: $md-break;
     }
 }
