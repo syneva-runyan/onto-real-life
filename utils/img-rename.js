@@ -10,7 +10,7 @@ const argv = require("minimist")(process.argv.slice(2));
 const ogPrefix0 = "img";
 const fileExt0 = ".jpg";
 const inputDir0 =
-  "C:/Users/Syneva/Development/onto-real-life/source/assets/img/blogs/cambodia";
+  "C:/Users/Syneva/Development/onto-real-life/source/assets/img/blogs/backpacking";
 const suffixes0 = ["", "--sm", "--md", "--lg"];
 const newPrefix0 = argv.imgName;
 
@@ -38,4 +38,4 @@ const rename = function(ogPrefix, newPrefix, fileExt, inputDir, suffixes) {
 
 rename(ogPrefix0, newPrefix0, fileExt0, inputDir0, suffixes0);
 
-export default rename;
+// export default rename;

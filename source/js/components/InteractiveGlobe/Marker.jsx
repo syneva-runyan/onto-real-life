@@ -1,17 +1,17 @@
 import React from "react";
-import PropTypes from "react-proptypes";
+import PropTypes from "prop-types";
 
 const defaultProps = {
-    isPost: false,
-    tagline: "Welcome to my Hometown, the ATL",
-    onClick: () => {},
-    title: "",
+  isPost: false,
+  tagline: "Welcome to my Hometown, the ATL",
+  onClick: () => {},
+  title: "",
 };
 const propTypes = {
-    isPost: PropTypes.bool,
-    tagline: PropTypes.string,
-    onClick: PropTypes.func,
-    title: PropTypes.string,
+  isPost: PropTypes.bool,
+  tagline: PropTypes.string,
+  onClick: PropTypes.func,
+  title: PropTypes.string,
 };
 
 export default function Marker(props) {
@@ -20,9 +20,9 @@ export default function Marker(props) {
       <h2 className="marker__title">{props.title}</h2>
       <p>{props.tagline}</p>
       {props.isPost ? <a data-test="marker-blog-cta">Read the Blog</a> : null }
-      <a role="button" onClick={props.onClick} className="marker__galleryCta" data-test="marker-photos-cta">
+      <button role="button" onClick={props.onClick} className="marker__galleryCta" data-test="marker-photos-cta">
         See Pictures <span className="marker__arrow">&rsaquo;</span>
-      </a>
+      </button>
     </div>
   );
 }
