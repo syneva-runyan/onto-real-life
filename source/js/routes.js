@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { About, BlogPosts, Contact, NotFound, Photos } from "./views";
+import { About, BlogPosts, Contact, Photos } from "./views";
 
 const publicPath = "/";
 

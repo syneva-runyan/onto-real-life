@@ -14,8 +14,10 @@ const australiaDarwinToPerth = require("./australiaDarwinToPerth/config.js");
 const australiaDarwinToPerthExperience = require("./australiaDarwinToPerthExperience/config.js");
 const taiwan = require("./taiwan/config.js");
 const cambodia = require("./cambodia/config.js");
+const backpacking = require("./backpacking/config.js");
 
 module.exports = {
+  backpacking,
   cambodia,
   taiwan,
   australiaDarwinToPerthExperience,
