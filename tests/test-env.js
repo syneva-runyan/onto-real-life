@@ -14,20 +14,21 @@ global.WE = {
   tileLayer: () => {
     return {
       addTo: () => {},
-    }
+    };
   },
   map: () => {
-    return {}
+    return {};
   },
   marker: () => {
     return {
       addTo: () => {
         return {
-          bindPopup: () => {}
-        }
+          bindPopup: () => {},
+          element: {},
+        };
       },
-    }
-  }
-}
+    };
+  },
+};
 
 global.$ = $;
