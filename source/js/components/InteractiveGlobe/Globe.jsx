@@ -91,16 +91,10 @@ export default class Globe extends Component {
       ).bind(this);
       marker.element.onclick = this.renderMarker(markerInfo).bind(this);
       marker.bindPopup(`<div class="globe__marker">
-<<<<<<< HEAD
         <div class="globe__markerImgContainer">
           <img class="globe__markerImg" id="${markerInfo.id}--img" src="${markerInfo.photos[0]}">
         </div>
           <div id="marker--${markerInfo.id}" class="globe__markerContent"/>
-=======
-        <img class="globe__markerImg" id="${markerInfo.id}--img" onload="loadMarkerContent${markerInfo.id}()" src="${markerInfo
-        .photos[0]}" width="100" height="132">
-        <div id="marker--${markerInfo.id}" class="globe__markerContent"/>
->>>>>>> 096d78304a7c78d7ea22dd181826e3c29aa0e80a
       </div>`);
     });
   }
