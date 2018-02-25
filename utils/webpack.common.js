@@ -35,7 +35,7 @@ module.exports = {
       {
         from: "../assets/scripts/sendEmail.php",
         to: "scripts/sendEmail.php",
-      },
+      }
     ]),
   ],
   rules: [

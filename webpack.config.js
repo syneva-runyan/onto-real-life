@@ -31,7 +31,6 @@ if (isProduction) {
 module.exports = {
   devtool: isProduction ? false : "source-map",
   context: jsSourcePath,
-  target: isProduction ? 'node' : 'web',
   entry: {
     app: "./index.js",
     vendor: ["lazysizes", "lazysizes/plugins/bgset/ls.bgset.min.js"]
