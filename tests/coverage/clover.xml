@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1519600673108" clover="3.2.0">
-  <project timestamp="1519600673109" name="All files">
-    <metrics statements="344" coveredstatements="342" conditionals="121" coveredconditionals="115" methods="110" coveredmethods="103" elements="575" coveredelements="560" complexity="0" loc="344" ncloc="344" packages="16" files="31" classes="31">
+<coverage generated="1519607589390" clover="3.2.0">
+  <project timestamp="1519607589390" name="All files">
+    <metrics statements="371" coveredstatements="348" conditionals="125" coveredconditionals="117" methods="114" coveredmethods="103" elements="610" coveredelements="568" complexity="0" loc="371" ncloc="371" packages="16" files="31" classes="31">
       <package name="components.AboutMe">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <file name="AboutMe.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\AboutMe\AboutMe.jsx">
@@ -175,43 +175,70 @@
         </file>
       </package>
       <package name="components.InteractiveGlobe">
-        <metrics statements="31" coveredstatements="31" conditionals="8" coveredconditionals="7" methods="12" coveredmethods="10"/>
+        <metrics statements="58" coveredstatements="37" conditionals="12" coveredconditionals="9" methods="16" coveredmethods="10"/>
         <file name="Globe.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\InteractiveGlobe\Globe.jsx">
-          <metrics statements="26" coveredstatements="26" conditionals="6" coveredconditionals="5" methods="10" coveredmethods="9"/>
-          <line num="9" count="15" type="stmt"/>
-          <line num="13" count="15" type="stmt"/>
-          <line num="19" count="2" type="stmt"/>
-          <line num="21" count="2" type="stmt"/>
-          <line num="24" count="3" type="stmt"/>
-          <line num="25" count="3" type="stmt"/>
-          <line num="29" count="2" type="stmt"/>
-          <line num="30" count="2" type="stmt"/>
-          <line num="31" count="2" type="stmt"/>
-          <line num="35" count="2" type="stmt"/>
-          <line num="36" count="2" type="stmt"/>
-          <line num="41" count="2" type="stmt"/>
-          <line num="42" count="2" type="stmt"/>
-          <line num="46" count="2" type="stmt"/>
-          <line num="47" count="6" type="stmt"/>
-          <line num="51" count="6" type="stmt"/>
-          <line num="54" count="6" type="stmt"/>
-          <line num="55" count="6" type="stmt"/>
-          <line num="64" count="14" type="stmt"/>
-          <line num="65" count="2" type="stmt"/>
-          <line num="66" count="2" type="cond" truecount="4" falsecount="0"/>
-          <line num="67" count="1" type="stmt"/>
-          <line num="80" count="2" type="stmt"/>
-          <line num="87" count="2" type="stmt"/>
-          <line num="114" count="15" type="stmt"/>
-          <line num="115" count="15" type="stmt"/>
+          <metrics statements="53" coveredstatements="32" conditionals="10" coveredconditionals="7" methods="14" coveredmethods="9"/>
+          <line num="10" count="15" type="stmt"/>
+          <line num="14" count="15" type="stmt"/>
+          <line num="20" count="2" type="stmt"/>
+          <line num="22" count="2" type="stmt"/>
+          <line num="23" count="2" type="stmt"/>
+          <line num="24" count="2" type="stmt"/>
+          <line num="26" count="2" type="stmt"/>
+          <line num="28" count="2" type="stmt"/>
+          <line num="33" count="3" type="stmt"/>
+          <line num="34" count="3" type="stmt"/>
+          <line num="36" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="42" count="0" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
+          <line num="44" count="0" type="stmt"/>
+          <line num="45" count="0" type="stmt"/>
+          <line num="46" count="0" type="stmt"/>
+          <line num="51" count="0" type="stmt"/>
+          <line num="56" count="0" type="stmt"/>
+          <line num="61" count="0" type="stmt"/>
+          <line num="62" count="0" type="stmt"/>
+          <line num="63" count="0" type="stmt"/>
+          <line num="64" count="0" type="stmt"/>
+          <line num="65" count="0" type="stmt"/>
+          <line num="66" count="0" type="stmt"/>
+          <line num="85" count="0" type="stmt"/>
+          <line num="86" count="0" type="stmt"/>
+          <line num="88" count="0" type="stmt"/>
+          <line num="90" count="0" type="stmt"/>
+          <line num="92" count="0" type="stmt"/>
+          <line num="94" count="0" type="stmt"/>
+          <line num="98" count="2" type="stmt"/>
+          <line num="99" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="101" count="0" type="stmt"/>
+          <line num="103" count="2" type="stmt"/>
+          <line num="104" count="2" type="stmt"/>
+          <line num="108" count="2" type="stmt"/>
+          <line num="109" count="2" type="stmt"/>
+          <line num="114" count="2" type="stmt"/>
+          <line num="115" count="2" type="stmt"/>
+          <line num="119" count="2" type="stmt"/>
+          <line num="120" count="18" type="stmt"/>
+          <line num="124" count="18" type="stmt"/>
+          <line num="127" count="18" type="stmt"/>
+          <line num="128" count="18" type="stmt"/>
+          <line num="139" count="38" type="stmt"/>
+          <line num="140" count="2" type="stmt"/>
+          <line num="141" count="2" type="cond" truecount="4" falsecount="0"/>
+          <line num="142" count="1" type="stmt"/>
+          <line num="155" count="2" type="stmt"/>
+          <line num="162" count="2" type="stmt"/>
+          <line num="189" count="15" type="stmt"/>
+          <line num="190" count="15" type="stmt"/>
         </file>
         <file name="Marker.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\InteractiveGlobe\Marker.jsx">
           <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
           <line num="4" count="15" type="stmt"/>
           <line num="10" count="15" type="stmt"/>
           <line num="18" count="3" type="stmt"/>
-          <line num="38" count="15" type="stmt"/>
-          <line num="39" count="15" type="stmt"/>
+          <line num="30" count="15" type="stmt"/>
+          <line num="31" count="15" type="stmt"/>
         </file>
       </package>
       <package name="components.PhotoGallery">
