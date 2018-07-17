@@ -7,6 +7,7 @@ const propTypes = {
   slides: PropTypes.array,
   className: PropTypes.string,
   allowNavigation: PropTypes.bool,
+  autoMove: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -14,6 +15,7 @@ const defaultProps = {
   aniDuration: 3000,
   slides: [],
   allowNavigation: false,
+  autoMove: true,
 };
 
 export default class Carousel extends Component {
@@ -24,22 +26,33 @@ export default class Carousel extends Component {
     this.state = {
       active: 0,
     };
-
-    this.boundMoveSlide = this.moveSlide.bind(this);
   }
 
   componentDidMount() {
-    this.slideTimer = setInterval(this.boundMoveSlide, this.props.aniDuration);
+    this.props.autoMove ? this.slideTimer = setInterval(this.nextSlide, this.props.aniDuration) : null;
   }
 
   componentWillUnmount() {
-    clearInterval(this.slideTimer);
+    this.slideTimer ? clearInterval(this.slideTimer) : null;
   }
 
-  moveSlide() {
+  nextSlide= (e = {}) => {
+    e.preventDefault && e.preventDefault();
+    e.stopPropagation && e.stopPropagation();
+    
     const activeSlideIndex = (this.state.active + 1) % this.props.slides.length;
     this.setState({
       active: activeSlideIndex,
+    });
+  }
+
+  prevSlide = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const activeSlideIndex = (this.state.active - 1);
+    this.setState({
+      active: activeSlideIndex >= 0 ? activeSlideIndex : this.props.slides.length -1,
     });
   }
 
@@ -49,7 +62,7 @@ export default class Carousel extends Component {
         {(this.props.slides.length > 1 && this.props.allowNavigation) ? <button onClick={this.prevSlide} className="carousel__prev carousel__nav">Prev</button> : null }
         <ul className={`carousel ${this.props.className}`}>
           {map(this.props.slides, (slide, index) => {
-            let slideClassNames = "carousel__slide";
+            let slideClassNames = null;
             if (index === this.state.active) {
               slideClassNames += " carousel__slide--active";
             } else if (
@@ -65,12 +78,12 @@ export default class Carousel extends Component {
               index === this.state.active + 1 ||
               (index === 0 && this.state.active === this.props.slides.length - 1)
             ) {
-              slideClassNames += " carouesl__slide--next";
+              slideClassNames += " carousel__slide--next";
             }
             return (
-              <li className={slideClassNames} key={`slide-${index}`}>
+              slideClassNames ? (<li className={`${slideClassNames} carousel__slide`} key={`slide-${index}`}>
                 {slide}
-              </li>
+              </li>) : null
             );
           })}
         </ul>
