@@ -1,9 +1,18 @@
 .photoGallery {
-    background-color: rgba(0,0,0,0.5);
     height: 100%;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 100;
+
+    .carousel {
+        max-width: 80%;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: auto;
+        left: 0;
+        right: 0;
+        position: absolute;
+    }
 }

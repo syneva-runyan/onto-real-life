@@ -5,6 +5,7 @@ import NotFound from "./NotFound";
 import ResponsiveImg from "./ResponsiveImg";
 import SocialShares from "./SocialShares";
 import Video from "./Video";
+import Modal from './Modal';
 
 module.exports = {
   Footer,
@@ -14,4 +15,5 @@ module.exports = {
   ResponsiveImg,
   SocialShares,
   Video,
+  Modal,
 };

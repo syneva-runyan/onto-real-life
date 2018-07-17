@@ -1,29 +1,26 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Carousel } from "../Carousel";
+import { Modal } from '../Global';
 
 const propTypes = {
   closeGallery: PropTypes.func,
+  photos: PropTypes.array,
 };
 const defaultProps = {
   closeGallery: () => {},
+  photos: [],
 };
 
 export default class PhotoGallery extends Component {
+  renderCarouselSlides = () => {
+    return this.props.photos.map(photoSrc => <img  key={photoSrc} src={photoSrc} /> )
+  }
   render() {
     return (
-      <div className="photoGallery">
-        <Carousel>
-          <p>Gallery Will Go Here</p>
-          <p>Gallery Will Go Here</p>
-        </Carousel>
-        <button
-          onClick={this.props.closeGallery}
-          data-test="photo-gallery-close"
-        >
-          Close
-        </button>
-      </div>
+      <Modal className="photoGallery" onClose={this.props.closeGallery}>
+      <Carousel slides={this.renderCarouselSlides()} allowNavigation />
+    </Modal>
     );
   }
 }

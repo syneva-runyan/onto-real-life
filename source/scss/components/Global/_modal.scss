@@ -1,0 +1,39 @@
+.modal {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  &__close {
+      position: absolute;
+      top: 25px;
+      right: 35px;
+      margin-right: 10px; 
+      background-image: url('../assets/img/close.svg');
+      background-color: transparent;
+      transform: scaleX(-1);
+      width: 30px;
+      height: 30px;
+      background-size: 100% 100%;
+      font-size: 0;
+      cursor: pointer;
+
+      &:hover {
+          background-color: transparent;
+      }
+  }
+
+  &__centeredContent {
+      max-width: 80%;
+      max-height: 80%;
+      top: 50%;
+      position: absolute;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
+      margin: auto;
+  }
+}
