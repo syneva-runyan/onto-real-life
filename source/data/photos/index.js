@@ -77,8 +77,16 @@ module.exports = {
         "tagline": "It gets cold here",
         "id": "oslo"
     }, {
-        "location":"Cinque Terre",
+        "location":"Cinque Terre, Italy",
         "tagline": "Do the hike",
         "id": "cinque"
+    }, {
+        "location": "Cotswolds",
+        "tagline": "Stereotypically British",
+        "id":"cots",
+    }, {
+        "location": "Geneva, Switzerland",
+        "tagline": "Beautiful Falls",
+        "id": "geneva"
     }]
 };
