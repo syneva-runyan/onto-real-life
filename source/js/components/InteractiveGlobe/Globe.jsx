@@ -112,6 +112,8 @@ export default class Globe extends Component {
   }
 
   handleStart(e) {
+    e.stopPropagation();
+    e.preventDefault();
     const earthCenter = this.earth.getCenter();
     this.startTouchX = e.touches[0].clientX;
     this.startTouchY = e.touches[0].clientY;
@@ -136,6 +138,8 @@ export default class Globe extends Component {
 
   // TODO fix vertical flipping of globe
   handleMove(e) {
+    e.preventDefault();
+    e.stopPropagation();
     const touchX = e.touches[0].clientX;
     const touchY = e.touches[0].clientY;
 
