@@ -77,7 +77,7 @@ module.exports = {
         "tagline": "It gets cold here",
         "id": "oslo"
     }, {
-        "location":"Cinque Terre, Italy",
+        "location":"Cinque terre, Italy",
         "tagline": "Do the hike",
         "id": "cinque"
     }, {
@@ -88,5 +88,19 @@ module.exports = {
         "location": "Geneva, Switzerland",
         "tagline": "Beautiful Falls",
         "id": "geneva"
+    },{
+        "location": "Chicago",
+        "tagline": "Fun Big City",
+        "id": "chicago"
+    }, {
+        "location": "South Island, New Zealand", 
+        "taggline": "GO HERE",
+        "id": "newZelandSouth",
+        isBlogPost: true,
+    },{
+        "location": "North Island, New Zealand", 
+        "taggline": "Come for the Hobbits. Stay for the people",
+        "id": "newZealandNorthOverview",
+        isBlogPost: true,
     }]
 };
