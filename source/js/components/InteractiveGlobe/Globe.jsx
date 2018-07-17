@@ -23,19 +23,19 @@ export default class Globe extends Component {
     this.el = null;
     this.earth = null;
 
-    this.handleMove = debounce(this.handleMove, 10);
+    // this.handleMove = debounce(this.handleMove, 10);
 
-    this.isMobile = !!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent,
-    );
+    // this.isMobile = !!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    //   navigator.userAgent,
+    // );
   }
   componentDidMount() {
     this.createGlobe();
     this.placeMarkers();
 
-    if (this.isMobile) {
-      this.addMobileInteractions();
-    }
+    // if (this.isMobile) {
+    //   this.addMobileInteractions();
+    // }
 
     if(this.props.autoSpin) {
       this.spinEarth();
