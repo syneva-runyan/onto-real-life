@@ -94,12 +94,12 @@ module.exports = {
         "id": "chicago"
     }, {
         "location": "South Island, New Zealand", 
-        "taggline": "GO HERE",
+        "tagline": "GO HERE",
         "id": "newZealandSouth",
         isBlogPost: true,
     },{
         "location": "North Island, New Zealand", 
-        "taggline": "Come for the Hobbits. Stay for the people",
+        "tagline": "Come for the Hobbits. Stay for the people",
         "id": "newZealandNorthOverview",
         isBlogPost: true,
     }]
