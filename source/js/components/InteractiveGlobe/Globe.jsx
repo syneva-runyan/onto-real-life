@@ -36,6 +36,60 @@ export default class Globe extends Component {
     if (this.isMobile) {
       this.addMobileInteractions();
     }
+
+    if(this.props.autoSpin) {
+      this.spinEarth();
+    } else {
+      this.stopSpinningEarth();
+    }
+
+    this.panToFix()
+  }
+
+  componentDidUpdate() {
+    if(this.props.autoSpin) {
+      this.spinEarth();
+    } else {
+      this.stopSpinningEarth();
+    }
+  }
+
+  panToFix() {
+    // TEMP FIX FOR BUG: [https://github.com/webglearth/webglearth2/issues/83]
+    this.earth.panTo = function(center, opt_opts) { if (!center.length) center = [center['lat'], center['lng']]; opt_opts = opt_opts || {}; this.flyTo(center[0], center[1], undefined, undefined, 0, 0, opt_opts['duration']) };
+  }
+
+  isMarkerOpen(marker = {}) {
+    if(marker.element) {
+      const popup = marker.element.getElementsByClassName('we-pp')[0];
+      return popup && popup.style.visibility === 'visible' || false;
+    }
+
+    return false;
+  }
+
+  spinEarth() {
+    if(!this.spinningEarth && !this.isMarkerOpen(this.openMarker)) {
+      var before = null;
+      const animate = (now) => {
+        if(this.earth) {
+          var c = this.earth.getPosition();
+          var elapsed = before? now - before: 0;
+          before = now;
+          this.earth.setCenter([c[0], c[1] + 0.1*(elapsed/20)]);
+          this.spinningEarth = requestAnimationFrame(animate);
+        }
+      }
+
+      this.spinningEarth = requestAnimationFrame(animate);
+    }
+  }
+
+  stopSpinningEarth() {
+    if(this.spinningEarth) {
+      window.cancelAnimationFrame(this.spinningEarth);
+      this.spinningEarth = undefined;
+    }
   }
 
   addMobileInteractions() {
@@ -116,34 +170,58 @@ export default class Globe extends Component {
   }
 
   createMarkers(options, markerCollection) {
-    markerCollection.markerData.forEach(markerInfo => {
-      const marker = WE.marker([
-        markerInfo.geoLocation.lat,
-        markerInfo.geoLocation.lng,
-      ]).addTo(this.earth);
-      window[`loadMarkerContent${markerInfo.id}`] = this.renderMarker(
-        markerInfo,
-      ).bind(this);
-      marker.element.onclick = this.renderMarker(markerInfo).bind(this);
-      marker.bindPopup(`<div class="globe__marker">
-        <div class="globe__markerImgContainer">
-          <img class="globe__markerImg" id="${markerInfo.id}--img" src="${markerInfo
-        .photos[0]}">
-        </div>
-          <div id="marker--${markerInfo.id}" class="globe__markerContent"/>
-      </div>`);
+    markerCollection.markerData.forEach((markerInfo, markerIndex) => {
+      if(markerInfo.geoLocation && markerInfo.geoLocation.lat && markerInfo.geoLocation.lng) {
+        const marker = WE.marker([
+          markerInfo.geoLocation.lat,
+          markerInfo.geoLocation.lng,
+        ]).addTo(this.earth);
+        window[`loadMarkerContent${markerInfo.id}`] = this.renderMarker(
+          markerInfo,
+          marker,
+          markerIndex
+        ).bind(this);
+        marker.element.onclick = this.renderMarker(markerInfo, marker, markerIndex).bind(this);
+        marker.bindPopup(`<div class="globe__marker marker">
+          <div class="globe__markerImgContainer">
+            <img class="globe__markerImg" id="${markerInfo.id}--img" src="${markerInfo
+          .photos[0]}">
+          </div>
+            <div id="marker--${markerInfo.id}" class="globe__markerContent"/>
+        </div>`);
+      }
     });
   }
 
-  renderMarker(marker) {
+  onMarkerClick(markerIndex) {
+    return () => {
+      this.props.onMarkerClick(markerIndex);
+    }
+  }
+
+  renderMarker(marker, markerObj, markerIndex) {
     return function() {
+      // close any other open marker
+      if(this.openMarker && this.openMarker !== markerObj) {
+        this.openMarker.closePopup();
+      }
+
+      // keep track of open markers
+      this.openMarker = markerObj;
+
+      this.stopSpinningEarth();
+      this.earth.panTo([
+        marker.geoLocation.lat + 30,
+        marker.geoLocation.lng,
+      ], { duration: 1.5});
+
       const el = document.getElementById(`marker--${marker.id}`);
       if (el && el.children.length === 0) {
         ReactDOM.render(
           <Marker
-            onClick={this && this.props.onMarkerClick}
-            tagline={marker.tagline}
+            onClick={this && this.onMarkerClick(markerIndex)}
             title={marker.location}
+            {...marker}
           />,
           el,
         );
@@ -171,14 +249,14 @@ export default class Globe extends Component {
             top: 0,
             left: 0,
             pointerEvents: "none",
-            backgroundImage: `url("assets/img/aeronautical-map.jpg")`,
+           // backgroundImage: `url("assets/img/aeronautical-map.jpg")`,
           }}
         />
         <div
           id="earth_div"
           style={{
             ...backgroundStyles,
-            backgroundColor: "#173b71ad",
+            backgroundColor: "rgb(0, 0, 29)",
           }}
         />
       </div>

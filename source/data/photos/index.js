@@ -44,5 +44,11 @@ module.exports = {
         "tagline": "The beautiful island",
         "isBlogPost": true,
         "id": "taiwan"
+    },
+    {
+        "location": "Arizona Trail",
+        "tagline": "Level 2 Fun",
+        "isBlogPost": true,
+        "id": "backpacking"
     }]
 };

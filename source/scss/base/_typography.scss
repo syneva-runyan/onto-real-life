@@ -4,7 +4,7 @@ $secondary-font: alegreyaSans-light;
 $secondary-font-bold: alegreyaSans-regular;
 $title-font: blackjack;
 
-a, p, h1, h2, h3, h4, h5, h6, ul, ol {
+a, p, h1, h2, h3, h4, h5, h6, ul, ol, label {
 	font-family: $primary-font;
 	color: $text-color;
 }
