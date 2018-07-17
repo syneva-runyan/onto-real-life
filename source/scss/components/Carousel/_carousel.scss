@@ -44,6 +44,7 @@
         margin: auto;
         position: absolute;
         height: 50px;
+        z-index: 10;
     }
 
     &__next {
@@ -62,6 +63,10 @@
         background-size: 100% 100%;
         font-size: 0;
         cursor: pointer;
+
+        @media screen and (max-width: $md-break) { 
+            margin-left: -5px;
+        }
     }
 
     &__next {
@@ -74,5 +79,15 @@
         background-size: 100% 100%;
         font-size: 0;
         cursor: pointer;
+
+        @media screen and (max-width: $md-break) { 
+            margin-right: 0px;
+        }
+    }
+
+    &__nav {
+        @media screen and (max-width: $md-break) { 
+            background-color: $primary-color;
+        }
     }
 }
