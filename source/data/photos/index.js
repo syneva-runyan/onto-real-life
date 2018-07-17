@@ -55,5 +55,22 @@ module.exports = {
         "location": "Sri Lanka",
         "tagline": "has my heart",
         "id": "sriLanka"
+    },
+    {
+        "location": "Hong Kong",
+        "tagline": "busy busy busy",
+        "id": "hongKong"
+    }, {
+        "location": "Cumberland Island",
+        "tagline": "Rocky Georiga Coast",
+        "id": "cumberland"
+    }, {
+        "location": "Asheville, NC",
+        "tagline": "IPAs and Hiking",
+        "id": "asheville"
+    },{
+        "location": "Costa Rica",
+        "tagline": "Lots of nature",
+        "id": "costaRica"
     }]
 };

@@ -23,6 +23,7 @@ module.exports = {
           XMLHttpRequest: {},
           scroll: function() {}
         },
+        navigator: {},
       }
     }),
     new ExtractTextPlugin("style.css"),
@@ -30,6 +31,10 @@ module.exports = {
       {
         from: "../assets/img/blogs",
         to: "assets/img/blogs"
+      },
+      {
+        from: "../assets/img/photos",
+        to: "assets/img/photos"
       },
       {
         from: "../assets/img/about-me",

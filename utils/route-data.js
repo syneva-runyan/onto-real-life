@@ -10,7 +10,11 @@ const generateBlogPostPaths = function(blogPosts, basePath) {
     return paths;
 }
 
-let routes = [];
+let routes = [
+    'photos',
+    'about',
+    'contact'
+];
 
 routes = routes.concat(generateBlogPostPaths(blogPosts, postPath));
 
