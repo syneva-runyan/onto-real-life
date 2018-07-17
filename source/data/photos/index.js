@@ -72,5 +72,13 @@ module.exports = {
         "location": "Costa Rica",
         "tagline": "Lots of nature",
         "id": "costaRica"
+    }, {
+        "location": "Oslo, Norway",
+        "tagline": "It gets cold here",
+        "id": "oslo"
+    }, {
+        "location":"Cinque Terre",
+        "tagline": "Do the hike",
+        "id": "cinque"
     }]
 };
