@@ -12,25 +12,65 @@
         left: 101%;
         position: absolute;
         width: 101%;
+        top: 0;
 
         &--active {
             position: relative;
+            transform: translateX(0);
+
         }
 
         &--prev {
-            transform: translate(-100%);
+            transform: translateX(-100%);
         }  
 
         &--next {
-            transform: translate(100%);
+            transform: translateX(101%);
         }
 
         &--next, &--active, &--prev {
-            float: left;
             left: -1%;
             transition: $ani-speed * 1.5 ease-in-out;
         }
 
 
+    }
+
+    &__nav {
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        position: absolute;
+        height: 50px;
+    }
+
+    &__next {
+        right: 0;
+    }
+
+    &__prev {
+        margin-left: 40px; 
+        align-self: center;
+        background-image: url('../assets/img/arrow.svg');
+        background-color: transparent;
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        width: 45px;
+        height: 60px;
+        background-size: 100% 100%;
+        font-size: 0;
+        cursor: pointer;
+    }
+
+    &__next {
+        margin-right: 40px;
+        align-self: center;
+        background-image: url('../assets/img/arrow.svg');
+        background-color: transparent;
+        width: 45px;
+        height: 60px;
+        background-size: 100% 100%;
+        font-size: 0;
+        cursor: pointer;
     }
 }

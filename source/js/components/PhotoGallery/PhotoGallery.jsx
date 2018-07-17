@@ -14,12 +14,12 @@ const defaultProps = {
 
 export default class PhotoGallery extends Component {
   renderCarouselSlides = () => {
-    return this.props.photos.map(photoSrc => <img  key={photoSrc} src={photoSrc} /> )
+    return this.props.photos.map(photoSrc => <img  onClick={e => e.stopPropagation()}key={photoSrc} src={photoSrc} /> )
   }
   render() {
     return (
       <Modal className="photoGallery" onClose={this.props.closeGallery}>
-      <Carousel slides={this.renderCarouselSlides()} allowNavigation />
+      <Carousel slides={this.renderCarouselSlides()} allowNavigation autoMove={false} />
     </Modal>
     );
   }

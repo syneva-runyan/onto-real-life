@@ -14,7 +14,7 @@ const defaultProps = {
 export default class Modal extends Component {
   render() {
     return (
-      <div className={`modal ${this.props.className}`} onClick={this.props.close}>
+      <div className={`modal ${this.props.className}`} onClick={this.props.onClose}>
         {this.props.children}
         <button
           className="modal__close"
