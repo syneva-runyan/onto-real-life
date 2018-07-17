@@ -50,5 +50,10 @@ module.exports = {
         "tagline": "Level 2 Fun",
         "isBlogPost": true,
         "id": "backpacking"
+    },
+    {
+        "location": "Sri Lanka",
+        "tagline": "has my heart",
+        "id": "sriLanka"
     }]
 };
