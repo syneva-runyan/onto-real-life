@@ -22,10 +22,12 @@
 
         &--prev {
             transform: translateX(-100%);
+            opacity: 0.5;
         }  
 
         &--next {
             transform: translateX(101%);
+            opacity: 0.5;
         }
 
         &--next, &--active, &--prev {
