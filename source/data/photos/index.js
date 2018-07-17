@@ -95,7 +95,7 @@ module.exports = {
     }, {
         "location": "South Island, New Zealand", 
         "taggline": "GO HERE",
-        "id": "newZelandSouth",
+        "id": "newZealandSouth",
         isBlogPost: true,
     },{
         "location": "North Island, New Zealand", 
