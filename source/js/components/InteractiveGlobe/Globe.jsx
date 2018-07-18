@@ -186,13 +186,16 @@ export default class Globe extends Component {
           markerIndex
         ).bind(this);
         marker.element.onclick = this.renderMarker(markerInfo, marker, markerIndex).bind(this);
-        marker.bindPopup(`<div class="globe__marker marker">
+
+        // Img kept in markup here so it loads as the same time as 
+        // globe & no flicker is shown on maker click
+        marker.bindPopup(`<div class="globe__marker marker globe__markerContent">
           <div class="globe__markerImgContainer">
             <img class="globe__markerImg" id="${markerInfo.id}--img" src="${markerInfo
           .photos[0]}">
           </div>
             <div id="marker--${markerInfo.id}" class="globe__markerContent"/>
-        </div>`);
+        </div>`, 300, false);
       }
     });
   }
@@ -203,11 +206,15 @@ export default class Globe extends Component {
     }
   }
 
+  closePopup = () => {
+    this.openMarker && this.openMarker.closePopup();
+  }
+
   renderMarker(marker, markerObj, markerIndex) {
     return function() {
       // close any other open marker
       if(this.openMarker && this.openMarker !== markerObj) {
-        this.openMarker.closePopup();
+        this.closePopup();
       }
 
       // keep track of open markers
@@ -220,12 +227,14 @@ export default class Globe extends Component {
       ], { duration: 1.5});
 
       const el = document.getElementById(`marker--${marker.id}`);
-      if (el && el.children.length === 0) {
+      if (el) {
         ReactDOM.render(
           <Marker
+            marker={marker}
             onClick={this && this.onMarkerClick(markerIndex)}
             title={marker.location}
             {...marker}
+            onClose={this.closePopup}
           />,
           el,
         );

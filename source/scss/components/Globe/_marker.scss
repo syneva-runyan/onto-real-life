@@ -22,15 +22,19 @@
         font-size: 19px;
     }
 
-    button, .btn {
+    .btn {
         padding: 7px 5px;
         width: 100%;
         margin-top: 6px;
-    }
-
-    .btn {
         color: white;
         text-align: center;
+    }
+
+    .we-pp-close {
+        background-color: transparent;
+        padding: 0;
+        top: 7px;
+        right: 6px;
     }
 }
 
