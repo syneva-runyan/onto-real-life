@@ -60,7 +60,7 @@ export default class Globe extends Component {
   }
 
   isMarkerOpen(marker = {}) {
-    if(marker.element) {
+    if(marker && marker.element) {
       const popup = marker.element.getElementsByClassName('we-pp')[0];
       return popup && popup.style.visibility === 'visible' || false;
     }
@@ -208,6 +208,10 @@ export default class Globe extends Component {
 
   closePopup = () => {
     this.openMarker && this.openMarker.closePopup();
+    this.openMarker = null;
+    if(this.props.autoSpin) {
+      this.spinEarth();
+    }
   }
 
   renderMarker(marker, markerObj, markerIndex) {
@@ -217,16 +221,28 @@ export default class Globe extends Component {
         this.closePopup();
       }
 
-      // keep track of open markers
-      this.openMarker = markerObj;
+      if(!this.openMarker || (this.openMarker && this.openMarker !== markerObj)) {
 
-      this.stopSpinningEarth();
-      this.earth.panTo([
-        marker.geoLocation.lat + 30,
-        marker.geoLocation.lng,
-      ], { duration: 1.5});
+          // keep track of open markers
+          this.openMarker = markerObj;
+          this.stopSpinningEarth();
 
+          // semi-depend on earth's zoom to center marker.
+          let adjustLat = 25;
+          if(this.earth.getZoom() > 3) {
+            adjustLat = 5;
+          }
+
+          this.earth.panTo([
+            // adjust lat based on current view
+            marker.geoLocation.lat + adjustLat,
+            marker.geoLocation.lng,
+          ], { duration: 1.5});
+
+      }
+      
       const el = document.getElementById(`marker--${marker.id}`);
+      
       if (el) {
         ReactDOM.render(
           <Marker

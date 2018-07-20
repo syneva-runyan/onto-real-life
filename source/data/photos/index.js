@@ -102,5 +102,25 @@ module.exports = {
         "tagline": "Come for the Hobbits. Stay for the people",
         "id": "newZealandNorthOverview",
         isBlogPost: true,
+    },
+    {
+        "location": "Edinburg", 
+        "tagline": "Or just outside of it, really",
+        "id": "edinburgh",
+    },
+    {
+        "location": "London", 
+        "tagline": "Not the tourist spots, the things I loved",
+        "id": "london",
+    },
+    {
+        "location": "Lisbon", 
+        "tagline": "One of my favorite places in Europe",
+        "id": "lisbon",
+    },
+    {
+        "location": "Bergen, Norway", 
+        "tagline": "Cute place for a weekend break",
+        "id": "bergen",
     }]
 };
