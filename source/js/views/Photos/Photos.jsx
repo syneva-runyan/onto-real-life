@@ -30,7 +30,7 @@ export default class Photos extends Component {
       <div className="Page__content">
         <div>
           <p>
-            Click, rotate, and zoom the globe below to find then browse pictures
+            Rotate, and zoom the globe below. Click on the markers to see pictures.
           </p>
           <GlobeSettings toggleSpin={this.toggleSpin} autoSpin={this.state.autoSpin}/>
         </div>
