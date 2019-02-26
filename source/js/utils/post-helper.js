@@ -46,4 +46,4 @@ class PostHelper {
   }
 }
 
-module.exports = new PostHelper(xmlhttpRequest, postAssetPath, contentFileName);
+export default new PostHelper(xmlhttpRequest, postAssetPath, contentFileName);

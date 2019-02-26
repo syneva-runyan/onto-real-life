@@ -1,5 +1,5 @@
 import PhotoGallery from "./PhotoGallery";
 
-module.exports = {
+export {
   PhotoGallery,
 };

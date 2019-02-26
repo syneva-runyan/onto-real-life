@@ -1,5 +1,5 @@
 import AboutMe from "./AboutMe";
 
-module.exports = {
+export {
   AboutMe,
 };

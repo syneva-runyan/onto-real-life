@@ -1,5 +1,5 @@
 import App from "./App.jsx";
 
-module.exports = {
+export {
   App,
 };

@@ -1,6 +1,6 @@
 import Content from "./Content.jsx";
 
-module.exports = {
+export default {
   id: "newZealandNorthHiking",
   tags: [
     "new zealand",

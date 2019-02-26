@@ -2,7 +2,7 @@ import Globe from "./Globe";
 import Marker from "./Marker";
 import GlobeSettings from './GlobeSettings';
 
-module.exports = {
+export {
   Globe,
   GlobeSettings,
   Marker,

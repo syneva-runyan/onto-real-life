@@ -1,6 +1,6 @@
 import Content from "./Content.jsx";
 
-module.exports = {
+export default {
   id: "cambodia",
   tags: ["asia", "south east asia", "temples", "siem reap", "phnom pehn"],
   title: "Cambodia",

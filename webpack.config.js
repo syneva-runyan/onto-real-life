@@ -33,7 +33,7 @@ module.exports = {
   context: jsSourcePath,
   entry: {
     app: "./index.js",
-    vendor: ["lazysizes", "lazysizes/plugins/bgset/ls.bgset.min.js"]
+    vendor: ["lazysizes", path.join(__dirname, "node_modules/lazysizes/plugins/bgset/ls.bgset.js")]
   },
   output: {
     path: buildPath,

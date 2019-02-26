@@ -1,7 +1,7 @@
 import SearchPosts from "./SearchPosts";
 import PredictiveSuggestions from "./PredictiveSuggestions";
 
-module.exports = {
+export {
   SearchPosts,
   PredictiveSuggestions,
 };

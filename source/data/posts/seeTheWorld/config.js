@@ -1,6 +1,6 @@
 import Content from "./Content.jsx";
 
-module.exports = {
+export default {
   id: "seeTheWorld",
   tags: ["travel thoughts", "why"],
   title: "Goal: See the World",

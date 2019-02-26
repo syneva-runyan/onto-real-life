@@ -1,5 +1,5 @@
 /* eslint no-console: 0 */
-import postCatalogue from "../../data/posts";
+import * as postCatalogue from "../../data/posts";
 
 const dictFilterList = ["a", "the", "an", "of", "and"];
 
@@ -45,7 +45,7 @@ const checkForSubstring = function(stringToCheck, subString) {
 
 // lowercase search terms
 // and remove unhelpful words
-const cleanSearchTerm = function(searchTerm) {
+const cleanSearchTerm = function(searchTerm = "") {
   let cleanedSearchTerm = searchTerm.toLowerCase();
   // eslint-disable-next-line no-restricted-syntax
   for (const wordToRemove of dictFilterList) {
@@ -182,7 +182,8 @@ class SearchDictionary {
 }
 
 const catalogSearcher = new SearchDictionary(postCatalogue);
-module.exports = {
+
+export {
   catalogSearcher,
   SearchDictionary,
   checkForSubstring,

@@ -98,7 +98,7 @@ module.exports = {
         "id": "newZealandSouth",
         isBlogPost: true,
     },{
-        "location": "North Island, New Zealand", 
+        "location": "Auckland, New Zealand", 
         "tagline": "Come for the Hobbits. Stay for the people",
         "id": "newZealandNorthOverview",
         isBlogPost: true,
@@ -122,5 +122,46 @@ module.exports = {
         "location": "Bergen, Norway", 
         "tagline": "Cute place for a weekend break",
         "id": "bergen",
+    }, {
+            "location": "Quebec, Canada", 
+            "tagline": "Winter Wonderland",
+            "id": "quebec",
+    }, {
+        "location": "Zermat, Switzerland",
+        "tagline": "As seen on instagram",
+        "id": "zermat"
+    }, {
+        "location": "Reykjavik, Iceland",
+        "tagline": "Striking beauty",
+        "id": "iceland"
+    },
+    {
+        "location": "Amsterdam, Netherlands",
+        "tagline": "Got hit by a bike here. And it was my fault.",
+        "id": "amsterdam"
+    },
+    {
+        "location": "Paris, France",
+        "tagline": "",
+        "id": "paris"
+    },{
+        "location": "Berlin, Germany",
+        "tagline": "Dirty, in a good way",
+        "id": "berlin"
+    },
+    {
+        "location": "Copenhagen, Denmark",
+        "tagline": "",
+        "id": "Copenhagen"
+    },
+    {
+        "location": "Budapest, Hungary",
+        "tagline": "",
+        "id": "budapest"
+    },
+    {
+        "location": "Columbus, Ohio",
+        "tagline": "",
+        "id": "columbus"
     }]
 };

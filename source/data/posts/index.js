@@ -1,37 +1,17 @@
-const barcelona = require("./barcelona/config.js");
-const eatingAlone = require("./eatingAlone/config.js");
-const malta = require("./malta/config.js");
-const morocco = require("./morocco/config.js");
-const seeTheWorld = require("./seeTheWorld/config.js");
-const newZealandNorthOverview = require("./newZealandNorthOverview/config.js");
-const newZealandNorthHiking = require("./newZealandNorthHiking/config.js");
-const newZealandSouth = require("./newZealandSouth/config.js");
-const nzTravelThoughts = require("./nzTravelThoughts/config.js");
-const java = require("./java/config.js");
-const javaTravel = require("./javaTravel/config.js");
-const indonesiaTravelThoughts = require("./indonesiaTravelThoughts/config.js");
-const australiaDarwinToPerth = require("./australiaDarwinToPerth/config.js");
-const australiaDarwinToPerthExperience = require("./australiaDarwinToPerthExperience/config.js");
-const taiwan = require("./taiwan/config.js");
-const cambodia = require("./cambodia/config.js");
-const backpacking = require("./backpacking/config.js");
-
-module.exports = {
-  backpacking,
-  cambodia,
-  taiwan,
-  australiaDarwinToPerthExperience,
-  australiaDarwinToPerth,
-  indonesiaTravelThoughts,
-  javaTravel,
-  java,
-  nzTravelThoughts,
-  newZealandSouth,
-  newZealandNorthOverview,
-  newZealandNorthHiking,
-  barcelona,
-  eatingAlone,
-  malta,
-  morocco,
-  seeTheWorld,
-};
+export { default as backpacking } from "./backpacking/config.js";
+export { default as barcelona} from './barcelona/config.js';
+export { default as cambodia } from "./cambodia/config.js";
+export { default as taiwan } from "./taiwan/config.js";
+export { default as australiaDarwinToPerthExperience } from "./australiaDarwinToPerthExperience/config.js";
+export { default as australiaDarwinToPerth } from "./australiaDarwinToPerth/config.js";
+export { default as indonesiaTravelThoughts } from "./indonesiaTravelThoughts/config.js";
+export { default as javaTravel } from "./javaTravel/config.js";
+export { default as java } from "./java/config.js";
+export { default as nzTravelThoughts } from "./nzTravelThoughts/config.js";
+export { default as newZealandSouth } from "./newZealandSouth/config.js";
+export { default as newZealandNorthHiking } from "./newZealandNorthHiking/config.js";
+export { default as newZealandNorthOverview } from "./newZealandNorthOverview/config.js";
+export { default as morocco } from "./morocco/config.js";
+export { default as malta } from "./malta/config.js";
+export { default as eatingAlone } from "./eatingAlone/config.js";
+export { default as seeTheWorld } from "./seeTheWorld/config.js";
