@@ -1,5 +1,5 @@
 import Carousel from "./Carousel";
 
-module.exports = {
+export {
   Carousel,
 };

@@ -7,7 +7,7 @@ import SocialShares from "./SocialShares";
 import Video from "./Video";
 import Modal from './Modal';
 
-module.exports = {
+export {
   Footer,
   Header,
   Menu,

@@ -3,7 +3,7 @@ import PostTitle from "./PostTitle";
 import PostContent from "./PostContent";
 import PostContextNav from "./PostContextNav";
 
-module.exports = {
+export {
   PostPreviewer,
   PostTitle,
   PostContent,

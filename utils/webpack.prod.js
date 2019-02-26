@@ -1,6 +1,6 @@
 const webpack = require("webpack");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const StaticSiteGeneratorPlugin = require("static-site-generator-webpack-plugin");
 const ejs = require("ejs");
 const fs = require("fs");
@@ -26,7 +26,9 @@ module.exports = {
         navigator: {},
       }
     }),
-    new ExtractTextPlugin("style.css"),
+    new MiniCssExtractPlugin({
+      filename: "[name].css"
+    }),
     new CopyWebpackPlugin([
       {
         from: "../assets/img/blogs",
@@ -44,32 +46,16 @@ module.exports = {
         from: "../assets/img/quotes.png",
         to: "assets/img/quotes.png"
       }
-    ]),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-        screw_ie8: true,
-        conditionals: true,
-        unused: true,
-        comparisons: true,
-        sequences: true,
-        dead_code: true,
-        evaluate: true,
-        if_return: true,
-        join_vars: true
-      },
-      output: {
-        comments: false
-      }
-    }),
+    ])
   ],
   rules: [
     {
       test: /\.scss$/,
-      loader: ExtractTextPlugin.extract({
-        fallback: "style-loader",
-        use: "css-loader!postcss-loader!sass-loader"
-      }),
+      use: [
+        MiniCssExtractPlugin.loader,
+        'css-loader',
+        'sass-loader'
+      ]
     },
   ],
 };

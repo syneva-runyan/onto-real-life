@@ -1,5 +1,5 @@
 import Spinner from "./Spinner";
 
-module.exports = {
+export {
   Spinner,
 };

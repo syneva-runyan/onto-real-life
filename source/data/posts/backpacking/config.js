@@ -1,6 +1,6 @@
 import Content from "./Content.jsx";
 
-module.exports = {
+export default {
   id: "backpacking",
   tags: ["backpacking", "arizonia", "usa", "southwest", "hike", "hiking"],
   title: "Long Distance Backpacking",

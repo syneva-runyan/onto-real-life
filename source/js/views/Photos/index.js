@@ -1,5 +1,5 @@
 import Photos from "./Photos.jsx";
 
-module.exports = {
+export {
   Photos,
 };
