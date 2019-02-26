@@ -104,7 +104,7 @@ module.exports = {
         isBlogPost: true,
     },
     {
-        "location": "Edinburg", 
+        "location": "Edinburg, Scotland", 
         "tagline": "Or just outside of it, really",
         "id": "edinburgh",
     },
