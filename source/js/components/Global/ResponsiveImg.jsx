@@ -6,6 +6,7 @@ const propTypes = {
   className: PropTypes.string,
   imgRootPath: PropTypes.string,
   imgPrefix: PropTypes.string,
+  fileExtension: PropTypes.string,
 };
 
 const defaultProps = {
@@ -13,19 +14,20 @@ const defaultProps = {
   className: "",
   imgRootPath: "",
   imgPrefix: "notFound",
+  fileExtension: "jpg"
 };
 
-export default function ResponsiveImg(props) {
+export default function ResponsiveImg({fileExtension, className, alt, imgRootPath, imgPrefix}) {
   return (
     <img
-      className={`lazyload blur-up ${props.className}`}
-      alt={props.alt}
+      className={`lazyload blur-up ${className}`}
+      alt={alt}
       data-sizes="auto"
-      src={`${props.imgRootPath}/${props.imgPrefix}--md.jpg`}
-      data-srcset={`${props.imgRootPath}/${props.imgPrefix}--sm.jpg 400w,
-                    ${props.imgRootPath}/${props.imgPrefix}--md.jpg  725w,
-                  ${props.imgRootPath}/${props.imgPrefix}--lg.jpg 1025w,
-                  ${props.imgRootPath}/${props.imgPrefix}.jpg 2050w`}
+      src={`${imgRootPath}/${imgPrefix}--md.${fileExtension}`}
+      data-srcset={`${imgRootPath}/${imgPrefix}--sm.${fileExtension} 400w,
+                    ${imgRootPath}/${imgPrefix}--md.${fileExtension}  725w,
+                  ${imgRootPath}/${imgPrefix}--lg.${fileExtension} 1025w,
+                  ${imgRootPath}/${imgPrefix}.${fileExtension} 2050w`}
     />
   );
 }

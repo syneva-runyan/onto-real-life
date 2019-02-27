@@ -6,13 +6,14 @@
 
 	&__block {
 		display: inline-block;
-		font-size: 22px;
-    	line-height: 18px;
+		font-size: 18px;
+    	line-height: 15px;
     	text-align: right;
 	}
 	&__text {
 		display: inline-block;
-		font-size: 46px;
+		line-height: 30px;
+		font-size: 38px;
 	}
 
 	@media screen and (max-width: $md-break) {

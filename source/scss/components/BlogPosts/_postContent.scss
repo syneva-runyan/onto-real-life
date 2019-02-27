@@ -1,4 +1,6 @@
 .postContent {
+    margin: 0 25px;
+
     ul {
         padding-left: 15px;
     }
@@ -89,7 +91,7 @@
     }
 
     // TODO cleanup
-    .alignleft, .alignright {
+    .align-left, .align-right {
         margin-top: 3px;
     }
 
@@ -101,6 +103,7 @@
 
     .align-center {
         text-align: center;
+        margin: auto;
         img {
             display: center;
         }
@@ -114,23 +117,16 @@
         float: left;
     }
 
-    .alignLeft {
-        float: left;
-        margin-right: 20px;
-    }
-
-    .alignright {
-        float : right;
-        margin-left: 20px;
-
-    }
-
     .margin--left {
         margin-left: 20px;
     }
 
     .margin--right {
         margin-right: 20px;
+    }
+
+    .margin--bottom {
+        margin-bottom: 20px;
     }
 
     .width--20 {
@@ -172,5 +168,9 @@
         @media screen and (max-width: $md-break) {
             width: 50%;   
         }
+    }
+
+    @media screen and (max-width: $md-break) {
+        margin: 0 0;  
     }
 }

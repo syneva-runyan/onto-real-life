@@ -24,17 +24,19 @@ export default function PostTitle(props) {
           backgroundImage: `url("${props.imgPath}/introImg.jpg")`,
         }}
       />
-      <h5 className="postTitle__date">
-        {props.datePublished}
-      </h5>
-      <h1 className="postTitle__title">
-        {props.title}
-      </h1>
-      {props.tagLine
-        ? <h3 className="postTitle__tagLine">
-            {props.tagLine}
-          </h3>
-        : null}
+      <div className="postTitle__text">
+        <h5 className="postTitle__date">
+          {props.datePublished}
+        </h5>
+        <h1 className="postTitle__title">
+          {props.title}
+        </h1>
+        {props.tagLine
+          ? <h3 className="postTitle__tagLine">
+              {props.tagLine}
+            </h3>
+          : null}
+      </div>
     </div>
   );
 }
