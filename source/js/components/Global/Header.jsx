@@ -24,7 +24,7 @@ export default class Header extends Component {
   }
 
   mobileScrollInit() {
-    window.addEventListener('scroll', debounce(this.checkForScroll))
+    window.addEventListener && window.addEventListener('scroll', debounce(this.checkForScroll))
   }
 
   checkForScroll = () => {

@@ -7,7 +7,7 @@ export default function Contact() {
       <h1>Contact Me</h1>
       <p>
         Start a conversation with me below or send an email to{" "}
-        <bold>syneva@gmail.com</bold>
+        <strong>syneva@gmail.com</strong>
       </p>
       <ContactMsg />
     </div>

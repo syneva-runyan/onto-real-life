@@ -34,7 +34,7 @@ export default function Content(props) {
         tasting) espresso machines. Gas station coffee tends to cost ~$4 nzd,
         which is cheaper than the usual $4.50 you pay for a cup everywhere else.
         If that seems expensive to you, it should.
-        <bold>Everything is so expensive here.</bold> When you find a pint
+        <strong>Everything is so expensive here.</strong> When you find a pint
         somewhere for $7.50 nzd, you stay at the pub. $7.50 is so much cheaper
         than the $10 you'll pay anywhere else.
       </p>
@@ -44,9 +44,9 @@ export default function Content(props) {
         of.
       </p>
       <p>
-        <bold>
+        <strong>
           <em>Auckland: </em>
-        </bold>
+        </strong>
         Clean, has more people than anywhere else in the country, but that's
         still only 1.38 million. Pretty low key, with considerably less culture
         than other places I've been, but has
@@ -86,9 +86,9 @@ export default function Content(props) {
       </figure>
       <br />
       <p>
-        <bold>
+        <strong>
           <em>Whangarei: </em>
-        </bold>
+        </strong>
         Cute town with a lovely town centre. Not much to do here, more of a base
         for several great hikes in the area (see
         <a target="blank" href="/posts/newZealandNorthHiking">
@@ -124,9 +124,9 @@ export default function Content(props) {
 
       <br />
       <p>
-        <bold>
+        <strong>
           <em>Napier: </em>
-        </bold>
+        </strong>
         See <a href="#wine">wine</a> below. Considers itself an Art Deco capital
         and does not disappoint. People were so overly friendly and happy here.
         We were given discounts or deals at the hostel, bike shop, and gas
@@ -146,9 +146,9 @@ export default function Content(props) {
       </figure>
       <br />
       <p>
-        <bold>
+        <strong>
           <em>Wellington: </em>
-        </bold>
+        </strong>
         Must have beard and skateboard to fit in. Capital of New Zealand. Tiny
         city, but considered large by New Zealand standards(496,000) with a
         breathtaking bay and sunsets. See <a href="#weta">Weta workshop</a>
@@ -191,10 +191,10 @@ export default function Content(props) {
         free or cheap.
       </p>
       <p>
-        <bold>
+        <strong>
           If that's not something you can enjoy, I can't be friends with you.
           Sorry not sorry.
-        </bold>
+        </strong>
       </p>
       <p>
         On the island of Waiheke outside of Auckland, I walked between
@@ -420,15 +420,15 @@ export default function Content(props) {
         <br /> I checked into a hotel the next morning.
       </p>
       <p>
-        <bold>
+        <strong>
           <em>Biggest pro of the stay: </em>
-        </bold>
+        </strong>
         Making pancakes and coffee on the backporch surrounded by bush
       </p>
       <p>
-        <bold>
+        <strong>
           <em>Biggest con: </em>
-        </bold>Non functioning toilet behind the coffee making station on the
+        </strong>Non functioning toilet behind the coffee making station on the
         backporch surrounded by bush
       </p>
       <figure>
@@ -692,7 +692,7 @@ export default function Content(props) {
         New Zealand experiences.
       </p>
       <p>
-        In summation of <bold>Hobbiton</bold>: Peter Jackson is crazy. It's very
+        In summation of <strong>Hobbiton</strong>: Peter Jackson is crazy. It's very
         unusual to build a set out of permanent material (like Hobbiton is), it
         costs a lot of money. The tree above Baggens has over 5,000 hand painted
         leaves, hand painted because they were made the wrong color. Locals were
