@@ -17,9 +17,10 @@ const defaultProps = {
   fileExtension: "jpg"
 };
 
-export default function ResponsiveImg({fileExtension, className, alt, imgRootPath, imgPrefix}) {
+export default function ResponsiveImg({fileExtension, className, alt, imgRootPath, imgPrefix, style={}}) {
   return (
     <img
+      style={style}
       className={`lazyload blur-up ${className}`}
       alt={alt}
       data-sizes="auto"

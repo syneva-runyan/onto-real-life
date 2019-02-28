@@ -16,6 +16,7 @@ export default function Content() {
       </p>
       <figure className="width--25 sm-width--100 margin--right align-left">
         <ResponsiveImg
+          style={{"filter": "none"}}
           alt="Moving back into my Parent's basement"
           imgRootPath={imgBasePath}
           imgPrefix="chaos"  
