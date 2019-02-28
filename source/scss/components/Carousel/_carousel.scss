@@ -6,6 +6,10 @@
     position: relative;
     overflow: hidden;
     width: 100%;
+    
+    @media screen and (max-width: $sm-break) { 
+     margin-top: 39px;
+    }
 
     &__slide {
         display: inline-block;
