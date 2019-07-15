@@ -1,20 +1,26 @@
 .menu {
+  display: flex;
+  height: 100%;
+  justify-content: center;
   font-family: $secondary-font;
 
+  &__search {
+    flex: 1;
+    position: relative;
+  }
   &__nav {
-    padding: 0;
-    position: absolute;
-    left: auto;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-left: 20px;
     transition: 0.25s;
   }
 
   &__item {
     display: inline-block;
     list-style-type: none;
+    position: relative;
     text-transform: uppercase;
+    text-align: right;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .selected {
@@ -24,13 +30,15 @@
   }
 
   a {
-    display: block;
 		font-family: $secondary-font;
-		margin-right: 10px;
-		padding: 5px 0;
+    margin-left: 10px;
+    padding: 5px 0;
 		text-decoration: none;
-		text-transform: uppercase;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translateY(-50%);
     transition: $ani-speed;
+    white-space: nowrap;
 
     &:hover {
       color: lighten($primary-color, 25%);
@@ -40,16 +48,18 @@
   @media screen and (max-width: $md-break) {
     &__nav {
       background-color: $white;
-      border-right: 0.5px solid $primary-color-light;
       left: 0;
       margin-bottom: 0;
       margin-top: 0;
+      margin-left: 0;
       position: absolute;
       right: auto;
-      top: 35px;
+      top: 5px;
       transform: translateX(-101%);
       width: auto;
       z-index: 1;
+      box-shadow: 0px 2px 2px 2px $light-gray;
+      margin-left: -2px;
      
       .menu__item, .menu__item a {
         height: auto;
@@ -57,15 +67,13 @@
     }
 
     &__item {
-      border-bottom: 0;
+      border-bottom: 0.5px solid $primary-color-light;
       display: block;
       height: 0;
       overflow: hidden;
-
-      a {
-        border-bottom: 0.5px solid $primary-color-light;
-      }
-
+      top: 0;
+      transform: none;
+      padding: 10px 0;
     }
 
     &--opened {
@@ -78,7 +86,7 @@
     a {
       width: 100%;
       margin: 0;
-      padding: 5px 10px 5px 20px;
+      padding: 5px 10px 5px 50px;
     }
 
     .selected {
@@ -92,9 +100,9 @@
     background: none;
     display: none;
     font-size: 14px;
-    height: 100%;
-    position: absolute;
+    position: fixed;
     left: 0;
+    top: 0;
     text-transform: uppercase;
     width: auto;
 

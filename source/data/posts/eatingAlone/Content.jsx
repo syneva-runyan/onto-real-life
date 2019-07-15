@@ -30,7 +30,7 @@ export default function Content(props) {
         question or judge their guests. Unfortunately, some people lack the
         ability to withhold judgement. These are the same people who honk at the
         old lady with a cane who just had double knee surgery that taking{" "}
-        <bold>WAY TOO LONG</bold> to cross the street.
+        <strong>WAY TOO LONG</strong> to cross the street.
       </p>
       <p>
         Last week in Toronto, I went to a rooftop restaurant, asked for a table
@@ -57,7 +57,7 @@ export default function Content(props) {
         alone at nice restaurants, telling myself I&#8217;m not interesting
         enough to watch or notice, but looking down at my shoes every once in
         awhile to check and make sure I didn&#8217;t screw up my left and
-        right&#8230; because <bold>SOMETHING</bold> feels slightly off.
+        right&#8230; because <strong>SOMETHING</strong> feels slightly off.
       </p>
     </div>
   );

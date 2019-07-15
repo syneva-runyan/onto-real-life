@@ -799,7 +799,7 @@ export default function Content(props) {
       <figure
         data-shortcode="caption"
         id="attachment_media-36"
-        className="wp-caption alignleft"
+        className="wp-caption align-left"
       >
         <img
           src="https://ontoreallife.files.wordpress.com/2017/04/moped.jpg?w=412"

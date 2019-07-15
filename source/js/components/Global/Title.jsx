@@ -1,11 +1,21 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { routeCodes } from "../../routes";
+
+
+const defaultProps = {
+  mobileShift: false
+};
+
+const propTypes = {
+  mobileShift: PropTypes.bool
+};
 
 export default class Title extends Component {
   render() {
     return (
-      <Link className="title" to={routeCodes.HOME}>
+      <Link className={`title ${this.props.mobileShift ? 'title--subtle' : ''}`} to={routeCodes.HOME}>
         <span className="title__block">
           <span>On</span>
           <br />
@@ -21,3 +31,6 @@ export default class Title extends Component {
     );
   }
 }
+
+Title.defaulProps = defaultProps;
+Title.propTypes = propTypes;

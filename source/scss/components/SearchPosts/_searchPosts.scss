@@ -1,7 +1,8 @@
 .searchPosts {
     position: absolute;
     right: 0;
-    top: -41px;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 2;
 
     &__input {
@@ -40,8 +41,9 @@
         background-size: 100% 100%;
         height: 17px;
         padding: 0;
-        position: relative;
-        top: 8px;
+        position: absolute;
+        right: 0;
+        top: 13px;
         width: 17px;
 
         &:hover {
@@ -68,7 +70,7 @@
     @media screen and (max-width: $md-break) {
         height: 40px;
         right: 0;
-        top: 0px;
+        top: -15px;
         z-index: 2;
 
         &__input {
@@ -94,7 +96,7 @@
             padding-left: 10px;
 
             .searchPosts__input {
-                width: 155px;
+                width: 315px;
             }
 
             .searchPosts__submit {
@@ -103,7 +105,7 @@
         } 
 
         .searchPosts__input:focus { 
-            width: 155px;
+            width: 315px;
         }
     }
 }

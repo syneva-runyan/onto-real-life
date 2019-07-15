@@ -3,21 +3,24 @@
 	display: inline-block;
 	margin-bottom: 0;
 	text-transform: uppercase;
+	transition: $ani-speed * 1.5 all;
 
 	&__block {
 		display: inline-block;
-		font-size: 22px;
-    	line-height: 18px;
+		font-size: 18px;
+    	line-height: 15px;
     	text-align: right;
 	}
 	&__text {
 		display: inline-block;
-		font-size: 46px;
+		line-height: 30px;
+		font-size: 38px;
 	}
 
 	@media screen and (max-width: $md-break) {
 		background-color: $white;
 		border-radius: 100%;
+		box-shadow: 0 1px 1px 0px $primary-color;
 		left: 50%;
 		padding: 11px 9px;
 		transform: translateX(-50%);
@@ -34,6 +37,17 @@
 		}
 		&__text {
 			font-size: 24px;
+		}
+
+		&--subtle {
+			background: none;
+			color: $white;
+			top: -18px;
+			box-shadow: none;
+
+			.title__text {
+				color: $white;
+			}
 		}
 	}
 }

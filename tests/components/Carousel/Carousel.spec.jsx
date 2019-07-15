@@ -31,12 +31,17 @@ describe("Post Content", () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  it("should increment activeSlideIndex appropriated with moveSlide", () => {
+  it("should increment activeSlideIndex appropriated with nextSlide", () => {
     component.instance().componentWillUnmount();
     component.instance().state.active = 1;
-    component.instance().moveSlide();
+    component.instance().nextSlide();
     expect(component.instance().state.active).toEqual(2);
-    component.instance().moveSlide();
+  });
+
+  it("should decrement activeSlideIndex appropriated with prevSlide", () => {
+    component.instance().componentWillUnmount();
+    component.instance().state.active = 1;
+    component.instance().prevSlide();
     expect(component.instance().state.active).toEqual(0);
   });
 
