@@ -1,10 +1,10 @@
 body {
-  background: $light-gray;
+  background: $white;
   overflow-x: hidden;
 }
 
 .App {
-  margin: 50px auto 0;
+  margin: 15px auto 0;
   max-width: 1078px;
   min-width: $min-width;
   width: calc(100% - 100px);
@@ -29,7 +29,7 @@ body {
     width: 100%;
 
     .Page {
-      padding: 0 20px 20px;
+      padding: 35px 20px 20px;
     }
   }
 }

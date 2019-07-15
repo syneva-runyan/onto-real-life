@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import { routeCodes } from "../../routes";
+import { SearchPosts } from "../../components/SearchPosts";
 
 export default class Menu extends Component {
   constructor() {
@@ -42,6 +43,9 @@ export default class Menu extends Component {
         <button className="menu__cta" onClick={this.boundMenuToggle}>
           Menu
         </button>
+        <div className="menu__search">
+          <SearchPosts />
+        </div>
         <nav className={menuClassNames}>
           <li className={`menu__item ${routeCodes.ABOUT}`}>
             <NavLink

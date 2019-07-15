@@ -1,519 +1,584 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1519607589390" clover="3.2.0">
-  <project timestamp="1519607589390" name="All files">
-    <metrics statements="371" coveredstatements="348" conditionals="125" coveredconditionals="117" methods="114" coveredmethods="103" elements="610" coveredelements="568" complexity="0" loc="371" ncloc="371" packages="16" files="31" classes="31">
-      <package name="components.AboutMe">
+<coverage generated="1551366912958" clover="3.2.0">
+  <project timestamp="1551366912958" name="All files">
+    <metrics statements="431" coveredstatements="301" conditionals="196" coveredconditionals="86" methods="134" coveredmethods="81" elements="761" coveredelements="468" complexity="0" loc="431" ncloc="431" packages="16" files="33" classes="33"/>
+    <package name="components.AboutMe">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="AboutMe.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/AboutMe/AboutMe.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <file name="AboutMe.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\AboutMe\AboutMe.jsx">
-          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="6" count="1" type="stmt"/>
-        </file>
-      </package>
-      <package name="components.BlogPosts">
-        <metrics statements="26" coveredstatements="26" conditionals="10" coveredconditionals="10" methods="7" coveredmethods="7"/>
-        <file name="PostContent.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\BlogPosts\PostContent.jsx">
-          <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-          <line num="18" count="12" type="stmt"/>
-          <line num="23" count="12" type="stmt"/>
-          <line num="30" count="2" type="stmt"/>
-          <line num="32" count="2" type="stmt"/>
-          <line num="38" count="2" type="stmt"/>
-          <line num="42" count="1" type="stmt"/>
-          <line num="47" count="3" type="stmt"/>
-          <line num="65" count="12" type="stmt"/>
-          <line num="66" count="12" type="stmt"/>
-        </file>
-        <file name="PostContextNav.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\BlogPosts\PostContextNav.jsx">
-          <metrics statements="7" coveredstatements="7" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
-          <line num="5" count="12" type="stmt"/>
-          <line num="10" count="12" type="stmt"/>
-          <line num="16" count="8" type="stmt"/>
-          <line num="17" count="4" type="stmt"/>
-          <line num="35" count="8" type="stmt"/>
-          <line num="59" count="12" type="stmt"/>
-          <line num="60" count="12" type="stmt"/>
-        </file>
-        <file name="PostPreviewer.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\BlogPosts\PostPreviewer.jsx">
-          <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-          <line num="5" count="13" type="stmt"/>
-          <line num="12" count="13" type="stmt"/>
-          <line num="21" count="3" type="stmt"/>
-          <line num="49" count="13" type="stmt"/>
-          <line num="50" count="13" type="stmt"/>
-        </file>
-        <file name="PostTitle.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\BlogPosts\PostTitle.jsx">
-          <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-          <line num="4" count="13" type="stmt"/>
-          <line num="11" count="13" type="stmt"/>
-          <line num="19" count="3" type="stmt"/>
-          <line num="42" count="13" type="stmt"/>
-          <line num="43" count="13" type="stmt"/>
-        </file>
-      </package>
-      <package name="components.Carousel">
-        <metrics statements="21" coveredstatements="21" conditionals="12" coveredconditionals="11" methods="6" coveredmethods="6"/>
-        <file name="Carousel.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Carousel\Carousel.jsx">
-          <metrics statements="21" coveredstatements="21" conditionals="12" coveredconditionals="11" methods="6" coveredmethods="6"/>
-          <line num="5" count="15" type="stmt"/>
-          <line num="11" count="15" type="stmt"/>
-          <line num="19" count="7" type="stmt"/>
-          <line num="20" count="7" type="stmt"/>
-          <line num="22" count="7" type="stmt"/>
-          <line num="26" count="7" type="stmt"/>
-          <line num="30" count="8" type="stmt"/>
-          <line num="34" count="2" type="stmt"/>
-          <line num="38" count="2" type="stmt"/>
-          <line num="39" count="2" type="stmt"/>
-          <line num="45" count="11" type="stmt"/>
-          <line num="48" count="33" type="stmt"/>
-          <line num="49" count="33" type="cond" truecount="2" falsecount="0"/>
-          <line num="50" count="11" type="stmt"/>
-          <line num="51" count="22" type="cond" truecount="2" falsecount="0"/>
-          <line num="57" count="11" type="stmt"/>
-          <line num="58" count="11" type="cond" truecount="1" falsecount="1"/>
-          <line num="64" count="11" type="stmt"/>
-          <line num="66" count="33" type="stmt"/>
-          <line num="77" count="15" type="stmt"/>
-          <line num="78" count="15" type="stmt"/>
-        </file>
-      </package>
-      <package name="components.Contact">
-        <metrics statements="31" coveredstatements="31" conditionals="9" coveredconditionals="9" methods="11" coveredmethods="10"/>
-        <file name="ContactMsg.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Contact\ContactMsg.jsx">
-          <metrics statements="31" coveredstatements="31" conditionals="9" coveredconditionals="9" methods="11" coveredmethods="10"/>
-          <line num="3" count="14" type="stmt"/>
-          <line num="4" count="5" type="stmt"/>
-          <line num="7" count="14" type="stmt"/>
-          <line num="11" count="7" type="stmt"/>
-          <line num="12" count="7" type="stmt"/>
-          <line num="18" count="7" type="stmt"/>
-          <line num="19" count="7" type="stmt"/>
-          <line num="20" count="7" type="stmt"/>
-          <line num="21" count="7" type="stmt"/>
-          <line num="25" count="1" type="stmt"/>
-          <line num="26" count="1" type="stmt"/>
-          <line num="27" count="1" type="stmt"/>
-          <line num="29" count="1" type="stmt"/>
-          <line num="33" count="11" type="cond" truecount="2" falsecount="0"/>
-          <line num="34" count="2" type="stmt"/>
-          <line num="40" count="9" type="cond" truecount="2" falsecount="0"/>
-          <line num="41" count="1" type="stmt"/>
-          <line num="48" count="8" type="stmt"/>
-          <line num="55" count="3" type="stmt"/>
-          <line num="56" count="3" type="stmt"/>
-          <line num="58" count="3" type="cond" truecount="2" falsecount="0"/>
-          <line num="65" count="1" type="stmt"/>
-          <line num="70" count="1" type="stmt"/>
-          <line num="71" count="1" type="stmt"/>
-          <line num="74" count="2" type="stmt"/>
-          <line num="81" count="2" type="stmt"/>
-          <line num="84" count="2" type="stmt"/>
-          <line num="94" count="3" type="cond" truecount="3" falsecount="0"/>
-          <line num="98" count="1" type="stmt"/>
-          <line num="108" count="11" type="stmt"/>
-          <line num="112" count="11" type="stmt"/>
-        </file>
-      </package>
-      <package name="components.Global">
-        <metrics statements="33" coveredstatements="33" conditionals="7" coveredconditionals="6" methods="12" coveredmethods="12"/>
-        <file name="Footer.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Footer.jsx">
-          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="5" count="1" type="stmt"/>
-        </file>
-        <file name="Header.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Header.jsx">
-          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="6" count="12" type="stmt"/>
-          <line num="10" count="12" type="stmt"/>
-          <line num="18" count="1" type="stmt"/>
-          <line num="31" count="12" type="stmt"/>
-          <line num="32" count="12" type="stmt"/>
-        </file>
-        <file name="Menu.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Menu.jsx">
-          <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
-          <line num="7" count="1" type="stmt"/>
-          <line num="8" count="1" type="stmt"/>
-          <line num="12" count="1" type="stmt"/>
-          <line num="16" count="2" type="stmt"/>
-          <line num="17" count="2" type="stmt"/>
-          <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
-          <line num="25" count="1" type="stmt"/>
-          <line num="26" count="1" type="stmt"/>
-          <line num="28" count="1" type="stmt"/>
-          <line num="32" count="3" type="stmt"/>
-          <line num="36" count="3" type="cond" truecount="2" falsecount="0"/>
-          <line num="40" count="3" type="stmt"/>
-        </file>
-        <file name="NotFound.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\NotFound.jsx">
-          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="4" count="1" type="stmt"/>
-        </file>
-        <file name="ResponsiveImg.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\ResponsiveImg.jsx">
-          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="4" count="13" type="stmt"/>
-          <line num="11" count="13" type="stmt"/>
-          <line num="19" count="1" type="stmt"/>
-          <line num="33" count="13" type="stmt"/>
-          <line num="34" count="13" type="stmt"/>
-        </file>
-        <file name="SocialShares.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\SocialShares.jsx">
-          <metrics statements="3" coveredstatements="3" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
-          <line num="4" count="1" type="cond" truecount="2" falsecount="1"/>
-          <line num="5" count="1" type="stmt"/>
-          <line num="6" count="1" type="stmt"/>
-        </file>
-        <file name="Title.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Title.jsx">
-          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="7" count="1" type="stmt"/>
-        </file>
-        <file name="Video.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Global\Video.jsx">
-          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="4" count="13" type="stmt"/>
-          <line num="9" count="13" type="stmt"/>
-          <line num="15" count="1" type="stmt"/>
-          <line num="18" count="13" type="stmt"/>
-          <line num="19" count="13" type="stmt"/>
-        </file>
-      </package>
-      <package name="components.InteractiveGlobe">
-        <metrics statements="58" coveredstatements="37" conditionals="12" coveredconditionals="9" methods="16" coveredmethods="10"/>
-        <file name="Globe.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\InteractiveGlobe\Globe.jsx">
-          <metrics statements="53" coveredstatements="32" conditionals="10" coveredconditionals="7" methods="14" coveredmethods="9"/>
-          <line num="10" count="15" type="stmt"/>
-          <line num="14" count="15" type="stmt"/>
-          <line num="20" count="2" type="stmt"/>
-          <line num="22" count="2" type="stmt"/>
-          <line num="23" count="2" type="stmt"/>
-          <line num="24" count="2" type="stmt"/>
-          <line num="26" count="2" type="stmt"/>
-          <line num="28" count="2" type="stmt"/>
-          <line num="33" count="3" type="stmt"/>
-          <line num="34" count="3" type="stmt"/>
-          <line num="36" count="3" type="cond" truecount="1" falsecount="1"/>
-          <line num="37" count="0" type="stmt"/>
-          <line num="42" count="0" type="stmt"/>
-          <line num="43" count="0" type="stmt"/>
-          <line num="44" count="0" type="stmt"/>
-          <line num="45" count="0" type="stmt"/>
-          <line num="46" count="0" type="stmt"/>
-          <line num="51" count="0" type="stmt"/>
-          <line num="56" count="0" type="stmt"/>
-          <line num="61" count="0" type="stmt"/>
-          <line num="62" count="0" type="stmt"/>
-          <line num="63" count="0" type="stmt"/>
-          <line num="64" count="0" type="stmt"/>
-          <line num="65" count="0" type="stmt"/>
-          <line num="66" count="0" type="stmt"/>
-          <line num="85" count="0" type="stmt"/>
-          <line num="86" count="0" type="stmt"/>
-          <line num="88" count="0" type="stmt"/>
-          <line num="90" count="0" type="stmt"/>
-          <line num="92" count="0" type="stmt"/>
-          <line num="94" count="0" type="stmt"/>
-          <line num="98" count="2" type="stmt"/>
-          <line num="99" count="2" type="cond" truecount="1" falsecount="1"/>
-          <line num="101" count="0" type="stmt"/>
-          <line num="103" count="2" type="stmt"/>
-          <line num="104" count="2" type="stmt"/>
-          <line num="108" count="2" type="stmt"/>
-          <line num="109" count="2" type="stmt"/>
-          <line num="114" count="2" type="stmt"/>
-          <line num="115" count="2" type="stmt"/>
-          <line num="119" count="2" type="stmt"/>
-          <line num="120" count="18" type="stmt"/>
-          <line num="124" count="18" type="stmt"/>
-          <line num="127" count="18" type="stmt"/>
-          <line num="128" count="18" type="stmt"/>
-          <line num="139" count="38" type="stmt"/>
-          <line num="140" count="2" type="stmt"/>
-          <line num="141" count="2" type="cond" truecount="4" falsecount="0"/>
-          <line num="142" count="1" type="stmt"/>
-          <line num="155" count="2" type="stmt"/>
-          <line num="162" count="2" type="stmt"/>
-          <line num="189" count="15" type="stmt"/>
-          <line num="190" count="15" type="stmt"/>
-        </file>
-        <file name="Marker.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\InteractiveGlobe\Marker.jsx">
-          <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="1"/>
-          <line num="4" count="15" type="stmt"/>
-          <line num="10" count="15" type="stmt"/>
-          <line num="18" count="3" type="stmt"/>
-          <line num="30" count="15" type="stmt"/>
-          <line num="31" count="15" type="stmt"/>
-        </file>
-      </package>
-      <package name="components.PhotoGallery">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-        <file name="PhotoGallery.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\PhotoGallery\PhotoGallery.jsx">
-          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-          <line num="5" count="14" type="stmt"/>
-          <line num="8" count="14" type="stmt"/>
-          <line num="14" count="2" type="stmt"/>
-          <line num="31" count="14" type="stmt"/>
-          <line num="32" count="14" type="stmt"/>
-        </file>
-      </package>
-      <package name="components.SearchPosts">
-        <metrics statements="37" coveredstatements="36" conditionals="29" coveredconditionals="27" methods="15" coveredmethods="13"/>
-        <file name="PredictiveSuggestions.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\SearchPosts\PredictiveSuggestions.jsx">
-          <metrics statements="13" coveredstatements="13" conditionals="8" coveredconditionals="7" methods="6" coveredmethods="5"/>
-          <line num="5" count="13" type="stmt"/>
-          <line num="12" count="13" type="stmt"/>
-          <line num="20" count="13" type="stmt"/>
-          <line num="21" count="1" type="stmt"/>
-          <line num="24" count="3" type="stmt"/>
-          <line num="47" count="13" type="stmt"/>
-          <line num="48" count="2" type="stmt"/>
-          <line num="55" count="13" type="stmt"/>
-          <line num="56" count="1" type="stmt"/>
-          <line num="63" count="3" type="cond" truecount="1" falsecount="1"/>
-          <line num="66" count="3" type="stmt"/>
-          <line num="76" count="13" type="stmt"/>
-          <line num="77" count="13" type="stmt"/>
-        </file>
-        <file name="SearchPosts.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\SearchPosts\SearchPosts.jsx">
-          <metrics statements="24" coveredstatements="23" conditionals="21" coveredconditionals="20" methods="9" coveredmethods="8"/>
-          <line num="5" count="13" type="stmt"/>
-          <line num="9" count="8" type="stmt"/>
-          <line num="10" count="8" type="stmt"/>
-          <line num="11" count="8" type="stmt"/>
-          <line num="18" count="8" type="stmt"/>
-          <line num="19" count="8" type="stmt"/>
-          <line num="20" count="8" type="stmt"/>
-          <line num="24" count="3" type="stmt"/>
-          <line num="25" count="3" type="stmt"/>
-          <line num="31" count="3" type="cond" truecount="2" falsecount="0"/>
-          <line num="32" count="1" type="stmt"/>
-          <line num="37" count="2" type="cond" truecount="2" falsecount="0"/>
-          <line num="38" count="1" type="stmt"/>
-          <line num="43" count="2" type="stmt"/>
-          <line num="47" count="2" type="cond" truecount="1" falsecount="1"/>
-          <line num="48" count="2" type="cond" truecount="2" falsecount="0"/>
-          <line num="49" count="1" type="stmt"/>
-          <line num="54" count="3" type="stmt"/>
-          <line num="60" count="1" type="stmt"/>
-          <line num="69" count="1" type="stmt"/>
-          <line num="71" count="1" type="stmt"/>
-          <line num="78" count="18" type="cond" truecount="4" falsecount="0"/>
-          <line num="82" count="18" type="stmt"/>
-          <line num="90" count="0" type="stmt"/>
-        </file>
-      </package>
-      <package name="components.Spinner">
-        <metrics statements="23" coveredstatements="23" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
-        <file name="Spinner.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\components\Spinner\Spinner.jsx">
-          <metrics statements="23" coveredstatements="23" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
-          <line num="4" count="14" type="stmt"/>
-          <line num="8" count="14" type="stmt"/>
-          <line num="17" count="14" type="stmt"/>
-          <line num="21" count="5" type="stmt"/>
-          <line num="22" count="5" type="cond" truecount="2" falsecount="0"/>
-          <line num="23" count="1" type="stmt"/>
-          <line num="26" count="4" type="stmt"/>
-          <line num="32" count="4" type="stmt"/>
-          <line num="38" count="1" type="stmt"/>
-          <line num="39" count="1" type="stmt"/>
-          <line num="40" count="1" type="stmt"/>
-          <line num="44" count="3" type="stmt"/>
-          <line num="48" count="1" type="stmt"/>
-          <line num="49" count="1" type="stmt"/>
-          <line num="51" count="1" type="stmt"/>
-          <line num="52" count="1" type="stmt"/>
-          <line num="53" count="1" type="stmt"/>
-          <line num="55" count="1" type="stmt"/>
-          <line num="59" count="12" type="stmt"/>
-          <line num="73" count="48" type="stmt"/>
-          <line num="84" count="4" type="stmt"/>
-          <line num="120" count="14" type="stmt"/>
-          <line num="121" count="14" type="stmt"/>
-        </file>
-      </package>
-      <package name="utils">
-        <metrics statements="84" coveredstatements="83" conditionals="32" coveredconditionals="31" methods="18" coveredmethods="17"/>
-        <file name="post-helper.js" path="C:\Users\Syneva\Development\onto-real-life\source\js\utils\post-helper.js">
-          <metrics statements="16" coveredstatements="15" conditionals="6" coveredconditionals="5" methods="5" coveredmethods="4"/>
-          <line num="2" count="13" type="stmt"/>
-          <line num="3" count="13" type="stmt"/>
-          <line num="6" count="13" type="cond" truecount="1" falsecount="1"/>
-          <line num="7" count="13" type="stmt"/>
-          <line num="9" count="0" type="stmt"/>
-          <line num="14" count="13" type="stmt"/>
-          <line num="15" count="13" type="stmt"/>
-          <line num="16" count="13" type="stmt"/>
-          <line num="21" count="2" type="stmt"/>
-          <line num="22" count="2" type="cond" truecount="4" falsecount="0"/>
-          <line num="23" count="1" type="stmt"/>
-          <line num="28" count="1" type="stmt"/>
-          <line num="29" count="1" type="stmt"/>
-          <line num="33" count="1" type="stmt"/>
-          <line num="38" count="1" type="stmt"/>
-          <line num="49" count="13" type="stmt"/>
-        </file>
-        <file name="search-posts.js" path="C:\Users\Syneva\Development\onto-real-life\source\js\utils\search-posts.js">
-          <metrics statements="68" coveredstatements="68" conditionals="26" coveredconditionals="26" methods="13" coveredmethods="13"/>
-          <line num="4" count="12" type="stmt"/>
-          <line num="9" count="12" type="stmt"/>
-          <line num="14" count="82" type="stmt"/>
-          <line num="15" count="82" type="stmt"/>
-          <line num="19" count="82" type="stmt"/>
-          <line num="25" count="12" type="stmt"/>
-          <line num="26" count="1742" type="stmt"/>
-          <line num="28" count="1742" type="cond" truecount="2" falsecount="0"/>
-          <line num="29" count="58" type="stmt"/>
-          <line num="33" count="1684" type="stmt"/>
-          <line num="34" count="1684" type="stmt"/>
-          <line num="35" count="1684" type="cond" truecount="2" falsecount="0"/>
-          <line num="37" count="1684" type="cond" truecount="2" falsecount="0"/>
-          <line num="38" count="2" type="stmt"/>
-          <line num="42" count="1682" type="stmt"/>
-          <line num="43" count="1682" type="cond" truecount="2" falsecount="0"/>
-          <line num="48" count="12" type="stmt"/>
-          <line num="49" count="332" type="stmt"/>
-          <line num="51" count="332" type="stmt"/>
-          <line num="52" count="1660" type="stmt"/>
-          <line num="54" count="1660" type="stmt"/>
-          <line num="57" count="79" type="stmt"/>
-          <line num="62" count="79" type="stmt"/>
-          <line num="66" count="332" type="stmt"/>
-          <line num="74" count="16" type="stmt"/>
-          <line num="76" count="16" type="stmt"/>
-          <line num="77" count="16" type="stmt"/>
-          <line num="79" count="16" type="cond" truecount="4" falsecount="0"/>
-          <line num="80" count="15" type="stmt"/>
-          <line num="81" count="174" type="stmt"/>
-          <line num="82" count="174" type="stmt"/>
-          <line num="83" count="174" type="cond" truecount="2" falsecount="0"/>
-          <line num="86" count="174" type="cond" truecount="2" falsecount="0"/>
-          <line num="87" count="174" type="stmt"/>
-          <line num="90" count="1" type="stmt"/>
-          <line num="95" count="16" type="stmt"/>
-          <line num="99" count="3" type="stmt"/>
-          <line num="100" count="3" type="cond" truecount="2" falsecount="0"/>
-          <line num="103" count="3" type="stmt"/>
-          <line num="104" count="3" type="stmt"/>
-          <line num="105" count="3" type="stmt"/>
-          <line num="114" count="18649" type="cond" truecount="2" falsecount="0"/>
-          <line num="115" count="4738" type="stmt"/>
-          <line num="117" count="13911" type="stmt"/>
-          <line num="118" count="13911" type="stmt"/>
-          <line num="119" count="13911" type="stmt"/>
-          <line num="125" count="2613" type="stmt"/>
-          <line num="126" count="2613" type="stmt"/>
-          <line num="131" count="18649" type="stmt"/>
-          <line num="132" count="18649" type="stmt"/>
-          <line num="135" count="18649" type="stmt"/>
-          <line num="140" count="18649" type="cond" truecount="2" falsecount="0"/>
-          <line num="142" count="4738" type="stmt"/>
-          <line num="146" count="4738" type="stmt"/>
-          <line num="148" count="13911" type="stmt"/>
-          <line num="152" count="2613" type="stmt"/>
-          <line num="160" count="4738" type="stmt"/>
-          <line num="161" count="4738" type="stmt"/>
-          <line num="162" count="7718" type="cond" truecount="2" falsecount="0"/>
-          <line num="163" count="1341" type="stmt"/>
-          <line num="165" count="1341" type="stmt"/>
-          <line num="170" count="7718" type="stmt"/>
-          <line num="173" count="4738" type="cond" truecount="2" falsecount="0"/>
-          <line num="174" count="4738" type="stmt"/>
-          <line num="178" count="174" type="stmt"/>
-          <line num="179" count="2612" type="stmt"/>
-          <line num="184" count="12" type="stmt"/>
-          <line num="185" count="12" type="stmt"/>
-        </file>
-      </package>
-      <package name="views.About">
+        <line num="6" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.BlogPosts">
+      <metrics statements="26" coveredstatements="26" conditionals="10" coveredconditionals="10" methods="7" coveredmethods="7"/>
+      <file name="PostContent.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/BlogPosts/PostContent.jsx">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="18" count="7" type="stmt"/>
+        <line num="23" count="7" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="47" count="3" type="stmt"/>
+        <line num="65" count="7" type="stmt"/>
+        <line num="66" count="7" type="stmt"/>
+      </file>
+      <file name="PostContextNav.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/BlogPosts/PostContextNav.jsx">
+        <metrics statements="7" coveredstatements="7" conditionals="6" coveredconditionals="6" methods="2" coveredmethods="2"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="35" count="8" type="stmt"/>
+        <line num="59" count="7" type="stmt"/>
+        <line num="60" count="7" type="stmt"/>
+      </file>
+      <file name="PostPreviewer.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/BlogPosts/PostPreviewer.jsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="49" count="8" type="stmt"/>
+        <line num="50" count="8" type="stmt"/>
+      </file>
+      <file name="PostTitle.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/BlogPosts/PostTitle.jsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="11" count="8" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="44" count="8" type="stmt"/>
+        <line num="45" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Carousel">
+      <metrics statements="26" coveredstatements="23" conditionals="33" coveredconditionals="23" methods="7" coveredmethods="7"/>
+      <file name="Carousel.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/Carousel/Carousel.jsx">
+        <metrics statements="26" coveredstatements="23" conditionals="33" coveredconditionals="23" methods="7" coveredmethods="7"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="23" count="8" type="stmt"/>
+        <line num="24" count="8" type="stmt"/>
+        <line num="26" count="8" type="stmt"/>
+        <line num="32" count="9" type="cond" truecount="1" falsecount="1"/>
+        <line num="36" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="40" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="41" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="60" count="11" type="stmt"/>
+        <line num="65" count="33" type="stmt"/>
+        <line num="66" count="33" type="cond" truecount="2" falsecount="0"/>
+        <line num="67" count="11" type="stmt"/>
+        <line num="68" count="22" type="cond" truecount="2" falsecount="0"/>
+        <line num="74" count="11" type="stmt"/>
+        <line num="75" count="11" type="cond" truecount="1" falsecount="1"/>
+        <line num="81" count="11" type="stmt"/>
+        <line num="83" count="33" type="stmt"/>
+        <line num="96" count="8" type="stmt"/>
+        <line num="97" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Contact">
+      <metrics statements="31" coveredstatements="26" conditionals="9" coveredconditionals="7" methods="11" coveredmethods="8"/>
+      <file name="ContactMsg.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/Contact/ContactMsg.jsx">
+        <metrics statements="31" coveredstatements="26" conditionals="9" coveredconditionals="7" methods="11" coveredmethods="8"/>
+        <line num="3" count="9" type="stmt"/>
+        <line num="4" count="5" type="stmt"/>
+        <line num="7" count="9" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="18" count="7" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="21" count="7" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="33" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="40" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="48" count="8" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="58" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="84" count="1" type="stmt"/>
+        <line num="94" count="3" type="cond" truecount="3" falsecount="0"/>
+        <line num="98" count="0" type="stmt"/>
+        <line num="108" count="9" type="stmt"/>
+        <line num="112" count="9" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Global">
+      <metrics statements="38" coveredstatements="37" conditionals="8" coveredconditionals="7" methods="14" coveredmethods="12"/>
+      <file name="Footer.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/Global/Footer.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <file name="index.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\views\About\index.jsx">
-          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="7" count="1" type="stmt"/>
-        </file>
-      </package>
-      <package name="views.App">
+        <line num="5" count="1" type="stmt"/>
+      </file>
+      <file name="Header.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/Global/Header.jsx">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <file name="App.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\views\App\App.jsx">
-          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="8" count="12" type="stmt"/>
-          <line num="12" count="12" type="stmt"/>
-          <line num="24" count="2" type="stmt"/>
-          <line num="37" count="12" type="stmt"/>
-          <line num="38" count="12" type="stmt"/>
-        </file>
-      </package>
-      <package name="views.BlogPosts">
-        <metrics statements="39" coveredstatements="39" conditionals="10" coveredconditionals="10" methods="12" coveredmethods="12"/>
-        <file name="BlogPosts.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\views\BlogPosts\BlogPosts.jsx">
-          <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
-          <line num="9" count="12" type="stmt"/>
-          <line num="11" count="12" type="stmt"/>
-          <line num="15" count="12" type="stmt"/>
-          <line num="23" count="3" type="stmt"/>
-          <line num="25" count="3" type="stmt"/>
-          <line num="26" count="3" type="stmt"/>
-          <line num="29" count="4" type="stmt"/>
-          <line num="30" count="1" type="stmt"/>
-          <line num="34" count="4" type="stmt"/>
-          <line num="35" count="1" type="stmt"/>
-          <line num="39" count="3" type="stmt"/>
-          <line num="48" count="12" type="stmt"/>
-          <line num="49" count="12" type="stmt"/>
-        </file>
-        <file name="Post.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\views\BlogPosts\Post.jsx">
-          <metrics statements="17" coveredstatements="17" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="3"/>
-          <line num="9" count="12" type="stmt"/>
-          <line num="15" count="12" type="stmt"/>
-          <line num="27" count="3" type="stmt"/>
-          <line num="32" count="3" type="stmt"/>
-          <line num="33" count="7" type="cond" truecount="2" falsecount="0"/>
-          <line num="34" count="3" type="stmt"/>
-          <line num="35" count="3" type="stmt"/>
-          <line num="37" count="3" type="stmt"/>
-          <line num="42" count="3" type="stmt"/>
-          <line num="46" count="5" type="stmt"/>
-          <line num="47" count="5" type="stmt"/>
-          <line num="49" count="5" type="cond" truecount="2" falsecount="0"/>
-          <line num="50" count="4" type="stmt"/>
-          <line num="52" count="1" type="stmt"/>
-          <line num="54" count="1" type="stmt"/>
-          <line num="70" count="12" type="stmt"/>
-          <line num="71" count="12" type="stmt"/>
-        </file>
-        <file name="PostCollection.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\views\BlogPosts\PostCollection.jsx">
-          <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-          <line num="6" count="12" type="stmt"/>
-          <line num="11" count="12" type="stmt"/>
-          <line num="18" count="2" type="stmt"/>
-          <line num="19" count="4" type="stmt"/>
-          <line num="20" count="4" type="stmt"/>
-          <line num="32" count="2" type="stmt"/>
-          <line num="36" count="2" type="stmt"/>
-          <line num="47" count="12" type="stmt"/>
-          <line num="48" count="12" type="stmt"/>
-        </file>
-      </package>
-      <package name="views.Contact">
+        <line num="6" count="7" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="35" count="7" type="stmt"/>
+        <line num="36" count="7" type="stmt"/>
+      </file>
+      <file name="Menu.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/Global/Menu.jsx">
+        <metrics statements="12" coveredstatements="12" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="5"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="24" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="37" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="41" count="3" type="stmt"/>
+      </file>
+      <file name="Modal.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/Global/Modal.jsx">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="31" count="7" type="stmt"/>
+        <line num="32" count="7" type="stmt"/>
+      </file>
+      <file name="NotFound.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/Global/NotFound.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <file name="Contact.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\views\Contact\Contact.jsx">
-          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="5" count="1" type="stmt"/>
-        </file>
-      </package>
-      <package name="views.NotFound">
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="ResponsiveImg.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/Global/ResponsiveImg.jsx">
+        <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="36" count="8" type="stmt"/>
+        <line num="37" count="8" type="stmt"/>
+      </file>
+      <file name="SocialShares.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/Global/SocialShares.jsx">
+        <metrics statements="3" coveredstatements="3" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="cond" truecount="2" falsecount="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+      <file name="Title.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/Global/Title.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <file name="index.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\views\NotFound\index.jsx">
-          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-          <line num="5" count="1" type="stmt"/>
-        </file>
-      </package>
-      <package name="views.Photos">
-        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-        <file name="Photos.jsx" path="C:\Users\Syneva\Development\onto-real-life\source\js\views\Photos\Photos.jsx">
-          <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-          <line num="7" count="2" type="stmt"/>
-          <line num="8" count="2" type="stmt"/>
-          <line num="11" count="2" type="stmt"/>
-          <line num="14" count="1" type="stmt"/>
-          <line num="19" count="3" type="stmt"/>
-        </file>
-      </package>
-    </metrics>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+      <file name="Video.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/Global/Video.jsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="8" type="stmt"/>
+        <line num="9" count="8" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.InteractiveGlobe">
+      <metrics statements="108" coveredstatements="45" conditionals="56" coveredconditionals="10" methods="29" coveredmethods="12"/>
+      <file name="Globe.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/InteractiveGlobe/Globe.jsx">
+        <metrics statements="98" coveredstatements="36" conditionals="54" coveredconditionals="9" methods="24" coveredmethods="11"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="14" count="9" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="36" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="40" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="50" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="59" count="3" type="cond" truecount="0" falsecount="4"/>
+        <line num="63" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="65" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="72" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="77" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="79" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="89" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="97" count="0" type="stmt"/>
+        <line num="98" count="0" type="stmt"/>
+        <line num="99" count="0" type="stmt"/>
+        <line num="100" count="0" type="stmt"/>
+        <line num="105" count="0" type="stmt"/>
+        <line num="110" count="0" type="stmt"/>
+        <line num="115" count="0" type="stmt"/>
+        <line num="116" count="0" type="stmt"/>
+        <line num="117" count="0" type="stmt"/>
+        <line num="118" count="0" type="stmt"/>
+        <line num="119" count="0" type="stmt"/>
+        <line num="120" count="0" type="stmt"/>
+        <line num="121" count="0" type="stmt"/>
+        <line num="122" count="0" type="stmt"/>
+        <line num="141" count="0" type="stmt"/>
+        <line num="142" count="0" type="stmt"/>
+        <line num="143" count="0" type="stmt"/>
+        <line num="144" count="0" type="stmt"/>
+        <line num="146" count="0" type="stmt"/>
+        <line num="148" count="0" type="stmt"/>
+        <line num="150" count="0" type="stmt"/>
+        <line num="152" count="0" type="stmt"/>
+        <line num="156" count="2" type="stmt"/>
+        <line num="157" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="159" count="0" type="stmt"/>
+        <line num="161" count="2" type="stmt"/>
+        <line num="162" count="2" type="stmt"/>
+        <line num="166" count="2" type="stmt"/>
+        <line num="167" count="2" type="stmt"/>
+        <line num="172" count="2" type="stmt"/>
+        <line num="173" count="2" type="stmt"/>
+        <line num="177" count="2" type="stmt"/>
+        <line num="178" count="70" type="cond" truecount="4" falsecount="1"/>
+        <line num="179" count="70" type="stmt"/>
+        <line num="183" count="70" type="stmt"/>
+        <line num="188" count="70" type="stmt"/>
+        <line num="192" count="70" type="stmt"/>
+        <line num="204" count="0" type="stmt"/>
+        <line num="205" count="0" type="stmt"/>
+        <line num="210" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="211" count="0" type="stmt"/>
+        <line num="212" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="213" count="0" type="stmt"/>
+        <line num="218" count="141" type="stmt"/>
+        <line num="220" count="1" type="cond" truecount="1" falsecount="3"/>
+        <line num="221" count="0" type="stmt"/>
+        <line num="224" count="0" type="cond" truecount="0" falsecount="5"/>
+        <line num="227" count="0" type="stmt"/>
+        <line num="228" count="0" type="stmt"/>
+        <line num="231" count="0" type="stmt"/>
+        <line num="232" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="233" count="0" type="stmt"/>
+        <line num="236" count="0" type="stmt"/>
+        <line num="244" count="0" type="stmt"/>
+        <line num="246" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="247" count="0" type="stmt"/>
+        <line num="262" count="2" type="stmt"/>
+        <line num="269" count="2" type="stmt"/>
+        <line num="296" count="9" type="stmt"/>
+        <line num="297" count="9" type="stmt"/>
+      </file>
+      <file name="GlobeSettings.js" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/InteractiveGlobe/GlobeSettings.js">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="4" count="9" type="stmt"/>
+        <line num="7" count="9" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="22" count="9" type="stmt"/>
+        <line num="23" count="9" type="stmt"/>
+      </file>
+      <file name="Marker.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/InteractiveGlobe/Marker.jsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="1"/>
+        <line num="4" count="9" type="stmt"/>
+        <line num="11" count="9" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="33" count="9" type="stmt"/>
+        <line num="34" count="9" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.PhotoGallery">
+      <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+      <file name="PhotoGallery.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/PhotoGallery/PhotoGallery.jsx">
+        <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="6" count="7" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="28" count="7" type="stmt"/>
+        <line num="29" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.SearchPosts">
+      <metrics statements="37" coveredstatements="8" conditionals="29" coveredconditionals="0" methods="15" coveredmethods="0"/>
+      <file name="PredictiveSuggestions.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/SearchPosts/PredictiveSuggestions.jsx">
+        <metrics statements="13" coveredstatements="7" conditionals="8" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="47" count="7" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="55" count="7" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="63" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="76" count="7" type="stmt"/>
+        <line num="77" count="7" type="stmt"/>
+      </file>
+      <file name="SearchPosts.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/SearchPosts/SearchPosts.jsx">
+        <metrics statements="24" coveredstatements="1" conditionals="21" coveredconditionals="0" methods="9" coveredmethods="0"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="31" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="37" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="47" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="48" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="78" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.Spinner">
+      <metrics statements="23" coveredstatements="23" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
+      <file name="Spinner.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/components/Spinner/Spinner.jsx">
+        <metrics statements="23" coveredstatements="23" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
+        <line num="4" count="9" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
+        <line num="17" count="9" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="22" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="44" count="3" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="59" count="12" type="stmt"/>
+        <line num="73" count="48" type="stmt"/>
+        <line num="84" count="4" type="stmt"/>
+        <line num="120" count="9" type="stmt"/>
+        <line num="121" count="9" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="83" coveredstatements="75" conditionals="33" coveredconditionals="27" methods="18" coveredmethods="15"/>
+      <file name="post-helper.js" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/utils/post-helper.js">
+        <metrics statements="15" coveredstatements="14" conditionals="6" coveredconditionals="5" methods="5" coveredmethods="4"/>
+        <line num="2" count="8" type="stmt"/>
+        <line num="3" count="8" type="stmt"/>
+        <line num="6" count="8" type="cond" truecount="1" falsecount="1"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
+        <line num="15" count="8" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+      </file>
+      <file name="search-posts.js" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/utils/search-posts.js">
+        <metrics statements="68" coveredstatements="61" conditionals="27" coveredconditionals="22" methods="13" coveredmethods="11"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="14" count="48" type="stmt"/>
+        <line num="15" count="48" type="stmt"/>
+        <line num="19" count="48" type="stmt"/>
+        <line num="25" count="7" type="stmt"/>
+        <line num="26" count="1093" type="stmt"/>
+        <line num="28" count="1093" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="36" type="stmt"/>
+        <line num="33" count="1057" type="stmt"/>
+        <line num="34" count="1057" type="stmt"/>
+        <line num="35" count="1057" type="cond" truecount="1" falsecount="1"/>
+        <line num="37" count="1057" type="cond" truecount="1" falsecount="1"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="42" count="1057" type="stmt"/>
+        <line num="43" count="1057" type="cond" truecount="2" falsecount="0"/>
+        <line num="48" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="49" count="209" type="stmt"/>
+        <line num="51" count="209" type="stmt"/>
+        <line num="52" count="1045" type="stmt"/>
+        <line num="54" count="1045" type="stmt"/>
+        <line num="57" count="48" type="stmt"/>
+        <line num="62" count="48" type="stmt"/>
+        <line num="66" count="209" type="stmt"/>
+        <line num="74" count="7" type="stmt"/>
+        <line num="76" count="7" type="stmt"/>
+        <line num="77" count="7" type="stmt"/>
+        <line num="79" count="7" type="cond" truecount="3" falsecount="1"/>
+        <line num="80" count="7" type="stmt"/>
+        <line num="81" count="111" type="stmt"/>
+        <line num="82" count="111" type="stmt"/>
+        <line num="83" count="111" type="cond" truecount="2" falsecount="0"/>
+        <line num="86" count="111" type="cond" truecount="2" falsecount="0"/>
+        <line num="87" count="111" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
+        <line num="95" count="7" type="stmt"/>
+        <line num="99" count="0" type="stmt"/>
+        <line num="100" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="103" count="0" type="stmt"/>
+        <line num="104" count="0" type="stmt"/>
+        <line num="105" count="0" type="stmt"/>
+        <line num="114" count="11564" type="cond" truecount="2" falsecount="0"/>
+        <line num="115" count="3001" type="stmt"/>
+        <line num="117" count="8563" type="stmt"/>
+        <line num="118" count="8563" type="stmt"/>
+        <line num="119" count="8563" type="stmt"/>
+        <line num="125" count="1608" type="stmt"/>
+        <line num="126" count="1608" type="stmt"/>
+        <line num="127" count="1608" type="stmt"/>
+        <line num="131" count="11564" type="stmt"/>
+        <line num="132" count="11564" type="stmt"/>
+        <line num="135" count="11564" type="stmt"/>
+        <line num="140" count="11564" type="cond" truecount="2" falsecount="0"/>
+        <line num="142" count="3001" type="stmt"/>
+        <line num="146" count="3001" type="stmt"/>
+        <line num="148" count="8563" type="stmt"/>
+        <line num="152" count="1608" type="stmt"/>
+        <line num="160" count="3001" type="stmt"/>
+        <line num="161" count="3001" type="stmt"/>
+        <line num="162" count="5245" type="cond" truecount="2" falsecount="0"/>
+        <line num="163" count="822" type="stmt"/>
+        <line num="165" count="822" type="stmt"/>
+        <line num="170" count="5245" type="stmt"/>
+        <line num="173" count="3001" type="cond" truecount="2" falsecount="0"/>
+        <line num="174" count="3001" type="stmt"/>
+        <line num="178" count="111" type="stmt"/>
+        <line num="179" count="1608" type="stmt"/>
+        <line num="184" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="views.About">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/views/About/index.jsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="views.App">
+      <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="App.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/views/App/App.jsx">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="7" count="7" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="35" count="7" type="stmt"/>
+        <line num="36" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="views.BlogPosts">
+      <metrics statements="39" coveredstatements="26" conditionals="10" coveredconditionals="0" methods="12" coveredmethods="9"/>
+      <file name="BlogPosts.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/views/BlogPosts/BlogPosts.jsx">
+        <metrics statements="13" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="29" count="4" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="34" count="4" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="48" count="7" type="stmt"/>
+        <line num="49" count="7" type="stmt"/>
+      </file>
+      <file name="Post.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/views/BlogPosts/Post.jsx">
+        <metrics statements="17" coveredstatements="4" conditionals="10" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="49" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="70" count="7" type="stmt"/>
+        <line num="71" count="7" type="stmt"/>
+      </file>
+      <file name="PostCollection.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/views/BlogPosts/PostCollection.jsx">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="6" count="7" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="47" count="7" type="stmt"/>
+        <line num="48" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="views.Contact">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Contact.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/views/Contact/Contact.jsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="views.NotFound">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/views/NotFound/index.jsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="views.Photos">
+      <metrics statements="5" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="Photos.jsx" path="/Users/syneva.j.runyan/Development/Learning/onto-real-life/source/js/views/Photos/Photos.jsx">
+        <metrics statements="5" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

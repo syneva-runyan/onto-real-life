@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import { SearchPosts } from "../../components/SearchPosts";
 import { Header, Footer } from "../../components/Global";
 import Routes from "../../routes";
 
@@ -23,7 +22,6 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchPosts />
         <Header />
         <div className="Page">
           <Routes />

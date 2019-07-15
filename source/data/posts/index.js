@@ -1,3 +1,4 @@
+export { default as backToTheGrind } from "./backToTheGrind/config.js";
 export { default as backpacking } from "./backpacking/config.js";
 export { default as barcelona} from './barcelona/config.js';
 export { default as cambodia } from "./cambodia/config.js";

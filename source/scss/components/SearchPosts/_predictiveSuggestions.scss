@@ -16,17 +16,20 @@
         border-left: 0.5px solid $text-color;
         border-right: 0.5px solid $text-color;
         background-color: $white;
+        display: inline-block;
         list-style: none;
         margin: 0;
         padding-left: 0;
         position: relative;
-        width: 100%;
+        width: auto;
         z-index: 2;
     }
 
     &__listItem {
         border-bottom: 0.5px solid $text-color;
+        display: inline-block;
         transition: $ani-speed;
+        width: 100%;
         &:hover, &:focus {
             background-color: rgba($primary-color-light, 0.85);
             a {
@@ -42,6 +45,8 @@
         line-height: 6.1px;
         padding: 5px 5px 5px 10px;
         width: 100%;
+        position: relative;
+        transform: none !important;
     }
 
     &__title {
