@@ -1,5 +1,7 @@
 .postContent {
+    display: inline-block;
     margin: 0 25px;
+    font-size: 18px;
 
     ul {
         padding-left: 15px;
@@ -113,7 +115,7 @@
         float: right;
     }
 
-    .align-left {
+    .align-left, .align--left {
         float: left;
     }
 

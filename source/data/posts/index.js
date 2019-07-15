@@ -1,6 +1,6 @@
+export { default as scotland } from "./scotland/config.js";
 export { default as backToTheGrind } from "./backToTheGrind/config.js";
 export { default as backpacking } from "./backpacking/config.js";
-export { default as barcelona} from './barcelona/config.js';
 export { default as cambodia } from "./cambodia/config.js";
 export { default as taiwan } from "./taiwan/config.js";
 export { default as australiaDarwinToPerthExperience } from "./australiaDarwinToPerthExperience/config.js";
@@ -14,5 +14,6 @@ export { default as newZealandNorthHiking } from "./newZealandNorthHiking/config
 export { default as newZealandNorthOverview } from "./newZealandNorthOverview/config.js";
 export { default as morocco } from "./morocco/config.js";
 export { default as malta } from "./malta/config.js";
+export { default as barcelona} from './barcelona/config.js';
 export { default as eatingAlone } from "./eatingAlone/config.js";
 export { default as seeTheWorld } from "./seeTheWorld/config.js";
