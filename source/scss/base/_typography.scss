@@ -1,5 +1,5 @@
-$primary-font: verlag-light;
-$primary-font-bold: verlag-book;
+$primary-font: open_sans;
+$primary-font-bold: open_sansbold;
 $secondary-font: alegreyaSans-light;
 $secondary-font-bold: alegreyaSans-regular;
 $title-font: blackjack;
@@ -15,7 +15,12 @@ strong {
 }
 
 p, em, strong {
-	line-height: 1.4;
+    line-height: 1.6;
+    font-size: 16px;
+    @media screen and (max-width: $md-break) { 
+        font-size: 18px;
+        line-height: 1.8;
+      }
 }
 
 ul, em, strong {
@@ -50,7 +55,7 @@ blockquote {
         margin-right: 0;
 		margin-left: 0;
         font-family: $secondary-font-bold;
-        font-size: 17px;
+        font-size: 19px;
         padding: 25px 25px 25px 49px;
         position: relative;
 		
@@ -67,4 +72,9 @@ blockquote {
             font-family: serif;
             width: 30px;
         }
+
+        @media screen and (max-width: $md-break) { 
+            font-size: 26px;
+            line-height: 2;
+          }
 }
