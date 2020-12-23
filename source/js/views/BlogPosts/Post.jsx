@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Suspense } from "react";
 import PropTypes from "prop-types";
 import {
   PostTitle,
@@ -23,6 +23,16 @@ const defaultProps = {
 };
 
 export default class Post extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  componentDidMount() {
+    const postId = this.props.match.params.postId;
+    const post = this.props.postCatalog.get(postId);
+    post && this.setPostContent(post);
+  }
   getPostContext(collection, postId) {
     const postContext = {
       next: null,
@@ -42,15 +52,19 @@ export default class Post extends Component {
     return postContext;
   }
 
+  async setPostContent(postInfo) {
+    const postContent = await postInfo.component();
+    this.setState({ postContent });
+  }
+
   render() {
     const postId = this.props.match.params.postId;
-    const post = this.props.postCatalog[postId];
+    const post = this.props.postCatalog.get(postId);
 
     if (!post) {
       return <p>Post Not Found</p>;
     }
     const postContext = this.getPostContext(this.props.postCatalog, postId);
-
     return (
       <div>
         <PostTitle
@@ -59,7 +73,7 @@ export default class Post extends Component {
           tagLine={post.tagLine}
           imgPath={`${this.props.assetBase}/${postId}`}
         />
-        <PostContent postId={postId} component={post.component} />
+        <PostContent postId={postId} component={this.state.postContent} />
         <hr />
         <PostContextNav {...postContext} />
       </div>

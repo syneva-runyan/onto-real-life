@@ -1,6 +1,11 @@
 .postContent {
     margin: 0 25px;
 
+    &__sectionTitle {
+        color: #a2a2a2;
+        text-transform: uppercase;
+    }
+
     ul {
         padding-left: 15px;
     }
@@ -27,7 +32,7 @@
         // blockquote specific
         margin-right: 0;
         font-family: $secondary-font-bold;
-        font-size: 17px;
+        font-size: 18px;
         overflow: auto;
         overflow-x: hidden;
         padding: 25px 25px 25px 49px;
@@ -50,7 +55,7 @@
         }
 
         &:before {
-            background: url("/assets/img/quotes.png");
+            background: url("../assets/img/quotes.png");
             background-size: 100% auto;
             content: ' ';
             color: $secondary-color;

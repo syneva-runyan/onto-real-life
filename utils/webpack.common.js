@@ -16,13 +16,10 @@ module.exports = {
         NODE_ENV: JSON.stringify(nodeEnv),
       },
     }),
-    new webpack.NamedModulesPlugin(),
     new webpack.LoaderOptionsPlugin({
       options: {
         postcss: [
-          autoprefixer({
-            browsers: ["last 3 version", "ie >= 10"],
-          }),
+          autoprefixer(),
         ],
         context: sourcePath,
       },
@@ -31,12 +28,14 @@ module.exports = {
       $: "jquery",
       jQuery: "jquery",
     }),
-    new CopyWebpackPlugin([
+    new CopyWebpackPlugin({
+      patterns: [
       {
         from: "../assets/scripts/sendEmail.php",
         to: "scripts/sendEmail.php",
       },
-    ]),
+      ]
+    }),
   ],
   rules: [
     {

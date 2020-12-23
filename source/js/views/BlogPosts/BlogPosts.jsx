@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import PropTypes from "prop-types";
-import * as postCatalog from "../../../data/posts";
+import { postCatalog } from "../../../data/posts";
 import Post from "./Post";
 import PostCollection from "./PostCollection";
 import { routeCodes } from "../../routes";

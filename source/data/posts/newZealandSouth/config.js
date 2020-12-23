@@ -1,5 +1,3 @@
-import Content from "./Content.jsx";
-
 export default {
   id: "newZealandSouth",
   tags: [
@@ -19,5 +17,5 @@ export default {
   title: "New Zealand - South Island",
   datePublished: "2 July, ,2017",
   tagLine: "Highlights",
-  component: Content,
+  component: async ()=> { const content = await import("./Content.jsx"); return content.default },
 };

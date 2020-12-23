@@ -1,5 +1,3 @@
-import Content from "./Content.jsx";
-
 export default {
   id: "malta",
   tags: [
@@ -28,5 +26,5 @@ export default {
   title: "Malta & Gozo",
   tagLine: "Just Roll With It",
   datePublished: "8 April, 2017",
-  component: Content,
+  component: async ()=> { const content = await import("./Content.jsx"); return content.default },
 };

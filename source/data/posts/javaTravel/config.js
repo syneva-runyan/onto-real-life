@@ -1,5 +1,3 @@
-import Content from "./Content.jsx";
-
 export default {
   id: "javaTravel",
   tags: [
@@ -27,5 +25,5 @@ export default {
   title: "Java Travel",
   tagLine: "How tos of a Java Visit",
   datePublished: "2 August, 2017",
-  component: Content,
+  component: async ()=> { const content = await import("./Content.jsx"); return content.default },
 };
