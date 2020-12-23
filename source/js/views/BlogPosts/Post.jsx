@@ -31,7 +31,6 @@ export default class Post extends Component {
   componentDidMount() {
     const postId = this.props.match.params.postId;
     const post = this.props.postCatalog.get(postId);
-    console.log(this.props.postCatalog)
     post && this.setPostContent(post);
   }
   getPostContext(collection, postId) {
@@ -55,7 +54,6 @@ export default class Post extends Component {
 
   async setPostContent(postInfo) {
     const postContent = await postInfo.component();
-    console.log(postContent);
     this.setState({ postContent });
   }
 

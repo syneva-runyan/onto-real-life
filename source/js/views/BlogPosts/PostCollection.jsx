@@ -31,7 +31,6 @@ export default class PostCollection extends Component {
     return gallery;
   }
   render() {
-    console.log(this.props.postCatalog);
     const blogPostPreviews = this.previewGallery(
       this.props.postCatalog,
       this.props.assetBase,

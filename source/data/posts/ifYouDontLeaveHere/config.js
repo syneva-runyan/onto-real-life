@@ -8,6 +8,6 @@ export default {
   ],
   title: "If You Don't Leave Here",
   tagLine: "Thoughts on Remote Technology",
-  datePublished: "14 December, 2020",
+  datePublished: "23 December, 2020",
   component: async ()=> { const content = await import("./Content.jsx"); return content.default },
 };
