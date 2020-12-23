@@ -1,5 +1,3 @@
-import Content from "./Content.jsx";
-
 export default {
   id: "newZealandNorthHiking",
   tags: [
@@ -17,5 +15,5 @@ export default {
   title: "NZ North Island Hiking",
   datePublished: "9 June, 2017",
   tagLine: "Hiking Catalogue",
-  component: Content,
+  component: async ()=> { const content = await import("./Content.jsx"); return content.default },
 };

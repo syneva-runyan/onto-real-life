@@ -12,7 +12,7 @@ const propTypes = {
 
 const defaultProps = {
   className: '',
-  aniDuration: 3000,
+  aniDuration: 5000,
   slides: [],
   allowNavigation: false,
   autoMove: true,

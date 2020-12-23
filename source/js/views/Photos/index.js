@@ -1,5 +1,3 @@
 import Photos from "./Photos.jsx";
 
-export {
-  Photos,
-};
+export default Photos;

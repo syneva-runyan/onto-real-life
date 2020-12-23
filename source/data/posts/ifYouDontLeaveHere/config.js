@@ -1,5 +1,3 @@
-import Content from "./Content.jsx";
-
 export default {
   id: "ifYouDontLeaveHere",
   tags: [
@@ -11,5 +9,5 @@ export default {
   title: "If You Don't Leave Here",
   tagLine: "Thoughts on Remote Technology",
   datePublished: "14 December, 2020",
-  component: Content,
+  component: async ()=> { const content = await import("./Content.jsx"); return content.default },
 };
