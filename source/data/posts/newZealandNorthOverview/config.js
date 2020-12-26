@@ -1,5 +1,3 @@
-import Content from "./Content.jsx";
-
 export default {
   id: "newZealandNorthOverview",
   tags: [
@@ -24,5 +22,5 @@ export default {
   title: "New Zealand - North Island",
   datePublished: "9 June, 2017",
   tagLine: "Overview",
-  component: Content,
+  component: async ()=> { const content = await import("./Content.jsx"); return content.default },
 };

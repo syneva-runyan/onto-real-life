@@ -1,5 +1,3 @@
-import Content from "./Content.jsx";
-
 export default {
   id: "scotland",
   tags: [
@@ -17,5 +15,5 @@ export default {
   title: "Scotland",
   datePublished: "15 July, 2019",
   tagLine: "Living up to the Romanticism",
-  component: Content,
+  component: async ()=> { const content = await import("./Content.jsx"); return content.default },
 };

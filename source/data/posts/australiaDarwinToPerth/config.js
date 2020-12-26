@@ -1,5 +1,3 @@
-import Content from "./Content.jsx";
-
 export default {
   id: "australiaDarwinToPerth",
   tags: [
@@ -24,5 +22,5 @@ export default {
   title: "Roadtrippin' Darwin to Perth",
   tagLine: "Travel Advice",
   datePublished: "29 August, 2017",
-  component: Content,
+  component: async ()=> { const content = await import("./Content.jsx"); return content.default },
 };

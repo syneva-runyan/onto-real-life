@@ -1,5 +1,3 @@
-import Content from "./Content.jsx";
-
 export default {
   id: "nzTravelThoughts",
   tags: [
@@ -14,5 +12,5 @@ export default {
   title: "NZ Travel Thoughts",
   datePublished: "5 July, 2017",
   tagLine: "Q&A",
-  component: Content,
+  component: async ()=> { const content = await import("./Content.jsx"); return content.default },
 };

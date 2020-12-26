@@ -1,5 +1,3 @@
 import Contact from "./Contact.jsx";
 
-export {
-  Contact,
-};
+export default Contact;

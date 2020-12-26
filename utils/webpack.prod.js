@@ -29,24 +29,26 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css"
     }),
-    new CopyWebpackPlugin([
-      {
-        from: "../assets/img/blogs",
-        to: "assets/img/blogs"
-      },
-      {
-        from: "../assets/img/photos",
-        to: "assets/img/photos"
-      },
-      {
-        from: "../assets/img/about-me",
-        to: "assets/img/about-me"
-      },
-      {
-        from: "../assets/img/quotes.png",
-        to: "assets/img/quotes.png"
-      }
-    ])
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "../assets/img/blogs",
+          to: "assets/img/blogs"
+        },
+        {
+          from: "../assets/img/photos",
+          to: "assets/img/photos"
+        },
+        {
+          from: "../assets/img/about-me",
+          to: "assets/img/about-me"
+        },
+        {
+          from: "../assets/img/quotes.png",
+          to: "assets/img/quotes.png"
+        }
+      ]
+    })
   ],
   rules: [
     {

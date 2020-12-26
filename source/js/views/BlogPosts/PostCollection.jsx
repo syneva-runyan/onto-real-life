@@ -15,18 +15,20 @@ const defaultProps = {
 
 export default class PostCollection extends Component {
   previewGallery(catalog, assetBase) {
-    return Object.keys(catalog).map(item => {
-      const itemContent = catalog[item];
-      return (
+    const gallery = [];
+    catalog.forEach(post => {
+      gallery.push(
         <PostPreviewer
-          postId={itemContent.id}
-          key={`post-${itemContent.id}`}
-          title={itemContent.title}
-          tagLine={itemContent.tagLine}
-          assetPath={`${assetBase}/${itemContent.id}`}
+          postId={post.id}
+          key={`post-${post.id}`}
+          title={post.title}
+          tagLine={post.tagLine}
+          assetPath={`${assetBase}/${post.id}`}
         />
       );
     });
+
+    return gallery;
   }
   render() {
     const blogPostPreviews = this.previewGallery(

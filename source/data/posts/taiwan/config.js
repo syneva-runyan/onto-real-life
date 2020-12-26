@@ -1,5 +1,3 @@
-import Content from "./Content.jsx";
-
 export default {
   id: "taiwan",
   tags: [
@@ -27,5 +25,5 @@ export default {
   title: "Taiwan",
   tagLine: "The Beautiful Island",
   datePublished: "18 September, 2017",
-  component: Content,
+  component: async ()=> { const content = await import("./Content.jsx"); return content.default },
 };
