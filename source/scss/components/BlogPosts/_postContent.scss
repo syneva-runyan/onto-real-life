@@ -1,5 +1,7 @@
 .postContent {
+    display: inline-block;
     margin: 0 25px;
+    font-size: 18px;
 
     &__sectionTitle {
         color: #a2a2a2;
@@ -118,7 +120,7 @@
         float: right;
     }
 
-    .align-left {
+    .align-left, .align--left {
         float: left;
     }
 

@@ -1,4 +1,5 @@
 import ifYouDontLeaveHere  from "./ifYouDontLeaveHere/config.js";
+import scotland from "./scotland/config.js";
 import backToTheGrind  from "./backToTheGrind/config.js";
 import backpacking  from "./backpacking/config.js";
 import barcelona from './barcelona/config.js';
@@ -21,6 +22,7 @@ import seeTheWorld  from "./seeTheWorld/config.js";
 export const postCatalog = new Map([
   ['ifYouDontLeaveHere', ifYouDontLeaveHere],
   ['backToTheGrind', backToTheGrind],
+  ['scotland', scotland],
   ['backpacking', backpacking],
   ['barcelona', barcelona],
   ['cambodia', cambodia],
