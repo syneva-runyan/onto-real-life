@@ -7,7 +7,7 @@
   "scripts": {
     "test": "jest",
     "start": "webpack serve",
-    "build": "rm -rf ./build && webpack --mode production",
+    "build": "rm -rf ./build && cross-env NODE_ENV=\"production\" webpack --mode production",
     "lint": "eslint ./source/js ./webpack.config.js -f table --ext .js --ext .jsx --fix"
   },
   "browsers": [
