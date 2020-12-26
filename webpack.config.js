@@ -1,5 +1,4 @@
 /* eslint comma-dangle: 0 */
-
 const webpack = require("webpack"); // eslint-disable-line no-unused-vars
 const path = require("path");
 
@@ -39,7 +38,8 @@ module.exports = {
     path: buildPath,
     publicPath: "/",
     filename: "[name].js",
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    globalObject: "this",
   },
   module: {
     rules,

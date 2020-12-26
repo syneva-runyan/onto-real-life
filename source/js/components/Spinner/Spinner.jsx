@@ -37,7 +37,7 @@ export default class Spinner extends Component {
   setOrientation(cube, previousOrientation, nextOrientation) {
     cube.classList.remove(`show-${previousOrientation}`);
     cube.classList.add(`show-${nextOrientation}`);
-    cube.setAttribute("data-sideShow", nextOrientation);
+    cube.setAttribute("data-side-show", nextOrientation);
   }
 
   determineNextSide(currentSide) {
@@ -48,7 +48,7 @@ export default class Spinner extends Component {
     const target = e.target;
     const cube = target.nextSibling;
 
-    let currentOrientation = cube.getAttribute("data-sideShow");
+    let currentOrientation = cube.getAttribute("data-side-show");
     currentOrientation = parseInt(currentOrientation, 10);
     const nextOrientation = this.determineNextSide(currentOrientation);
 
@@ -59,7 +59,7 @@ export default class Spinner extends Component {
     return (
       <div
         className={`${cubeClass} animateEx show-${sideToShow} ${side}`}
-        data-sideShow={`${sideToShow}`}
+        data-side-show={`${sideToShow}`}
       >
         {this.renderSide("zero", images[0])}
         {this.renderSide("first", images[1])}

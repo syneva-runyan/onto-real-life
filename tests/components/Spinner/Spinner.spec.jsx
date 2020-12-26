@@ -30,7 +30,7 @@ describe("Spinner", () => {
       "setOrientation"
     );
     const mockSqr = document.createElement("div");
-    mockSqr.setAttribute("data-sideShow", 0);
+    mockSqr.setAttribute("data-side-show", 0);
     const mockEvent = {
       target: {
         nextSibling: mockSqr

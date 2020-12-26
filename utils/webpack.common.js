@@ -6,8 +6,6 @@ const path = require("path");
 const nodeEnv = process.env.NODE_ENV || "development";
 const sourcePath = path.join(__dirname, "../source");
 const imgPath = path.join(__dirname, "../source/assets/img");
-const jsSourcePath = path.join(__dirname, "./source/js");
-const buildPath = path.join(__dirname, "../build");
 
 module.exports = {
   plugins: [
