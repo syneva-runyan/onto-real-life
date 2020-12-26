@@ -1,57 +1,47 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
+import cx from "classnames";
 import { NavLink } from "react-router-dom";
 import { routeCodes } from "../../routes";
 import { SearchPosts } from "../../components/SearchPosts";
 
-export default class Menu extends Component {
-  constructor() {
-    super();
-    this.state = {
-      opened: false,
-    };
+export default function Menu() {
+  const [opened, setOpened] = useState(false);
 
-    this.boundMenuToggle = this.toggleMenu.bind(this);
-  }
+  const toggleMenu = () => {
+    setOpened(!opened);
+  };
 
-  toggleMenu() {
-    this.listenForAltInteraction(!this.state.opened);
-    this.setState({
-      opened: !this.state.opened,
-    });
-  }
-
-  listenForAltInteraction(shouldAdd) {
-    if (shouldAdd) {
+  useEffect(() => {
+    if (opened) {
       // close menu on alternative interaction with page
-      document.addEventListener("click", this.boundMenuToggle);
-      return;
+      document.addEventListener("click", toggleMenu);
+    } else {
+      document.removeEventListener("click", toggleMenu);
     }
-    document.removeEventListener("click", this.boundMenuToggle);
-  }
+    return () => document.removeEventListener("click", toggleMenu);
+  }, [opened, toggleMenu]);
 
-  postRouteAdjustments(postPath) {
+  const postRouteAdjustments = (postPath) => {
     return postPath.replace("/(:postId)", "");
-  }
-
-  render() {
-    const menuClassNames = this.state.opened
-      ? "menu__nav menu--opened"
-      : "menu__nav";
+  };
 
     return (
       <div className="menu">
-        <button className="menu__cta" onClick={this.boundMenuToggle}>
+        <button className="menu__cta" onClick={toggleMenu}>
           Menu
         </button>
         <div className="menu__search">
           <SearchPosts />
         </div>
-        <nav className={menuClassNames}>
+        <nav className={cx({
+          "menu__nav": true,
+          "menu--opened": opened,
+        })}>
           <li className={`menu__item ${routeCodes.ABOUT}`}>
             <NavLink
               activeClassName="selected"
               to={routeCodes.ABOUT}
-              onClick={this.boundMenuToggle}
+              onClick={toggleMenu}
             >
               About
             </NavLink>
@@ -60,8 +50,8 @@ export default class Menu extends Component {
             <NavLink
               exact
               activeClassName="selected"
-              to={this.postRouteAdjustments(routeCodes.POSTS)}
-              onClick={this.boundMenuToggle}
+              to={postRouteAdjustments(routeCodes.POSTS)}
+              onClick={toggleMenu}
             >
               Blog Posts
             </NavLink>
@@ -70,7 +60,7 @@ export default class Menu extends Component {
             <NavLink
               activeClassName="selected"
               to={routeCodes.PHOTO_MAP}
-              onClick={this.boundMenuToggle}
+              onClick={toggleMenu}
             >
               Photo Map
             </NavLink>
@@ -79,7 +69,7 @@ export default class Menu extends Component {
             <NavLink
               activeClassName="selected"
               to={routeCodes.CONTACT}
-              onClick={this.boundMenuToggle}
+              onClick={toggleMenu}
             >
               Contact
             </NavLink>
@@ -88,4 +78,3 @@ export default class Menu extends Component {
       </div>
     );
   }
-}
