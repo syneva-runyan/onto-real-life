@@ -1,7 +1,7 @@
 .predictiveSuggestions {
     position: absolute;
     background: $white;
-    border: 0.5px $text-color solid;
+    border-top: 0.5px $text-color solid;
     font-size: 13px;
     margin-top: -12px;
     right: 17px;
@@ -16,17 +16,19 @@
         border-left: 0.5px solid $text-color;
         border-right: 0.5px solid $text-color;
         background-color: $white;
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
         list-style: none;
         margin: 0;
         padding-left: 0;
         position: relative;
         width: auto;
         z-index: 2;
+
     }
 
     &__listItem {
-        border-bottom: 0.5px solid $text-color;
+        border: 0.5px solid $text-color;
         display: inline-block;
         transition: $ani-speed;
         width: 100%;
@@ -35,6 +37,14 @@
             a {
                 color: $white;
             }
+        }
+        a {
+            margin: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            top: 0;
+            transform: none;
+            white-space: normal;
         }
     }
 
@@ -50,13 +60,13 @@
     }
 
     &__title {
-        line-height: 30px;
+        line-height: 20px;
     }
 
     &__matchedTerm {
         font-size: 10px;
         position: relative;
-        top: -6px;
+        line-height: normal;
     }
     
     

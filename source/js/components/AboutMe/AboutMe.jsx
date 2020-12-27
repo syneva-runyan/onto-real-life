@@ -7,8 +7,8 @@ export default class AboutMe extends Component {
       <div className="aboutMe">
         <p>
           I&apos;m a front end developer and CS grad student. I love traveling
-          and in general trying new things. For those who are interested in why
-          I love these things, checkout my article
+          and in general trying new things. Interested in why
+          I love these things? Checkout my article
           <Link to={"/posts/seeTheWorld"}> here.</Link>
         </p>
         <p>

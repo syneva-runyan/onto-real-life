@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import {
   PostTitle,
@@ -22,23 +22,41 @@ const defaultProps = {
   },
 };
 
-export default class Post extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
+export default function Post(props) {
+    const [postId, setPostId] = useState(null);
+    const [postContent, setPostContent] = useState();
+    const [postContext, setPostContext] = useState(null);
+    const [post, setPost] = useState(null);
+
+    useEffect(() => {
+      setupPost();
+      scrollToTop();
+    }, [props.match.params.postId]);
+  
+    useEffect(() => {
+      setupPost();
+    }, []);
+  
+  const setupPost = () => {
+    const postId = props.match.params.postId;
+      setPostId(postId);
+      const post = props.postCatalog.get(postId);
+      setPost(post);
+      post && getPostContent(post);
+      post && getPostContext(props.postCatalog, postId);
+
   }
 
-  componentDidMount() {
-    const postId = this.props.match.params.postId;
-    const post = this.props.postCatalog.get(postId);
-    post && this.setPostContent(post);
+  const scrollToTop = () => {
+    window.scrollTo(0,0);
   }
-  getPostContext(collection, postId) {
+  const getPostContext = (postMap, postId) => {
     const postContext = {
       next: null,
       prev: null,
     };
 
+    const collection = Object.fromEntries(postMap);
     Object.keys(collection).forEach((item, index) => {
       if (item === postId) {
         const entriesArray = Object.entries(collection);
@@ -49,36 +67,30 @@ export default class Post extends Component {
       }
     });
 
-    return postContext;
+    setPostContext(postContext);
   }
 
-  async setPostContent(postInfo) {
+  const getPostContent = async (postInfo) => {
     const postContent = await postInfo.component();
-    this.setState({ postContent });
+    setPostContent(postContent);
   }
 
-  render() {
-    const postId = this.props.match.params.postId;
-    const post = this.props.postCatalog.get(postId);
-
-    if (!post) {
-      return <p>Post Not Found</p>;
-    }
-    const postContext = this.getPostContext(this.props.postCatalog, postId);
-    return (
-      <div>
-        <PostTitle
-          title={post.title}
-          datePublished={post.datePublished}
-          tagLine={post.tagLine}
-          imgPath={`${this.props.assetBase}/${postId}`}
-        />
-        <PostContent postId={postId} component={this.state.postContent} />
-        <hr />
-        <PostContextNav {...postContext} />
-      </div>
-    );
+  if (post == null) {
+    return <p>Post Not Found</p>;
   }
+  return (
+    <div>
+      <PostTitle
+        title={post.title}
+        datePublished={post.datePublished}
+        tagLine={post.tagLine}
+        imgPath={`${props.assetBase}/${postId}`}
+      />
+      <PostContent postId={postId} component={postContent} />
+      <hr />
+      <PostContextNav {...postContext} />
+    </div>
+  );
 }
 
 Post.propTypes = propTypes;

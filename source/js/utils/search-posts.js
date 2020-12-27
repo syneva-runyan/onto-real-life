@@ -1,5 +1,5 @@
 /* eslint no-console: 0 */
-import * as postCatalogue from "../../data/posts";
+import { postCatalog } from "../../data/posts";
 
 const dictFilterList = ["a", "the", "an", "of", "and"];
 
@@ -76,22 +76,14 @@ class SearchDictionary {
     this.predictiveSearchStartIndex = 3;
     this.posts = posts;
 
-    if (posts && typeof posts === "object") {
-      Object.keys(posts).forEach(postEntry => {
-        const postInfo = posts[postEntry];
-        const title = cleanSearchTerm(postInfo.title);
-        const tagLine = postInfo.tagLine
-          ? cleanSearchTerm(postInfo.tagLine)
-          : "";
-        const tags = postInfo.tags ? postInfo.tags : [];
-        this.createDictItem(postEntry, title, tagLine, ...tags);
-      });
-    } else {
-      console.info(
-        "For search to work properly, please provide post catalog object to dictionary searcher",
-      );
-    }
-
+    posts.forEach((postInfo = {}) => {
+      const title = cleanSearchTerm(postInfo.title);
+      const tagLine = postInfo.tagLine
+        ? cleanSearchTerm(postInfo.tagLine)
+        : "";
+      const tags = postInfo.tags ? postInfo.tags : [];
+      this.createDictItem(postInfo, title, tagLine, ...tags);
+    });
     return this;
   }
 
@@ -101,10 +93,10 @@ class SearchDictionary {
       ? this.dict[cleanedSearchTerm].values
       : [];
     return termMatches.map(suggestedMatch => {
-      const postKey = suggestedMatch.searchSuggestion;
+      const postInfo = suggestedMatch.searchSuggestion;
       return {
         matchedPhrases: suggestedMatch.matchedPhrases,
-        ...this.posts[postKey],
+        ...postInfo,
       };
     });
   }
@@ -181,7 +173,7 @@ class SearchDictionary {
   }
 }
 
-const catalogSearcher = new SearchDictionary(postCatalogue);
+const catalogSearcher = new SearchDictionary(postCatalog);
 
 export {
   catalogSearcher,

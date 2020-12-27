@@ -5,7 +5,6 @@ export default {
     "technology",
     "travel thoughts",
     "post",
-    "If You Don't Leave Here"
   ],
   title: "If You Don't Leave Here",
   tagLine: "Thoughts on Remote Technology",

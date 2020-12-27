@@ -22,7 +22,7 @@ const propTypes = {
 
 const defaultProps = {
   postId: null,
-  component: NotFound,
+  component: () => <p>Loading...</p>
 };
 
 export default class PostContent extends Component {
@@ -56,7 +56,7 @@ export default class PostContent extends Component {
           <button onClick={this.boundSavePost}>Save</button>
         </div> */}
         {/* <FroalaEditorView model={this.state.content} />*/}
-        <this.props.component />
+        {this.props.component}
       </div>
     );
   }

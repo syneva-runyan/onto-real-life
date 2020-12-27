@@ -31,10 +31,10 @@ export const renderSearchLink = function(suggestions, closeSearch) {
               className="predictiveSuggestions__link"
               to={`/posts/${article.id}`}
             >
-              <span className="predictiveSuggestions__title">{article.title}</span>
+              <strong className="predictiveSuggestions__title">{article.title}</strong>
               <br />
               <span className="predictiveSuggestions__matchedTerm">
-                matches: <strong>{article.matchedPhrases.join(", ")}</strong>
+                matches: <span>{article.matchedPhrases.join(", ")}</span>
               </span>
             </Link>
           </li>
