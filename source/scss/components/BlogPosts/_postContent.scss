@@ -69,6 +69,9 @@
             font-family: serif;
             width: 30px;
         }
+        @media screen and (max-width: $md-break) { 
+            font-size: 20px;
+        }
     }
 
     blockquote:before {

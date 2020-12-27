@@ -7,7 +7,7 @@ export default function Content(props) {
   return (
     <div>
         <p>In the precendented times of 2017, I wrote a statement of purpose for my application to Georgia Tech's Online Masters of Compuer Science program.  The statement centered around remote technology's ability to attack the lack of opportunities accessible to people who don't live in the first world.</p>
-        <p>Fast forward to 2020 where remote working is a way of life my statement of purpose seems more relevant than when I wrote it.</p>
+        <p>Fast forward to 2020 where remote working is a way of life my statement of purpose is more relevant than when I wrote it.</p>
         <hr/>
         <p className="postContent__sectionTitle">From my statement</p>
         <figure className="align-right width--30 sm-width--100 margin--left">
@@ -28,7 +28,6 @@ export default function Content(props) {
         <p>The remote location of Flores leads to limited opportunities, which Ken sees as an insurmountable problem, the only solution being to <strong>uproot their lives and physically move.</strong></p>
         <p>This problem does not have to be insurmountable. 
         </p>
-        <br/>
         <blockquote>
             Technology, by bridging physical and cyber spaces, has potential to alleviate the gap between physical location and opportunities.
         </blockquote>
