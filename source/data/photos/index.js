@@ -9,6 +9,12 @@ module.exports = {
         "tagline": "Welcome to my Hometown",
         "isBlogPost": false,
         "id": "atlanta",
+    },,
+    {
+        "location": "Bermuda",
+        "tagline": '“You can go to heaven if you want to. I’d rather stay in Bermuda.” - Mark Twain',
+        "isBlogPost": false,
+        "id": "bermuda",
     }, {
         "location": "Valletta, Malta",
         "tagline": "Blue skies, blue water, ancient ruins, beautiful island",
@@ -61,7 +67,7 @@ module.exports = {
         "tagline": "busy busy busy",
         "id": "hongKong"
     }, {
-        "location": "Golden Coast",
+        "location": "Golden Coast, Georgia",
         "tagline": "Off the coast of Georgia",
         "id": "goldenCoast"
     }, {
