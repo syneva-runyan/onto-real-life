@@ -33,3 +33,14 @@
         flex: 2;
     }
 }
+
+/// overwrite cesiums' default styles
+@media screen and (max-width: 600px) {
+    .cesium-infoBox {
+      width: 60%;
+    }
+    button.cesium-infoBox-close {
+      text-align: right;
+    }
+  }
+  
