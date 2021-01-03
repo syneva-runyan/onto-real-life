@@ -9,7 +9,7 @@ module.exports = {
         "tagline": "Welcome to my Hometown",
         "isBlogPost": false,
         "id": "atlanta",
-    },,
+    },
     {
         "location": "Bermuda",
         "tagline": '“You can go to heaven if you want to. I’d rather stay in Bermuda.” - Mark Twain',
