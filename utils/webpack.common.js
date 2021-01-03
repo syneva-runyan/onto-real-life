@@ -1,10 +1,13 @@
 const webpack = require("webpack");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 const path = require("path");
 
+
 const nodeEnv = process.env.NODE_ENV || "development";
 const sourcePath = path.join(__dirname, "../source");
+const buildPath = path.join(__dirname, "../build");
 const imgPath = path.join(__dirname, "../source/assets/img");
 
 const cesiumSource = '../../vendor/cesium/Min/Cesium';
@@ -12,6 +15,11 @@ const cesiumWorkers = './Workers';
 
 module.exports = {
   plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(sourcePath, "template.ejs"),
+      path: buildPath,
+      filename: "index.html",
+  }),
     new webpack.DefinePlugin({
       "process.env": {
         NODE_ENV: JSON.stringify(nodeEnv),
@@ -24,7 +32,6 @@ module.exports = {
         ],
         context: sourcePath,
       },
-      debug:true
     }),
     new webpack.ProvidePlugin({
       $: "jquery",
@@ -48,7 +55,7 @@ module.exports = {
   ],
   rules: [{
       test: /\.(js|jsx)$/,
-      exclude: [/node_modules/, /vendor/],
+      exclude: [/node_modules/],
       use: {
         loader: "babel-loader"
       },

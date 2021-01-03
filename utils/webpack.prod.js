@@ -1,31 +1,10 @@
 const webpack = require("webpack");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const StaticSiteGeneratorPlugin = require("static-site-generator-webpack-plugin");
-const ejs = require("ejs");
-const fs = require("fs");
-const path = require("path");
-
-const template = ejs.compile(
-  fs.readFileSync(path.join(__dirname, "../source/template.ejs"), "utf-8")
-);
 
 module.exports = {
+  mode: 'production',
   plugins: [
-    new StaticSiteGeneratorPlugin({
-      crawl: true,
-      entry: "app",
-      locals: {
-        template: template
-      },
-      globals: {
-        window: {
-          XMLHttpRequest: {},
-          scroll: function() {}
-        },
-        navigator: {},
-      }
-    }),
     new MiniCssExtractPlugin({
       filename: "[name].css"
     }),

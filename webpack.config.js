@@ -17,19 +17,21 @@ const sourcePath = path.join(__dirname, "./source");
 const plugins = [...commonConfig.plugins];
 const rules = [...commonConfig.rules];
 
-const cesiumSource = 'vendor/cesium/Source';
-
+let mode;
 if (isProduction) {
   // Production plugins & rules
   plugins.push(...prodConfig.plugins);
   rules.push(...prodConfig.rules);
+  mode = prodConfig.mode;
 } else {
   // Development plugins & rules
   plugins.push(...devConfig.plugins);
   rules.push(...devConfig.rules);
+  mode = devConfig.mode;
 }
 
 module.exports = {
+  mode: mode,
   devtool: isProduction ? false : "source-map",
   context: jsSourcePath,
   entry: {
@@ -60,10 +62,6 @@ module.exports = {
       ".jsx",
     ],
     modules: [path.resolve(__dirname, "node_modules"), jsSourcePath],
-    alias: {
-      // CesiumJS module name
-      cesium: path.resolve(__dirname, cesiumSource)
-    },
     fallback: {
       fs: false
     }

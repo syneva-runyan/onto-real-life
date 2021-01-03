@@ -31,7 +31,7 @@ const calcRelativeBase = path => {
 
   // do not set base
   // for main index
-  if (path === "/" || !path) {
+  if (path === "/") {
     return null;
   }
 
