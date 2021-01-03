@@ -98,7 +98,11 @@
     var orig_path = path;
     var request = new XMLHttpRequest();
 
-    if (path.match(/\.[^./]+$/)) {
+    if (!path) {
+      console.log('no path');
+    }
+
+    if (path && path.match(/\.[^./]+$/)) {
       // has extension
     } else {
       path += ".js";

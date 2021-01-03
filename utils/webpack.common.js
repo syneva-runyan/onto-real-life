@@ -7,8 +7,8 @@ const nodeEnv = process.env.NODE_ENV || "development";
 const sourcePath = path.join(__dirname, "../source");
 const imgPath = path.join(__dirname, "../source/assets/img");
 
-const cesiumSource = '../../vendor/cesium/Source';
-const cesiumWorkers = '../Workers';
+const cesiumSource = '../../vendor/cesium/Min/Cesium';
+const cesiumWorkers = './Workers';
 
 module.exports = {
   plugins: [
@@ -24,6 +24,7 @@ module.exports = {
         ],
         context: sourcePath,
       },
+      debug:true
     }),
     new webpack.ProvidePlugin({
       $: "jquery",
@@ -45,17 +46,16 @@ module.exports = {
       CESIUM_BASE_URL: JSON.stringify('/Cesium')
   })
   ],
-  rules: [
-    {
-      test: /\.css$/,
-      use: ["style-loader", "css-loader"],
-    },
-    {
+  rules: [{
       test: /\.(js|jsx)$/,
       exclude: [/node_modules/, /vendor/],
       use: {
         loader: "babel-loader"
-      }
+      },
+    },
+    {
+      test: /\.css$/,
+      use: ["style-loader", "css-loader"],
     },
     {
       test: /\.(png|gif|jpg|svg)$/,

@@ -3,10 +3,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import debounce from "debounce";
 
-const loadCesium = async ()=> { 
-  const content = await import("../../../../vendor/cesium/Source/Cesium");
-  return content;
-};
+import { Cartesian3, UrlTemplateImageryProvider, Credit, Viewer, GeoJsonDataSource } from "../../../../vendor/cesium/Source/Cesium";
 
 import markerData from "../../../data/photos/photgallerydata.js";
 
@@ -32,24 +29,10 @@ export default class Globe extends Component {
       navigator.userAgent,
     );
   }
-  async init() {
-    window.Cesium = await loadCesium();
-    if (!Cesium) {
-      console.warn("Issues loading Cesium");
-      return;
-    }
-    this.createGlobe();
-    this.placeMarkers();
-    // TODO re add spinning
-    // if(this.props.autoSpin) {
-    //   this.spinEarth();
-    // } else {
-    //   this.stopSpinningEarth();
-    // }
-  }
 
   componentDidMount() {
-   this.init();
+    this.createGlobe();
+    this.placeMarkers();
   }
 
   // componentDidUpdate() {
@@ -60,38 +43,38 @@ export default class Globe extends Component {
   //   }
   // }
 
-  isMarkerOpen() {
-    const popup = document.getElementsByClassName('cesium-infoBox-visible"')[0];
-    return popup || false;
-  }
+  // isMarkerOpen() {
+  //   const popup = document.getElementsByClassName('cesium-infoBox-visible"')[0];
+  //   return popup || false;
+  // }
 
-  spinEarth() {
-    if(!this.spinningEarth && !this.isMarkerOpen(this.openMarker)) {
-      var before = null;
-      const animate = (now) => {
-        if(this.earth) {
-          var c = this.earth.camera.position;
-          var elapsed = before? now - before: 0;
-          before = now;
-          this.earth.camera.flyTo({
-            destination: Cesium.Rectangle.fromDegrees(c.x + 0.1*(elapsed/20), c.y)
-          });
-          setTimeout(() => {
-            this.spinningEarth = requestAnimationFrame(animate);
-          }, 500);
-        }
-      }
+  // spinEarth() {
+  //   if(!this.spinningEarth && !this.isMarkerOpen(this.openMarker)) {
+  //     var before = null;
+  //     const animate = (now) => {
+  //       if(this.earth) {
+  //         var c = this.earth.camera.position;
+  //         var elapsed = before? now - before: 0;
+  //         before = now;
+  //         this.earth.camera.flyTo({
+  //           destination: Rectangle.fromDegrees(c.x + 0.1*(elapsed/20), c.y)
+  //         });
+  //         setTimeout(() => {
+  //           this.spinningEarth = requestAnimationFrame(animate);
+  //         }, 500);
+  //       }
+  //     }
 
-      this.spinningEarth = requestAnimationFrame(animate);
-    }
-  }
+  //     this.spinningEarth = requestAnimationFrame(animate);
+  //   }
+  // }
 
-  stopSpinningEarth() {
-    if(this.spinningEarth) {
-      window.cancelAnimationFrame(this.spinningEarth);
-      this.spinningEarth = undefined;
-    }
-  }
+  // stopSpinningEarth() {
+  //   if(this.spinningEarth) {
+  //     window.cancelAnimationFrame(this.spinningEarth);
+  //     this.spinningEarth = undefined;
+  //   }
+  // }
 
   createGlobe() {
     const options = {
@@ -100,22 +83,22 @@ export default class Globe extends Component {
       sceneModePicker: false,
       homeButton: false,
       geocoder: false,
-      imageryProvider: new Cesium.UrlTemplateImageryProvider({
+      imageryProvider: new UrlTemplateImageryProvider({
         url: 'https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=Uki1TJXtQzc8y1292iLl',
         tileWidth: 512,
         tileHeight: 512,
-        credit: new Cesium.Credit("\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e", true)
+        credit: new Credit("\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e", true)
       })
     };
-    const earth = new Cesium.Viewer("earth_div", options);
+    const earth = new Viewer("earth_div", options);
     earth.camera.setView({
-      destination: Cesium.Cartesian3.fromDegrees(47.19537, 8.524404, 8000000)
+      destination: Cartesian3.fromDegrees(47.19537, 8.524404, 8000000)
     });
     this.earth = earth;
   }
 
   placeMarkers() {
-    var source = new Cesium.GeoJsonDataSource("locations");
+    var source = new GeoJsonDataSource("locations");
     this.earth.dataSources.add(source);
     const cleanedData = this.markerData.markerData.map((data, idx) => {
       const popup = {

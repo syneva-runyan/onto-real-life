@@ -61,9 +61,9 @@ module.exports = {
         "tagline": "busy busy busy",
         "id": "hongKong"
     }, {
-        "location": "Cumberland Island",
-        "tagline": "Rocky Georiga Coast",
-        "id": "cumberland"
+        "location": "Golden Coast",
+        "tagline": "Off the coast of Georgia",
+        "id": "goldenCoast"
     }, {
         "location": "Asheville, NC",
         "tagline": "IPAs and Hiking",
