@@ -7,6 +7,9 @@ const buildPath = path.join(__dirname, "../build");
 
 
 module.exports = {
+    watchOptions: {
+      ignored: [/node_modules/, /vendor/],
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: path.join(sourcePath, "template.ejs"),

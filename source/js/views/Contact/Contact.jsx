@@ -9,7 +9,8 @@ export default function Contact() {
         Start a conversation with me below or send an email to{" "}
         <strong>syneva@gmail.com</strong>
       </p>
-      <ContactMsg />
+      <p>Contact form temporarily unavailable</p>
+      {/* <ContactMsg /> */}
     </div>
   );
 }

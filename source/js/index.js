@@ -52,7 +52,7 @@ const calcRelativeBase = path => {
 * @param {object} data - Object passed in StaticSiteGeneratorPlugin & general webpack data
 */
 export default data => {
-  // Assets defined in webpack config
+  // assets defined in webpack config
   const history = createMemoryHistory();
   const assets = Object.keys(data.webpackStats.compilation.assets);
   const css = assets.filter(value => value.match(/\.css$/));

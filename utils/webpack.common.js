@@ -7,6 +7,9 @@ const nodeEnv = process.env.NODE_ENV || "development";
 const sourcePath = path.join(__dirname, "../source");
 const imgPath = path.join(__dirname, "../source/assets/img");
 
+const cesiumSource = '../../vendor/cesium/Source';
+const cesiumWorkers = '../Build/Cesium/Workers';
+
 module.exports = {
   plugins: [
     new webpack.DefinePlugin({
@@ -32,8 +35,15 @@ module.exports = {
         from: "../assets/scripts/sendEmail.php",
         to: "scripts/sendEmail.php",
       },
+      { from: path.join(cesiumSource, cesiumWorkers), to: 'Cesium/Workers' },
+      { from: path.join(cesiumSource, 'Assets'), to: 'Cesium/Assets' },
+      { from: path.join(cesiumSource, 'Widgets'), to: 'Cesium/Widgets' }
       ]
     }),
+    new webpack.DefinePlugin({
+      // Define relative base path in cesium for loading assets
+      CESIUM_BASE_URL: JSON.stringify('/Cesium')
+  })
   ],
   rules: [
     {
@@ -42,7 +52,7 @@ module.exports = {
     },
     {
       test: /\.(js|jsx)$/,
-      exclude: /node_modules/,
+      exclude: [/node_modules/, /vendor/],
       use: {
         loader: "babel-loader"
       }

@@ -1,11 +1,14 @@
 /* eslint-disable no-undef */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import ReactDOM from "react-dom";
 import debounce from "debounce";
-import Marker from "./Marker";
 
-import markerData from "../../../data/photos/photgallerydata";
+const loadCesium = async ()=> { 
+  const content = await import("cesium/Cesium");
+  return content;
+};
+
+import markerData from "../../../data/photos/photgallerydata.js";
 
 const propTypes = {
   onMarkerClick: PropTypes.func,
@@ -29,43 +32,37 @@ export default class Globe extends Component {
       navigator.userAgent,
     );
   }
-  componentDidMount() {
+  async init() {
+    window.Cesium = await loadCesium();
+    if (!Cesium) {
+      console.warn("Issues loading Cesium");
+      return;
+    }
     this.createGlobe();
     this.placeMarkers();
-
-    if (this.isMobile) {
-      this.addMobileInteractions();
-    }
-
-    if(this.props.autoSpin) {
-      this.spinEarth();
-    } else {
-      this.stopSpinningEarth();
-    }
-
-    this.panToFix()
+    // TODO re add spinning
+    // if(this.props.autoSpin) {
+    //   this.spinEarth();
+    // } else {
+    //   this.stopSpinningEarth();
+    // }
   }
 
-  componentDidUpdate() {
-    if(this.props.autoSpin) {
-      this.spinEarth();
-    } else {
-      this.stopSpinningEarth();
-    }
+  componentDidMount() {
+   this.init();
   }
 
-  panToFix() {
-    // TEMP FIX FOR BUG: [https://github.com/webglearth/webglearth2/issues/83]
-    this.earth.panTo = function(center, opt_opts) { if (!center.length) center = [center['lat'], center['lng']]; opt_opts = opt_opts || {}; this.flyTo(center[0], center[1], undefined, undefined, 0, 0, opt_opts['duration']) };
-  }
+  // componentDidUpdate() {
+  //   if(this.props.autoSpin) {
+  //     this.spinEarth();
+  //   } else {
+  //     this.stopSpinningEarth();
+  //   }
+  // }
 
-  isMarkerOpen(marker = {}) {
-    if(marker && marker.element) {
-      const popup = marker.element.getElementsByClassName('we-pp')[0];
-      return popup && popup.style.visibility === 'visible' || false;
-    }
-
-    return false;
+  isMarkerOpen() {
+    const popup = document.getElementsByClassName('cesium-infoBox-visible"')[0];
+    return popup || false;
   }
 
   spinEarth() {
@@ -73,11 +70,15 @@ export default class Globe extends Component {
       var before = null;
       const animate = (now) => {
         if(this.earth) {
-          var c = this.earth.getPosition();
+          var c = this.earth.camera.position;
           var elapsed = before? now - before: 0;
           before = now;
-          this.earth.setCenter([c[0], c[1] + 0.1*(elapsed/20)]);
-          this.spinningEarth = requestAnimationFrame(animate);
+          this.earth.camera.flyTo({
+            destination: Cesium.Rectangle.fromDegrees(c.x + 0.1*(elapsed/20), c.y)
+          });
+          setTimeout(() => {
+            this.spinningEarth = requestAnimationFrame(animate);
+          }, 500);
         }
       }
 
@@ -92,170 +93,70 @@ export default class Globe extends Component {
     }
   }
 
-  addMobileInteractions() {
-    const earth = document.getElementById("earth_div");
-    this.canvas = earth.getElementsByTagName("canvas")[0];
-    this.canvasWidth = this.canvas.offsetWidth;
-    this.canvasHeight = this.canvas.offsetHeight;
-    this.canvas.addEventListener(
-      "touchstart",
-      this.handleStart.bind(this),
-      false,
-    );
-    this.canvas.addEventListener(
-      "touchmove",
-      this.handleMove.bind(this),
-      false,
-    );
-    this.canvas.addEventListener("touchend", this.handleEnd.bind(this), false);
-    // TODO consider adding momentum spin at touchend
-  }
-
-  handleStart(e) {
-    e.stopPropagation();
-    e.preventDefault();
-    const earthCenter = this.earth.getCenter();
-    this.startTouchX = e.touches[0].clientX;
-    this.startTouchY = e.touches[0].clientY;
-    this.startEarthX = earthCenter[1];
-    this.startEarthY = earthCenter[0];
-    this.startTouchTime = e.timestamp;
-  }
-
-  handleEnd() {
-    // const endTouch = e.timestamp;
-    // const touchDuration = endTouch - this.startTouchTime;
-    // const earthCenter = this.earth.getCenter();
-    // const changeX = earthCenter[1] - this.startEarthX;
-    // const changeY = earthCenter[0] - this.startEarthY;
-    // go an extra portion of the totla change
-    // or order to implement a pseudo momentum,
-    // with the portion traveling in this section
-    // being defined by the speed
-    // the user was spinning.
-    // this.earth.panTo([newX, newY]);
-  }
-
-  // TODO fix vertical flipping of globe
-  handleMove(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    const touchX = e.touches[0].clientX;
-    const touchY = e.touches[0].clientY;
-
-    const earthCenter = this.earth.getCenter();
-    const newX =
-      earthCenter[1] + (this.startTouchX - touchX) / this.canvasWidth * 7 % 180;
-    const newY =
-      earthCenter[0] -
-      (this.startTouchY - touchY) / this.canvasHeight * 7 % 180;
-    this.earth.setView([newY, newX]);
-  }
-
   createGlobe() {
-    const options = { zoom: 1.5, position: [47.19537, 8.524404] };
-    if (this.isMobile) {
-      // disable 3rd party dragging on mobile
-      options.dragging = false;
-    }
-    const earth = new WE.map("earth_div", options);
-    const map = WE.tileLayer(
-      "http://tileserver.maptiler.com/nasa/{z}/{x}/{y}.jpg",
-      options,
-    );
-    map.addTo(earth);
+    const options = {
+      animation: true,
+      baseLayerPicker: false,
+      sceneModePicker: false,
+      homeButton: false,
+      geocoder: false,
+      imageryProvider: new Cesium.UrlTemplateImageryProvider({
+        url: 'https://api.maptiler.com/maps/hybrid/{z}/{x}/{y}.jpg?key=Uki1TJXtQzc8y1292iLl',
+        tileWidth: 512,
+        tileHeight: 512,
+        credit: new Cesium.Credit("\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e", true)
+      })
+    };
+    const earth = new Cesium.Viewer("earth_div", options);
+    earth.camera.setView({
+      destination: Cesium.Cartesian3.fromDegrees(47.19537, 8.524404, 8000000)
+    });
     this.earth = earth;
   }
 
   placeMarkers() {
-    // for markes in some loaded json file
-    const options = { zoom: 1.5, position: [47.19537, 8.524404] };
-    this.createMarkers(options, this.markerData);
-  }
-
-  createMarkers(options, markerCollection) {
-    markerCollection.markerData.forEach((markerInfo, markerIndex) => {
-      if(markerInfo.geoLocation && markerInfo.geoLocation.lat && markerInfo.geoLocation.lng) {
-        const marker = WE.marker([
-          markerInfo.geoLocation.lat,
-          markerInfo.geoLocation.lng,
-        ]).addTo(this.earth);
-        window[`loadMarkerContent${markerInfo.id}`] = this.renderMarker(
-          markerInfo,
-          marker,
-          markerIndex
-        ).bind(this);
-        marker.element.onclick = this.renderMarker(markerInfo, marker, markerIndex).bind(this);
-
-        // Img kept in markup here so it loads as the same time as 
-        // globe & no flicker is shown on maker click
-        marker.bindPopup(`<div class="globe__marker marker globe__markerContent">
-          <div class="globe__markerImgContainer">
-            <img class="globe__markerImg" id="${markerInfo.id}--img" src="${markerInfo
-          .photos[0]}">
-          </div>
-            <div id="marker--${markerInfo.id}" class="globe__markerContent"/>
-        </div>`, 300, false);
+    var source = new Cesium.GeoJsonDataSource("locations");
+    this.earth.dataSources.add(source);
+    const cleanedData = this.markerData.markerData.map((data, idx) => {
+      const popup = {
+        ...data.properties,
+        description: this.createPopup(data, idx)
+      };
+      return {
+        geometry: {
+          ...data.geometry,
+          type: "Point",
+        },
+        properties: popup,
+        id: data.id
       }
+    })
+
+    // LOAD DATA TO MAP
+    source.load({
+      type: "FeatureCollection",
+      crs: {
+          type: "name",
+          properties: {
+              name: "urn:ogc:def:crs:OGC:1.3:CRS84"
+          }
+      },
+      features: cleanedData
     });
   }
 
-  onMarkerClick(markerIndex) {
-    return () => {
-      this.props.onMarkerClick(markerIndex);
+  createPopup(markerInfo, markerIdx) {
+    let markup =  `...${markerInfo.tagline}.`;
+    if(markerInfo.isBlogPost) {
+      markup += `  <a href='posts/${markerInfo.id}' target="_blank" rel="noopener noreferrer">Read the blog.</a>`;
     }
-  }
 
-  closePopup = () => {
-    this.openMarker && this.openMarker.closePopup();
-    this.openMarker = null;
-    if(this.props.autoSpin) {
-      this.spinEarth();
-    }
-  }
-
-  renderMarker(marker, markerObj, markerIndex) {
-    return function() {
-      // close any other open marker
-      if(this.openMarker && this.openMarker !== markerObj) {
-        this.closePopup();
-      }
-
-      if(!this.openMarker || (this.openMarker && this.openMarker !== markerObj)) {
-
-          // keep track of open markers
-          this.openMarker = markerObj;
-          this.stopSpinningEarth();
-
-          // semi-depend on earth's zoom to center marker.
-          let adjustLat = 25;
-          if(this.earth.getZoom() > 3) {
-            adjustLat = 5;
-          }
-
-          this.earth.panTo([
-            // adjust lat based on current view
-            marker.geoLocation.lat + adjustLat,
-            marker.geoLocation.lng,
-          ], { duration: 1.5});
-
-      }
-      
-      const el = document.getElementById(`marker--${marker.id}`);
-      
-      if (el) {
-        ReactDOM.render(
-          <Marker
-            marker={marker}
-            onClick={this && this.onMarkerClick(markerIndex)}
-            title={marker.location}
-            {...marker}
-            onClose={this.closePopup}
-          />,
-          el,
-        );
-      }
+    window.top[`fn_otrl_${markerInfo.id}`] = () => {
+      this.props.onMarkerClick(markerIdx);
     };
+    const btnStyle = "background-color: #046; color: white; padding: 7px 12px; border: 0;";
+    markup += `<br/><br/><button onclick="window.top.fn_otrl_${markerInfo.id}()" style="${btnStyle}">See the photos</button>`;
+    return markup;
   }
 
   render() {
@@ -278,7 +179,6 @@ export default class Globe extends Component {
             top: 0,
             left: 0,
             pointerEvents: "none",
-           // backgroundImage: `url("assets/img/aeronautical-map.jpg")`,
           }}
         />
         <div

@@ -17,6 +17,8 @@ const sourcePath = path.join(__dirname, "./source");
 const plugins = [...commonConfig.plugins];
 const rules = [...commonConfig.rules];
 
+const cesiumSource = 'vendor/cesium/Source';
+
 if (isProduction) {
   // Production plugins & rules
   plugins.push(...prodConfig.plugins);
@@ -40,6 +42,11 @@ module.exports = {
     filename: "[name].js",
     libraryTarget: 'umd',
     globalObject: "this",
+    sourcePrefix: ''
+  },
+  amd: {
+    // Enable webpack-friendly use of require in Cesium
+    toUrlUndefined: true
   },
   module: {
     rules,
@@ -53,6 +60,13 @@ module.exports = {
       ".jsx",
     ],
     modules: [path.resolve(__dirname, "node_modules"), jsSourcePath],
+    alias: {
+      // CesiumJS module name
+      cesium: path.resolve(__dirname, cesiumSource)
+    },
+    fallback: {
+      fs: false
+    }
   },
   plugins,
   devServer: {
