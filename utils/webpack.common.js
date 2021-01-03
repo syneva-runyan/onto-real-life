@@ -8,7 +8,7 @@ const sourcePath = path.join(__dirname, "../source");
 const imgPath = path.join(__dirname, "../source/assets/img");
 
 const cesiumSource = '../../vendor/cesium/Source';
-const cesiumWorkers = '../Build/Cesium/Workers';
+const cesiumWorkers = './Workers';
 
 module.exports = {
   plugins: [
