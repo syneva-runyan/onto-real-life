@@ -11,10 +11,10 @@ const propTypes = {
 export default function GlobeSettings(props) {
   return (
     <div className="globeSettings">
-        <label className="globeSettings__label">
+        {/* <label className="globeSettings__label">
             AutoSpin
             <input type="checkbox" onChange={props.toggleSpin} checked={props.autoSpin} />
-        </label>
+        </label> */}
     </div>
   );
 }

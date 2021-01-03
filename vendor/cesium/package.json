@@ -156,5 +156,8 @@
   },
   "type": "module",
   "types": "./Source/Cesium.d.ts",
-  "version": "1.76.0"
+  "version": "1.76.0",
+  "dependencies": {
+    "package.json": "^2.0.1"
+  }
 }

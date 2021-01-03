@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import debounce from "debounce";
 
 const loadCesium = async ()=> { 
-  const content = await import("cesium/Cesium");
+  const content = await import("../../../../vendor/cesium/Source/Cesium");
   return content;
 };
 
