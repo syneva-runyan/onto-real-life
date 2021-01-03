@@ -75,7 +75,6 @@
     "classnames": "^2.2.6",
     "debounce": "^1.2.0",
     "es6-promise": "^4.2.8",
-    "http": "0.0.1-security",
     "immutable": "^3.8.1",
     "isomorphic-fetch": "^3.0.0",
     "jquery": "^3.5.1",
@@ -83,8 +82,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-froala-wysiwyg": "^3.2.5",
-    "react-router-dom": "^5.2.0",
-    "zlib": "^1.0.5"
+    "react-router-dom": "^5.2.0"
   },
   "description": "Simplistic Travel Blog",
   "repository": {
