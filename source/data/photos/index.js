@@ -16,6 +16,11 @@ module.exports = {
         "isBlogPost": false,
         "id": "bermuda",
     }, {
+        "location": "Nepal",
+        "tagline": '“Chasing angels or fleeing demons, go to the mountains.” - Jeffrey Rasley',
+        "isBlogPost": false,
+        "id": "nepal",
+    }, {
         "location": "Valletta, Malta",
         "tagline": "Blue skies, blue water, ancient ruins, beautiful island",
         "isBlogPost": true,
