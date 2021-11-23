@@ -7,6 +7,7 @@
   "scripts": {
     "test": "jest",
     "start": "webpack serve",
+    "build-gallery": "node utils/generate-photo-gallery.js",
     "build": "rm -rf ./build && cross-env NODE_ENV=\"production\" webpack --mode production",
     "lint": "eslint ./source/js ./webpack.config.js -f table --ext .js --ext .jsx --fix"
   },
@@ -72,6 +73,7 @@
     "@babel/runtime": "^7.12.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-polyfill": "^6.26.0",
+    "caniuse-lite": "^1.0.30001282",
     "classnames": "^2.2.6",
     "debounce": "^1.2.0",
     "es6-promise": "^4.2.8",
