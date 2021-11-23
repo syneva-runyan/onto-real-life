@@ -174,5 +174,10 @@ module.exports = {
         "location": "Columbus, Ohio",
         "tagline": "",
         "id": "columbus"
+    },
+    {
+        "location": "Rocky Mountain National Park",
+        "tagline": "Yak tracks were necessary",
+        "id": "colorado"
     }]
 };
