@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import "./Spinner.css";
 
 const propTypes = {
   images: PropTypes.array,
@@ -7,10 +8,10 @@ const propTypes = {
 
 const defaultProps = {
   images: [
-    "assets/img/about-me/face0.png",
-    "assets/img/about-me/face1.png",
-    "assets/img/about-me/face2.png",
-    "assets/img/about-me/face3.png",
+    "face0",
+    "face1",
+    "face2",
+    "face3",
   ],
 };
 
@@ -72,10 +73,7 @@ export default class Spinner extends Component {
   renderSide(sideCount, image) {
     return (
       <div
-        className={sideCount}
-        style={{
-          backgroundImage: `url(${image})`,
-        }}
+        className={`${sideCount} ${image}`}
       />
     );
   }
