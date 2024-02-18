@@ -61,10 +61,6 @@ module.exports = {
       },
     },
     {
-      test: /\.css$/,
-      use: ["style-loader", "css-loader"],
-    },
-    {
       test: /\.(png|gif|jpg|svg)$/,
       include: imgPath,
       use: "url-loader?limit=20480&name=assets/[name]-[hash].[ext]",
@@ -72,6 +68,10 @@ module.exports = {
     {
       test: /\.(eot|otf|ttf|woff|woff2)$/,
       use: "file-loader?name=fonts/[name].[ext]",
+    },
+    {
+      test: /\.css$/i,
+      use: ["style-loader", "css-loader"],
     },
   ],
 };

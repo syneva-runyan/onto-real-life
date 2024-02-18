@@ -1,17 +1,17 @@
 @font-face {
   font-family: alegreyaSans-light;
   src:
-  // url('../assets/fonts/alegreyaSans/AlegreyaSans-Light.otf') format("opentype"),
-       url('../assets/fonts/alegreyaSans/alegreyasans-light-webfont.woff2') format('woff2'),
-       url('../assets/fonts/alegreyaSans/alegreyasans-light-webfont.woff') format('woff');
+    url('../assets/fonts/alegreyaSans/AlegreyaSans-Light.otf') format("opentype"),
+    url('../assets/fonts/alegreyaSans/alegreyasans-light-webfont.woff2') format('woff2'),
+    url('../assets/fonts/alegreyaSans/alegreyasans-light-webfont.woff') format('woff');
 }
 
 @font-face {
   font-family: alegreyaSans-regular;
   src: 
-  //url('../assets/fonts/alegreyaSans/AlegreyaSans-Regular.otf') format("opentype"),
-       url('../assets/fonts/alegreyaSans/alegreyasans-regular-webfont.woff2') format('woff2'),
-       url('../assets/fonts/alegreyaSans/alegreyasans-regular-webfont.woff') format('woff');
+    url('../assets/fonts/alegreyaSans/AlegreyaSans-Regular.otf') format("opentype"),
+    url('../assets/fonts/alegreyaSans/alegreyasans-regular-webfont.woff2') format('woff2'),
+    url('../assets/fonts/alegreyaSans/alegreyasans-regular-webfont.woff') format('woff');
 }
 
 @font-face {
@@ -47,6 +47,3 @@
   font-style: normal;
 
 }
-
-
-

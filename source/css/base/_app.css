@@ -1,0 +1,42 @@
+body {
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+.App {
+  margin: 15px auto 0;
+  max-width: 1078px;
+  min-width: var(--min-width);
+  width: calc(100% - 100px);
+  background: var(--white);
+  padding: 20px 20px 0;
+  position: relative;
+  border-radius: 1px;
+}
+
+.Page__content {
+  padding-bottom: 20px;
+  padding-top: 15px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+@media screen and (max-width: var(--md-break)) {
+  .App {
+    border-radius: 0;
+    margin-top: 0px;
+    padding: 0;
+    width: 100%;
+  }
+  .Page__content {
+    padding-top: 30px;
+  }
+
+  .Page {
+    padding: 35px 20px 20px;
+  }
+}

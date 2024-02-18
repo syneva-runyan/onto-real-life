@@ -1,9 +1,11 @@
-$ani-speed: 0.25s;
+:root {
+  --ani-speed: 0.25s;
+}
 
 .blur-up {
 		filter: blur(5px);
-		transition: filter $ani-speed * 1.5, -webkit-filter $ani-speed * 1.5;
-	}
+		transition: filter var(--ani-speed) * 1.5;
+}
 
 .blur-up.lazyloaded {
 	  filter: blur(0);
@@ -29,13 +31,13 @@ $ani-speed: 0.25s;
 
 @keyframes emphasize {
   0%{
-    box-shadow: 0  0 0.5px 0.5px $secondary-color;
+    box-shadow: 0  0 0.5px 0.5px var(--secondary-color);
   }
   50%{
-    box-shadow: 0 0 2px 0.5px  darken($secondary-color, 2);
+    box-shadow: 0 0 2px 0.5px  darken(var(--secondary-color), 2);
   }
   100%{
-    box-shadow: 0  0 0.5px 0.5px  $secondary-color;
+    box-shadow: 0  0 0.5px 0.5px  var(--secondary-color);
   }
 }
 

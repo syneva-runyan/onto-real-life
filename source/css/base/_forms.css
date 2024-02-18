@@ -1,6 +1,6 @@
 input, textarea  {
     border-radius: 1px;
-    border: 0.5px solid rgba($primary-color, 0.5);
+    border: 0.5px solid rgba(var(--primary-color), 0.5);
     font-size: 14px;
     line-height: 22px;
     padding: 7px;
@@ -8,18 +8,20 @@ input, textarea  {
 }
 
 button {
-    background-color: $primary-color;
+    background-color: var(--primary-color);
     border: 0px;
-    color: $white;
+    color: var(--white);
     cursor: pointer;
     padding: 7px 12px;
     text-align: center;
+}
 
-    &:hover {
-        background-color: darken($primary-color, 0.5);
-    }
+.button:hover {
+    background-color: darken(var(--primary-color), 0.5);
+}
 
-    @media screen and (max-width: $md-break) { 
+@media screen and (max-width: var(--md-break)) { 
+    .button {
         display: block;
         padding: 12px;
         width: 100%;

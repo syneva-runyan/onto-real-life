@@ -1,8 +1,10 @@
-import React, { Component, createHook } from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Title from "./Title";
-import Menu from "./Menu";
+// import Menu from "./Menu";
 import { debounce } from "lodash";
+
+import "../../../css/components/Global/_header.css";
 
 const propTypes = {
   location: PropTypes.object,
@@ -43,7 +45,7 @@ export default class Header extends Component {
             <Title mobileShift={this.state.mobileShift} />
           </div>
           <div className="header__section header__section--lg">
-            <Menu />
+            {/* <Menu /> */}
           </div>
         </div>
         <span id="headerBorder" className="header__border" />

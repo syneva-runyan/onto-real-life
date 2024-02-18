@@ -3,23 +3,22 @@
 // load server || build static pages as appropriate.
 import React from "react";
 import { Router, StaticRouter } from "react-router-dom";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import ReactDOMServer from "react-dom/server";
 import { createBrowserHistory, createMemoryHistory } from "history";
 
 import { App } from "./views";
 
 // Load SCSS
-import "../scss/app.scss";
+import "../css/app.css";
 
 if (typeof document !== "undefined") {
   const history = createBrowserHistory();
-  const rootEl = document.getElementById("app");
-  ReactDOM.render(
+  const root = createRoot(document.getElementById("app"))
+  root.render(
     <Router history={history}>
       <App />
     </Router>,
-    rootEl,
   );
 }
 

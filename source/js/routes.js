@@ -1,21 +1,21 @@
 import React, { lazy } from "react";
 import { Route, Switch } from "react-router-dom";
-import { About, BlogPosts, Contact, Photos } from "./views";
+// import { About, BlogPosts, Contact, Photos } from "./views";
 
 const publicPath = "/";
 
 export const routeCodes = {
-  ABOUT: `${publicPath}about`,
-  POSTS: `${publicPath}posts`,
-  PHOTO_MAP: `${publicPath}photos`,
-  CONTACT: `${publicPath}contact`,
+  // ABOUT: `${publicPath}about`,
+  // POSTS: `${publicPath}posts`,
+  // PHOTO_MAP: `${publicPath}photos`,
+  // CONTACT: `${publicPath}contact`,
   HOME: publicPath,
 };
 
 export default function Routes() {
   return (
       <Switch>
-        <Route exact path={publicPath} component={BlogPosts} />
+        {/* <Route exact path={publicPath} component={BlogPosts} />
         <Route path={routeCodes.ABOUT} component={About} />
         <Route
           path={routeCodes.POSTS}
@@ -24,7 +24,7 @@ export default function Routes() {
         />
         <Route path={routeCodes.PHOTO_MAP} component={Photos} />
         <Route path={routeCodes.CONTACT} component={Contact} />
-        <Route component={BlogPosts} />
+        <Route component={BlogPosts} /> */}
       </Switch>
   );
 }

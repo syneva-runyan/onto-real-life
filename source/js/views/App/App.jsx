@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import { Header, Footer } from "../../components/Global";
-import Routes from "../../routes";
+import { Header } from "../../components/Global";
+// import Routes from "../../routes";
 
 const propTypes = {
   location: PropTypes.object,
@@ -23,10 +23,10 @@ export default class App extends Component {
     return (
       <div className="App">
         <Header />
-        <div className="Page">
+        {/*<div className="Page">
           <Routes />
         </div>
-        <Footer />
+        <Footer /> */}
       </div>
     );
   }

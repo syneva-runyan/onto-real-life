@@ -1,0 +1,66 @@
+:root {
+	--header-margin-bottom: 10px;
+}
+
+.header {
+	display: block;
+	margin-bottom: var(--header-margin-bottom);
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+.header__box {
+	display: relative;
+}
+
+.header__section {
+	display: inline-block;
+	position: relative;
+}
+	
+.header--lg {
+	bottom: 5px;
+	position: absolute;
+	right: 0;
+}
+
+.header__logo {
+	background-image: url("../assets/img/airplane.png");
+	background-size: cover;
+	height: 19px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 24px;
+}
+
+.title {
+	margin-left: 26px;
+}
+
+.header__border {
+	background-image: url("../assets/img/chevron.png");
+	background-size: 5px 9px;
+	bottom: var(--header-margin-bottom) * -1;
+	height: 9px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+		
+@media screen and (max-width: var(--md-break)) {
+	.title {
+		background-color: var(--primary-color);
+		height:40px;
+		margin-bottom: 0;
+		position: fixed;
+		top: 0;
+	}
+	.header {
+		margin: 0;
+	}
+	.header__section {
+		width: 100%;
+	}
+}
