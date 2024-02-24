@@ -62,16 +62,13 @@ module.exports = {
     },
     {
       test: /\.(png|gif|jpg|svg)$/,
+      type: "asset/resource",
       include: imgPath,
       use: "url-loader?limit=20480&name=assets/[name]-[hash].[ext]",
     },
     {
       test: /\.(eot|otf|ttf|woff|woff2)$/,
       use: "file-loader?name=fonts/[name].[ext]",
-    },
-    {
-      test: /\.css$/i,
-      use: ["style-loader", "css-loader"],
-    },
+    }
   ],
 };

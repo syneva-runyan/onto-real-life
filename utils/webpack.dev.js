@@ -9,5 +9,17 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
     ],
-    rules: []
+    rules: [{
+      test: /\.css$/,
+      exclude: /node_modules/,
+      use: [{
+        loader: "style-loader",
+      }, {
+        loader: "css-loader", 
+        options: {
+          url: false,
+        }
+      }]
+      }
+    ]
 };

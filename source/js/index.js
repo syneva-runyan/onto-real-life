@@ -9,8 +9,6 @@ import { createBrowserHistory, createMemoryHistory } from "history";
 
 import { App } from "./views";
 
-// Load SCSS
-import "../css/app.css";
 
 if (typeof document !== "undefined") {
   const history = createBrowserHistory();

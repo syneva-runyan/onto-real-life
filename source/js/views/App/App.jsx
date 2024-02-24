@@ -4,6 +4,9 @@ import PropTypes from "prop-types";
 import { Header } from "../../components/Global";
 // import Routes from "../../routes";
 
+// Load styles
+import "../../../css/app.css";
+
 const propTypes = {
   location: PropTypes.object,
 };

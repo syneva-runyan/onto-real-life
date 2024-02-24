@@ -10,6 +10,12 @@
 	z-index: 1;
 }
 
+.title__block {
+	display: inline-block;
+    font-size: 18px;
+    line-height: 15px;
+    text-align: right;
+}
 .header__box {
 	display: relative;
 }
@@ -26,7 +32,7 @@
 }
 
 .header__logo {
-	background-image: url("../assets/img/airplane.png");
+	background-image: url("../../../assets/img/airplane2.png");
 	background-size: cover;
 	height: 19px;
 	position: absolute;
@@ -36,11 +42,22 @@
 }
 
 .title {
+	color: var(--primary-color);
+    display: inline-block;
+    margin-bottom: 0;
+    text-transform: uppercase;
+
 	margin-left: 26px;
 }
 
+.title__text {
+	display: inline-block;
+    line-height: 30px;
+    font-size: 38px;
+}
+
 .header__border {
-	background-image: url("../assets/img/chevron.png");
+	/* background-image: url("../assets/img/chevron.png"); */
 	background-size: 5px 9px;
 	bottom: var(--header-margin-bottom) * -1;
 	height: 9px;

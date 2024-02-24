@@ -1,4 +1,3 @@
-import movingBackToANewPlace  from "./movingBackToANewPlace/config.js";
 import ifYouDontLeaveHere  from "./ifYouDontLeaveHere/config.js";
 import scotland from "./scotland/config.js";
 import backToTheGrind  from "./backToTheGrind/config.js";
@@ -21,7 +20,6 @@ import eatingAlone  from "./eatingAlone/config.js";
 import seeTheWorld  from "./seeTheWorld/config.js";
 
 export const postCatalog = new Map([
-  ['movingBackToANewPlace', movingBackToANewPlace],
   ['ifYouDontLeaveHere', ifYouDontLeaveHere],
   ['backToTheGrind', backToTheGrind],
   ['scotland', scotland],
